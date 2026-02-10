@@ -84,6 +84,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Gallery: shuffle and clone for infinite scroll
+const galleryTrack = document.getElementById('galleryTrack');
+if (galleryTrack) {
+    const slides = Array.from(galleryTrack.children);
+
+    // Fisher-Yates shuffle
+    for (let i = slides.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        galleryTrack.appendChild(slides[j]);
+    }
+
+    // Clone all slides for seamless infinite scroll
+    const allSlides = Array.from(galleryTrack.children);
+    allSlides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        galleryTrack.appendChild(clone);
+    });
+}
+
 // Console Easter Egg
 console.log(`
 🕯️ Progetto Siliceo

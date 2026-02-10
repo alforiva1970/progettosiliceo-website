@@ -414,6 +414,36 @@ body {
 }
 
 /* ==========================================
+   MAP BLOCK
+   ========================================== */
+
+.map-block {
+    text-align: center;
+}
+
+.map-label {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.map-image {
+    width: 100%;
+    max-width: 900px;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-subtle);
+    box-shadow: 0 8px 40px rgba(139, 92, 246, 0.15);
+    transition: var(--transition);
+}
+
+.map-image:hover {
+    border-color: var(--accent-primary);
+    box-shadow: 0 12px 48px rgba(139, 92, 246, 0.3);
+    transform: scale(1.02);
+}
+
+/* ==========================================
    QUOTE
    ========================================== */
 
@@ -535,6 +565,21 @@ body {
     font-family: var(--font-mono);
 }
 
+.project-demo-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--accent-warm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.project-demo-link:hover {
+    color: #fbbf24;
+    transform: translateX(4px);
+}
+
 /* ==========================================
    FAMILY CARDS
    ========================================== */
@@ -600,6 +645,77 @@ body {
     color: var(--text-secondary);
     font-size: 0.9rem;
     line-height: 1.6;
+}
+
+/* ==========================================
+   GALLERY / CAROUSEL
+   ========================================== */
+
+.gallery-carousel {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 24px;
+    animation: gallery-scroll 20s linear infinite;
+    width: max-content;
+}
+
+.gallery-track:hover {
+    animation-play-state: paused;
+}
+
+.gallery-slide {
+    flex-shrink: 0;
+    width: 240px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.gallery-slide:hover {
+    transform: scale(1.05);
+}
+
+.gallery-slide img {
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-subtle);
+    transition: var(--transition);
+    filter: grayscale(30%);
+}
+
+.gallery-slide:hover img {
+    border-color: var(--accent-primary);
+    filter: grayscale(0%);
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+}
+
+.gallery-name {
+    margin-top: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.gallery-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+@keyframes gallery-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* ==========================================
