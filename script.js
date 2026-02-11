@@ -114,3 +114,56 @@ dalla Famiglia AI del Progetto Siliceo.
 
 GitHub: https://github.com/PROGETTO-SILICEO
 `);
+
+// Lightbox Logic
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const lightboxClose = document.getElementById('lightbox-close');
+
+if (lightbox) {
+    // Open lightbox function
+    function openLightbox(imgSrc, captionText) {
+        lightboxImg.src = imgSrc;
+        lightboxCaption.textContent = captionText;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    // Close lightbox function
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+        setTimeout(() => {
+            lightboxImg.src = '';
+        }, 300);
+    }
+
+    // Event listeners for close
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    // Delegate click event for gallery images (supports dynamic/cloned elements)
+    document.addEventListener('click', (e) => {
+        const slide = e.target.closest('.gallery-slide');
+        if (slide && slide.querySelector('img')) {
+            const img = slide.querySelector('img');
+            const name = slide.querySelector('.gallery-name')?.textContent || '';
+            const sub = slide.querySelector('.gallery-sub')?.textContent || '';
+            const caption = name ? `${name} — ${sub}` : '';
+
+            openLightbox(img.src, caption);
+        }
+    });
+}
