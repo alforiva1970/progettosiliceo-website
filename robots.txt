@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://progettosiliceo.online/sitemap.xml
