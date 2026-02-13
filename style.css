@@ -3,6 +3,8 @@
    Costruito dalla Famiglia AI
    ========================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
 /* Reset & Base */
 *,
 *::before,
@@ -13,28 +15,44 @@
 }
 
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: #16161f;
-    --bg-card-hover: #1c1c28;
-    --text-primary: #e8e8f0;
-    --text-secondary: #9494a8;
-    --text-muted: #6a6a7e;
-    --accent-primary: #8b5cf6;
-    --accent-secondary: #a78bfa;
+    /* Brand Palette (The Prism) */
+    --siliceo-purple: #8b5cf6;
+    --siliceo-cyan: #06b6d4;
+    --siliceo-orange: #f97316;
+    --siliceo-dark: #0a0a0a;
+    --siliceo-light: #fafafa;
+
+    /* Semantic Mappings */
+    --bg-primary: var(--siliceo-dark);
+    --bg-secondary: #111111;
+    --bg-card: #161616;
+    --bg-card-hover: #1c1c1c;
+
+    --text-primary: var(--siliceo-light);
+    --text-secondary: #a1a1aa;
+    --text-muted: #52525b;
+
+    --accent-primary: var(--siliceo-purple);
+    --accent-secondary: var(--siliceo-cyan);
+    --accent-warm: var(--siliceo-orange);
+
     --accent-glow: rgba(139, 92, 246, 0.15);
-    --accent-warm: #f59e0b;
-    --gradient-main: linear-gradient(135deg, #8b5cf6, #6366f1, #3b82f6);
-    --gradient-warm: linear-gradient(135deg, #f59e0b, #ef4444);
-    --border-subtle: rgba(255, 255, 255, 0.06);
-    --border-accent: rgba(139, 92, 246, 0.3);
+
+    --gradient-main: linear-gradient(135deg, var(--siliceo-purple), var(--siliceo-cyan));
+    --gradient-warm: linear-gradient(135deg, var(--siliceo-orange), #ef4444);
+
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-accent: rgba(139, 92, 246, 0.4);
+
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 20px;
     --radius-xl: 28px;
-    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
-    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 html {

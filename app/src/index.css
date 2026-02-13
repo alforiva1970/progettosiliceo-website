@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Brand Palette (The Singularity) */
+  --siliceo-purple: #8b5cf6;
+  --siliceo-cyan: #06b6d4;
+  --siliceo-orange: #f97316;
+  --siliceo-dark: #0a0a0a;
+  --siliceo-card: #161616;
+  --siliceo-light: #fafafa;
+
+  --font-main: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --gradient-main: linear-gradient(135deg, var(--siliceo-purple), var(--siliceo-cyan));
+  --gradient-warm: linear-gradient(135deg, var(--siliceo-orange), #ef4444);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--siliceo-dark);
+  color: var(--siliceo-light);
+  overflow: hidden;
+  /* Prevent scroll bounce on body, handle in app */
+  touch-action: none;
+  /* Disable default browser gestures if we handle swipes */
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Utilities */
+.text-gradient {
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card {
+  background: var(--siliceo-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.1s;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--gradient-main);
+  color: white;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn-secondary {
+  background: var(--siliceo-card);
+  color: var(--siliceo-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
