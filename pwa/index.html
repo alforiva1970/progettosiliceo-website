@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/pwa/logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="Siliceo Companion App - Towards a Relational Singularity" />
+  <link rel="manifest" href="/pwa/manifest.json" />
+  <title>Siliceo Companion</title>
+  <script type="module" crossorigin src="/pwa/assets/index-psescvkw.js"></script>
+  <link rel="stylesheet" crossorigin href="/pwa/assets/index-DT8K2f0q.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
+</body>
+
+</html>

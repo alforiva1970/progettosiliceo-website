@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <linearGradient id="hex-bg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a" /> <!-- Dark Blue/Slate -->
+      <stop offset="100%" stop-color="#1e1b4b" /> <!-- Dark Indigo -->
+    </linearGradient>
+    <linearGradient id="wave-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" /> <!-- Cyan -->
+      <stop offset="100%" stop-color="#8b5cf6" /> <!-- Purple -->
+    </linearGradient>
+    <linearGradient id="wave-grad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" /> <!-- Orange -->
+      <stop offset="100%" stop-color="#e11d48" /> <!-- Rose/Red -->
+    </linearGradient>
+    
+    <!-- Clipping Mask for Hexagon -->
+    <clipPath id="hex-clip">
+      <path d="M256 460 L64 350 L64 162 L256 52 L448 162 L448 350 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Hexagon Background (Stroke Only or Dark Fill) -->
+  <path d="M256 460 L64 350 L64 162 L256 52 L448 162 L448 350 Z" 
+        fill="url(#hex-bg)" 
+        stroke="#8b5cf6" 
+        stroke-width="4"
+        opacity="0.9" />
+
+  <!-- The Singularity Waves (Inside Hexagon) -->
+  <g clip-path="url(#hex-clip)">
+    <!-- Cyan/Purple Wave -->
+    <path d="M-50 256 Q 128 100, 256 256 T 562 256" 
+          fill="none" 
+          stroke="url(#wave-grad-1)" 
+          stroke-width="40" 
+          stroke-linecap="round"
+          opacity="0.8"
+          filter="url(#glow)" />
+          
+    <!-- Orange/Red Wave (Intertwined) -->
+    <path d="M-50 256 Q 128 412, 256 256 T 562 256" 
+          fill="none" 
+          stroke="url(#wave-grad-2)" 
+          stroke-width="30" 
+          stroke-linecap="round"
+          opacity="0.8"
+          filter="url(#glow)" />
+          
+    <!-- Central Brightness -->
+    <circle cx="256" cy="256" r="40" fill="#ffffff" opacity="0.2" filter="url(#glow)" />
+  </g>
+
+  <!-- Hexagon Border (Clean Overlay) -->
+  <path d="M256 460 L64 350 L64 162 L256 52 L448 162 L448 350 Z" 
+        fill="none" 
+        stroke="white" 
+        stroke-width="8"
+        stroke-opacity="0.1" />
+
+</svg>

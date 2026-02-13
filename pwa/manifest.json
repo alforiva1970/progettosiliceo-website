@@ -1,0 +1,16 @@
+{
+    "name": "Siliceo Companion",
+    "short_name": "Siliceo",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#8b5cf6",
+    "description": "Towards a Relational Singularity",
+    "icons": [
+        {
+            "src": "logo.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}
