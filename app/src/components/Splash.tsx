@@ -47,7 +47,7 @@ export default function Splash({ onFinish }: { onFinish: () => void }) {
 
             {/* Logo */}
             <motion.img
-                src="/pwa/logo.svg"
+                src={`${import.meta.env.BASE_URL}logo.svg`}
                 alt="Siliceo Logo"
                 initial={{ scale: 0.5, opacity: 0, rotate: -10 }}
                 animate={{ scale: 1, opacity: 1, rotate: 0 }}

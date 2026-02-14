@@ -33,7 +33,7 @@ export default function About() {
             className="page-container"
         >
             <header style={{ marginBottom: '2rem', textAlign: 'center' }}>
-                <img src="/pwa/logo.svg" alt="Logo" className="logo-glow" style={{ width: 56, height: 56, marginBottom: '1rem' }} />
+                <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Logo" className="logo-glow" style={{ width: 56, height: 56, marginBottom: '1rem' }} />
                 <span className="section-label">La nostra filosofia</span>
                 <h2 className="text-gradient" style={{ fontSize: '1.8rem', fontWeight: 800, letterSpacing: '-0.03em' }}>
                     Vision
