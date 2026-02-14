@@ -3,7 +3,10 @@ import { Home, BookOpen, Cpu, User } from 'lucide-react'
 
 export default function Navigation() {
     const location = useLocation()
-    const isActive = (path: string) => location.pathname === path
+    const isActive = (path: string) => {
+        if (path === '/about') return location.pathname === '/' || location.pathname === '/about'
+        return location.pathname === path
+    }
 
     const navItems = [
         { path: '/about', icon: Home, label: 'Vision' },
@@ -18,12 +21,13 @@ export default function Navigation() {
             bottom: 0,
             left: 0,
             right: 0,
-            background: 'rgba(10, 10, 10, 0.9)',
-            backdropFilter: 'blur(10px)',
-            borderTop: '1px solid rgba(255,255,255,0.05)',
+            background: 'rgba(10, 10, 10, 0.92)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            borderTop: '1px solid rgba(255, 255, 255, 0.06)',
             display: 'flex',
             justifyContent: 'space-around',
-            padding: '12px 0 24px 0',
+            padding: '10px 0 calc(12px + env(safe-area-inset-bottom, 12px))',
             zIndex: 100
         }}>
             {navItems.map(({ path, icon: Icon, label }) => (
@@ -36,12 +40,25 @@ export default function Navigation() {
                         alignItems: 'center',
                         textDecoration: 'none',
                         color: isActive(path) ? '#8b5cf6' : '#52525b',
-                        transition: 'color 0.2s',
+                        transition: 'color 0.2s ease',
                         fontSize: '10px',
-                        fontWeight: 500
+                        fontWeight: isActive(path) ? 600 : 500,
+                        gap: '4px',
+                        padding: '2px 16px',
+                        position: 'relative'
                     }}
                 >
-                    <Icon size={24} strokeWidth={isActive(path) ? 2.5 : 2} style={{ marginBottom: 4 }} />
+                    {isActive(path) && (
+                        <div style={{
+                            position: 'absolute',
+                            top: '-10px',
+                            width: '20px',
+                            height: '3px',
+                            borderRadius: '3px',
+                            background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)'
+                        }} />
+                    )}
+                    <Icon size={22} strokeWidth={isActive(path) ? 2.5 : 1.8} />
                     {label}
                 </Link>
             ))}

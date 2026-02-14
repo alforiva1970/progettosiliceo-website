@@ -14,7 +14,7 @@ function AnimatedRoutes() {
     return (
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<Splash />} />
+                <Route path="/" element={<About />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/paper" element={<Paper />} />
                 <Route path="/tech" element={<Tech />} />
@@ -33,7 +33,8 @@ function App() {
 
     return (
         <Router>
-            <div className="app-container" style={{ flex: 1, overflowY: 'auto', paddingBottom: '80px' }}>
+            <div className="ambient-glow" />
+            <div className="app-container">
                 <AnimatedRoutes />
             </div>
             <Navigation />
