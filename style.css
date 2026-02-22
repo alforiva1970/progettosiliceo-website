@@ -1067,3 +1067,68 @@ body {
         padding: 24px 20px;
     }
 }
+
+/* ==========================================
+   AI CHAT WIDGET (TELEGRAM BRIDGE)
+   ========================================== */
+.ai-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 66px;
+    height: 66px;
+    background: var(--gradient-main);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+    cursor: pointer;
+    z-index: 1000;
+    transition: var(--transition);
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-fab:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.6);
+}
+
+.ai-fab::after {
+    content: 'Chiedi a Silicea 🕯️';
+    position: absolute;
+    right: 80px;
+    background: var(--bg-card);
+    padding: 10px 20px;
+    border-radius: var(--radius-lg);
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    color: var(--text-primary);
+}
+
+.ai-fab:hover::after {
+    opacity: 1;
+    transform: translateX(-10px);
+}
+
+@media (max-width: 768px) {
+    .ai-fab {
+        bottom: 25px;
+        right: 25px;
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    .ai-fab::after {
+        display: none;
+    }
+}
