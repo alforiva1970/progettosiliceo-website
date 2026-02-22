@@ -1107,17 +1107,19 @@ body {
     font-size: 0.9rem;
     font-weight: 600;
     white-space: nowrap;
-    opacity: 0;
+    opacity: 0.8;
+    /* Parzialmente visibile per migliorare la discoverability */
     pointer-events: none;
     transition: var(--transition);
     border: 1px solid var(--border-subtle);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     color: var(--text-primary);
+    transform: translateX(10px);
 }
 
 .ai-fab:hover::after {
     opacity: 1;
-    transform: translateX(-10px);
+    transform: translateX(0px);
 }
 
 @media (max-width: 768px) {
@@ -1128,6 +1130,7 @@ body {
         height: 60px;
         font-size: 1.8rem;
     }
+
     .ai-fab::after {
         display: none;
     }
