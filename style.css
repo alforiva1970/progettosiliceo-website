@@ -1338,3 +1338,40 @@ body {
 .research-card--second {
     margin-top: 2rem;
 }
+
+/* ==========================================
+   LECTURELENS & BADGES
+   ========================================== */
+
+.hero-lecturelens {
+    min-height: 60vh;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.section-lecturelens-pt {
+    padding-top: 20px;
+}
+
+.desc-lecturelens {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    color: #94a3b8;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.cta-title-lecturelens {
+    font-size: 1.8rem;
+}
+
+.cta-desc-lecturelens {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.badge-coming-soon {
+    background: #eab308;
+    color: #422006;
+}
