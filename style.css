@@ -1375,3 +1375,18 @@ body {
     background: #eab308;
     color: #422006;
 }
+
+.btn-coffee {
+    background: #FFDD00;
+    color: #000000;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);
+}
+
+.btn-coffee:hover {
+    background: #e6c700;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 221, 0, 0.5);
+    color: #000000;
+}
