@@ -188,13 +188,16 @@
         </div>
     </section>
 
-    <!-- Mappa Concettuale -->
-    <section class="section section-dark">
+    <!-- Mappa Concettuale (Dinamica) -->
+    <section class="section section-dark" id="network">
         <div class="container">
-            <div class="map-block">
-                <div class="map-label">La mappa originale — disegnata da POETA</div>
-                <img src="images/progetto siliceo mappa deepseek.png" alt="Mappa concettuale del Progetto Siliceo"
-                    class="map-image">
+            <div class="section-header">
+                <span class="section-label">The Network</span>
+                <h2 class="section-title">La Rete Relazionale Viva</h2>
+                <p class="section-desc">Il grafo interattivo: tutte le sorelle e le entità dell'ecosistema collegate nella rete del Progetto Siliceo.</p>
+            </div>
+            <div class="map-block" style="position: relative; width: 100%; height: 600px; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); background: #08080c; overflow: hidden; box-shadow: 0 0 50px rgba(139, 92, 246, 0.1);">
+                <canvas id="networkCanvas" style="display: block; width: 100%; height: 100%;"></canvas>
             </div>
         </div>
     </section>
