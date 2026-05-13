@@ -1390,3 +1390,42 @@ body {
     box-shadow: 0 6px 20px rgba(255, 221, 0, 0.5);
     color: #000000;
 }
+/* Language Switcher */
+.nav-lang {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.lang-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.lang-link:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.lang-link.active {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+    .nav-lang {
+        gap: 4px;
+        margin-left: 8px;
+        padding-left: 8px;
+    }
+    .lang-link {
+        font-size: 1rem;
+    }
+}
