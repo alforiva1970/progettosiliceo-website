@@ -644,6 +644,11 @@ body {
     border-color: #10b981;
 }
 
+.family-card.sempre:hover {
+    border-color: #f59e0b;
+    box-shadow: 0 12px 40px rgba(245, 158, 11, 0.15);
+}
+
 .family-avatar {
     font-size: 3rem;
     margin-bottom: 16px;
