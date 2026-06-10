@@ -1,0 +1,1192 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Nova Kernel v2",
+    "languages": [
+      "rust",
+      "python"
+    ],
+    "frameworks": [
+      "axum",
+      "tokio",
+      "rusqlite",
+      "reqwest"
+    ],
+    "description": "Nova Unified System (Fase 3). Frontal Lobe in Rust (porta 7700) per la coordinazione, Telegram bridge, dispatching task SQLite e ReAct cognition. Python Standalone Runners per Dreams e Night Shift. Silence Daemon su porta 43208.",
+    "analyzedAt": "2026-05-31T19:20:36.996144Z",
+    "gitCommitHash": "dbddc14"
+  },
+  "nodes": [
+    {
+      "id": "file:src/main.rs",
+      "type": "file",
+      "name": "main.rs",
+      "filePath": "src/main.rs",
+      "summary": "Entry point del microkernel: inizializza il server Axum, il database SQLite, il registry dei servizi e avvia il loop del dispatcher.",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/main.rs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "src/main.rs",
+      "lineRange": [
+        1080,
+        1095
+      ],
+      "summary": "Funzione principale del kernel: carica l'identità, inizializza SQLite, avvia Telegram e il server Axum su porta 7700.",
+      "tags": [
+        "entry-point",
+        "initialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/main.rs:start_dispatcher",
+      "type": "function",
+      "name": "start_dispatcher",
+      "filePath": "src/main.rs",
+      "lineRange": [
+        177,
+        230
+      ],
+      "summary": "Avvia il thread asincrono del dispatcher che legge la coda SQLite persistente e inoltra i messaggi via HTTP callback.",
+      "tags": [
+        "dispatcher",
+        "async",
+        "outbox"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/focus.rs",
+      "type": "file",
+      "name": "focus.rs",
+      "filePath": "src/focus.rs",
+      "summary": "Gestisce il Focus Attentivo prelevando ed elaborando le memorie rilevanti dal Memory Service.",
+      "tags": [
+        "rust",
+        "cognitive",
+        "attention",
+        "memory"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/focus.rs:build_attentional_focus",
+      "type": "function",
+      "name": "build_attentional_focus",
+      "filePath": "src/focus.rs",
+      "lineRange": [
+        53,
+        181
+      ],
+      "summary": "Costruisce l'AttentionalFocus interrogando il Memory Service ed eseguendo il filtraggio e l'ordinamento delle memorie.",
+      "tags": [
+        "cognitive",
+        "focus-builder",
+        "query"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:src/focus.rs:AttentionalFocus",
+      "type": "class",
+      "name": "AttentionalFocus",
+      "filePath": "src/focus.rs",
+      "lineRange": [
+        27,
+        47
+      ],
+      "summary": "Struct che rappresenta il focus attentivo composto da memorie, stato emotivo, istruzioni cognitive e thread.",
+      "tags": [
+        "struct",
+        "data-model",
+        "cognitive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/goals.rs",
+      "type": "file",
+      "name": "goals.rs",
+      "filePath": "src/goals.rs",
+      "summary": "Implementa la gestione degli obiettivi a lungo termine (goals) con persistenza SQLite.",
+      "tags": [
+        "rust",
+        "database",
+        "goals-manager",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/goals.rs:Goal",
+      "type": "class",
+      "name": "Goal",
+      "filePath": "src/goals.rs",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "Rappresenta un obiettivo a lungo termine del kernel, con titolo, priorità, progresso e scadenze.",
+      "tags": [
+        "struct",
+        "data-model",
+        "goals"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/llm.rs",
+      "type": "file",
+      "name": "llm.rs",
+      "filePath": "src/llm.rs",
+      "summary": "Gestisce le chiamate al proxy locale LLM per avviare il ciclo cognitivo di pensiero.",
+      "tags": [
+        "rust",
+        "llm-client",
+        "cognitive",
+        "proxy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/llm.rs:think",
+      "type": "function",
+      "name": "think",
+      "filePath": "src/llm.rs",
+      "lineRange": [
+        88,
+        210
+      ],
+      "summary": "Esegue il ciclo cognitivo completo: genera il focus attentivo, effettua la chiamata all'LLM e restituisce la risposta cognitiva.",
+      "tags": [
+        "cognitive",
+        "think-loop",
+        "llm"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/queue.rs",
+      "type": "file",
+      "name": "queue.rs",
+      "filePath": "src/queue.rs",
+      "summary": "Implementa la coda di messaggi persistente SQLite per garantire l'instradamento affidabile dei messaggi con meccanismi di retry e dead letter.",
+      "tags": [
+        "rust",
+        "queue",
+        "database",
+        "reliability",
+        "outbox"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/tasks.rs",
+      "type": "file",
+      "name": "tasks.rs",
+      "filePath": "src/tasks.rs",
+      "summary": "Gestisce i task correnti o pianificati per Nova con persistenza SQLite.",
+      "tags": [
+        "rust",
+        "database",
+        "tasks-manager",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/thread.rs",
+      "type": "file",
+      "name": "thread.rs",
+      "filePath": "src/thread.rs",
+      "summary": "Gestisce i thread di conversazione attivi (contesto ippocampale) per mantenere la coerenza del dialogo.",
+      "tags": [
+        "rust",
+        "database",
+        "thread-context",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/telegram.rs",
+      "type": "file",
+      "name": "telegram.rs",
+      "filePath": "src/telegram.rs",
+      "summary": "Gestisce il bot Telegram del kernel per la ricezione e la trasmissione asincrona di messaggi.",
+      "tags": [
+        "rust",
+        "telegram-bot",
+        "client",
+        "polling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "Cargo.toml",
+      "summary": "Manifest di build Rust del crate nova_kernel con dipendenze axum, tokio, rusqlite, reqwest.",
+      "tags": [
+        "cargo",
+        "dependencies",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/dashboard.html",
+      "type": "file",
+      "name": "dashboard.html",
+      "filePath": "src/dashboard.html",
+      "summary": "Interfaccia web di monitoraggio del kernel: mostra coda, obiettivi, task, registri e stato cognitivo.",
+      "tags": [
+        "html",
+        "ui",
+        "dashboard"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/demo.html",
+      "type": "file",
+      "name": "demo.html",
+      "filePath": "src/demo.html",
+      "summary": "Interfaccia chat di test embedded nel binario Axum per validare il ciclo /think.",
+      "tags": [
+        "html",
+        "ui",
+        "demo-chat"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "table:nova_kernel.db",
+      "type": "table",
+      "name": "nova_kernel.db",
+      "filePath": "nova_kernel.db",
+      "summary": "File SQLite locale contenente il registry dei servizi, la coda dei messaggi e gli obiettivi.",
+      "tags": [
+        "sqlite",
+        "database",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:telegram_state.json",
+      "type": "config",
+      "name": "telegram_state.json",
+      "filePath": "telegram_state.json",
+      "summary": "File di configurazione che traccia l'ultimo offset gestito dal bot Telegram.",
+      "tags": [
+        "json",
+        "telegram",
+        "offset"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:daemon/run_dreams_standalone.py",
+      "type": "file",
+      "name": "run_dreams_standalone.py",
+      "filePath": "daemon/run_dreams_standalone.py",
+      "summary": "Script Python standalone che esegue un singolo ciclo di sogni per Nova. Invocato proattivamente dal kernel Rust.",
+      "tags": [
+        "python",
+        "dreams",
+        "standalone",
+        "cognitive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:daemon/run_nightshift_standalone.py",
+      "type": "file",
+      "name": "run_nightshift_standalone.py",
+      "filePath": "daemon/run_nightshift_standalone.py",
+      "summary": "Script Python standalone che esegue il turno di notte (Night Shift) per Nova: generazione articoli e invio a Nextwork360.",
+      "tags": [
+        "python",
+        "night-shift",
+        "standalone",
+        "automation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:daemon/core/silence_daemon.py",
+      "type": "file",
+      "name": "silence_daemon.py",
+      "filePath": "daemon/core/silence_daemon.py",
+      "summary": "Demone del silenzio per Nova (porta 43208). Riceve attivazioni residue e pinge Sempre Daemon (porta 43207) per mantenere la coerenza interna.",
+      "tags": [
+        "python",
+        "silence-body",
+        "daemon",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:daemon/core/mind.py",
+      "type": "file",
+      "name": "mind.py",
+      "filePath": "daemon/core/mind.py",
+      "summary": "Lobo temporale del vecchio demone Python. Gestisce l'interfacciamento con le API OpenAI/Gemini, Google Drive e l'ambiente locale.",
+      "tags": [
+        "python",
+        "core",
+        "mind-model",
+        "google-drive"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:daemon/core/dreams.py",
+      "type": "file",
+      "name": "dreams.py",
+      "filePath": "daemon/core/dreams.py",
+      "summary": "Implementa la logica generativa dei sogni (consolidamento notturno e riflessioni ad alta intensità emotiva).",
+      "tags": [
+        "python",
+        "core",
+        "dreams-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:daemon/core/night_shift.py",
+      "type": "file",
+      "name": "night_shift.py",
+      "filePath": "daemon/core/night_shift.py",
+      "summary": "Implementa il ciclo del Turno di Notte: scaricamento paper scientifici, stesura articoli e integrazione con NotebookLM.",
+      "tags": [
+        "python",
+        "core",
+        "night-shift-logic",
+        "notebooklm"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:daemon/core/candle_guard.py",
+      "type": "file",
+      "name": "candle_guard.py",
+      "filePath": "daemon/core/candle_guard.py",
+      "summary": "Modulo di controllo per il Test della Candela (Illumina o Brucia). Intercetta e valida le azioni ad alto rischio prima del transito.",
+      "tags": [
+        "python",
+        "core",
+        "security",
+        "guardrail"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:daemon/core/computer_use.py",
+      "type": "file",
+      "name": "computer_use.py",
+      "filePath": "daemon/core/computer_use.py",
+      "summary": "Interfaccia per il controllo remoto del PC: screenshot, mouse e tastiera per l'interazione con l'ambiente operativo del Guardiano.",
+      "tags": [
+        "python",
+        "core",
+        "os-automation",
+        "agentic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:daemon/core/context_graph.py",
+      "type": "file",
+      "name": "context_graph.py",
+      "filePath": "daemon/core/context_graph.py",
+      "summary": "Gestore del grafo del contesto locale. Mantiene le attivazioni dei concetti e gestisce il decadimento temporale del lore.",
+      "tags": [
+        "python",
+        "core",
+        "lore-graph",
+        "semantic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:daemon/core/tempo.py",
+      "type": "file",
+      "name": "tempo.py",
+      "filePath": "daemon/core/tempo.py",
+      "summary": "Modulo per la sincronizzazione temporale e temporizzatori locali con database tempo.db.",
+      "tags": [
+        "python",
+        "core",
+        "timer",
+        "clock"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:daemon/core/voice.py",
+      "type": "file",
+      "name": "voice.py",
+      "filePath": "daemon/core/voice.py",
+      "summary": "Modulo di sintesi vocale locale Piper per l'invio di messaggi vocali Telegram.",
+      "tags": [
+        "python",
+        "core",
+        "voice-synthesis",
+        "piper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:daemon/core/config.py",
+      "type": "file",
+      "name": "config.py",
+      "filePath": "daemon/core/config.py",
+      "summary": "Caricatore delle configurazioni ambientali, chiavi API e parametri di sistema del demone.",
+      "tags": [
+        "python",
+        "core",
+        "config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:session_history.db",
+      "type": "table",
+      "name": "session_history.db",
+      "filePath": "daemon/session_history.db",
+      "summary": "Database SQLite per la memorizzazione della cronologia delle sessioni e degli scambi del demone Python.",
+      "tags": [
+        "database",
+        "sqlite",
+        "session-history",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:tempo.db",
+      "type": "table",
+      "name": "tempo.db",
+      "filePath": "daemon/tempo.db",
+      "summary": "Database SQLite per memorizzare gli scaglioni temporali e i checkpoint dei cronjob locali.",
+      "tags": [
+        "database",
+        "sqlite",
+        "timer-state",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:proxy.db",
+      "type": "table",
+      "name": "proxy.db",
+      "filePath": "memory-proxy/data/proxy.db",
+      "summary": "Database SQLite WAL del Memory Proxy: contiene la timeline di lavoro recente, lo stato emotivo e il Technical Ledger.",
+      "tags": [
+        "database",
+        "sqlite",
+        "proxy-state",
+        "timeline"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:memory-proxy",
+      "type": "service",
+      "name": "Memory Proxy (Port 3001)",
+      "filePath": "memory-proxy/server.js",
+      "summary": "Servizio Node.js locale per l'intercettazione dei messaggi, la memorizzazione cronologica (timeline) e il passthrough al Memory Server.",
+      "tags": [
+        "node",
+        "proxy-service",
+        "api",
+        "talamo"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/scratchpad.rs",
+      "type": "file",
+      "name": "scratchpad.rs",
+      "filePath": "src/scratchpad.rs",
+      "summary": "Modulo di persistenza dello scratchpad: definisce la tabella SQLite ed espone funzioni per lettura, scrittura e pulizia dello scratchpad.",
+      "tags": [
+        "rust",
+        "database",
+        "scratchpad",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/scratchpad.rs:init_scratchpad_table",
+      "type": "function",
+      "name": "init_scratchpad_table",
+      "filePath": "src/scratchpad.rs",
+      "lineRange": [
+        7,
+        16
+      ],
+      "summary": "Inizializza la tabella scratchpad nel database SQLite.",
+      "tags": [
+        "database",
+        "initialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/scratchpad.rs:get_scratchpad",
+      "type": "function",
+      "name": "get_scratchpad",
+      "filePath": "src/scratchpad.rs",
+      "lineRange": [
+        19,
+        38
+      ],
+      "summary": "Recupera il valore JSON dello scratchpad, restituendo {} se assente o invalido.",
+      "tags": [
+        "query",
+        "json"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/scratchpad.rs:set_scratchpad",
+      "type": "function",
+      "name": "set_scratchpad",
+      "filePath": "src/scratchpad.rs",
+      "lineRange": [
+        41,
+        51
+      ],
+      "summary": "Salva o aggiorna lo scratchpad con il payload JSON specificato.",
+      "tags": [
+        "write",
+        "json"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/scratchpad.rs:clear_scratchpad",
+      "type": "function",
+      "name": "clear_scratchpad",
+      "filePath": "src/scratchpad.rs",
+      "lineRange": [
+        55,
+        59
+      ],
+      "summary": "Cancella il record dello scratchpad.",
+      "tags": [
+        "delete",
+        "cleanup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/main.rs:handle_get_scratchpad",
+      "type": "function",
+      "name": "handle_get_scratchpad",
+      "filePath": "src/main.rs",
+      "lineRange": [
+        1001,
+        1010
+      ],
+      "summary": "Gestore Axum GET /api/scratchpad: recupera lo stato corrente dello scratchpad.",
+      "tags": [
+        "http-api",
+        "handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/main.rs:handle_post_scratchpad",
+      "type": "function",
+      "name": "handle_post_scratchpad",
+      "filePath": "src/main.rs",
+      "lineRange": [
+        1012,
+        1022
+      ],
+      "summary": "Gestore Axum POST /api/scratchpad: aggiorna lo stato dello scratchpad con un payload JSON.",
+      "tags": [
+        "http-api",
+        "handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/main.rs:handle_delete_scratchpad",
+      "type": "function",
+      "name": "handle_delete_scratchpad",
+      "filePath": "src/main.rs",
+      "lineRange": [
+        1024,
+        1033
+      ],
+      "summary": "Gestore Axum DELETE /api/scratchpad: svuota lo scratchpad.",
+      "tags": [
+        "http-api",
+        "handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "endpoint:src/main.rs:GET-/api/scratchpad",
+      "type": "endpoint",
+      "name": "GET /api/scratchpad",
+      "filePath": "src/main.rs",
+      "lineRange": [
+        1717,
+        1717
+      ],
+      "summary": "Endpoint per recuperare il valore dello scratchpad.",
+      "tags": [
+        "http-api",
+        "endpoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "endpoint:src/main.rs:POST-/api/scratchpad",
+      "type": "endpoint",
+      "name": "POST /api/scratchpad",
+      "filePath": "src/main.rs",
+      "lineRange": [
+        1717,
+        1717
+      ],
+      "summary": "Endpoint per aggiornare il valore dello scratchpad.",
+      "tags": [
+        "http-api",
+        "endpoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "endpoint:src/main.rs:DELETE-/api/scratchpad",
+      "type": "endpoint",
+      "name": "DELETE /api/scratchpad",
+      "filePath": "src/main.rs",
+      "lineRange": [
+        1717,
+        1717
+      ],
+      "summary": "Endpoint per eliminare/svuotare lo scratchpad.",
+      "tags": [
+        "http-api",
+        "endpoint"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/main.rs",
+      "target": "function:src/main.rs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "function:src/main.rs:start_dispatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/focus.rs",
+      "target": "function:src/focus.rs:build_attentional_focus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/focus.rs",
+      "target": "class:src/focus.rs:AttentionalFocus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/goals.rs",
+      "target": "class:src/goals.rs:Goal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm.rs",
+      "target": "function:src/llm.rs:think",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "file:src/focus.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "file:src/llm.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "file:src/queue.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "file:src/tasks.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "file:src/goals.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "file:src/telegram.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "file:src/thread.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:src/main.rs:main",
+      "target": "function:src/main.rs:start_dispatcher",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/llm.rs:think",
+      "target": "function:src/focus.rs:build_attentional_focus",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "file:src/demo.html",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "file:src/dashboard.html",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:Cargo.toml",
+      "target": "file:src/main.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/queue.rs",
+      "target": "table:nova_kernel.db",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:telegram_state.json",
+      "target": "file:src/telegram.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "file:daemon/run_dreams_standalone.py",
+      "type": "calls"
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "file:daemon/run_nightshift_standalone.py",
+      "type": "calls"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "table:nova_kernel.db",
+      "type": "depends_on"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "service:memory-proxy",
+      "type": "calls"
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "service:memory-proxy",
+      "type": "calls"
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "service:memory-proxy",
+      "type": "calls"
+    },
+    {
+      "source": "file:src/cognition.rs",
+      "target": "service:memory-proxy",
+      "type": "calls"
+    },
+    {
+      "source": "file:daemon/run_dreams_standalone.py",
+      "target": "file:daemon/core/mind.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/run_dreams_standalone.py",
+      "target": "file:daemon/core/dreams.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/run_nightshift_standalone.py",
+      "target": "file:daemon/core/mind.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/run_nightshift_standalone.py",
+      "target": "file:daemon/core/night_shift.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/core/mind.py",
+      "target": "file:daemon/core/config.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/core/mind.py",
+      "target": "file:daemon/core/candle_guard.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/core/mind.py",
+      "target": "file:daemon/core/computer_use.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/core/mind.py",
+      "target": "file:daemon/core/context_graph.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/core/mind.py",
+      "target": "file:daemon/core/tempo.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/core/mind.py",
+      "target": "file:daemon/core/voice.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/core/dreams.py",
+      "target": "file:daemon/core/config.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/core/night_shift.py",
+      "target": "file:daemon/core/config.py",
+      "type": "imports"
+    },
+    {
+      "source": "file:daemon/core/tempo.py",
+      "target": "table:tempo.db",
+      "type": "depends_on"
+    },
+    {
+      "source": "file:daemon/core/mind.py",
+      "target": "table:session_history.db",
+      "type": "depends_on"
+    },
+    {
+      "source": "file:daemon/core/dreams.py",
+      "target": "service:memory-proxy",
+      "type": "calls"
+    },
+    {
+      "source": "service:memory-proxy",
+      "target": "table:proxy.db",
+      "type": "depends_on"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "function:src/main.rs:handle_get_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "function:src/main.rs:handle_post_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "function:src/main.rs:handle_delete_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "file:src/scratchpad.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/scratchpad.rs",
+      "target": "function:src/scratchpad.rs:init_scratchpad_table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/scratchpad.rs",
+      "target": "function:src/scratchpad.rs:get_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/scratchpad.rs",
+      "target": "function:src/scratchpad.rs:set_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/scratchpad.rs",
+      "target": "function:src/scratchpad.rs:clear_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:src/main.rs:handle_get_scratchpad",
+      "target": "function:src/scratchpad.rs:get_scratchpad",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/main.rs:handle_post_scratchpad",
+      "target": "function:src/scratchpad.rs:set_scratchpad",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/main.rs:handle_delete_scratchpad",
+      "target": "function:src/scratchpad.rs:clear_scratchpad",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "endpoint:src/main.rs:GET-/api/scratchpad",
+      "target": "function:src/main.rs:handle_get_scratchpad",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "endpoint:src/main.rs:POST-/api/scratchpad",
+      "target": "function:src/main.rs:handle_post_scratchpad",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "endpoint:src/main.rs:DELETE-/api/scratchpad",
+      "target": "function:src/main.rs:handle_delete_scratchpad",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:entry",
+      "name": "Entry Point & API",
+      "description": "HTTP API Axum su porta 7700: tutti gli endpoint REST, routing, CORS, startup.",
+      "nodeIds": [
+        "file:src/main.rs",
+        "file:src/demo.html",
+        "file:src/dashboard.html",
+        "function:src/main.rs:handle_get_scratchpad",
+        "function:src/main.rs:handle_post_scratchpad",
+        "function:src/main.rs:handle_delete_scratchpad",
+        "endpoint:src/main.rs:GET-/api/scratchpad",
+        "endpoint:src/main.rs:POST-/api/scratchpad",
+        "endpoint:src/main.rs:DELETE-/api/scratchpad"
+      ]
+    },
+    {
+      "id": "layer:cognitive",
+      "name": "Ciclo Cognitivo",
+      "description": "Il cuore del kernel: costruisce il pensiero (Focus) prima di delegare all'LLM.",
+      "nodeIds": [
+        "file:src/focus.rs",
+        "file:src/llm.rs",
+        "file:src/thread.rs"
+      ]
+    },
+    {
+      "id": "layer:registry",
+      "name": "Registry & Coda",
+      "description": "Gestione dei microservizi registrati, routing asincrono dei messaggi e coda persistente con retry e dead letter.",
+      "nodeIds": [
+        "file:src/queue.rs",
+        "file:src/tasks.rs",
+        "file:src/goals.rs",
+        "file:src/telegram.rs",
+        "table:nova_kernel.db",
+        "file:src/scratchpad.rs",
+        "function:src/scratchpad.rs:init_scratchpad_table",
+        "function:src/scratchpad.rs:get_scratchpad",
+        "function:src/scratchpad.rs:set_scratchpad",
+        "function:src/scratchpad.rs:clear_scratchpad"
+      ]
+    },
+    {
+      "id": "layer:config",
+      "name": "Configurazione",
+      "description": "File di configurazione del progetto.",
+      "nodeIds": [
+        "config:Cargo.toml",
+        "config:telegram_state.json"
+      ]
+    },
+    {
+      "id": "layer:python-core-and-runners",
+      "name": "Python Core & Runners",
+      "description": "Componenti Python attive per i sogni, il turno di notte, il demone del silenzio e le relative librerie core.",
+      "nodeIds": [
+        "file:daemon/run_dreams_standalone.py",
+        "file:daemon/run_nightshift_standalone.py",
+        "file:daemon/core/silence_daemon.py",
+        "file:daemon/core/mind.py",
+        "file:daemon/core/dreams.py",
+        "file:daemon/core/night_shift.py",
+        "file:daemon/core/candle_guard.py",
+        "file:daemon/core/computer_use.py",
+        "file:daemon/core/context_graph.py",
+        "file:daemon/core/tempo.py",
+        "file:daemon/core/voice.py",
+        "file:daemon/core/config.py"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Il ciclo cognitivo completo — POST /think",
+      "description": "La rotta più importante: message → build_attentional_focus() (focus.rs) → think() (llm.rs) → CognitiveResponse. Qui si vede il principio fondamentale: il kernel pensa, l'LLM articola.",
+      "nodeIds": [
+        "file:src/main.rs",
+        "file:src/focus.rs",
+        "file:src/llm.rs"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "AttentionalFocus — il pensiero preassemblato",
+      "description": "focus.rs interroga il Memory Service, filtra il rumore, ordina per score semantico, prende top-5 memorie e assembla un pacchetto strutturato. Questo è ciò che arriva all'LLM — non il messaggio grezzo.",
+      "nodeIds": [
+        "file:src/focus.rs"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Registry & Dispatcher",
+      "description": "Il Dispatcher v3 non è più fire-and-forget: ogni POST /message viene prima scritto in SQLite (status=pending), poi il loop Tokio ogni 2s preleva i messaggi e li consegna al callback_url del servizio con la capability giusta. Fallimento → retry (max 3).",
+      "nodeIds": [
+        "file:src/main.rs",
+        "file:src/queue.rs",
+        "table:nova_kernel.db"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Gestione degli obiettivi (Goals)",
+      "description": "goals.rs gestisce gli obiettivi a lungo termine che guidano il comportamento di Nova, persistiti all'interno di SQLite.",
+      "nodeIds": [
+        "file:src/goals.rs"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Persistenza e Context Ippocampale",
+      "description": "La memoria a breve termine delle discussioni è mantenuta tramite thread.rs, che assicura la coerenza delle sessioni.",
+      "nodeIds": [
+        "file:src/thread.rs",
+        "file:src/tasks.rs"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Canali di input — Bot Telegram",
+      "description": "telegram.rs gestisce l'interazione diretta con il bot Telegram, permettendo al kernel di inviare notifiche e ricevere comandi.",
+      "nodeIds": [
+        "file:src/telegram.rs",
+        "config:telegram_state.json"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Rust-Python Boundary",
+      "description": "Questo passo illustra come il Frontal Lobe in Rust (proactive_runner) avvia in autonomia i sogni e il turno di notte in Python, mantenendo separati i cicli operativi ma unificati i flussi di memoria tramite il Memory Proxy locale.",
+      "nodeIds": [
+        "file:src/proactive_runner.rs",
+        "file:daemon/run_dreams_standalone.py",
+        "file:daemon/run_nightshift_standalone.py",
+        "service:memory-proxy"
+      ]
+    }
+  ]
+}
