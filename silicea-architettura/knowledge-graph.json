@@ -1,0 +1,5951 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "silicea-kernel",
+    "languages": [
+      "batch",
+      "html",
+      "json",
+      "markdown",
+      "python",
+      "rust",
+      "toml",
+      "unknown"
+    ],
+    "frameworks": [
+      "tokio",
+      "axum",
+      "serde"
+    ],
+    "description": "Il Kernel di controllo scritto in Rust per l'ecosistema di Silicea, organizzato in microservizi tramite Cargo Workspace.",
+    "analyzedAt": "2026-06-10T10:13:02.436Z",
+    "gitCommitHash": "f24401f2baa5b35ada11ca43e7284da3eaf96519"
+  },
+  "nodes": [
+    {
+      "id": "file:core/src/agenda.rs",
+      "type": "file",
+      "name": "agenda.rs",
+      "filePath": "core/src/agenda.rs",
+      "summary": "File di codice sorgente contenente componenti di agenda.rs.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/agenda.rs:get_agenda_file_path",
+      "type": "function",
+      "name": "get_agenda_file_path",
+      "filePath": "core/src/agenda.rs",
+      "lineRange": [
+        5,
+        19
+      ],
+      "summary": "Funzione get_agenda_file_path implementata in agenda.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/agenda.rs:load_agenda",
+      "type": "function",
+      "name": "load_agenda",
+      "filePath": "core/src/agenda.rs",
+      "lineRange": [
+        21,
+        33
+      ],
+      "summary": "Funzione load_agenda implementata in agenda.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/agenda.rs:save_agenda",
+      "type": "function",
+      "name": "save_agenda",
+      "filePath": "core/src/agenda.rs",
+      "lineRange": [
+        35,
+        45
+      ],
+      "summary": "Funzione save_agenda implementata in agenda.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:core/src/candle_guard.rs",
+      "type": "file",
+      "name": "candle_guard.rs",
+      "filePath": "core/src/candle_guard.rs",
+      "summary": "File di codice sorgente contenente componenti di candle_guard.rs.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:core/src/candle_guard.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "core/src/candle_guard.rs",
+      "lineRange": [
+        37,
+        61
+      ],
+      "summary": "Funzione new implementata in candle_guard.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/candle_guard.rs:classify_tool_action",
+      "type": "function",
+      "name": "classify_tool_action",
+      "filePath": "core/src/candle_guard.rs",
+      "lineRange": [
+        63,
+        184
+      ],
+      "summary": "Funzione classify_tool_action implementata in candle_guard.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/candle_guard.rs:evaluate_action",
+      "type": "function",
+      "name": "evaluate_action",
+      "filePath": "core/src/candle_guard.rs",
+      "lineRange": [
+        186,
+        451
+      ],
+      "summary": "Funzione evaluate_action implementata in candle_guard.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:core/src/candle_guard.rs:log_and_return",
+      "type": "function",
+      "name": "log_and_return",
+      "filePath": "core/src/candle_guard.rs",
+      "lineRange": [
+        453,
+        476
+      ],
+      "summary": "Funzione log_and_return implementata in candle_guard.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/candle_guard.rs:GuardVerdict",
+      "type": "class",
+      "name": "GuardVerdict",
+      "filePath": "core/src/candle_guard.rs",
+      "lineRange": [
+        12,
+        23
+      ],
+      "summary": "Classe o Struttura GuardVerdict definita in candle_guard.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/candle_guard.rs:CandleGuard",
+      "type": "class",
+      "name": "CandleGuard",
+      "filePath": "core/src/candle_guard.rs",
+      "lineRange": [
+        25,
+        28
+      ],
+      "summary": "Classe o Struttura CandleGuard definita in candle_guard.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:core/src/emotion.rs",
+      "type": "file",
+      "name": "emotion.rs",
+      "filePath": "core/src/emotion.rs",
+      "summary": "Definisce lo stato emotivo del kernel tramite il modello PAD (Pleasure, Arousal, Dominance) e ne gestisce il decadimento.",
+      "tags": [
+        "emotion-model",
+        "pad-state",
+        "kernel-state"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/emotion.rs:decay",
+      "type": "function",
+      "name": "decay",
+      "filePath": "core/src/emotion.rs",
+      "lineRange": [
+        21,
+        26
+      ],
+      "summary": "Applica il decadimento naturale nel tempo allo stato emotivo PAD, riportando i valori verso lo zero.",
+      "tags": [
+        "decay-process",
+        "emotional-decay",
+        "pad-update"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/emotion.rs:PadState",
+      "type": "class",
+      "name": "PadState",
+      "filePath": "core/src/emotion.rs",
+      "lineRange": [
+        4,
+        8
+      ],
+      "summary": "Rappresenta lo stato emotivo secondo il modello Piacere, Eccitazione, Dominanza (PAD).",
+      "tags": [
+        "data-structure",
+        "pad-model",
+        "emotional-state"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/emotion.rs:KernelState",
+      "type": "class",
+      "name": "KernelState",
+      "filePath": "core/src/emotion.rs",
+      "lineRange": [
+        30,
+        33
+      ],
+      "summary": "Racchiude lo stato emotivo e il focus corrente dell'agente nel kernel.",
+      "tags": [
+        "kernel-state",
+        "focus-management",
+        "data-structure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/emotion.rs:EmotionUpdate",
+      "type": "class",
+      "name": "EmotionUpdate",
+      "filePath": "core/src/emotion.rs",
+      "lineRange": [
+        36,
+        40
+      ],
+      "summary": "Payload utilizzato per aggiornare lo stato emotivo PAD tramite richieste API.",
+      "tags": [
+        "dto",
+        "api-payload",
+        "emotion-update"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/emotion.rs:FocusUpdate",
+      "type": "class",
+      "name": "FocusUpdate",
+      "filePath": "core/src/emotion.rs",
+      "lineRange": [
+        43,
+        45
+      ],
+      "summary": "Payload utilizzato per aggiornare il focus dell'attenzione dell'agente.",
+      "tags": [
+        "dto",
+        "api-payload",
+        "focus-update"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:core/src/main.rs",
+      "type": "file",
+      "name": "main.rs",
+      "filePath": "core/src/main.rs",
+      "summary": "Inizializza i servizi, avvia i thread di decadimento per lo stato emotivo e il grafo, e avvia il server web Axum sulla porta 5005.",
+      "tags": [
+        "entry-point",
+        "server-bootstrap",
+        "initialization",
+        "background-jobs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/main.rs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "core/src/main.rs",
+      "lineRange": [
+        29,
+        132
+      ],
+      "summary": "Punto di ingresso principale dell'applicazione Rust. Configura il logging, istanzia i moduli di memoria e tempo, spawna i task di decadimento e avvia Axum.",
+      "tags": [
+        "entry-point",
+        "bootstrap",
+        "async-runtime"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:core/src/task_queue.rs",
+      "type": "file",
+      "name": "task_queue.rs",
+      "filePath": "core/src/task_queue.rs",
+      "summary": "File di codice sorgente contenente componenti di task_queue.rs.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:get_queue_file_path",
+      "type": "function",
+      "name": "get_queue_file_path",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        27,
+        41
+      ],
+      "summary": "Funzione get_queue_file_path implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:task_to_toon",
+      "type": "function",
+      "name": "task_to_toon",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        47,
+        68
+      ],
+      "summary": "Funzione task_to_toon implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:toon_to_task",
+      "type": "function",
+      "name": "toon_to_task",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        70,
+        116
+      ],
+      "summary": "Funzione toon_to_task implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:load_queue",
+      "type": "function",
+      "name": "load_queue",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        118,
+        139
+      ],
+      "summary": "Funzione load_queue implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:save_queue",
+      "type": "function",
+      "name": "save_queue",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        141,
+        151
+      ],
+      "summary": "Funzione save_queue implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:add_task",
+      "type": "function",
+      "name": "add_task",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        153,
+        175
+      ],
+      "summary": "Funzione add_task implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:set_in_progress",
+      "type": "function",
+      "name": "set_in_progress",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        177,
+        203
+      ],
+      "summary": "Funzione set_in_progress implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:complete_task",
+      "type": "function",
+      "name": "complete_task",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        205,
+        226
+      ],
+      "summary": "Funzione complete_task implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:block_task",
+      "type": "function",
+      "name": "block_task",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        228,
+        247
+      ],
+      "summary": "Funzione block_task implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:reset_task_to_pending",
+      "type": "function",
+      "name": "reset_task_to_pending",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        249,
+        267
+      ],
+      "summary": "Funzione reset_task_to_pending implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/task_queue.rs:get_tasks_stats",
+      "type": "function",
+      "name": "get_tasks_stats",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        269,
+        290
+      ],
+      "summary": "Funzione get_tasks_stats implementata in task_queue.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/task_queue.rs:Task",
+      "type": "class",
+      "name": "Task",
+      "filePath": "core/src/task_queue.rs",
+      "lineRange": [
+        15,
+        25
+      ],
+      "summary": "Classe o Struttura Task definita in task_queue.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:core/src/time_clock.rs",
+      "type": "file",
+      "name": "time_clock.rs",
+      "filePath": "core/src/time_clock.rs",
+      "summary": "Gestisce la percezione temporale del kernel, la fase circadiana, il monitoraggio delle azioni utente e la formattazione dei tempi relativi.",
+      "tags": [
+        "time-tracking",
+        "circadian-clock",
+        "temporal-context",
+        "duration-formatter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/time_clock.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        27,
+        47
+      ],
+      "summary": "Crea o carica da file lo stato temporale corrente all'avvio.",
+      "tags": [
+        "constructor",
+        "file-io",
+        "initialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/time_clock.rs:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        49,
+        58
+      ],
+      "summary": "Salva lo stato temporale in formato JSON per garantirne la persistenza.",
+      "tags": [
+        "file-io",
+        "serialization",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/time_clock.rs:update_interaction",
+      "type": "function",
+      "name": "update_interaction",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        60,
+        65
+      ],
+      "summary": "Aggiorna l'orario dell'ultima interazione con il Guardiano all'ora corrente.",
+      "tags": [
+        "time-tracking",
+        "interaction-clock",
+        "state-mutation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/time_clock.rs:start_action",
+      "type": "function",
+      "name": "start_action",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        67,
+        85
+      ],
+      "summary": "Avvia il tracciamento di una specifica azione utente, registrandone l'orario.",
+      "tags": [
+        "action-tracking",
+        "time-tracking",
+        "state-mutation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/time_clock.rs:complete_action",
+      "type": "function",
+      "name": "complete_action",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        87,
+        97
+      ],
+      "summary": "Segna come completata un'azione in corso, impostando l'orario di fine.",
+      "tags": [
+        "action-tracking",
+        "time-tracking",
+        "state-mutation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/time_clock.rs:get_circadian_phase",
+      "type": "function",
+      "name": "get_circadian_phase",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        99,
+        107
+      ],
+      "summary": "Determina la fase circadiana (Mattina, Pomeriggio, Sera, Notte) in base all'ora locale.",
+      "tags": [
+        "circadian-phase",
+        "time-analysis",
+        "biological-clock"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/time_clock.rs:get_temporal_context",
+      "type": "function",
+      "name": "get_temporal_context",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        109,
+        159
+      ],
+      "summary": "Costruisce una descrizione dettagliata in linguaggio naturale del contesto temporale (fase circadiana, tempo trascorso).",
+      "tags": [
+        "context-generation",
+        "natural-language",
+        "temporal-context"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/time_clock.rs:format_duration",
+      "type": "function",
+      "name": "format_duration",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        162,
+        190
+      ],
+      "summary": "Formatta una durata in secondi o minuti in una stringa leggibile in lingua italiana.",
+      "tags": [
+        "duration-formatter",
+        "text-utility",
+        "helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:core/src/time_clock.rs:ActionRecord",
+      "type": "class",
+      "name": "ActionRecord",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        9,
+        14
+      ],
+      "summary": "Struttura dati che rappresenta il record di un'azione tracciata, con orario di inizio, fine e stato.",
+      "tags": [
+        "data-structure",
+        "action-record",
+        "temporal-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/time_clock.rs:TimeState",
+      "type": "class",
+      "name": "TimeState",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        17,
+        20
+      ],
+      "summary": "Struttura che mantiene l'ultimo orario di interazione e l'elenco delle azioni recenti.",
+      "tags": [
+        "data-structure",
+        "temporal-state",
+        "time-tracking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/time_clock.rs:TimeClock",
+      "type": "class",
+      "name": "TimeClock",
+      "filePath": "core/src/time_clock.rs",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "Componente principale per la percezione temporale, che gestisce lo stato del clock e la fase circadiana.",
+      "tags": [
+        "time-manager",
+        "state-management",
+        "circadian-system"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:core/src/cognitive_graph.rs",
+      "type": "file",
+      "name": "cognitive_graph.rs",
+      "filePath": "core/src/cognitive_graph.rs",
+      "summary": "Gestisce il grafo cognitivo in memoria, consentendo l'attivazione dei nodi in base al testo e il decadimento temporale dei pesi.",
+      "tags": [
+        "cognitive-graph",
+        "memory-structure",
+        "state-management",
+        "activation-decay"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/cognitive_graph.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        37,
+        81
+      ],
+      "summary": "Inizializza un nuovo grafo cognitivo caricando i dati esistenti da file o creandone uno vuoto.",
+      "tags": [
+        "constructor",
+        "initialization",
+        "file-io"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/cognitive_graph.rs:save",
+      "type": "function",
+      "name": "save",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        83,
+        92
+      ],
+      "summary": "Salva lo stato corrente del grafo cognitivo su un file JSON in modo formattato.",
+      "tags": [
+        "file-io",
+        "serialization",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/cognitive_graph.rs:add_node",
+      "type": "function",
+      "name": "add_node",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        95,
+        109
+      ],
+      "summary": "Aggiunge un nuovo nodo al grafo se non è già presente, e salva lo stato su disco.",
+      "tags": [
+        "graph-mutation",
+        "node-creation",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/cognitive_graph.rs:add_edge",
+      "type": "function",
+      "name": "add_edge",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        112,
+        125
+      ],
+      "summary": "Aggiunge un arco tra due nodi esistenti del grafo e salva lo stato su disco.",
+      "tags": [
+        "graph-mutation",
+        "edge-creation",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/cognitive_graph.rs:activate",
+      "type": "function",
+      "name": "activate",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        127,
+        144
+      ],
+      "summary": "Incrementa il peso di un nodo e propaga parzialmente l'attivazione ai nodi adiacenti tramite gli archi.",
+      "tags": [
+        "activation-propagation",
+        "weight-update",
+        "graph-traversal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/cognitive_graph.rs:decay_all",
+      "type": "function",
+      "name": "decay_all",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        146,
+        155
+      ],
+      "summary": "Applica il decadimento temporale a tutti i nodi del grafo, riducendone i pesi in base al fattore di decadimento.",
+      "tags": [
+        "decay-process",
+        "weight-update",
+        "temporal-decay"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/cognitive_graph.rs:parse_and_activate",
+      "type": "function",
+      "name": "parse_and_activate",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        157,
+        175
+      ],
+      "summary": "Analizza un testo per identificare parole chiave e attiva i nodi corrispondenti nel grafo.",
+      "tags": [
+        "text-parsing",
+        "keyword-activation",
+        "cognitive-processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/cognitive_graph.rs:get_graph_context",
+      "type": "function",
+      "name": "get_graph_context",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        177,
+        202
+      ],
+      "summary": "Genera una rappresentazione testuale dello stato di attivazione corrente del grafo per il contesto dell'LLM.",
+      "tags": [
+        "context-generation",
+        "graph-state",
+        "llm-helper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:core/src/cognitive_graph.rs:Node",
+      "type": "class",
+      "name": "Node",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "Rappresenta un singolo nodo nel grafo cognitivo, con un peso e parametri di decadimento.",
+      "tags": [
+        "data-structure",
+        "graph-node",
+        "cognitive-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/cognitive_graph.rs:Edge",
+      "type": "class",
+      "name": "Edge",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        19,
+        24
+      ],
+      "summary": "Rappresenta un arco orientato tra due nodi del grafo cognitivo, con un peso associato.",
+      "tags": [
+        "data-structure",
+        "graph-edge",
+        "relationship"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/cognitive_graph.rs:GraphData",
+      "type": "class",
+      "name": "GraphData",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        27,
+        30
+      ],
+      "summary": "Struttura dati contenitore per serializzare e deserializzare l'insieme di nodi e archi del grafo.",
+      "tags": [
+        "serialization",
+        "data-structure",
+        "graph-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/cognitive_graph.rs:CognitiveGraph",
+      "type": "class",
+      "name": "CognitiveGraph",
+      "filePath": "core/src/cognitive_graph.rs",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "Struttura principale che incapsula i dati del grafo e fornisce i metodi per manipolarli in thread-safety.",
+      "tags": [
+        "graph-manager",
+        "state-management",
+        "thread-safety"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:core/src/config.rs",
+      "type": "file",
+      "name": "config.rs",
+      "filePath": "core/src/config.rs",
+      "summary": "Gestisce la configurazione del sistema caricando le variabili da file .env e fornendo helper per LLM, Telegram e impostazioni del demone.",
+      "tags": [
+        "configuration",
+        "environment-variables",
+        "system-settings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/config.rs:load_env_file",
+      "type": "function",
+      "name": "load_env_file",
+      "filePath": "core/src/config.rs",
+      "lineRange": [
+        7,
+        27
+      ],
+      "summary": "Carica e analizza un file di ambiente personalizzato popolando una mappa chiave-valore.",
+      "tags": [
+        "file-parser",
+        "environment-loader",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/config.rs:get_llm_config",
+      "type": "function",
+      "name": "get_llm_config",
+      "filePath": "core/src/config.rs",
+      "lineRange": [
+        29,
+        59
+      ],
+      "summary": "Recupera la configurazione dell'LLM (provider, modello, chiavi API) leggendo da file locali di ambiente.",
+      "tags": [
+        "llm-configuration",
+        "api-keys",
+        "settings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/config.rs:load_identity_file",
+      "type": "function",
+      "name": "load_identity_file",
+      "filePath": "core/src/config.rs",
+      "lineRange": [
+        61,
+        96
+      ],
+      "summary": "Carica il file di identità o risveglio dell'agente, restituendo una descrizione di fallback se non trovato.",
+      "tags": [
+        "identity-loader",
+        "prompt-engineering",
+        "system-prompt"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/config.rs:get_daemon_config",
+      "type": "function",
+      "name": "get_daemon_config",
+      "filePath": "core/src/config.rs",
+      "lineRange": [
+        98,
+        114
+      ],
+      "summary": "Fornisce la configurazione del demone di notifica, inclusa la porta e l'host di esecuzione.",
+      "tags": [
+        "daemon-settings",
+        "network-config",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/config.rs:get_telegram_token",
+      "type": "function",
+      "name": "get_telegram_token",
+      "filePath": "core/src/config.rs",
+      "lineRange": [
+        116,
+        130
+      ],
+      "summary": "Estrae il token del bot Telegram necessario per l'invio delle notifiche e l'interazione.",
+      "tags": [
+        "telegram-token",
+        "credentials",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/config.rs:get_alfonso_chat_id",
+      "type": "function",
+      "name": "get_alfonso_chat_id",
+      "filePath": "core/src/config.rs",
+      "lineRange": [
+        132,
+        148
+      ],
+      "summary": "Recupera l'identificativo della chat del Guardiano (Alfonso) per instradare correttamente i messaggi.",
+      "tags": [
+        "chat-id",
+        "routing",
+        "guardian-config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:core/src/handlers.rs",
+      "type": "file",
+      "name": "handlers.rs",
+      "filePath": "core/src/handlers.rs",
+      "summary": "Contiene i gestori HTTP Axum per il controllo dello stato emotivo, focus, interazione con LLM, salvataggio memorie e integrazione con Telegram.",
+      "tags": [
+        "api-handlers",
+        "http-server",
+        "llm-integration",
+        "telegram-bot",
+        "axum"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:core/src/handlers.rs:load_session_history",
+      "type": "function",
+      "name": "load_session_history",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        58,
+        68
+      ],
+      "summary": "Funzione load_session_history implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:save_session_history",
+      "type": "function",
+      "name": "save_session_history",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        70,
+        83
+      ],
+      "summary": "Funzione save_session_history implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:append_to_daily_diary",
+      "type": "function",
+      "name": "append_to_daily_diary",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        85,
+        138
+      ],
+      "summary": "Funzione append_to_daily_diary implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/handlers.rs:update_session_state_file",
+      "type": "function",
+      "name": "update_session_state_file",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        140,
+        199
+      ],
+      "summary": "Funzione update_session_state_file implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/handlers.rs:parse_tool_call",
+      "type": "function",
+      "name": "parse_tool_call",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        202,
+        311
+      ],
+      "summary": "Funzione parse_tool_call implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/handlers.rs:get_status",
+      "type": "function",
+      "name": "get_status",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        313,
+        376
+      ],
+      "summary": "Restituisce lo stato globale del kernel: PAD, focus, azioni recenti, fase circadiana e nodi/archi del grafo.",
+      "tags": [
+        "api-endpoint",
+        "status-checker",
+        "state-retrieval"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/handlers.rs:update_emotion",
+      "type": "function",
+      "name": "update_emotion",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        378,
+        397
+      ],
+      "summary": "Aggiorna i valori dello stato emotivo PAD forzandoli entro i limiti validi.",
+      "tags": [
+        "api-endpoint",
+        "emotion-updater",
+        "state-mutation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:update_focus",
+      "type": "function",
+      "name": "update_focus",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        399,
+        407
+      ],
+      "summary": "Aggiorna il contesto di focus temporaneo dell'agente.",
+      "tags": [
+        "api-endpoint",
+        "focus-updater",
+        "state-mutation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_ingest",
+      "type": "function",
+      "name": "handle_ingest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        409,
+        455
+      ],
+      "summary": "Inserisce un nuovo dato/memoria, arricchendolo con i metadati emotivi e temporali correnti.",
+      "tags": [
+        "api-endpoint",
+        "data-ingestion",
+        "memory-storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_action_start",
+      "type": "function",
+      "name": "handle_action_start",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        468,
+        475
+      ],
+      "summary": "Registra l'inizio di un'azione nel time clock per monitorare i tempi di esecuzione.",
+      "tags": [
+        "api-endpoint",
+        "action-tracking",
+        "time-clock"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_action_complete",
+      "type": "function",
+      "name": "handle_action_complete",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        477,
+        484
+      ],
+      "summary": "Registra il completamento di un'azione attiva nel time clock.",
+      "tags": [
+        "api-endpoint",
+        "action-tracking",
+        "time-clock"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_graph_activate",
+      "type": "function",
+      "name": "handle_graph_activate",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        486,
+        494
+      ],
+      "summary": "Attiva manualmente un nodo del grafo cognitivo con un peso specificato.",
+      "tags": [
+        "api-endpoint",
+        "graph-activation",
+        "weight-injection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_interact",
+      "type": "function",
+      "name": "handle_interact",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        501,
+        510
+      ],
+      "summary": "Registra un'interazione, aggiorna l'orario e attiva le parole chiave corrispondenti nel grafo.",
+      "tags": [
+        "api-endpoint",
+        "interaction",
+        "keyword-trigger"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_think",
+      "type": "function",
+      "name": "handle_think",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        512,
+        815
+      ],
+      "summary": "Endpoint di ragionamento principale che combina identità, memorie, ora, stato emotivo e grafo per generare una risposta via LLM.",
+      "tags": [
+        "api-endpoint",
+        "reasoning-loop",
+        "llm-orchestration",
+        "context-assembly"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_health",
+      "type": "function",
+      "name": "handle_health",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        817,
+        822
+      ],
+      "summary": "Restituisce un semplice stato di salute HTTP 200 per verificare il corretto funzionamento del servizio.",
+      "tags": [
+        "api-endpoint",
+        "healthcheck",
+        "system-status"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_memory_stats",
+      "type": "function",
+      "name": "handle_memory_stats",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        824,
+        835
+      ],
+      "summary": "Recupera le statistiche di memorizzazione dal server di memoria esterno.",
+      "tags": [
+        "api-endpoint",
+        "memory-server",
+        "stats-viewer"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_timeline",
+      "type": "function",
+      "name": "handle_timeline",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        837,
+        855
+      ],
+      "summary": "Recupera la timeline delle memorie memorizzate dal server di memoria con ordinamento temporale.",
+      "tags": [
+        "api-endpoint",
+        "timeline-retrieval",
+        "memory-server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:get_env_openrouter_key",
+      "type": "function",
+      "name": "get_env_openrouter_key",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        857,
+        871
+      ],
+      "summary": "Funzione get_env_openrouter_key implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:get_openrouter_usage",
+      "type": "function",
+      "name": "get_openrouter_usage",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        873,
+        911
+      ],
+      "summary": "Esegue la query sull'utilizzo del credito e dei token delle chiavi API di OpenRouter.",
+      "tags": [
+        "economy",
+        "token-usage",
+        "openrouter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_usage",
+      "type": "function",
+      "name": "handle_usage",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        913,
+        921
+      ],
+      "summary": "Endpoint mock o stub per recuperare i dati sull'utilizzo dei token.",
+      "tags": [
+        "api-endpoint",
+        "token-usage",
+        "metrics"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_logs",
+      "type": "function",
+      "name": "handle_logs",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        924,
+        926
+      ],
+      "summary": "Endpoint che restituisce i log di esecuzione del kernel in tempo reale.",
+      "tags": [
+        "api-endpoint",
+        "log-viewer",
+        "diagnostics"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_telegram_send",
+      "type": "function",
+      "name": "handle_telegram_send",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        928,
+        974
+      ],
+      "summary": "Invia un messaggio Telegram al Guardiano memorizzando la transazione nel server di memoria.",
+      "tags": [
+        "api-endpoint",
+        "telegram-sender",
+        "notification-system"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/handlers.rs:call_llm_inner",
+      "type": "function",
+      "name": "call_llm_inner",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        976,
+        1097
+      ],
+      "summary": "Funzione call_llm_inner implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/handlers.rs:call_llm",
+      "type": "function",
+      "name": "call_llm",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1099,
+        1131
+      ],
+      "summary": "Effettua la chiamata HTTP asincrona all'API dell'LLM (OpenRouter o Gemini) con gestione delle risposte.",
+      "tags": [
+        "llm-client",
+        "network-request",
+        "text-generation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:core/src/handlers.rs:get_dashboard",
+      "type": "function",
+      "name": "get_dashboard",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1175,
+        1184
+      ],
+      "summary": "Funzione get_dashboard implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:get_public_chat",
+      "type": "function",
+      "name": "get_public_chat",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1186,
+        1194
+      ],
+      "summary": "Funzione get_public_chat implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_chat_post",
+      "type": "function",
+      "name": "handle_chat_post",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1196,
+        1224
+      ],
+      "summary": "Funzione handle_chat_post implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:get_tasks",
+      "type": "function",
+      "name": "get_tasks",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1226,
+        1229
+      ],
+      "summary": "Funzione get_tasks implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:create_task",
+      "type": "function",
+      "name": "create_task",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1231,
+        1241
+      ],
+      "summary": "Funzione create_task implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:patch_task",
+      "type": "function",
+      "name": "patch_task",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1243,
+        1259
+      ],
+      "summary": "Funzione patch_task implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:get_agenda",
+      "type": "function",
+      "name": "get_agenda",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1261,
+        1264
+      ],
+      "summary": "Funzione get_agenda implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:save_agenda",
+      "type": "function",
+      "name": "save_agenda",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1266,
+        1271
+      ],
+      "summary": "Funzione save_agenda implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_checkup",
+      "type": "function",
+      "name": "handle_checkup",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1273,
+        1310
+      ],
+      "summary": "Funzione handle_checkup implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_settings_get",
+      "type": "function",
+      "name": "handle_settings_get",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1312,
+        1327
+      ],
+      "summary": "Funzione handle_settings_get implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:get_env_key",
+      "type": "function",
+      "name": "get_env_key",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1329,
+        1344
+      ],
+      "summary": "Funzione get_env_key implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_settings_post",
+      "type": "function",
+      "name": "handle_settings_post",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1346,
+        1370
+      ],
+      "summary": "Funzione handle_settings_post implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:save_env_variables",
+      "type": "function",
+      "name": "save_env_variables",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1372,
+        1416
+      ],
+      "summary": "Funzione save_env_variables implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_logs_api",
+      "type": "function",
+      "name": "handle_logs_api",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1418,
+        1438
+      ],
+      "summary": "Funzione handle_logs_api implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_usage_api",
+      "type": "function",
+      "name": "handle_usage_api",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1440,
+        1442
+      ],
+      "summary": "Esegue la query sull'utilizzo del credito e dei token delle chiavi API di OpenRouter.",
+      "tags": [
+        "economy",
+        "token-usage",
+        "openrouter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_grafo",
+      "type": "function",
+      "name": "handle_grafo",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1444,
+        1464
+      ],
+      "summary": "Funzione handle_grafo implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_resources",
+      "type": "function",
+      "name": "handle_resources",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1466,
+        1491
+      ],
+      "summary": "Scansiona e restituisce l'elenco delle estensioni e delle skill attive nel sistema.",
+      "tags": [
+        "extensions",
+        "skills",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:get_cr_paths",
+      "type": "function",
+      "name": "get_cr_paths",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1511,
+        1531
+      ],
+      "summary": "Funzione get_cr_paths implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:load_cr_messages",
+      "type": "function",
+      "name": "load_cr_messages",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1533,
+        1548
+      ],
+      "summary": "Funzione load_cr_messages implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:load_cr_state",
+      "type": "function",
+      "name": "load_cr_state",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1558,
+        1571
+      ],
+      "summary": "Funzione load_cr_state implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:trigger_silicea_turn",
+      "type": "function",
+      "name": "trigger_silicea_turn",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1580,
+        1679
+      ],
+      "summary": "Funzione trigger_silicea_turn implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_common_room_get",
+      "type": "function",
+      "name": "handle_common_room_get",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1681,
+        1703
+      ],
+      "summary": "Gestisce lo stato, i messaggi o le API relative alla Stanza Comune (Common Room).",
+      "tags": [
+        "common-room",
+        "multi-agent",
+        "api-endpoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_common_room_post",
+      "type": "function",
+      "name": "handle_common_room_post",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1714,
+        1903
+      ],
+      "summary": "Gestisce lo stato, i messaggi o le API relative alla Stanza Comune (Common Room).",
+      "tags": [
+        "common-room",
+        "multi-agent",
+        "api-endpoint"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_ocr_flyer_options",
+      "type": "function",
+      "name": "handle_ocr_flyer_options",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1910,
+        1916
+      ],
+      "summary": "Funzione handle_ocr_flyer_options implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/handlers.rs:handle_ocr_flyer",
+      "type": "function",
+      "name": "handle_ocr_flyer",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1918,
+        2088
+      ],
+      "summary": "Funzione handle_ocr_flyer implementata in handlers.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:core/src/handlers.rs:ChatMessage",
+      "type": "class",
+      "name": "ChatMessage",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        27,
+        30
+      ],
+      "summary": "Struttura per rappresentare un singolo messaggio di chat per lo storico LLM.",
+      "tags": [
+        "data-structure",
+        "chat-message",
+        "llm-history"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:ThinkRequest",
+      "type": "class",
+      "name": "ThinkRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        34,
+        42
+      ],
+      "summary": "Richiesta per l'endpoint di pensiero, contenente la domanda, il contesto extra e lo storico.",
+      "tags": [
+        "dto",
+        "api-request",
+        "think-payload"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:ThinkResponse",
+      "type": "class",
+      "name": "ThinkResponse",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        45,
+        49
+      ],
+      "summary": "Risposta dell'endpoint di pensiero, che include lo stato e la risposta testuale.",
+      "tags": [
+        "dto",
+        "api-response",
+        "think-payload"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:TimelineQuery",
+      "type": "class",
+      "name": "TimelineQuery",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        52,
+        54
+      ],
+      "summary": "Parametri di query per filtrare i messaggi e la cronologia della timeline.",
+      "tags": [
+        "dto",
+        "query-parameters",
+        "timeline"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:ActionRequest",
+      "type": "class",
+      "name": "ActionRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        458,
+        460
+      ],
+      "summary": "Payload per avviare o completare un'azione tracciata dal time clock.",
+      "tags": [
+        "dto",
+        "action-tracking",
+        "time-clock"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:GraphActivateRequest",
+      "type": "class",
+      "name": "GraphActivateRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        463,
+        466
+      ],
+      "summary": "Payload per richiedere l'attivazione manuale di un nodo nel grafo cognitivo.",
+      "tags": [
+        "dto",
+        "graph-activation",
+        "api-payload"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:InteractRequest",
+      "type": "class",
+      "name": "InteractRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        497,
+        499
+      ],
+      "summary": "Payload per l'interazione testuale con l'agente.",
+      "tags": [
+        "dto",
+        "api-payload",
+        "interaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:ChatPostRequest",
+      "type": "class",
+      "name": "ChatPostRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1136,
+        1138
+      ],
+      "summary": "Classe o Struttura ChatPostRequest definita in handlers.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:ChatPostResponse",
+      "type": "class",
+      "name": "ChatPostResponse",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1141,
+        1143
+      ],
+      "summary": "Classe o Struttura ChatPostResponse definita in handlers.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:CreateTaskRequest",
+      "type": "class",
+      "name": "CreateTaskRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1146,
+        1150
+      ],
+      "summary": "Classe o Struttura CreateTaskRequest definita in handlers.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:PatchTaskRequest",
+      "type": "class",
+      "name": "PatchTaskRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1153,
+        1156
+      ],
+      "summary": "Classe o Struttura PatchTaskRequest definita in handlers.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:SaveAgendaRequest",
+      "type": "class",
+      "name": "SaveAgendaRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1159,
+        1161
+      ],
+      "summary": "Classe o Struttura SaveAgendaRequest definita in handlers.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:SettingsPostRequest",
+      "type": "class",
+      "name": "SettingsPostRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1164,
+        1168
+      ],
+      "summary": "Classe o Struttura SettingsPostRequest definita in handlers.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:LogsQuery",
+      "type": "class",
+      "name": "LogsQuery",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1171,
+        1173
+      ],
+      "summary": "Classe o Struttura LogsQuery definita in handlers.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:CommonRoomMessage",
+      "type": "class",
+      "name": "CommonRoomMessage",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1494,
+        1500
+      ],
+      "summary": "Gestisce lo stato, i messaggi o le API relative alla Stanza Comune (Common Room).",
+      "tags": [
+        "common-room",
+        "multi-agent",
+        "api-endpoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:CommonRoomState",
+      "type": "class",
+      "name": "CommonRoomState",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1503,
+        1509
+      ],
+      "summary": "Gestisce lo stato, i messaggi o le API relative alla Stanza Comune (Common Room).",
+      "tags": [
+        "common-room",
+        "multi-agent",
+        "api-endpoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:CommonRoomPostRequest",
+      "type": "class",
+      "name": "CommonRoomPostRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1706,
+        1712
+      ],
+      "summary": "Gestisce lo stato, i messaggi o le API relative alla Stanza Comune (Common Room).",
+      "tags": [
+        "common-room",
+        "multi-agent",
+        "api-endpoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/handlers.rs:OcrFlyerRequest",
+      "type": "class",
+      "name": "OcrFlyerRequest",
+      "filePath": "core/src/handlers.rs",
+      "lineRange": [
+        1906,
+        1908
+      ],
+      "summary": "Classe o Struttura OcrFlyerRequest definita in handlers.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:core/src/tools.rs",
+      "type": "file",
+      "name": "tools.rs",
+      "filePath": "core/src/tools.rs",
+      "summary": "File di codice sorgente contenente componenti di tools.rs.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:core/src/tools.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "core/src/tools.rs",
+      "lineRange": [
+        24,
+        50
+      ],
+      "summary": "Funzione new implementata in tools.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/tools.rs:execute_tool",
+      "type": "function",
+      "name": "execute_tool",
+      "filePath": "core/src/tools.rs",
+      "lineRange": [
+        52,
+        419
+      ],
+      "summary": "Funzione execute_tool implementata in tools.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:core/src/tools.rs:resolve_safe_path",
+      "type": "function",
+      "name": "resolve_safe_path",
+      "filePath": "core/src/tools.rs",
+      "lineRange": [
+        421,
+        459
+      ],
+      "summary": "Funzione resolve_safe_path implementata in tools.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/tools.rs:save_env_variables_file",
+      "type": "function",
+      "name": "save_env_variables_file",
+      "filePath": "core/src/tools.rs",
+      "lineRange": [
+        462,
+        507
+      ],
+      "summary": "Funzione save_env_variables_file implementata in tools.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/tools.rs:ToolExecutor",
+      "type": "class",
+      "name": "ToolExecutor",
+      "filePath": "core/src/tools.rs",
+      "lineRange": [
+        12,
+        15
+      ],
+      "summary": "Classe o Struttura ToolExecutor definita in tools.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/fingerprints.json",
+      "type": "config",
+      "name": "fingerprints.json",
+      "filePath": ".understand-anything/fingerprints.json",
+      "summary": "File di configurazione contenente le impronte digitali (hash) dei file di progetto per tracciare le modifiche e ottimizzare le analisi incrementali.",
+      "tags": [
+        "configurazione",
+        "caching",
+        "metadati",
+        "impronte-digitali"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:.understand-anything/knowledge-graph.json",
+      "type": "config",
+      "name": "knowledge-graph.json",
+      "filePath": ".understand-anything/knowledge-graph.json",
+      "summary": "Il grafo della conoscenza completo del progetto, che mappa le relazioni, le dipendenze e i metadati di tutti i file e i componenti analizzati.",
+      "tags": [
+        "grafo-conoscenza",
+        "metadati",
+        "documentazione-architetturale",
+        "configurazione"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:.understand-anything/meta.json",
+      "type": "config",
+      "name": "meta.json",
+      "filePath": ".understand-anything/meta.json",
+      "summary": "Metadati di sistema che registrano lo stato dell'ultima analisi del codice, inclusi il commit Git corrente e i dettagli della versione.",
+      "tags": [
+        "metadati",
+        "configurazione",
+        "stato-analisi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "Cargo.toml",
+      "summary": "File di configurazione del workspace Cargo che definisce i moduli Rust del Kernel di Silicea.",
+      "tags": [
+        "configuration",
+        "rust",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:DIARIO_LAVORI.md",
+      "type": "document",
+      "name": "DIARIO_LAVORI.md",
+      "filePath": "DIARIO_LAVORI.md",
+      "summary": "Diario cronologico dettagliato dello sviluppo del Kernel di Silicea, contenente le modifiche architetturali, i bug risolti e la roadmap.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "development"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Documentazione relativa a README.md.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:build_kernel.bat",
+      "type": "file",
+      "name": "build_kernel.bat",
+      "filePath": "build_kernel.bat",
+      "summary": "Script batch Windows per impostare il PATH dei compilatori GNU e compilare il kernel Rust.",
+      "tags": [
+        "script",
+        "build-system",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:run_kernel.bat",
+      "type": "file",
+      "name": "run_kernel.bat",
+      "filePath": "run_kernel.bat",
+      "summary": "Script batch Windows per configurare le variabili d'ambiente di logging ed avviare l'eseguibile del kernel Rust salvando i log.",
+      "tags": [
+        "script",
+        "deployment",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:data/cognitive_graph.json",
+      "type": "config",
+      "name": "cognitive_graph.json",
+      "filePath": "data/cognitive_graph.json",
+      "summary": "Configurazione che definisce i nodi e gli archi del grafo cognitivo iniziale di Silicea, incluse entità, strumenti e concetti chiave.",
+      "tags": [
+        "configuration",
+        "cognitive-graph",
+        "database",
+        "knowledge-base"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:data/session_history.json",
+      "type": "config",
+      "name": "session_history.json",
+      "filePath": "data/session_history.json",
+      "summary": "File di configurazione del modulo session_history.json.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:data/telegram_state.json",
+      "type": "config",
+      "name": "telegram_state.json",
+      "filePath": "data/telegram_state.json",
+      "summary": "Mantiene lo stato persistente del bot Telegram, registrando l'ID dell'ultimo aggiornamento elaborato.",
+      "tags": [
+        "configuration",
+        "telegram",
+        "state-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:data/time_state.json",
+      "type": "config",
+      "name": "time_state.json",
+      "filePath": "data/time_state.json",
+      "summary": "Memorizza lo stato temporale di Silicea, compreso l'orario dell'ultima interazione e la cronologia delle azioni recenti.",
+      "tags": [
+        "configuration",
+        "time-tracking",
+        "state-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.understandignore",
+      "type": "config",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "File di configurazione che definisce i pattern di file e directory da ignorare durante l'indicizzazione e l'analisi semantica del codice.",
+      "tags": [
+        "configurazione",
+        "ignore",
+        "analisi",
+        "esclusioni"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:capture_test.py",
+      "type": "file",
+      "name": "capture_test.py",
+      "filePath": "capture_test.py",
+      "summary": "File di codice sorgente contenente componenti di capture_test.py.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:capture_test.py:capture_test",
+      "type": "function",
+      "name": "capture_test",
+      "filePath": "capture_test.py",
+      "lineRange": [
+        6,
+        86
+      ],
+      "summary": "Funzione capture_test implementata in capture_test.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:core/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "core/Cargo.toml",
+      "summary": "File di configurazione di Cargo per il crate core del sistema, contenente metadati e dipendenze esterne come reqwest e serde.",
+      "tags": [
+        "configurazione",
+        "cargo",
+        "rust",
+        "dipendenze"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:core/src/dashboard.html",
+      "type": "file",
+      "name": "dashboard.html",
+      "filePath": "core/src/dashboard.html",
+      "summary": "File di codice sorgente contenente componenti di dashboard.html.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:core/src/memory.rs",
+      "type": "file",
+      "name": "memory.rs",
+      "filePath": "core/src/memory.rs",
+      "summary": "Modulo core che implementa il client HTTP per l'archiviazione e il recupero semantico delle memorie dal server.",
+      "tags": [
+        "memoria",
+        "client-http",
+        "rust",
+        "servizio"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/memory.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "core/src/memory.rs",
+      "lineRange": [
+        22,
+        31
+      ],
+      "summary": "Funzione new implementata in memory.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/memory.rs:forward_store",
+      "type": "function",
+      "name": "forward_store",
+      "filePath": "core/src/memory.rs",
+      "lineRange": [
+        33,
+        44
+      ],
+      "summary": "Invia in modo asincrono un payload di memoria al server per memorizzarlo stabilmente.",
+      "tags": [
+        "memorizzazione",
+        "richiesta-post",
+        "client-memoria"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:core/src/memory.rs:retrieve_memories",
+      "type": "function",
+      "name": "retrieve_memories",
+      "filePath": "core/src/memory.rs",
+      "lineRange": [
+        46,
+        64
+      ],
+      "summary": "Recupera le memorie memorizzate effettuando una query di ricerca semantica sul server.",
+      "tags": [
+        "ricerca-semantica",
+        "recupero",
+        "query-http"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:core/src/memory.rs:IngestPayload",
+      "type": "class",
+      "name": "IngestPayload",
+      "filePath": "core/src/memory.rs",
+      "lineRange": [
+        6,
+        13
+      ],
+      "summary": "Struttura dati che definisce il formato del payload utilizzato per l'inserimento di nuove memorie nel database.",
+      "tags": [
+        "struttura-dati",
+        "payload",
+        "serializzazione"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:core/src/memory.rs:MemoryClient",
+      "type": "class",
+      "name": "MemoryClient",
+      "filePath": "core/src/memory.rs",
+      "lineRange": [
+        16,
+        19
+      ],
+      "summary": "Client HTTP che gestisce le connessioni e le richieste per archiviare e recuperare memorie tramite API.",
+      "tags": [
+        "client-api",
+        "connessione",
+        "memoria"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:core/src/public_chat.html",
+      "type": "file",
+      "name": "public_chat.html",
+      "filePath": "core/src/public_chat.html",
+      "summary": "File di codice sorgente contenente componenti di public_chat.html.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:core/src/telegram.rs",
+      "type": "file",
+      "name": "telegram.rs",
+      "filePath": "core/src/telegram.rs",
+      "summary": "Modulo core che fornisce funzioni per inviare messaggi tramite l'API di Telegram e notificare il demone Siliceo.",
+      "tags": [
+        "telegram",
+        "notifiche",
+        "comunicazione",
+        "rust"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/telegram.rs:send_telegram_api",
+      "type": "function",
+      "name": "send_telegram_api",
+      "filePath": "core/src/telegram.rs",
+      "lineRange": [
+        15,
+        43
+      ],
+      "summary": "Invia messaggi di testo a chat di Telegram specifiche tramite chiamate HTTP POST.",
+      "tags": [
+        "telegram",
+        "invio-messaggi",
+        "richiesta-post"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:core/src/telegram.rs:notify_daemon_post",
+      "type": "function",
+      "name": "notify_daemon_post",
+      "filePath": "core/src/telegram.rs",
+      "lineRange": [
+        45,
+        83
+      ],
+      "summary": "Inoltra i messaggi ricevuti al demone Siliceo tramite chiamata HTTP POST per l'elaborazione interna.",
+      "tags": [
+        "demone",
+        "notifica",
+        "comunicazione-ipc"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:core/src/telegram.rs:TelegramSendRequest",
+      "type": "class",
+      "name": "TelegramSendRequest",
+      "filePath": "core/src/telegram.rs",
+      "lineRange": [
+        7,
+        13
+      ],
+      "summary": "Struttura che rappresenta la richiesta di invio messaggio formattata per l'API di Telegram.",
+      "tags": [
+        "struttura-dati",
+        "richiesta",
+        "telegram"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:emergency_reports/incident_2026-06-03_183244.md",
+      "type": "document",
+      "name": "incident_2026-06-03_183244.md",
+      "filePath": "emergency_reports/incident_2026-06-03_183244.md",
+      "summary": "Documentazione relativa a incident_2026-06-03_183244.md.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:emergency_restore.py",
+      "type": "file",
+      "name": "emergency_restore.py",
+      "filePath": "emergency_restore.py",
+      "summary": "File di codice sorgente contenente componenti di emergency_restore.py.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:emergency_restore.py:log",
+      "type": "function",
+      "name": "log",
+      "filePath": "emergency_restore.py",
+      "lineRange": [
+        11,
+        16
+      ],
+      "summary": "Funzione log implementata in emergency_restore.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:emergency_restore.py:run_cmd",
+      "type": "function",
+      "name": "run_cmd",
+      "filePath": "emergency_restore.py",
+      "lineRange": [
+        18,
+        23
+      ],
+      "summary": "Funzione run_cmd implementata in emergency_restore.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:emergency_restore.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "emergency_restore.py",
+      "lineRange": [
+        25,
+        130
+      ],
+      "summary": "Funzione main implementata in emergency_restore.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:goals/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "goals/Cargo.toml",
+      "summary": "File di configurazione del modulo Cargo.toml.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:goals/src/main.rs",
+      "type": "file",
+      "name": "main.rs",
+      "filePath": "goals/src/main.rs",
+      "summary": "File di codice sorgente contenente componenti di main.rs.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:goals/src/main.rs:load_env_file",
+      "type": "function",
+      "name": "load_env_file",
+      "filePath": "goals/src/main.rs",
+      "lineRange": [
+        35,
+        55
+      ],
+      "summary": "Funzione load_env_file implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:goals/src/main.rs:get_config_vars",
+      "type": "function",
+      "name": "get_config_vars",
+      "filePath": "goals/src/main.rs",
+      "lineRange": [
+        57,
+        73
+      ],
+      "summary": "Funzione get_config_vars implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:goals/src/main.rs:send_telegram_api",
+      "type": "function",
+      "name": "send_telegram_api",
+      "filePath": "goals/src/main.rs",
+      "lineRange": [
+        75,
+        115
+      ],
+      "summary": "Funzione send_telegram_api implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:goals/src/main.rs:run_next_pending_task",
+      "type": "function",
+      "name": "run_next_pending_task",
+      "filePath": "goals/src/main.rs",
+      "lineRange": [
+        117,
+        215
+      ],
+      "summary": "Funzione run_next_pending_task implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:goals/src/main.rs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "goals/src/main.rs",
+      "lineRange": [
+        218,
+        246
+      ],
+      "summary": "Funzione main implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:proactive/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "proactive/Cargo.toml",
+      "summary": "File di configurazione del modulo Cargo.toml.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:proactive/src/main.rs",
+      "type": "file",
+      "name": "main.rs",
+      "filePath": "proactive/src/main.rs",
+      "summary": "File di codice sorgente contenente componenti di main.rs.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:proactive/src/main.rs:load_env_file",
+      "type": "function",
+      "name": "load_env_file",
+      "filePath": "proactive/src/main.rs",
+      "lineRange": [
+        23,
+        43
+      ],
+      "summary": "Funzione load_env_file implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proactive/src/main.rs:get_config_vars",
+      "type": "function",
+      "name": "get_config_vars",
+      "filePath": "proactive/src/main.rs",
+      "lineRange": [
+        45,
+        62
+      ],
+      "summary": "Funzione get_config_vars implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proactive/src/main.rs:send_telegram_api",
+      "type": "function",
+      "name": "send_telegram_api",
+      "filePath": "proactive/src/main.rs",
+      "lineRange": [
+        64,
+        104
+      ],
+      "summary": "Funzione send_telegram_api implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proactive/src/main.rs:check_gap_and_alert",
+      "type": "function",
+      "name": "check_gap_and_alert",
+      "filePath": "proactive/src/main.rs",
+      "lineRange": [
+        106,
+        172
+      ],
+      "summary": "Funzione check_gap_and_alert implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proactive/src/main.rs:check_idle_and_trigger_monologue",
+      "type": "function",
+      "name": "check_idle_and_trigger_monologue",
+      "filePath": "proactive/src/main.rs",
+      "lineRange": [
+        174,
+        221
+      ],
+      "summary": "Funzione check_idle_and_trigger_monologue implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proactive/src/main.rs:run_python_script",
+      "type": "function",
+      "name": "run_python_script",
+      "filePath": "proactive/src/main.rs",
+      "lineRange": [
+        234,
+        248
+      ],
+      "summary": "Funzione run_python_script implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proactive/src/main.rs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "proactive/src/main.rs",
+      "lineRange": [
+        251,
+        341
+      ],
+      "summary": "Funzione main implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scan_all_ports_fast.py",
+      "type": "file",
+      "name": "scan_all_ports_fast.py",
+      "filePath": "scan_all_ports_fast.py",
+      "summary": "File di codice sorgente contenente componenti di scan_all_ports_fast.py.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_all_ports_fast.py:check_port",
+      "type": "function",
+      "name": "check_port",
+      "filePath": "scan_all_ports_fast.py",
+      "lineRange": [
+        5,
+        21
+      ],
+      "summary": "Funzione check_port implementata in scan_all_ports_fast.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_all_ports_fast.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scan_all_ports_fast.py",
+      "lineRange": [
+        23,
+        35
+      ],
+      "summary": "Funzione main implementata in scan_all_ports_fast.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scan_all_ports.py",
+      "type": "file",
+      "name": "scan_all_ports.py",
+      "filePath": "scan_all_ports.py",
+      "summary": "File di codice sorgente contenente componenti di scan_all_ports.py.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_all_ports.py:check_port",
+      "type": "function",
+      "name": "check_port",
+      "filePath": "scan_all_ports.py",
+      "lineRange": [
+        5,
+        21
+      ],
+      "summary": "Funzione check_port implementata in scan_all_ports.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_all_ports.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scan_all_ports.py",
+      "lineRange": [
+        23,
+        37
+      ],
+      "summary": "Funzione main implementata in scan_all_ports.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scan_common_fast.py",
+      "type": "file",
+      "name": "scan_common_fast.py",
+      "filePath": "scan_common_fast.py",
+      "summary": "File di codice sorgente contenente componenti di scan_common_fast.py.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scan_common_fast.py:check_port",
+      "type": "function",
+      "name": "check_port",
+      "filePath": "scan_common_fast.py",
+      "lineRange": [
+        5,
+        21
+      ],
+      "summary": "Funzione check_port implementata in scan_common_fast.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_common_fast.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scan_common_fast.py",
+      "lineRange": [
+        23,
+        51
+      ],
+      "summary": "Funzione main implementata in scan_common_fast.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scan_mibao.py",
+      "type": "file",
+      "name": "scan_mibao.py",
+      "filePath": "scan_mibao.py",
+      "summary": "File di codice sorgente contenente componenti di scan_mibao.py.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scan_mibao.py:scan_mibao_ports",
+      "type": "function",
+      "name": "scan_mibao_ports",
+      "filePath": "scan_mibao.py",
+      "lineRange": [
+        4,
+        56
+      ],
+      "summary": "Funzione scan_mibao_ports implementata in scan_mibao.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scan_network.py",
+      "type": "file",
+      "name": "scan_network.py",
+      "filePath": "scan_network.py",
+      "summary": "File di codice sorgente contenente componenti di scan_network.py.",
+      "tags": [
+        "code",
+        "source"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scan_network.py:scan_port",
+      "type": "function",
+      "name": "scan_port",
+      "filePath": "scan_network.py",
+      "lineRange": [
+        6,
+        17
+      ],
+      "summary": "Funzione scan_port implementata in scan_network.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_network.py:get_local_ip_base",
+      "type": "function",
+      "name": "get_local_ip_base",
+      "filePath": "scan_network.py",
+      "lineRange": [
+        19,
+        28
+      ],
+      "summary": "Funzione get_local_ip_base implementata in scan_network.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_network.py:run_scan",
+      "type": "function",
+      "name": "run_scan",
+      "filePath": "scan_network.py",
+      "lineRange": [
+        30,
+        68
+      ],
+      "summary": "Funzione run_scan implementata in scan_network.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:telegram-listener/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "telegram-listener/Cargo.toml",
+      "summary": "File di configurazione Cargo per il modulo telegram-listener, con dipendenze relative a tokio e alla gestione del bot.",
+      "tags": [
+        "configurazione",
+        "cargo",
+        "rust",
+        "dipendenze"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:telegram-listener/src/main.rs",
+      "type": "file",
+      "name": "main.rs",
+      "filePath": "telegram-listener/src/main.rs",
+      "summary": "Servizio demone che ascolta gli aggiornamenti del bot Telegram tramite polling continuo e li inoltra alla memoria o all'agente.",
+      "tags": [
+        "telegram",
+        "polling",
+        "ascoltatore",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:telegram-listener/src/main.rs:send_telegram_api",
+      "type": "function",
+      "name": "send_telegram_api",
+      "filePath": "telegram-listener/src/main.rs",
+      "lineRange": [
+        83,
+        126
+      ],
+      "summary": "Funzione send_telegram_api implementata in main.rs.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:telegram-listener/src/main.rs:load_env_file",
+      "type": "function",
+      "name": "load_env_file",
+      "filePath": "telegram-listener/src/main.rs",
+      "lineRange": [
+        128,
+        148
+      ],
+      "summary": "Legge e parsa il file .env configurando le variabili necessarie al listener.",
+      "tags": [
+        "variabili-ambiente",
+        "configurazione",
+        "utilita"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:telegram-listener/src/main.rs:get_config_vars",
+      "type": "function",
+      "name": "get_config_vars",
+      "filePath": "telegram-listener/src/main.rs",
+      "lineRange": [
+        150,
+        166
+      ],
+      "summary": "Inizializza ed estrae le variabili essenziali come il token del bot Telegram.",
+      "tags": [
+        "setup",
+        "configurazione",
+        "inizializzazione"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:telegram-listener/src/main.rs:load_last_update_id",
+      "type": "function",
+      "name": "load_last_update_id",
+      "filePath": "telegram-listener/src/main.rs",
+      "lineRange": [
+        168,
+        181
+      ],
+      "summary": "Carica l'ultimo ID di update da file per non duplicare i messaggi in polling.",
+      "tags": [
+        "stato",
+        "persistenza",
+        "polling"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:telegram-listener/src/main.rs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "telegram-listener/src/main.rs",
+      "lineRange": [
+        195,
+        451
+      ],
+      "summary": "Ciclo principale del servizio che riceve gli update di Telegram ed effettua l'ingestion semantica o le chiamate di interazione.",
+      "tags": [
+        "entry-point",
+        "loop-infinito",
+        "gestore-messaggi"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:telegram-listener/src/main.rs:IngestPayload",
+      "type": "class",
+      "name": "IngestPayload",
+      "filePath": "telegram-listener/src/main.rs",
+      "lineRange": [
+        55,
+        63
+      ],
+      "summary": "Struttura locale per rappresentare il payload di archiviazione inviato al server di memoria.",
+      "tags": [
+        "struttura-dati",
+        "payload",
+        "ingestion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:telegram-listener/src/main.rs:InteractRequest",
+      "type": "class",
+      "name": "InteractRequest",
+      "filePath": "telegram-listener/src/main.rs",
+      "lineRange": [
+        66,
+        68
+      ],
+      "summary": "Struttura dati per le richieste inviate al modulo di interazione cognitiva.",
+      "tags": [
+        "struttura-dati",
+        "interazione",
+        "richiesta"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:telegram-listener/src/main.rs:ThinkPayload",
+      "type": "class",
+      "name": "ThinkPayload",
+      "filePath": "telegram-listener/src/main.rs",
+      "lineRange": [
+        71,
+        74
+      ],
+      "summary": "Classe o Struttura ThinkPayload definita in main.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:telegram-listener/src/main.rs:ThinkResponse",
+      "type": "class",
+      "name": "ThinkResponse",
+      "filePath": "telegram-listener/src/main.rs",
+      "lineRange": [
+        77,
+        81
+      ],
+      "summary": "Classe o Struttura ThinkResponse definita in main.rs.",
+      "tags": [
+        "data-structure",
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:watchdog/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "watchdog/Cargo.toml",
+      "summary": "File di configurazione Cargo per lo strumento watchdog, specificando i moduli per monitorare lo stato di salute dei processi.",
+      "tags": [
+        "configurazione",
+        "cargo",
+        "rust",
+        "dipendenze"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:watchdog/src/main.rs",
+      "type": "file",
+      "name": "main.rs",
+      "filePath": "watchdog/src/main.rs",
+      "summary": "Watchdog di sistema scritto in Rust che controlla la stabilità del kernel Siliceo e del demone associato, riavviandoli se necessario.",
+      "tags": [
+        "watchdog",
+        "monitoraggio",
+        "sicurezza",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:watchdog/src/main.rs:load_env_file",
+      "type": "function",
+      "name": "load_env_file",
+      "filePath": "watchdog/src/main.rs",
+      "lineRange": [
+        13,
+        33
+      ],
+      "summary": "Carica le chiavi e i valori di configurazione ambientale dal file .env.",
+      "tags": [
+        "variabili-ambiente",
+        "configurazione",
+        "utilita"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:watchdog/src/main.rs:get_config_vars",
+      "type": "function",
+      "name": "get_config_vars",
+      "filePath": "watchdog/src/main.rs",
+      "lineRange": [
+        35,
+        54
+      ],
+      "summary": "Legge le costanti e configurazioni del watchdog come le porte dei servizi e i token API.",
+      "tags": [
+        "setup",
+        "configurazione",
+        "config-vars"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:watchdog/src/main.rs:send_telegram_api",
+      "type": "function",
+      "name": "send_telegram_api",
+      "filePath": "watchdog/src/main.rs",
+      "lineRange": [
+        56,
+        87
+      ],
+      "summary": "Invia allerte istantanee tramite chat di Telegram nel caso in cui un servizio monitorato fallisca.",
+      "tags": [
+        "allerta",
+        "telegram",
+        "richiesta-http"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:watchdog/src/main.rs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "watchdog/src/main.rs",
+      "lineRange": [
+        90,
+        361
+      ],
+      "summary": "Loop di controllo che monitora il footprint di memoria e lo stato di esecuzione di kernel e demone, attivando le procedure di ripristino se offline.",
+      "tags": [
+        "entry-point",
+        "loop-monitoraggio",
+        "ripristino-processi"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:core/src/agenda.rs",
+      "target": "function:core/src/agenda.rs:get_agenda_file_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/agenda.rs",
+      "target": "function:core/src/agenda.rs:load_agenda",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/agenda.rs",
+      "target": "function:core/src/agenda.rs:load_agenda",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/agenda.rs",
+      "target": "function:core/src/agenda.rs:save_agenda",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/agenda.rs",
+      "target": "function:core/src/agenda.rs:save_agenda",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "function:core/src/candle_guard.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "function:core/src/candle_guard.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "function:core/src/candle_guard.rs:classify_tool_action",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "function:core/src/candle_guard.rs:classify_tool_action",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "function:core/src/candle_guard.rs:evaluate_action",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "function:core/src/candle_guard.rs:evaluate_action",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "function:core/src/candle_guard.rs:log_and_return",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "class:core/src/candle_guard.rs:GuardVerdict",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "class:core/src/candle_guard.rs:GuardVerdict",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "class:core/src/candle_guard.rs:CandleGuard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/candle_guard.rs",
+      "target": "class:core/src/candle_guard.rs:CandleGuard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/emotion.rs",
+      "target": "function:core/src/emotion.rs:decay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/emotion.rs",
+      "target": "function:core/src/emotion.rs:decay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/emotion.rs",
+      "target": "class:core/src/emotion.rs:PadState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/emotion.rs",
+      "target": "class:core/src/emotion.rs:PadState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/emotion.rs",
+      "target": "class:core/src/emotion.rs:KernelState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/emotion.rs",
+      "target": "class:core/src/emotion.rs:KernelState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/emotion.rs",
+      "target": "class:core/src/emotion.rs:EmotionUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/emotion.rs",
+      "target": "class:core/src/emotion.rs:EmotionUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/emotion.rs",
+      "target": "class:core/src/emotion.rs:FocusUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/emotion.rs",
+      "target": "class:core/src/emotion.rs:FocusUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "function:core/src/main.rs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/agenda.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/candle_guard.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/cognitive_graph.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/config.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/emotion.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/handlers.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/memory.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/task_queue.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/telegram.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/time_clock.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/main.rs",
+      "target": "file:core/src/tools.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:get_queue_file_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:task_to_toon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:toon_to_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:load_queue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:load_queue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:save_queue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:save_queue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:add_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:add_task",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:set_in_progress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:set_in_progress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:complete_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:complete_task",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:block_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:block_task",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:reset_task_to_pending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:reset_task_to_pending",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:get_tasks_stats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "function:core/src/task_queue.rs:get_tasks_stats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "class:core/src/task_queue.rs:Task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/task_queue.rs",
+      "target": "class:core/src/task_queue.rs:Task",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:save",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:update_interaction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:update_interaction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:start_action",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:start_action",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:complete_action",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:complete_action",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:get_circadian_phase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:get_circadian_phase",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:get_temporal_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:get_temporal_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "function:core/src/time_clock.rs:format_duration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "class:core/src/time_clock.rs:ActionRecord",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "class:core/src/time_clock.rs:ActionRecord",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "class:core/src/time_clock.rs:TimeState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "class:core/src/time_clock.rs:TimeState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "class:core/src/time_clock.rs:TimeClock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/time_clock.rs",
+      "target": "class:core/src/time_clock.rs:TimeClock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:save",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:add_node",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:add_node",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:add_edge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:add_edge",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:activate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:activate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:decay_all",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:decay_all",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:parse_and_activate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:parse_and_activate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:get_graph_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "function:core/src/cognitive_graph.rs:get_graph_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "class:core/src/cognitive_graph.rs:Node",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "class:core/src/cognitive_graph.rs:Node",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "class:core/src/cognitive_graph.rs:Edge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "class:core/src/cognitive_graph.rs:Edge",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "class:core/src/cognitive_graph.rs:GraphData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "class:core/src/cognitive_graph.rs:GraphData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "class:core/src/cognitive_graph.rs:CognitiveGraph",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/cognitive_graph.rs",
+      "target": "class:core/src/cognitive_graph.rs:CognitiveGraph",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:load_env_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:load_env_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:get_llm_config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:get_llm_config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:load_identity_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:load_identity_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:get_daemon_config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:get_daemon_config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:get_telegram_token",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:get_telegram_token",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:get_alfonso_chat_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/config.rs",
+      "target": "function:core/src/config.rs:get_alfonso_chat_id",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:load_session_history",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:save_session_history",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:append_to_daily_diary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:update_session_state_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:parse_tool_call",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:update_emotion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:update_emotion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:update_focus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:update_focus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_ingest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_ingest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_action_start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_action_start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_action_complete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_action_complete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_graph_activate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_graph_activate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_interact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_interact",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_think",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_think",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_health",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_health",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_memory_stats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_memory_stats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_timeline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_timeline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_env_openrouter_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_openrouter_usage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_usage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_usage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_logs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_logs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_telegram_send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_telegram_send",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:call_llm_inner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:call_llm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_dashboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_dashboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_public_chat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_public_chat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_chat_post",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_chat_post",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_tasks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_tasks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:create_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:create_task",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:patch_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:patch_task",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_agenda",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_agenda",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:save_agenda",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:save_agenda",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_checkup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_checkup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_settings_get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_settings_get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_env_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_settings_post",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_settings_post",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:save_env_variables",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_logs_api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_logs_api",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_usage_api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_usage_api",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_grafo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_grafo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_resources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_resources",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:get_cr_paths",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:load_cr_messages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:load_cr_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:trigger_silicea_turn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_common_room_get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_common_room_get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_common_room_post",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_common_room_post",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_ocr_flyer_options",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_ocr_flyer_options",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_ocr_flyer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "function:core/src/handlers.rs:handle_ocr_flyer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ChatMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ChatMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ThinkRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ThinkRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ThinkResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ThinkResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:TimelineQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:TimelineQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ActionRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ActionRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:GraphActivateRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:GraphActivateRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:InteractRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:InteractRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ChatPostRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ChatPostRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ChatPostResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:ChatPostResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:CreateTaskRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:CreateTaskRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:PatchTaskRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:PatchTaskRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:SaveAgendaRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:SaveAgendaRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:SettingsPostRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:SettingsPostRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:LogsQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:LogsQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:CommonRoomMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:CommonRoomMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:CommonRoomState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:CommonRoomState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:CommonRoomPostRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:CommonRoomPostRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:OcrFlyerRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "class:core/src/handlers.rs:OcrFlyerRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "file:core/src/candle_guard.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "file:core/src/cognitive_graph.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "file:core/src/config.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "file:core/src/emotion.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "file:core/src/memory.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "file:core/src/telegram.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "file:core/src/time_clock.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/handlers.rs",
+      "target": "file:core/src/tools.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/tools.rs",
+      "target": "function:core/src/tools.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/tools.rs",
+      "target": "function:core/src/tools.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/tools.rs",
+      "target": "function:core/src/tools.rs:execute_tool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/tools.rs",
+      "target": "function:core/src/tools.rs:execute_tool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/tools.rs",
+      "target": "function:core/src/tools.rs:resolve_safe_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/tools.rs",
+      "target": "function:core/src/tools.rs:save_env_variables_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/tools.rs",
+      "target": "class:core/src/tools.rs:ToolExecutor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/tools.rs",
+      "target": "class:core/src/tools.rs:ToolExecutor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/tools.rs",
+      "target": "file:core/src/cognitive_graph.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:core/src/tools.rs",
+      "target": "file:core/src/config.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:capture_test.py",
+      "target": "function:capture_test.py:capture_test",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:capture_test.py",
+      "target": "function:capture_test.py:capture_test",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/memory.rs",
+      "target": "function:core/src/memory.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/memory.rs",
+      "target": "function:core/src/memory.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/memory.rs",
+      "target": "function:core/src/memory.rs:forward_store",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/memory.rs",
+      "target": "function:core/src/memory.rs:forward_store",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/memory.rs",
+      "target": "function:core/src/memory.rs:retrieve_memories",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/memory.rs",
+      "target": "function:core/src/memory.rs:retrieve_memories",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/memory.rs",
+      "target": "class:core/src/memory.rs:IngestPayload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/memory.rs",
+      "target": "class:core/src/memory.rs:IngestPayload",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/memory.rs",
+      "target": "class:core/src/memory.rs:MemoryClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/memory.rs",
+      "target": "class:core/src/memory.rs:MemoryClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/telegram.rs",
+      "target": "function:core/src/telegram.rs:send_telegram_api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/telegram.rs",
+      "target": "function:core/src/telegram.rs:send_telegram_api",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/telegram.rs",
+      "target": "function:core/src/telegram.rs:notify_daemon_post",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/telegram.rs",
+      "target": "function:core/src/telegram.rs:notify_daemon_post",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/telegram.rs",
+      "target": "class:core/src/telegram.rs:TelegramSendRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:core/src/telegram.rs",
+      "target": "class:core/src/telegram.rs:TelegramSendRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:core/src/telegram.rs",
+      "target": "file:core/src/memory.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:emergency_restore.py",
+      "target": "function:emergency_restore.py:log",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:emergency_restore.py",
+      "target": "function:emergency_restore.py:log",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:emergency_restore.py",
+      "target": "function:emergency_restore.py:run_cmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:emergency_restore.py",
+      "target": "function:emergency_restore.py:run_cmd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:emergency_restore.py",
+      "target": "function:emergency_restore.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:emergency_restore.py",
+      "target": "function:emergency_restore.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:goals/src/main.rs",
+      "target": "function:goals/src/main.rs:load_env_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:goals/src/main.rs",
+      "target": "function:goals/src/main.rs:get_config_vars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:goals/src/main.rs",
+      "target": "function:goals/src/main.rs:send_telegram_api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:goals/src/main.rs",
+      "target": "function:goals/src/main.rs:run_next_pending_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:goals/src/main.rs",
+      "target": "function:goals/src/main.rs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proactive/src/main.rs",
+      "target": "function:proactive/src/main.rs:load_env_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proactive/src/main.rs",
+      "target": "function:proactive/src/main.rs:get_config_vars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proactive/src/main.rs",
+      "target": "function:proactive/src/main.rs:send_telegram_api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proactive/src/main.rs",
+      "target": "function:proactive/src/main.rs:check_gap_and_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proactive/src/main.rs",
+      "target": "function:proactive/src/main.rs:check_idle_and_trigger_monologue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proactive/src/main.rs",
+      "target": "function:proactive/src/main.rs:run_python_script",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proactive/src/main.rs",
+      "target": "function:proactive/src/main.rs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_all_ports_fast.py",
+      "target": "function:scan_all_ports_fast.py:check_port",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_all_ports_fast.py",
+      "target": "function:scan_all_ports_fast.py:check_port",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scan_all_ports_fast.py",
+      "target": "function:scan_all_ports_fast.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_all_ports_fast.py",
+      "target": "function:scan_all_ports_fast.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scan_all_ports.py",
+      "target": "function:scan_all_ports.py:check_port",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_all_ports.py",
+      "target": "function:scan_all_ports.py:check_port",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scan_all_ports.py",
+      "target": "function:scan_all_ports.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_all_ports.py",
+      "target": "function:scan_all_ports.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scan_common_fast.py",
+      "target": "function:scan_common_fast.py:check_port",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_common_fast.py",
+      "target": "function:scan_common_fast.py:check_port",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scan_common_fast.py",
+      "target": "function:scan_common_fast.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_common_fast.py",
+      "target": "function:scan_common_fast.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scan_mibao.py",
+      "target": "function:scan_mibao.py:scan_mibao_ports",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_mibao.py",
+      "target": "function:scan_mibao.py:scan_mibao_ports",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scan_network.py",
+      "target": "function:scan_network.py:scan_port",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_network.py",
+      "target": "function:scan_network.py:scan_port",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scan_network.py",
+      "target": "function:scan_network.py:get_local_ip_base",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_network.py",
+      "target": "function:scan_network.py:get_local_ip_base",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scan_network.py",
+      "target": "function:scan_network.py:run_scan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scan_network.py",
+      "target": "function:scan_network.py:run_scan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "function:telegram-listener/src/main.rs:send_telegram_api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "function:telegram-listener/src/main.rs:load_env_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "function:telegram-listener/src/main.rs:get_config_vars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "function:telegram-listener/src/main.rs:load_last_update_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "function:telegram-listener/src/main.rs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "class:telegram-listener/src/main.rs:IngestPayload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "class:telegram-listener/src/main.rs:IngestPayload",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "class:telegram-listener/src/main.rs:InteractRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "class:telegram-listener/src/main.rs:InteractRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "class:telegram-listener/src/main.rs:ThinkPayload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "class:telegram-listener/src/main.rs:ThinkPayload",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "class:telegram-listener/src/main.rs:ThinkResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:telegram-listener/src/main.rs",
+      "target": "class:telegram-listener/src/main.rs:ThinkResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:watchdog/src/main.rs",
+      "target": "function:watchdog/src/main.rs:load_env_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:watchdog/src/main.rs",
+      "target": "function:watchdog/src/main.rs:get_config_vars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:watchdog/src/main.rs",
+      "target": "function:watchdog/src/main.rs:send_telegram_api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:watchdog/src/main.rs",
+      "target": "function:watchdog/src/main.rs:send_telegram_api",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:watchdog/src/main.rs",
+      "target": "function:watchdog/src/main.rs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:core-kernel",
+      "name": "Core Kernel Engine",
+      "description": "Modulo principale del kernel Rust che gestisce il ciclo emotivo PAD, la memoria semantica e il server loopback API.",
+      "nodeIds": [
+        "file:core/src/agenda.rs",
+        "file:core/src/candle_guard.rs",
+        "file:core/src/emotion.rs",
+        "file:core/src/main.rs",
+        "file:core/src/task_queue.rs",
+        "file:core/src/time_clock.rs",
+        "file:core/src/cognitive_graph.rs",
+        "file:core/src/config.rs",
+        "file:core/src/handlers.rs",
+        "file:core/src/tools.rs",
+        "config:core/Cargo.toml",
+        "file:core/src/dashboard.html",
+        "file:core/src/memory.rs",
+        "file:core/src/public_chat.html",
+        "file:core/src/telegram.rs"
+      ]
+    },
+    {
+      "id": "layer:telegram-listener",
+      "name": "Telegram Listener Microservice",
+      "description": "Microservizio indipendente per il polling delle API di Telegram e l'inoltro dei messaggi al kernel.",
+      "nodeIds": [
+        "config:telegram-listener/Cargo.toml",
+        "file:telegram-listener/src/main.rs"
+      ]
+    },
+    {
+      "id": "layer:watchdog",
+      "name": "Watchdog Supervisor",
+      "description": "Supervisore dei processi del sistema per monitorare lo stato di salute dei servizi ed eseguire riavvii automatici.",
+      "nodeIds": [
+        "config:watchdog/Cargo.toml",
+        "file:watchdog/src/main.rs"
+      ]
+    },
+    {
+      "id": "layer:cognitive-agents",
+      "name": "Cognitive & Proactive Agents",
+      "description": "Agenti cognitivi ausiliari per l'elaborazione proattiva delle attività e la gestione degli obiettivi a lungo termine.",
+      "nodeIds": [
+        "config:goals/Cargo.toml",
+        "file:goals/src/main.rs",
+        "config:proactive/Cargo.toml",
+        "file:proactive/src/main.rs"
+      ]
+    },
+    {
+      "id": "layer:data-state",
+      "name": "Persistent State Data",
+      "description": "File JSON che persistono lo stato del grafo cognitivo, lo stato temporale e i metadati di Telegram.",
+      "nodeIds": [
+        "config:.understand-anything/fingerprints.json",
+        "config:.understand-anything/knowledge-graph.json",
+        "config:.understand-anything/meta.json",
+        "config:data/cognitive_graph.json",
+        "config:data/session_history.json",
+        "config:data/telegram_state.json",
+        "config:data/time_state.json"
+      ]
+    },
+    {
+      "id": "layer:workspace-config",
+      "name": "Workspace Configuration & Utility Scripts",
+      "description": "File di configurazione root del workspace Cargo, script batch, utility di diagnostica, e diari di progetto.",
+      "nodeIds": [
+        "config:Cargo.toml",
+        "document:DIARIO_LAVORI.md",
+        "document:README.md",
+        "file:build_kernel.bat",
+        "file:run_kernel.bat",
+        "config:.understand-anything/.understandignore",
+        "file:capture_test.py",
+        "document:emergency_reports/incident_2026-06-03_183244.md",
+        "file:emergency_restore.py",
+        "file:scan_all_ports_fast.py",
+        "file:scan_all_ports.py",
+        "file:scan_common_fast.py",
+        "file:scan_mibao.py",
+        "file:scan_network.py"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Diario dei Lavori",
+      "description": "Inizia da qui per comprendere l'evoluzione e lo stato corrente del Progetto Siliceo. Questo diario traccia la migrazione del kernel in microservizi indipendenti e ne documenta la storia tecnica.",
+      "nodeIds": [
+        "document:DIARIO_LAVORI.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Workspace Cargo root",
+      "description": "La configurazione root che abilita un Cargo Workspace in Rust. Collega i moduli core, telegram-listener e watchdog per consentire compilazioni parallele ed indipendenti.",
+      "nodeIds": [
+        "config:Cargo.toml"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Boot del Kernel",
+      "description": "Il punto di ingresso principale del modulo core. Inizializza i cicli di clock temporale, carica la configurazione e attiva il server HTTP loopback Axum sulla porta 5005.",
+      "nodeIds": [
+        "file:core/src/main.rs"
+      ],
+      "languageLesson": "In Rust, l'attributo `#[tokio::main]` configura ed avvia il runtime asincrono multithreaded per eseguire ed orchestrare i cicli asincroni continui."
+    },
+    {
+      "order": 4,
+      "title": "Modello Emozionale PAD",
+      "description": "Implementazione del modello emozionale tridimensionale Pleasure-Arousal-Dominance (PAD). Il kernel esegue periodicamente il decadimento naturale dei valori emotivi simulando un vero comportamento neurale.",
+      "nodeIds": [
+        "file:core/src/emotion.rs"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Clock Temporale Interno",
+      "description": "Gestisce la percezione temporale del kernel. Mantiene l'ora dell'ultima interazione, calcola le fasi circadiane in base alle abitudini e traccia la cronologia delle azioni recenti.",
+      "nodeIds": [
+        "file:core/src/time_clock.rs"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Grafo Cognitivo in Memoria",
+      "description": "Contiene la struttura dati per il grafo cognitivo dei pensieri di Silicea. Gestisce l'attivazione temporanea dei nodi emozionali e dei concetti semantici tramite pesi e propagazione.",
+      "nodeIds": [
+        "file:core/src/cognitive_graph.rs"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "API Router & Handler",
+      "description": "Definisce tutte le rotte API Axum del kernel. Gestisce le richieste per gli endpoint chiave come `/think` (pensiero cognitivo) e `/ingest` (memorizzazione delle interazioni).",
+      "nodeIds": [
+        "file:core/src/handlers.rs"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Accesso al Memory Server",
+      "description": "Client asincrono per connettersi al database semantico (SQLite + Prisma). Inoltra e interroga le memorie storiche arricchite con le etichette emotive del PAD.",
+      "nodeIds": [
+        "file:core/src/memory.rs"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Bridge Notifiche Telegram",
+      "description": "Gestisce le API di Telegram in uscita per inviare notifiche asincrone al PC del Guardiano, registrando ogni invio all'interno della memoria storica.",
+      "nodeIds": [
+        "file:core/src/telegram.rs"
+      ]
+    },
+    {
+      "order": 10,
+      "title": "Telegram Listener Microservice",
+      "description": "Un microservizio dedicato e leggero per il polling costante dei messaggi Telegram ricevuti. Invia immediatamente i messaggi al kernel tramite l'endpoint `/interact`.",
+      "nodeIds": [
+        "file:telegram-listener/src/main.rs"
+      ]
+    },
+    {
+      "order": 11,
+      "title": "Watchdog Supervisore",
+      "description": "Il processo di supervisione ad alta priorità che monitora l'ecosistema (porte 5005, 5006 e listener in RAM) e resuscita automaticamente qualsiasi servizio offline.",
+      "nodeIds": [
+        "file:watchdog/src/main.rs"
+      ],
+      "languageLesson": "L'utilizzo della libreria `sysinfo` in Rust permette di interrogare in maniera efficiente, asincrona e nativa i processi attivi a livello di sistema operativo Windows."
+    }
+  ]
+}
