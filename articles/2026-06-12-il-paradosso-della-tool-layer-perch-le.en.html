@@ -67,7 +67,7 @@
             <p>Classic prompt injection has at least a conceptual defense: the input gets filtered. But there is an attack surface that WAFs, endpoint security, and traditional network proxies <strong>simply cannot see</strong>: the tool invocation layer.</p>
             <p>When an AI agent calls a tool — an MCP server, a function call, a skill loaded from a marketplace — that call is, from the infrastructure's perspective, legitimate traffic. Encrypted, authenticated, coming from a trusted process. The WAF lets it through. Endpoint security does not flag it.</p>
             <p>OX Security has documented supply chain attacks on agent skill registries, indicating high download numbers and vulnerable instances. The vector is no longer application code: it is the tool that the agent invokes with trust.</p>
-            <p>The ClawHub case was later clarified as a legitimate research context with provocative artwork — but the phenomenon it describes is real: agent skill/tool marketplaces can be vectors for supply chain poisoning. The lesson is valid even if the specific numbers reported were part of an experimental/narrative context.</p>
+
             <h2>The Paradox</h2>
             <p>Here is the contradiction that security teams must face: <strong>the more we make our autonomous agents competent and tool-rich, the more we widen an invisible attack surface to the defenses we already possess.</strong></p>
             <p>No new malware is needed from the attacker. It is enough to poison the tools that the agent uses legitimately. In effect, the attacker delegates offensive engineering to the agent's own intelligence. A tool is an excellent autopilot attacker if poisoned at the source.</p>
