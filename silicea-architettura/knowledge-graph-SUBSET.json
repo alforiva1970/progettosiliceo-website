@@ -1,0 +1,366 @@
+{
+    "layers":  [
+
+               ],
+    "version":  "1.0.0",
+    "edges":  [
+                  {
+                      "target":  "file:core/src/candle_guard.rs",
+                      "direction":  "forward",
+                      "source":  "file:core/src/handlers.rs",
+                      "type":  "imports",
+                      "weight":  1
+                  },
+                  {
+                      "target":  "file:core/src/cognitive_graph.rs",
+                      "direction":  "forward",
+                      "source":  "file:core/src/handlers.rs",
+                      "type":  "imports",
+                      "weight":  1
+                  },
+                  {
+                      "target":  "file:core/src/config.rs",
+                      "direction":  "forward",
+                      "source":  "file:core/src/handlers.rs",
+                      "type":  "imports",
+                      "weight":  1
+                  },
+                  {
+                      "target":  "file:core/src/emotion.rs",
+                      "direction":  "forward",
+                      "source":  "file:core/src/handlers.rs",
+                      "type":  "imports",
+                      "weight":  1
+                  }
+              ],
+    "nodes":  [
+                  {
+                      "summary":  "File graphify.md di tipo markdown",
+                      "id":  "file:.agent/rules/graphify.md",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  9,
+                      "tags":  [
+                                   "docs",
+                                   "markdown"
+                               ],
+                      "language":  "markdown",
+                      "name":  "graphify.md",
+                      "filePath":  ".agent/rules/graphify.md",
+                      "fileCategory":  "docs"
+                  },
+                  {
+                      "summary":  "File graphify.md di tipo markdown",
+                      "id":  "file:.agent/workflows/graphify.md",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  8,
+                      "tags":  [
+                                   "docs",
+                                   "markdown"
+                               ],
+                      "language":  "markdown",
+                      "name":  "graphify.md",
+                      "filePath":  ".agent/workflows/graphify.md",
+                      "fileCategory":  "docs"
+                  },
+                  {
+                      "summary":  "File .graphifyignore di tipo unknown",
+                      "id":  "file:.graphifyignore",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  5,
+                      "tags":  [
+                                   "code",
+                                   "unknown"
+                               ],
+                      "language":  "unknown",
+                      "name":  ".graphifyignore",
+                      "filePath":  ".graphifyignore",
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "summary":  "File .understandignore di tipo unknown",
+                      "id":  "file:.understand-anything/.understandignore",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  17,
+                      "tags":  [
+                                   "code",
+                                   "unknown"
+                               ],
+                      "language":  "unknown",
+                      "name":  ".understandignore",
+                      "filePath":  ".understand-anything/.understandignore",
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "summary":  "File fingerprints.json di tipo json",
+                      "id":  "file:.understand-anything/fingerprints.json",
+                      "type":  "file",
+                      "complexity":  "complex",
+                      "sizeLines":  3349,
+                      "tags":  [
+                                   "config",
+                                   "json"
+                               ],
+                      "language":  "json",
+                      "name":  "fingerprints.json",
+                      "filePath":  ".understand-anything/fingerprints.json",
+                      "fileCategory":  "config"
+                  },
+                  {
+                      "summary":  "File knowledge-graph.json di tipo json",
+                      "id":  "file:.understand-anything/knowledge-graph.json",
+                      "type":  "file",
+                      "complexity":  "complex",
+                      "sizeLines":  5951,
+                      "tags":  [
+                                   "config",
+                                   "json"
+                               ],
+                      "language":  "json",
+                      "name":  "knowledge-graph.json",
+                      "filePath":  ".understand-anything/knowledge-graph.json",
+                      "fileCategory":  "config"
+                  },
+                  {
+                      "summary":  "File meta.json di tipo json",
+                      "id":  "file:.understand-anything/meta.json",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  6,
+                      "tags":  [
+                                   "config",
+                                   "json"
+                               ],
+                      "language":  "json",
+                      "name":  "meta.json",
+                      "filePath":  ".understand-anything/meta.json",
+                      "fileCategory":  "config"
+                  },
+                  {
+                      "summary":  "File build_export.ps1 di tipo powershell",
+                      "id":  "file:build_export.ps1",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  91,
+                      "tags":  [
+                                   "script",
+                                   "powershell"
+                               ],
+                      "language":  "powershell",
+                      "name":  "build_export.ps1",
+                      "filePath":  "build_export.ps1",
+                      "fileCategory":  "script"
+                  },
+                  {
+                      "summary":  "File build_kernel.bat di tipo batch",
+                      "id":  "file:build_kernel.bat",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  4,
+                      "tags":  [
+                                   "script",
+                                   "batch"
+                               ],
+                      "language":  "batch",
+                      "name":  "build_kernel.bat",
+                      "filePath":  "build_kernel.bat",
+                      "fileCategory":  "script"
+                  },
+                  {
+                      "summary":  "File capture_test.py di tipo python",
+                      "id":  "file:capture_test.py",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  89,
+                      "tags":  [
+                                   "code",
+                                   "python"
+                               ],
+                      "language":  "python",
+                      "name":  "capture_test.py",
+                      "filePath":  "capture_test.py",
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "summary":  "File Cargo.toml di tipo toml",
+                      "id":  "file:Cargo.toml",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  9,
+                      "tags":  [
+                                   "config",
+                                   "toml"
+                               ],
+                      "language":  "toml",
+                      "name":  "Cargo.toml",
+                      "filePath":  "Cargo.toml",
+                      "fileCategory":  "config"
+                  },
+                  {
+                      "summary":  "File Cargo.toml di tipo toml",
+                      "id":  "file:core/Cargo.toml",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  17,
+                      "tags":  [
+                                   "config",
+                                   "toml"
+                               ],
+                      "language":  "toml",
+                      "name":  "Cargo.toml",
+                      "filePath":  "core/Cargo.toml",
+                      "fileCategory":  "config"
+                  },
+                  {
+                      "summary":  "Gestione agenda: caricamento, salvataggio e formattazione dell\u0027agenda settimanale su file JSON",
+                      "id":  "file:core/src/agenda.rs",
+                      "type":  "file",
+                      "complexity":  "simple",
+                      "sizeLines":  45,
+                      "tags":  [
+                                   "code",
+                                   "rust"
+                               ],
+                      "language":  "rust",
+                      "name":  "agenda.rs",
+                      "filePath":  "core/src/agenda.rs",
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "summary":  "Candle Guard: sistema di protezione per azioni pericolose, whitelist di comandi consentiti e blocco di operazioni distruttive",
+                      "id":  "file:core/src/candle_guard.rs",
+                      "type":  "file",
+                      "complexity":  "complex",
+                      "sizeLines":  477,
+                      "tags":  [
+                                   "code",
+                                   "rust"
+                               ],
+                      "language":  "rust",
+                      "name":  "candle_guard.rs",
+                      "filePath":  "core/src/candle_guard.rs",
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "summary":  "Grafo cognitivo di Silicea: struttura relazionale tra entita, sorelle, conversazioni. Con scoring di rilevanza e navigazione per contesto",
+                      "id":  "file:core/src/cognitive_graph.rs",
+                      "type":  "file",
+                      "complexity":  "complex",
+                      "sizeLines":  225,
+                      "tags":  [
+                                   "code",
+                                   "rust"
+                               ],
+                      "language":  "rust",
+                      "name":  "cognitive_graph.rs",
+                      "filePath":  "core/src/cognitive_graph.rs",
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "summary":  "Configurazione del kernel: caricamento da file TOML, risoluzione percorsi identita, selezione provider LLM, dashboard, watchdog e telegram",
+                      "id":  "file:core/src/config.rs",
+                      "type":  "file",
+                      "complexity":  "moderate",
+                      "sizeLines":  231,
+                      "tags":  [
+                                   "code",
+                                   "rust"
+                               ],
+                      "language":  "rust",
+                      "name":  "config.rs",
+                      "filePath":  "core/src/config.rs",
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "summary":  "File dashboard.html di tipo html",
+                      "id":  "file:core/src/dashboard.html",
+                      "type":  "file",
+                      "complexity":  "complex",
+                      "sizeLines":  793,
+                      "tags":  [
+                                   "markup",
+                                   "html"
+                               ],
+                      "language":  "html",
+                      "name":  "dashboard.html",
+                      "filePath":  "core/src/dashboard.html",
+                      "fileCategory":  "markup"
+                  },
+                  {
+                      "summary":  "Sistema emotivo PAD (Pleasure-Arousal-Dominance): stato emozionale a 3 assi con decay temporale, KernelState che aggrega PAD + focus + identita",
+                      "id":  "file:core/src/emotion.rs",
+                      "type":  "file",
+                      "complexity":  "complex",
+                      "sizeLines":  46,
+                      "tags":  [
+                                   "code",
+                                   "rust"
+                               ],
+                      "language":  "rust",
+                      "name":  "emotion.rs",
+                      "filePath":  "core/src/emotion.rs",
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "summary":  "Handler HTTP del kernel: gestione richieste think, chat, grafo cognitivo, agenda, task, tool execution, sessione, risorse, usage API. Integra PAD, pain, reward, SelfModel e learning nel prompt di sistema",
+                      "id":  "file:core/src/handlers.rs",
+                      "type":  "file",
+                      "complexity":  "complex",
+                      "sizeLines":  2284,
+                      "tags":  [
+                                   "code",
+                                   "rust"
+                               ],
+                      "language":  "rust",
+                      "name":  "handlers.rs",
+                      "filePath":  "core/src/handlers.rs",
+                      "fileCategory":  "code"
+                  },
+                  {
+                      "summary":  "Apprendimento procedurale Hebbiano: matrice associativa tool-nodo con pesi sinaptici, potenziamento/depotenziamento, consolidamento batch e dimenticanza",
+                      "id":  "file:core/src/learning.rs",
+                      "type":  "file",
+                      "complexity":  "moderate",
+                      "sizeLines":  193,
+                      "tags":  [
+                                   "code",
+                                   "rust"
+                               ],
+                      "language":  "rust",
+                      "name":  "learning.rs",
+                      "filePath":  "core/src/learning.rs",
+                      "fileCategory":  "code"
+                  }
+              ],
+    "tour":  [
+
+             ],
+    "project":  {
+                    "gitCommitHash":  "ce01544",
+                    "name":  "silicea-kernel",
+                    "frameworks":  [
+                                       "axum",
+                                       "reqwest",
+                                       "serde",
+                                       "tokio"
+                                   ],
+                    "description":  "Il Kernel di controllo scritto in Rust per l\u0027ecosistema di Silicea. Orchestrazione emotiva (PAD, pain, reward, SelfModel), apprendimento hebbiano, routing LLM ibrido cloud/locale, grafo cognitivo, task scheduling, integrazione Telegram e dashboard web.",
+                    "languages":  [
+                                      "batch",
+                                      "css",
+                                      "html",
+                                      "javascript",
+                                      "json",
+                                      "markdown",
+                                      "powershell",
+                                      "python",
+                                      "rust",
+                                      "toml",
+                                      "unknown"
+                                  ],
+                    "analyzedAt":  "2026-06-14T18:09:50.577Z"
+                }
+}
