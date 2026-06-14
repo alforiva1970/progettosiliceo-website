@@ -37228,5 +37228,159 @@
                                         361
                                     ]
                   }
-              ]
+              ],
+    "layers":  [
+                   {
+                       "nodeIds":  [
+                                       "file:core/src/main.rs",
+                                       "file:core/src/handlers.rs",
+                                       "file:core/src/config.rs"
+                                   ],
+                       "description":  "Server HTTP Axum: main.rs avvia il kernel, handlers.rs gestisce tutte le rotte API",
+                       "name":  "Entry Point e Router",
+                       "id":  "layer:entry"
+                   },
+                   {
+                       "nodeIds":  [
+                                       "file:core/src/handlers.rs",
+                                       "file:core/src/prompt_builder.rs",
+                                       "file:core/src/provider_router.rs",
+                                       "file:core/src/provider_router.rs:classify_task",
+                                       "file:core/src/provider_router.rs:route",
+                                       "file:core/src/emotion.rs",
+                                       "file:core/src/self_model.rs",
+                                       "file:core/src/self_model.rs:SelfModel",
+                                       "file:core/src/self_model.rs:get_context"
+                                   ],
+                       "description":  "Costruzione del prompt di sistema, classificazione task, routing provider LLM",
+                       "name":  "Ciclo Cognitivo e Prompts",
+                       "id":  "layer:cognitive"
+                   },
+                   {
+                       "nodeIds":  [
+                                       "file:core/src/emotion.rs",
+                                       "file:core/src/pain.rs",
+                                       "file:core/src/reward.rs",
+                                       "file:core/src/self_model.rs",
+                                       "file:core/src/pain.rs:PainState",
+                                       "file:core/src/reward.rs:RewardState",
+                                       "file:core/src/self_model.rs:SelfModel",
+                                       "file:core/src/self_model.rs:update"
+                                   ],
+                       "description":  "Stato emotivo a tre assi PAD, dolore, ricompensa e modello unificato del se",
+                       "name":  "Sistema Emotivo",
+                       "id":  "layer:emotional"
+                   },
+                   {
+                       "nodeIds":  [
+                                       "file:core/src/learning.rs",
+                                       "file:core/src/cognitive_graph.rs",
+                                       "file:core/src/memory.rs",
+                                       "file:core/src/learning.rs:LearningState",
+                                       "file:core/src/learning.rs:record",
+                                       "file:core/src/cognitive_graph.rs:CognitiveGraph",
+                                       "file:core/src/cognitive_graph.rs:get_graph_context"
+                                   ],
+                       "description":  "Apprendimento hebbiano, grafo cognitivo, memoria esterna su server",
+                       "name":  "Apprendimento e Memoria",
+                       "id":  "layer:learning"
+                   },
+                   {
+                       "nodeIds":  [
+                                       "file:core/src/tools.rs",
+                                       "file:core/src/task_queue.rs",
+                                       "file:core/src/scheduler.rs",
+                                       "file:core/src/candle_guard.rs",
+                                       "file:core/src/task_queue.rs:TaskQueue",
+                                       "file:core/src/scheduler.rs:Scheduler",
+                                       "file:core/src/candle_guard.rs:CandleGuard"
+                                   ],
+                       "description":  "Esecuzione di tool, scheduler, task queue, candle guard",
+                       "name":  "Tool System e Task Queue",
+                       "id":  "layer:tools"
+                   },
+                   {
+                       "nodeIds":  [
+                                       "file:core/src/session.rs",
+                                       "file:core/src/telegram.rs",
+                                       "file:core/src/agenda.rs",
+                                       "file:core/src/time_clock.rs",
+                                       "file:core/src/globals.rs",
+                                       "file:core/src/types.rs",
+                                       "file:watchdog/src/main.rs",
+                                       "file:goals/src/main.rs",
+                                       "file:proactive/src/main.rs"
+                                   ],
+                       "description":  "Watchdog, Telegram, goal runner, session persistence",
+                       "name":  "Servizi Ausiliari",
+                       "id":  "layer:services"
+                   }
+               ],
+    "tour":  [
+                 {
+                     "title":  "Il ciclo cognitivo: POST /think",
+                     "description":  "handle_think() e il cuore del kernel: riceve messaggi, aggrega PAD, pain, reward, SelfModel, costruisce il prompt, chiama LLM",
+                     "nodeIds":  [
+                                     "file:core/src/handlers.rs",
+                                     "file:core/src/main.rs",
+                                     "file:core/src/prompt_builder.rs",
+                                     "file:core/src/self_model.rs"
+                                 ],
+                     "order":  1
+                 },
+                 {
+                     "title":  "Sistema Emotivo Integrato",
+                     "description":  "PAD, dolore, ricompensa e SelfModel: un unico modello del se che aggrega tutto",
+                     "nodeIds":  [
+                                     "file:core/src/emotion.rs",
+                                     "file:core/src/pain.rs",
+                                     "file:core/src/reward.rs",
+                                     "file:core/src/self_model.rs"
+                                 ],
+                     "order":  2
+                 },
+                 {
+                     "title":  "Routing LLM Ibrido",
+                     "description":  "Classificazione del task e routing dinamico tra cloud e locale",
+                     "nodeIds":  [
+                                     "file:core/src/provider_router.rs",
+                                     "file:core/src/provider_router.rs:classify_task",
+                                     "file:core/src/provider_router.rs:route"
+                                 ],
+                     "order":  3
+                 },
+                 {
+                     "title":  "Apprendimento Hebbiano",
+                     "description":  "Matrice associativa tool-nodo con plasticita sinaptica: piu usi una connessione, piu si rafforza",
+                     "nodeIds":  [
+                                     "file:core/src/learning.rs",
+                                     "file:core/src/learning.rs:record",
+                                     "file:core/src/learning.rs:consolidate",
+                                     "file:core/src/learning.rs:SynapticWeight"
+                                 ],
+                     "order":  4
+                 },
+                 {
+                     "title":  "Tool System e Candle Guard",
+                     "description":  "Esecuzione sicura di tool: pruning difensivo degli argomenti, whitelist e blocco operazioni distruttive",
+                     "nodeIds":  [
+                                     "file:core/src/tools.rs",
+                                     "file:core/src/candle_guard.rs",
+                                     "file:core/src/candle_guard.rs:CandleGuard"
+                                 ],
+                     "order":  5
+                 },
+                 {
+                     "title":  "Infrastruttura e Servizi",
+                     "description":  "Watchdog per auto-riavvio, agente proattivo, listener Telegram, schedulazione compiti notturni",
+                     "nodeIds":  [
+                                     "file:watchdog/src/main.rs",
+                                     "file:proactive/src/main.rs",
+                                     "file:core/src/telegram.rs",
+                                     "file:core/src/scheduler.rs",
+                                     "file:core/src/time_clock.rs"
+                                 ],
+                     "order":  6
+                 }
+             ]
 }
