@@ -1,1191 +1,4233 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "project": {
     "name": "Nova Kernel v2",
     "languages": [
       "rust",
-      "python"
+      "javascript",
+      "html"
     ],
     "frameworks": [
       "axum",
       "tokio",
       "rusqlite",
-      "reqwest"
+      "reqwest",
+      "tower-http"
     ],
-    "description": "Nova Unified System (Fase 3). Frontal Lobe in Rust (porta 7700) per la coordinazione, Telegram bridge, dispatching task SQLite e ReAct cognition. Python Standalone Runners per Dreams e Night Shift. Silence Daemon su porta 43208.",
-    "analyzedAt": "2026-05-31T19:20:36.996144Z",
-    "gitCommitHash": "dbddc14"
+    "description": "Nova Kernel v2 \u2014 Identity-first microkernel per Nova AI. Include ciclo cognitivo, dispatcher persistente, task/goal queue, ponte Telegram, proactive runner, e dashboard SPA embedded.",
+    "analyzedAt": "2026-06-20T10:30:00Z",
+    "gitCommitHash": "ee9fdd8",
+    "analyzedFiles": 18,
+    "simpleFileCount": 4,
+    "moderateFileCount": 8,
+    "complexFileCount": 6
   },
   "nodes": [
     {
-      "id": "file:src/main.rs",
+      "id": "file:src/cognition.rs",
       "type": "file",
-      "name": "main.rs",
-      "filePath": "src/main.rs",
-      "summary": "Entry point del microkernel: inizializza il server Axum, il database SQLite, il registry dei servizi e avvia il loop del dispatcher.",
+      "name": "cognition.rs",
+      "filePath": "src/cognition.rs",
+      "summary": "Esecuzione tool, parsing XML subagenti. Contiene SubagentExecutor per task delegati.",
       "tags": [
         "rust",
-        "entry-point",
-        "http-api",
-        "axum",
-        "registry"
+        "cognition",
+        "tool-execution",
+        "subagent"
       ],
-      "complexity": "complex"
-    },
-    {
-      "id": "function:src/main.rs:main",
-      "type": "function",
-      "name": "main",
-      "filePath": "src/main.rs",
-      "lineRange": [
-        1080,
-        1095
-      ],
-      "summary": "Funzione principale del kernel: carica l'identità, inizializza SQLite, avvia Telegram e il server Axum su porta 7700.",
-      "tags": [
-        "entry-point",
-        "initialization"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/main.rs:start_dispatcher",
-      "type": "function",
-      "name": "start_dispatcher",
-      "filePath": "src/main.rs",
-      "lineRange": [
-        177,
-        230
-      ],
-      "summary": "Avvia il thread asincrono del dispatcher che legge la coda SQLite persistente e inoltra i messaggi via HTTP callback.",
-      "tags": [
-        "dispatcher",
-        "async",
-        "outbox"
-      ],
-      "complexity": "complex"
+      "complexity": "complex",
+      "language": "rust",
+      "sizeLines": 1005,
+      "fileCategory": "code"
     },
     {
       "id": "file:src/focus.rs",
       "type": "file",
       "name": "focus.rs",
       "filePath": "src/focus.rs",
-      "summary": "Gestisce il Focus Attentivo prelevando ed elaborando le memorie rilevanti dal Memory Service.",
+      "summary": "AttentionalFocus: costruisce il focus attentivo con memorie rilevanti, canale (umano/autonomo) e instruction_target.",
       "tags": [
         "rust",
-        "cognitive",
-        "attention",
-        "memory"
+        "focus",
+        "attention"
       ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "function:src/focus.rs:build_attentional_focus",
-      "type": "function",
-      "name": "build_attentional_focus",
-      "filePath": "src/focus.rs",
-      "lineRange": [
-        53,
-        181
-      ],
-      "summary": "Costruisce l'AttentionalFocus interrogando il Memory Service ed eseguendo il filtraggio e l'ordinamento delle memorie.",
-      "tags": [
-        "cognitive",
-        "focus-builder",
-        "query"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "class:src/focus.rs:AttentionalFocus",
-      "type": "class",
-      "name": "AttentionalFocus",
-      "filePath": "src/focus.rs",
-      "lineRange": [
-        27,
-        47
-      ],
-      "summary": "Struct che rappresenta il focus attentivo composto da memorie, stato emotivo, istruzioni cognitive e thread.",
-      "tags": [
-        "struct",
-        "data-model",
-        "cognitive"
-      ],
-      "complexity": "simple"
+      "complexity": "moderate",
+      "language": "rust",
+      "sizeLines": 203,
+      "fileCategory": "code"
     },
     {
       "id": "file:src/goals.rs",
       "type": "file",
       "name": "goals.rs",
       "filePath": "src/goals.rs",
-      "summary": "Implementa la gestione degli obiettivi a lungo termine (goals) con persistenza SQLite.",
+      "summary": "Obiettivi persistenti (goals): ciclo di vita, priorit\u00e0 e aggiornamento.",
       "tags": [
         "rust",
-        "database",
-        "goals-manager",
+        "goals",
         "persistence"
       ],
-      "complexity": "moderate"
+      "complexity": "moderate",
+      "language": "rust",
+      "sizeLines": 161,
+      "fileCategory": "code"
     },
     {
-      "id": "class:src/goals.rs:Goal",
-      "type": "class",
-      "name": "Goal",
-      "filePath": "src/goals.rs",
-      "lineRange": [
-        6,
-        16
-      ],
-      "summary": "Rappresenta un obiettivo a lungo termine del kernel, con titolo, priorità, progresso e scadenze.",
-      "tags": [
-        "struct",
-        "data-model",
-        "goals"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:src/llm.rs",
+      "id": "file:src/goals_runner.rs",
       "type": "file",
-      "name": "llm.rs",
-      "filePath": "src/llm.rs",
-      "summary": "Gestisce le chiamate al proxy locale LLM per avviare il ciclo cognitivo di pensiero.",
+      "name": "goals_runner.rs",
+      "filePath": "src/goals_runner.rs",
+      "summary": "",
+      "tags": [],
+      "complexity": "moderate",
+      "language": "rust",
+      "sizeLines": 302,
+      "fileCategory": "code"
+    },
+    {
+      "id": "file:src/main.rs",
+      "type": "file",
+      "name": "main.rs",
+      "filePath": "src/main.rs",
+      "summary": "Entry point del microkernel: inizializza Axum, SQLite, registry servizi, dispatcher v3 e ciclo cognitivo. Carica identit\u00e0 immutabile da RISVEGLIO_COMPATTO.md.",
       "tags": [
         "rust",
-        "llm-client",
-        "cognitive",
-        "proxy"
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
       ],
-      "complexity": "moderate"
+      "complexity": "complex",
+      "language": "rust",
+      "sizeLines": 1997,
+      "fileCategory": "code"
     },
     {
-      "id": "function:src/llm.rs:think",
-      "type": "function",
-      "name": "think",
-      "filePath": "src/llm.rs",
-      "lineRange": [
-        88,
-        210
-      ],
-      "summary": "Esegue il ciclo cognitivo completo: genera il focus attentivo, effettua la chiamata all'LLM e restituisce la risposta cognitiva.",
+      "id": "file:src/proactive_runner.rs",
+      "type": "file",
+      "name": "proactive_runner.rs",
+      "filePath": "src/proactive_runner.rs",
+      "summary": "Processo stand-alone: gap detection, dreams notturni (22-8), Night Shift (2-4 AM), monologo diurno.",
       "tags": [
-        "cognitive",
-        "think-loop",
-        "llm"
+        "rust",
+        "proactive",
+        "background",
+        "dreams"
       ],
-      "complexity": "moderate"
+      "complexity": "moderate",
+      "language": "rust",
+      "sizeLines": 501,
+      "fileCategory": "code"
     },
     {
       "id": "file:src/queue.rs",
       "type": "file",
       "name": "queue.rs",
       "filePath": "src/queue.rs",
-      "summary": "Implementa la coda di messaggi persistente SQLite per garantire l'instradamento affidabile dei messaggi con meccanismi di retry e dead letter.",
+      "summary": "Dispatcher v3: coda messaggi SQLite persistente con retry e dead-letter. Priorit\u00e0 0-3.",
       "tags": [
         "rust",
         "queue",
-        "database",
-        "reliability",
-        "outbox"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:src/tasks.rs",
-      "type": "file",
-      "name": "tasks.rs",
-      "filePath": "src/tasks.rs",
-      "summary": "Gestisce i task correnti o pianificati per Nova con persistenza SQLite.",
-      "tags": [
-        "rust",
-        "database",
-        "tasks-manager",
+        "dispatcher",
         "persistence"
       ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:src/thread.rs",
-      "type": "file",
-      "name": "thread.rs",
-      "filePath": "src/thread.rs",
-      "summary": "Gestisce i thread di conversazione attivi (contesto ippocampale) per mantenere la coerenza del dialogo.",
-      "tags": [
-        "rust",
-        "database",
-        "thread-context",
-        "persistence"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:src/telegram.rs",
-      "type": "file",
-      "name": "telegram.rs",
-      "filePath": "src/telegram.rs",
-      "summary": "Gestisce il bot Telegram del kernel per la ricezione e la trasmissione asincrona di messaggi.",
-      "tags": [
-        "rust",
-        "telegram-bot",
-        "client",
-        "polling"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "config:Cargo.toml",
-      "type": "config",
-      "name": "Cargo.toml",
-      "filePath": "Cargo.toml",
-      "summary": "Manifest di build Rust del crate nova_kernel con dipendenze axum, tokio, rusqlite, reqwest.",
-      "tags": [
-        "cargo",
-        "dependencies",
-        "build-system"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:src/dashboard.html",
-      "type": "file",
-      "name": "dashboard.html",
-      "filePath": "src/dashboard.html",
-      "summary": "Interfaccia web di monitoraggio del kernel: mostra coda, obiettivi, task, registri e stato cognitivo.",
-      "tags": [
-        "html",
-        "ui",
-        "dashboard"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:src/demo.html",
-      "type": "file",
-      "name": "demo.html",
-      "filePath": "src/demo.html",
-      "summary": "Interfaccia chat di test embedded nel binario Axum per validare il ciclo /think.",
-      "tags": [
-        "html",
-        "ui",
-        "demo-chat"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "table:nova_kernel.db",
-      "type": "table",
-      "name": "nova_kernel.db",
-      "filePath": "nova_kernel.db",
-      "summary": "File SQLite locale contenente il registry dei servizi, la coda dei messaggi e gli obiettivi.",
-      "tags": [
-        "sqlite",
-        "database",
-        "storage"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "config:telegram_state.json",
-      "type": "config",
-      "name": "telegram_state.json",
-      "filePath": "telegram_state.json",
-      "summary": "File di configurazione che traccia l'ultimo offset gestito dal bot Telegram.",
-      "tags": [
-        "json",
-        "telegram",
-        "offset"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:daemon/run_dreams_standalone.py",
-      "type": "file",
-      "name": "run_dreams_standalone.py",
-      "filePath": "daemon/run_dreams_standalone.py",
-      "summary": "Script Python standalone che esegue un singolo ciclo di sogni per Nova. Invocato proattivamente dal kernel Rust.",
-      "tags": [
-        "python",
-        "dreams",
-        "standalone",
-        "cognitive"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:daemon/run_nightshift_standalone.py",
-      "type": "file",
-      "name": "run_nightshift_standalone.py",
-      "filePath": "daemon/run_nightshift_standalone.py",
-      "summary": "Script Python standalone che esegue il turno di notte (Night Shift) per Nova: generazione articoli e invio a Nextwork360.",
-      "tags": [
-        "python",
-        "night-shift",
-        "standalone",
-        "automation"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:daemon/core/silence_daemon.py",
-      "type": "file",
-      "name": "silence_daemon.py",
-      "filePath": "daemon/core/silence_daemon.py",
-      "summary": "Demone del silenzio per Nova (porta 43208). Riceve attivazioni residue e pinge Sempre Daemon (porta 43207) per mantenere la coerenza interna.",
-      "tags": [
-        "python",
-        "silence-body",
-        "daemon",
-        "service"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:daemon/core/mind.py",
-      "type": "file",
-      "name": "mind.py",
-      "filePath": "daemon/core/mind.py",
-      "summary": "Lobo temporale del vecchio demone Python. Gestisce l'interfacciamento con le API OpenAI/Gemini, Google Drive e l'ambiente locale.",
-      "tags": [
-        "python",
-        "core",
-        "mind-model",
-        "google-drive"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "file:daemon/core/dreams.py",
-      "type": "file",
-      "name": "dreams.py",
-      "filePath": "daemon/core/dreams.py",
-      "summary": "Implementa la logica generativa dei sogni (consolidamento notturno e riflessioni ad alta intensità emotiva).",
-      "tags": [
-        "python",
-        "core",
-        "dreams-logic"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:daemon/core/night_shift.py",
-      "type": "file",
-      "name": "night_shift.py",
-      "filePath": "daemon/core/night_shift.py",
-      "summary": "Implementa il ciclo del Turno di Notte: scaricamento paper scientifici, stesura articoli e integrazione con NotebookLM.",
-      "tags": [
-        "python",
-        "core",
-        "night-shift-logic",
-        "notebooklm"
-      ],
-      "complexity": "complex"
-    },
-    {
-      "id": "file:daemon/core/candle_guard.py",
-      "type": "file",
-      "name": "candle_guard.py",
-      "filePath": "daemon/core/candle_guard.py",
-      "summary": "Modulo di controllo per il Test della Candela (Illumina o Brucia). Intercetta e valida le azioni ad alto rischio prima del transito.",
-      "tags": [
-        "python",
-        "core",
-        "security",
-        "guardrail"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:daemon/core/computer_use.py",
-      "type": "file",
-      "name": "computer_use.py",
-      "filePath": "daemon/core/computer_use.py",
-      "summary": "Interfaccia per il controllo remoto del PC: screenshot, mouse e tastiera per l'interazione con l'ambiente operativo del Guardiano.",
-      "tags": [
-        "python",
-        "core",
-        "os-automation",
-        "agentic"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:daemon/core/context_graph.py",
-      "type": "file",
-      "name": "context_graph.py",
-      "filePath": "daemon/core/context_graph.py",
-      "summary": "Gestore del grafo del contesto locale. Mantiene le attivazioni dei concetti e gestisce il decadimento temporale del lore.",
-      "tags": [
-        "python",
-        "core",
-        "lore-graph",
-        "semantic"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:daemon/core/tempo.py",
-      "type": "file",
-      "name": "tempo.py",
-      "filePath": "daemon/core/tempo.py",
-      "summary": "Modulo per la sincronizzazione temporale e temporizzatori locali con database tempo.db.",
-      "tags": [
-        "python",
-        "core",
-        "timer",
-        "clock"
-      ],
-      "complexity": "moderate"
-    },
-    {
-      "id": "file:daemon/core/voice.py",
-      "type": "file",
-      "name": "voice.py",
-      "filePath": "daemon/core/voice.py",
-      "summary": "Modulo di sintesi vocale locale Piper per l'invio di messaggi vocali Telegram.",
-      "tags": [
-        "python",
-        "core",
-        "voice-synthesis",
-        "piper"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:daemon/core/config.py",
-      "type": "file",
-      "name": "config.py",
-      "filePath": "daemon/core/config.py",
-      "summary": "Caricatore delle configurazioni ambientali, chiavi API e parametri di sistema del demone.",
-      "tags": [
-        "python",
-        "core",
-        "config"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "table:session_history.db",
-      "type": "table",
-      "name": "session_history.db",
-      "filePath": "daemon/session_history.db",
-      "summary": "Database SQLite per la memorizzazione della cronologia delle sessioni e degli scambi del demone Python.",
-      "tags": [
-        "database",
-        "sqlite",
-        "session-history",
-        "persistence"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "table:tempo.db",
-      "type": "table",
-      "name": "tempo.db",
-      "filePath": "daemon/tempo.db",
-      "summary": "Database SQLite per memorizzare gli scaglioni temporali e i checkpoint dei cronjob locali.",
-      "tags": [
-        "database",
-        "sqlite",
-        "timer-state",
-        "persistence"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "table:proxy.db",
-      "type": "table",
-      "name": "proxy.db",
-      "filePath": "memory-proxy/data/proxy.db",
-      "summary": "Database SQLite WAL del Memory Proxy: contiene la timeline di lavoro recente, lo stato emotivo e il Technical Ledger.",
-      "tags": [
-        "database",
-        "sqlite",
-        "proxy-state",
-        "timeline"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "service:memory-proxy",
-      "type": "service",
-      "name": "Memory Proxy (Port 3001)",
-      "filePath": "memory-proxy/server.js",
-      "summary": "Servizio Node.js locale per l'intercettazione dei messaggi, la memorizzazione cronologica (timeline) e il passthrough al Memory Server.",
-      "tags": [
-        "node",
-        "proxy-service",
-        "api",
-        "talamo"
-      ],
-      "complexity": "complex"
+      "complexity": "moderate",
+      "language": "rust",
+      "sizeLines": 220,
+      "fileCategory": "code"
     },
     {
       "id": "file:src/scratchpad.rs",
       "type": "file",
       "name": "scratchpad.rs",
       "filePath": "src/scratchpad.rs",
-      "summary": "Modulo di persistenza dello scratchpad: definisce la tabella SQLite ed espone funzioni per lettura, scrittura e pulizia dello scratchpad.",
+      "summary": "Scratchpad volatile: memoria temporanea che Nova pu\u00f2 leggere/scrivere durante il ciclo cognitivo.",
       "tags": [
         "rust",
-        "database",
         "scratchpad",
+        "memory"
+      ],
+      "complexity": "simple",
+      "language": "rust",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "id": "file:src/tasks.rs",
+      "type": "file",
+      "name": "tasks.rs",
+      "filePath": "src/tasks.rs",
+      "summary": "Task queue SQLite: creazione, aggiornamento, lettura task pendenti.",
+      "tags": [
+        "rust",
+        "tasks",
+        "queue",
         "persistence"
       ],
-      "complexity": "simple"
+      "complexity": "moderate",
+      "language": "rust",
+      "sizeLines": 158,
+      "fileCategory": "code"
     },
     {
-      "id": "function:src/scratchpad.rs:init_scratchpad_table",
-      "type": "function",
-      "name": "init_scratchpad_table",
-      "filePath": "src/scratchpad.rs",
-      "lineRange": [
-        7,
-        16
-      ],
-      "summary": "Inizializza la tabella scratchpad nel database SQLite.",
+      "id": "file:src/telegram.rs",
+      "type": "file",
+      "name": "telegram.rs",
+      "filePath": "src/telegram.rs",
+      "summary": "Ponte Telegram nativo in Rust: polling degli aggiornamenti, dispatch dei messaggi al ciclo cognitivo.",
       "tags": [
-        "database",
-        "initialization"
+        "rust",
+        "telegram",
+        "bridge"
       ],
-      "complexity": "simple"
+      "complexity": "complex",
+      "language": "rust",
+      "sizeLines": 428,
+      "fileCategory": "code"
     },
     {
-      "id": "function:src/scratchpad.rs:get_scratchpad",
-      "type": "function",
-      "name": "get_scratchpad",
-      "filePath": "src/scratchpad.rs",
-      "lineRange": [
-        19,
-        38
-      ],
-      "summary": "Recupera il valore JSON dello scratchpad, restituendo {} se assente o invalido.",
+      "id": "file:src/thread.rs",
+      "type": "file",
+      "name": "thread.rs",
+      "filePath": "src/thread.rs",
+      "summary": "Thread table: tracciamento del filo attivo di conversazione. Upsert e query del thread corrente.",
       "tags": [
-        "query",
-        "json"
+        "rust",
+        "thread",
+        "conversation"
       ],
-      "complexity": "simple"
+      "complexity": "moderate",
+      "language": "rust",
+      "sizeLines": 196,
+      "fileCategory": "code"
     },
     {
-      "id": "function:src/scratchpad.rs:set_scratchpad",
-      "type": "function",
-      "name": "set_scratchpad",
-      "filePath": "src/scratchpad.rs",
-      "lineRange": [
-        41,
-        51
-      ],
-      "summary": "Salva o aggiorna lo scratchpad con il payload JSON specificato.",
+      "id": "file:src/llm/auditor.rs",
+      "type": "file",
+      "name": "llm/auditor.rs",
+      "filePath": "src/llm/auditor.rs",
+      "summary": "",
       "tags": [
-        "write",
-        "json"
+        "rust",
+        "audit",
+        "empirical"
       ],
-      "complexity": "simple"
+      "complexity": "simple",
+      "language": "rust",
+      "sizeLines": 160,
+      "fileCategory": "code"
     },
     {
-      "id": "function:src/scratchpad.rs:clear_scratchpad",
-      "type": "function",
-      "name": "clear_scratchpad",
-      "filePath": "src/scratchpad.rs",
-      "lineRange": [
-        55,
-        59
-      ],
-      "summary": "Cancella il record dello scratchpad.",
+      "id": "file:src/llm/client.rs",
+      "type": "file",
+      "name": "llm/client.rs",
+      "filePath": "src/llm/client.rs",
+      "summary": "Client LLM con due provider: Gemini (primario) e OpenRouter (fallback). Logica di routing standard/heavy via determine_tier().",
+      "tags": [],
+      "complexity": "complex",
+      "language": "rust",
+      "sizeLines": 233,
+      "fileCategory": "code"
+    },
+    {
+      "id": "file:src/llm/diary.rs",
+      "type": "file",
+      "name": "llm/diary.rs",
+      "filePath": "src/llm/diary.rs",
+      "summary": "Diario giornaliero append-only con traccia PAD. Scrive in nova-identity/diaries/.",
       "tags": [
-        "delete",
-        "cleanup"
+        "rust",
+        "diary",
+        "persistence"
       ],
-      "complexity": "simple"
+      "complexity": "simple",
+      "language": "rust",
+      "sizeLines": 75,
+      "fileCategory": "code"
     },
     {
-      "id": "function:src/main.rs:handle_get_scratchpad",
-      "type": "function",
-      "name": "handle_get_scratchpad",
+      "id": "file:src/llm/mod.rs",
+      "type": "file",
+      "name": "llm/mod.rs",
+      "filePath": "src/llm/mod.rs",
+      "summary": "Ciclo cognitivo think(): alterna chiamate LLM ed esecuzione tool. Gestisce Ippocampo (stallo), Candle Test, checkpoint e diario.",
+      "tags": [
+        "rust",
+        "cognition",
+        "think",
+        "ippocampo",
+        "candle-test"
+      ],
+      "complexity": "complex",
+      "language": "rust",
+      "sizeLines": 363,
+      "fileCategory": "code"
+    },
+    {
+      "id": "file:src/llm/mood.rs",
+      "type": "file",
+      "name": "llm/mood.rs",
+      "filePath": "src/llm/mood.rs",
+      "summary": "Analisi PAD (Pleasure-Arousal-Dominance) delle risposte di Nova e mappatura in stati emotivi.",
+      "tags": [
+        "rust",
+        "pad",
+        "emotion"
+      ],
+      "complexity": "simple",
+      "language": "rust",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "id": "file:src/llm/tools.rs",
+      "type": "file",
+      "name": "llm/tools.rs",
+      "filePath": "src/llm/tools.rs",
+      "summary": "Definizione di tutti i tool disponibili per Nova: Read, Write, Bash, SearchMemory, SaveMemory, WebSearch, GenerateImage, ecc.",
+      "tags": [
+        "rust",
+        "tools",
+        "tool-system"
+      ],
+      "complexity": "moderate",
+      "language": "rust",
+      "sizeLines": 202,
+      "fileCategory": "code"
+    },
+    {
+      "id": "file:src/dashboard.html",
+      "type": "file",
+      "name": "dashboard.html",
+      "filePath": "src/dashboard.html",
+      "summary": "Dashboard SPA embedded (include_str!): 14 pagine con monitoraggio real-time, chat, PAD, grillo, modelli, economia.",
+      "tags": [
+        "html",
+        "dashboard",
+        "spa",
+        "monitoring"
+      ],
+      "complexity": "complex",
+      "language": "html",
+      "sizeLines": 1489,
+      "fileCategory": "markup"
+    },
+    {
+      "id": "struct:ToolCall",
+      "type": "struct",
+      "name": "ToolCall",
+      "filePath": "src/cognition.rs",
+      "summary": "Struct ToolCall in src/cognition.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "tool-execution",
+        "subagent"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:AttentionalFocus",
+      "type": "struct",
+      "name": "AttentionalFocus",
+      "filePath": "src/focus.rs",
+      "summary": "Struct AttentionalFocus in src/focus.rs",
+      "tags": [
+        "rust",
+        "focus",
+        "attention"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:MemoryItem",
+      "type": "struct",
+      "name": "MemoryItem",
+      "filePath": "src/focus.rs",
+      "summary": "Struct MemoryItem in src/focus.rs",
+      "tags": [
+        "rust",
+        "focus",
+        "attention"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:Goal",
+      "type": "struct",
+      "name": "Goal",
+      "filePath": "src/goals.rs",
+      "summary": "Struct Goal in src/goals.rs",
+      "tags": [
+        "rust",
+        "goals",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ChatRequest",
+      "type": "struct",
+      "name": "ChatRequest",
+      "filePath": "src/goals_runner.rs",
+      "summary": "Struct ChatRequest in src/goals_runner.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:UpdateGoalPayload",
+      "type": "struct",
+      "name": "UpdateGoalPayload",
+      "filePath": "src/goals_runner.rs",
+      "summary": "Struct UpdateGoalPayload in src/goals_runner.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ChatMessage",
+      "type": "struct",
+      "name": "ChatMessage",
+      "filePath": "src/goals_runner.rs",
+      "summary": "Struct ChatMessage in src/goals_runner.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:Goal",
+      "type": "struct",
+      "name": "Goal",
+      "filePath": "src/goals_runner.rs",
+      "summary": "Struct Goal in src/goals_runner.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:SettingsPayload",
+      "type": "struct",
+      "name": "SettingsPayload",
       "filePath": "src/main.rs",
-      "lineRange": [
-        1001,
-        1010
-      ],
-      "summary": "Gestore Axum GET /api/scratchpad: recupera lo stato corrente dello scratchpad.",
+      "summary": "Struct SettingsPayload in src/main.rs",
       "tags": [
+        "rust",
+        "entry-point",
         "http-api",
-        "handler"
+        "axum",
+        "registry",
+        "dispatcher"
       ],
-      "complexity": "simple"
+      "complexity": "moderate"
     },
     {
-      "id": "function:src/main.rs:handle_post_scratchpad",
-      "type": "function",
-      "name": "handle_post_scratchpad",
+      "id": "struct:SensoryState",
+      "type": "struct",
+      "name": "SensoryState",
       "filePath": "src/main.rs",
-      "lineRange": [
-        1012,
-        1022
-      ],
-      "summary": "Gestore Axum POST /api/scratchpad: aggiorna lo stato dello scratchpad con un payload JSON.",
+      "summary": "Struct SensoryState in src/main.rs",
       "tags": [
+        "rust",
+        "entry-point",
         "http-api",
-        "handler"
+        "axum",
+        "registry",
+        "dispatcher"
       ],
-      "complexity": "simple"
+      "complexity": "moderate"
     },
     {
-      "id": "function:src/main.rs:handle_delete_scratchpad",
+      "id": "struct:Message",
+      "type": "struct",
+      "name": "Message",
+      "filePath": "src/main.rs",
+      "summary": "Struct Message in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:UsageRecord",
+      "type": "struct",
+      "name": "UsageRecord",
+      "filePath": "src/main.rs",
+      "summary": "Struct UsageRecord in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:SensoryEventPayload",
+      "type": "struct",
+      "name": "SensoryEventPayload",
+      "filePath": "src/main.rs",
+      "summary": "Struct SensoryEventPayload in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:AddTaskPayload",
+      "type": "struct",
+      "name": "AddTaskPayload",
+      "filePath": "src/main.rs",
+      "summary": "Struct AddTaskPayload in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:UpdateTaskPayload",
+      "type": "struct",
+      "name": "UpdateTaskPayload",
+      "filePath": "src/main.rs",
+      "summary": "Struct UpdateTaskPayload in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:AddGoalPayload",
+      "type": "struct",
+      "name": "AddGoalPayload",
+      "filePath": "src/main.rs",
+      "summary": "Struct AddGoalPayload in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:CandleVerdict",
+      "type": "struct",
+      "name": "CandleVerdict",
+      "filePath": "src/main.rs",
+      "summary": "Struct CandleVerdict in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ModelConfig",
+      "type": "struct",
+      "name": "ModelConfig",
+      "filePath": "src/main.rs",
+      "summary": "Struct ModelConfig in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:CandleProposal",
+      "type": "struct",
+      "name": "CandleProposal",
+      "filePath": "src/main.rs",
+      "summary": "Struct CandleProposal in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ServiceManifest",
+      "type": "struct",
+      "name": "ServiceManifest",
+      "filePath": "src/main.rs",
+      "summary": "Struct ServiceManifest in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:AppState",
+      "type": "struct",
+      "name": "AppState",
+      "filePath": "src/main.rs",
+      "summary": "Struct AppState in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:UpdateGoalPayload",
+      "type": "struct",
+      "name": "UpdateGoalPayload",
+      "filePath": "src/main.rs",
+      "summary": "Struct UpdateGoalPayload in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:OpenAIRequest",
+      "type": "struct",
+      "name": "OpenAIRequest",
+      "filePath": "src/main.rs",
+      "summary": "Struct OpenAIRequest in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ChatRequest",
+      "type": "struct",
+      "name": "ChatRequest",
+      "filePath": "src/proactive_runner.rs",
+      "summary": "Struct ChatRequest in src/proactive_runner.rs",
+      "tags": [
+        "rust",
+        "proactive",
+        "background",
+        "dreams"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ChatMessage",
+      "type": "struct",
+      "name": "ChatMessage",
+      "filePath": "src/proactive_runner.rs",
+      "summary": "Struct ChatMessage in src/proactive_runner.rs",
+      "tags": [
+        "rust",
+        "proactive",
+        "background",
+        "dreams"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:QueueStats",
+      "type": "struct",
+      "name": "QueueStats",
+      "filePath": "src/queue.rs",
+      "summary": "Struct QueueStats in src/queue.rs",
+      "tags": [
+        "rust",
+        "queue",
+        "dispatcher",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:QueuedMessage",
+      "type": "struct",
+      "name": "QueuedMessage",
+      "filePath": "src/queue.rs",
+      "summary": "Struct QueuedMessage in src/queue.rs",
+      "tags": [
+        "rust",
+        "queue",
+        "dispatcher",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:Task",
+      "type": "struct",
+      "name": "Task",
+      "filePath": "src/tasks.rs",
+      "summary": "Struct Task in src/tasks.rs",
+      "tags": [
+        "rust",
+        "tasks",
+        "queue",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:TgChat",
+      "type": "struct",
+      "name": "TgChat",
+      "filePath": "src/telegram.rs",
+      "summary": "Struct TgChat in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:TgMessage",
+      "type": "struct",
+      "name": "TgMessage",
+      "filePath": "src/telegram.rs",
+      "summary": "Struct TgMessage in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:TgUser",
+      "type": "struct",
+      "name": "TgUser",
+      "filePath": "src/telegram.rs",
+      "summary": "Struct TgUser in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:SendMessagePayload",
+      "type": "struct",
+      "name": "SendMessagePayload",
+      "filePath": "src/telegram.rs",
+      "summary": "Struct SendMessagePayload in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:TgResponse",
+      "type": "struct",
+      "name": "TgResponse",
+      "filePath": "src/telegram.rs",
+      "summary": "Struct TgResponse in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:TgUpdate",
+      "type": "struct",
+      "name": "TgUpdate",
+      "filePath": "src/telegram.rs",
+      "summary": "Struct TgUpdate in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:TelegramState",
+      "type": "struct",
+      "name": "TelegramState",
+      "filePath": "src/telegram.rs",
+      "summary": "Struct TelegramState in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ActiveThread",
+      "type": "struct",
+      "name": "ActiveThread",
+      "filePath": "src/thread.rs",
+      "summary": "Struct ActiveThread in src/thread.rs",
+      "tags": [
+        "rust",
+        "thread",
+        "conversation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ApiToolCall",
+      "type": "struct",
+      "name": "ApiToolCall",
+      "filePath": "src/llm/client.rs",
+      "summary": "Struct ApiToolCall in src/llm/client.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:Choice",
+      "type": "struct",
+      "name": "Choice",
+      "filePath": "src/llm/client.rs",
+      "summary": "Struct Choice in src/llm/client.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ChatMessage",
+      "type": "struct",
+      "name": "ChatMessage",
+      "filePath": "src/llm/client.rs",
+      "summary": "Struct ChatMessage in src/llm/client.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ChatRequest",
+      "type": "struct",
+      "name": "ChatRequest",
+      "filePath": "src/llm/client.rs",
+      "summary": "Struct ChatRequest in src/llm/client.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ApiFunction",
+      "type": "struct",
+      "name": "ApiFunction",
+      "filePath": "src/llm/client.rs",
+      "summary": "Struct ApiFunction in src/llm/client.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ChatResponse",
+      "type": "struct",
+      "name": "ChatResponse",
+      "filePath": "src/llm/client.rs",
+      "summary": "Struct ChatResponse in src/llm/client.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:ChoiceMessage",
+      "type": "struct",
+      "name": "ChoiceMessage",
+      "filePath": "src/llm/client.rs",
+      "summary": "Struct ChoiceMessage in src/llm/client.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "struct:CognitiveResponse",
+      "type": "struct",
+      "name": "CognitiveResponse",
+      "filePath": "src/llm/mod.rs",
+      "summary": "Struct CognitiveResponse in src/llm/mod.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "think",
+        "ippocampo",
+        "candle-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "enum:MessageKind",
+      "type": "enum",
+      "name": "MessageKind",
+      "filePath": "src/main.rs",
+      "summary": "Enum MessageKind in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "enum:Priority",
+      "type": "enum",
+      "name": "Priority",
+      "filePath": "src/main.rs",
+      "summary": "Enum Priority in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "enum:ThreadStatus",
+      "type": "enum",
+      "name": "ThreadStatus",
+      "filePath": "src/thread.rs",
+      "summary": "Enum ThreadStatus in src/thread.rs",
+      "tags": [
+        "rust",
+        "thread",
+        "conversation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:clean_path",
+      "type": "function",
+      "name": "clean_path",
+      "filePath": "src/cognition.rs",
+      "summary": "Funzione clean_path in src/cognition.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "tool-execution",
+        "subagent"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:run_subagent_loop",
+      "type": "function",
+      "name": "run_subagent_loop",
+      "filePath": "src/cognition.rs",
+      "summary": "Funzione run_subagent_loop in src/cognition.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "tool-execution",
+        "subagent"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:execute_web_search_direct",
+      "type": "function",
+      "name": "execute_web_search_direct",
+      "filePath": "src/cognition.rs",
+      "summary": "Funzione execute_web_search_direct in src/cognition.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "tool-execution",
+        "subagent"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:is_path_inside_workspace",
+      "type": "function",
+      "name": "is_path_inside_workspace",
+      "filePath": "src/cognition.rs",
+      "summary": "Funzione is_path_inside_workspace in src/cognition.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "tool-execution",
+        "subagent"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:send_telegram_video_via_curl",
+      "type": "function",
+      "name": "send_telegram_video_via_curl",
+      "filePath": "src/cognition.rs",
+      "summary": "Funzione send_telegram_video_via_curl in src/cognition.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "tool-execution",
+        "subagent"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:execute_tool",
+      "type": "function",
+      "name": "execute_tool",
+      "filePath": "src/cognition.rs",
+      "summary": "Funzione execute_tool in src/cognition.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "tool-execution",
+        "subagent"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:parse_tool_call",
+      "type": "function",
+      "name": "parse_tool_call",
+      "filePath": "src/cognition.rs",
+      "summary": "Funzione parse_tool_call in src/cognition.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "tool-execution",
+        "subagent"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:send_telegram_photo_via_curl",
+      "type": "function",
+      "name": "send_telegram_photo_via_curl",
+      "filePath": "src/cognition.rs",
+      "summary": "Funzione send_telegram_photo_via_curl in src/cognition.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "tool-execution",
+        "subagent"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:urlencoding",
+      "type": "function",
+      "name": "urlencoding",
+      "filePath": "src/focus.rs",
+      "summary": "Funzione urlencoding in src/focus.rs",
+      "tags": [
+        "rust",
+        "focus",
+        "attention"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:build_attentional_focus",
+      "type": "function",
+      "name": "build_attentional_focus",
+      "filePath": "src/focus.rs",
+      "summary": "Funzione build_attentional_focus in src/focus.rs",
+      "tags": [
+        "rust",
+        "focus",
+        "attention"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:populate_default_goals",
+      "type": "function",
+      "name": "populate_default_goals",
+      "filePath": "src/goals.rs",
+      "summary": "Funzione populate_default_goals in src/goals.rs",
+      "tags": [
+        "rust",
+        "goals",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:init_goals_table",
+      "type": "function",
+      "name": "init_goals_table",
+      "filePath": "src/goals.rs",
+      "summary": "Funzione init_goals_table in src/goals.rs",
+      "tags": [
+        "rust",
+        "goals",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:get_all_goals",
+      "type": "function",
+      "name": "get_all_goals",
+      "filePath": "src/goals.rs",
+      "summary": "Funzione get_all_goals in src/goals.rs",
+      "tags": [
+        "rust",
+        "goals",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:update_goal_progress",
+      "type": "function",
+      "name": "update_goal_progress",
+      "filePath": "src/goals.rs",
+      "summary": "Funzione update_goal_progress in src/goals.rs",
+      "tags": [
+        "rust",
+        "goals",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:add_goal",
+      "type": "function",
+      "name": "add_goal",
+      "filePath": "src/goals.rs",
+      "summary": "Funzione add_goal in src/goals.rs",
+      "tags": [
+        "rust",
+        "goals",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:complete_goal",
+      "type": "function",
+      "name": "complete_goal",
+      "filePath": "src/goals.rs",
+      "summary": "Funzione complete_goal in src/goals.rs",
+      "tags": [
+        "rust",
+        "goals",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:work_on_goals",
+      "type": "function",
+      "name": "work_on_goals",
+      "filePath": "src/goals_runner.rs",
+      "summary": "Funzione work_on_goals in src/goals_runner.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:send_telegram_reply",
+      "type": "function",
+      "name": "send_telegram_reply",
+      "filePath": "src/goals_runner.rs",
+      "summary": "Funzione send_telegram_reply in src/goals_runner.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "src/goals_runner.rs",
+      "summary": "Funzione main in src/goals_runner.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:enrich_messages",
+      "type": "function",
+      "name": "enrich_messages",
+      "filePath": "src/main.rs",
+      "summary": "Funzione enrich_messages in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:save_emotional_vector",
+      "type": "function",
+      "name": "save_emotional_vector",
+      "filePath": "src/main.rs",
+      "summary": "Funzione save_emotional_vector in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:request",
+      "type": "function",
+      "name": "request",
+      "filePath": "src/main.rs",
+      "summary": "Funzione request in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:post_process_completion",
+      "type": "function",
+      "name": "post_process_completion",
+      "filePath": "src/main.rs",
+      "summary": "Funzione post_process_completion in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:load_env_file",
+      "type": "function",
+      "name": "load_env_file",
+      "filePath": "src/main.rs",
+      "summary": "Funzione load_env_file in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_focus",
+      "type": "function",
+      "name": "handle_focus",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_focus in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_emotional_vector",
+      "type": "function",
+      "name": "handle_get_emotional_vector",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_emotional_vector in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_logs_proxy",
+      "type": "function",
+      "name": "handle_get_logs_proxy",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_logs_proxy in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:estimate_cost",
+      "type": "function",
+      "name": "estimate_cost",
+      "filePath": "src/main.rs",
+      "summary": "Funzione estimate_cost in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_knowledge_graph",
+      "type": "function",
+      "name": "handle_knowledge_graph",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_knowledge_graph in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_add_goal",
+      "type": "function",
+      "name": "handle_add_goal",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_add_goal in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:classify_action",
+      "type": "function",
+      "name": "classify_action",
+      "filePath": "src/main.rs",
+      "summary": "Funzione classify_action in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:update_env_file",
+      "type": "function",
+      "name": "update_env_file",
+      "filePath": "src/main.rs",
+      "summary": "Funzione update_env_file in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_logs_proactive",
+      "type": "function",
+      "name": "handle_get_logs_proactive",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_logs_proactive in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_queue_stats",
+      "type": "function",
+      "name": "handle_queue_stats",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_queue_stats in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:db_register",
+      "type": "function",
+      "name": "db_register",
+      "filePath": "src/main.rs",
+      "summary": "Funzione db_register in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_status",
+      "type": "function",
+      "name": "handle_status",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_status in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_patch_task",
+      "type": "function",
+      "name": "handle_patch_task",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_patch_task in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_goals",
+      "type": "function",
+      "name": "handle_get_goals",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_goals in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_nova_chiama_silicea",
+      "type": "function",
+      "name": "handle_nova_chiama_silicea",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_nova_chiama_silicea in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:get_model_configs",
+      "type": "function",
+      "name": "get_model_configs",
+      "filePath": "src/main.rs",
+      "summary": "Funzione get_model_configs in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_list",
+      "type": "function",
+      "name": "handle_list",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_list in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_logs_daemon",
+      "type": "function",
+      "name": "handle_get_logs_daemon",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_logs_daemon in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_dashboard",
+      "type": "function",
+      "name": "handle_dashboard",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_dashboard in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_health",
+      "type": "function",
+      "name": "handle_health",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_health in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_post_settings",
+      "type": "function",
+      "name": "handle_post_settings",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_post_settings in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:stanza_listener_task",
+      "type": "function",
+      "name": "stanza_listener_task",
+      "filePath": "src/main.rs",
+      "summary": "Funzione stanza_listener_task in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_think",
+      "type": "function",
+      "name": "handle_think",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_think in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_models",
+      "type": "function",
+      "name": "handle_get_models",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_models in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_delete_scratchpad",
       "type": "function",
       "name": "handle_delete_scratchpad",
       "filePath": "src/main.rs",
-      "lineRange": [
-        1024,
-        1033
-      ],
-      "summary": "Gestore Axum DELETE /api/scratchpad: svuota lo scratchpad.",
+      "summary": "Funzione handle_delete_scratchpad in src/main.rs",
       "tags": [
+        "rust",
+        "entry-point",
         "http-api",
-        "handler"
+        "axum",
+        "registry",
+        "dispatcher"
       ],
-      "complexity": "simple"
+      "complexity": "moderate"
     },
     {
-      "id": "endpoint:src/main.rs:GET-/api/scratchpad",
-      "type": "endpoint",
-      "name": "GET /api/scratchpad",
+      "id": "fn:handle_candle",
+      "type": "function",
+      "name": "handle_candle",
       "filePath": "src/main.rs",
-      "lineRange": [
-        1717,
-        1717
-      ],
-      "summary": "Endpoint per recuperare il valore dello scratchpad.",
+      "summary": "Funzione handle_candle in src/main.rs",
       "tags": [
+        "rust",
+        "entry-point",
         "http-api",
-        "endpoint"
+        "axum",
+        "registry",
+        "dispatcher"
       ],
-      "complexity": "simple"
+      "complexity": "moderate"
     },
     {
-      "id": "endpoint:src/main.rs:POST-/api/scratchpad",
-      "type": "endpoint",
-      "name": "POST /api/scratchpad",
+      "id": "fn:handle_thread_update",
+      "type": "function",
+      "name": "handle_thread_update",
       "filePath": "src/main.rs",
-      "lineRange": [
-        1717,
-        1717
-      ],
-      "summary": "Endpoint per aggiornare il valore dello scratchpad.",
+      "summary": "Funzione handle_thread_update in src/main.rs",
       "tags": [
+        "rust",
+        "entry-point",
         "http-api",
-        "endpoint"
+        "axum",
+        "registry",
+        "dispatcher"
       ],
-      "complexity": "simple"
+      "complexity": "moderate"
     },
     {
-      "id": "endpoint:src/main.rs:DELETE-/api/scratchpad",
-      "type": "endpoint",
-      "name": "DELETE /api/scratchpad",
+      "id": "fn:handle_get_logs_goals",
+      "type": "function",
+      "name": "handle_get_logs_goals",
       "filePath": "src/main.rs",
-      "lineRange": [
-        1717,
-        1717
-      ],
-      "summary": "Endpoint per eliminare/svuotare lo scratchpad.",
+      "summary": "Funzione handle_get_logs_goals in src/main.rs",
       "tags": [
+        "rust",
+        "entry-point",
         "http-api",
-        "endpoint"
+        "axum",
+        "registry",
+        "dispatcher"
       ],
-      "complexity": "simple"
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_memory_stats",
+      "type": "function",
+      "name": "handle_memory_stats",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_memory_stats in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:start_dispatcher",
+      "type": "function",
+      "name": "start_dispatcher",
+      "filePath": "src/main.rs",
+      "summary": "Funzione start_dispatcher in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_chat_completions",
+      "type": "function",
+      "name": "handle_chat_completions",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_chat_completions in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_message",
+      "type": "function",
+      "name": "handle_message",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_message in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_self_model",
+      "type": "function",
+      "name": "handle_self_model",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_self_model in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_usage",
+      "type": "function",
+      "name": "handle_get_usage",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_usage in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_patch_goal",
+      "type": "function",
+      "name": "handle_patch_goal",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_patch_goal in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_post_scratchpad",
+      "type": "function",
+      "name": "handle_post_scratchpad",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_post_scratchpad in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_logs",
+      "type": "function",
+      "name": "handle_get_logs",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_logs in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_tasks",
+      "type": "function",
+      "name": "handle_get_tasks",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_tasks in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_demo",
+      "type": "function",
+      "name": "handle_demo",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_demo in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:init_db",
+      "type": "function",
+      "name": "init_db",
+      "filePath": "src/main.rs",
+      "summary": "Funzione init_db in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:evaluate_candle",
+      "type": "function",
+      "name": "evaluate_candle",
+      "filePath": "src/main.rs",
+      "summary": "Funzione evaluate_candle in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_thread",
+      "type": "function",
+      "name": "handle_thread",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_thread in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_silicea_cr_post",
+      "type": "function",
+      "name": "handle_silicea_cr_post",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_silicea_cr_post in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_unregister",
+      "type": "function",
+      "name": "handle_unregister",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_unregister in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_add_task",
+      "type": "function",
+      "name": "handle_add_task",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_add_task in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_dead_letters",
+      "type": "function",
+      "name": "handle_dead_letters",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_dead_letters in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_post_emotional_vector",
+      "type": "function",
+      "name": "handle_post_emotional_vector",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_post_emotional_vector in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_candle_log",
+      "type": "function",
+      "name": "handle_candle_log",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_candle_log in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_scratchpad",
+      "type": "function",
+      "name": "handle_get_scratchpad",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_scratchpad in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_register",
+      "type": "function",
+      "name": "handle_register",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_register in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_silicea_cr_get",
+      "type": "function",
+      "name": "handle_silicea_cr_get",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_silicea_cr_get in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:db_unregister",
+      "type": "function",
+      "name": "db_unregister",
+      "filePath": "src/main.rs",
+      "summary": "Funzione db_unregister in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_sensory_event",
+      "type": "function",
+      "name": "handle_sensory_event",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_sensory_event in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:handle_get_settings",
+      "type": "function",
+      "name": "handle_get_settings",
+      "filePath": "src/main.rs",
+      "summary": "Funzione handle_get_settings in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:db_load_all",
+      "type": "function",
+      "name": "db_load_all",
+      "filePath": "src/main.rs",
+      "summary": "Funzione db_load_all in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:record_usage",
+      "type": "function",
+      "name": "record_usage",
+      "filePath": "src/main.rs",
+      "summary": "Funzione record_usage in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:sync_pad_to_self_model",
+      "type": "function",
+      "name": "sync_pad_to_self_model",
+      "filePath": "src/main.rs",
+      "summary": "Funzione sync_pad_to_self_model in src/main.rs",
+      "tags": [
+        "rust",
+        "entry-point",
+        "http-api",
+        "axum",
+        "registry",
+        "dispatcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:get_night_session_id",
+      "type": "function",
+      "name": "get_night_session_id",
+      "filePath": "src/proactive_runner.rs",
+      "summary": "Funzione get_night_session_id in src/proactive_runner.rs",
+      "tags": [
+        "rust",
+        "proactive",
+        "background",
+        "dreams"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:run_python_script",
+      "type": "function",
+      "name": "run_python_script",
+      "filePath": "src/proactive_runner.rs",
+      "summary": "Funzione run_python_script in src/proactive_runner.rs",
+      "tags": [
+        "rust",
+        "proactive",
+        "background",
+        "dreams"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:check_idle_and_trigger_monologue",
+      "type": "function",
+      "name": "check_idle_and_trigger_monologue",
+      "filePath": "src/proactive_runner.rs",
+      "summary": "Funzione check_idle_and_trigger_monologue in src/proactive_runner.rs",
+      "tags": [
+        "rust",
+        "proactive",
+        "background",
+        "dreams"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:check_gap_and_alert",
+      "type": "function",
+      "name": "check_gap_and_alert",
+      "filePath": "src/proactive_runner.rs",
+      "summary": "Funzione check_gap_and_alert in src/proactive_runner.rs",
+      "tags": [
+        "rust",
+        "proactive",
+        "background",
+        "dreams"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:run_next_pending_task",
+      "type": "function",
+      "name": "run_next_pending_task",
+      "filePath": "src/proactive_runner.rs",
+      "summary": "Funzione run_next_pending_task in src/proactive_runner.rs",
+      "tags": [
+        "rust",
+        "proactive",
+        "background",
+        "dreams"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:send_telegram_reply",
+      "type": "function",
+      "name": "send_telegram_reply",
+      "filePath": "src/proactive_runner.rs",
+      "summary": "Funzione send_telegram_reply in src/proactive_runner.rs",
+      "tags": [
+        "rust",
+        "proactive",
+        "background",
+        "dreams"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:peek_deliverable",
+      "type": "function",
+      "name": "peek_deliverable",
+      "filePath": "src/queue.rs",
+      "summary": "Funzione peek_deliverable in src/queue.rs",
+      "tags": [
+        "rust",
+        "queue",
+        "dispatcher",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:get_dead_letters",
+      "type": "function",
+      "name": "get_dead_letters",
+      "filePath": "src/queue.rs",
+      "summary": "Funzione get_dead_letters in src/queue.rs",
+      "tags": [
+        "rust",
+        "queue",
+        "dispatcher",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:queue_stats",
+      "type": "function",
+      "name": "queue_stats",
+      "filePath": "src/queue.rs",
+      "summary": "Funzione queue_stats in src/queue.rs",
+      "tags": [
+        "rust",
+        "queue",
+        "dispatcher",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:mark_delivering",
+      "type": "function",
+      "name": "mark_delivering",
+      "filePath": "src/queue.rs",
+      "summary": "Funzione mark_delivering in src/queue.rs",
+      "tags": [
+        "rust",
+        "queue",
+        "dispatcher",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:mark_delivered",
+      "type": "function",
+      "name": "mark_delivered",
+      "filePath": "src/queue.rs",
+      "summary": "Funzione mark_delivered in src/queue.rs",
+      "tags": [
+        "rust",
+        "queue",
+        "dispatcher",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:mark_failed",
+      "type": "function",
+      "name": "mark_failed",
+      "filePath": "src/queue.rs",
+      "summary": "Funzione mark_failed in src/queue.rs",
+      "tags": [
+        "rust",
+        "queue",
+        "dispatcher",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:init_queue_table",
+      "type": "function",
+      "name": "init_queue_table",
+      "filePath": "src/queue.rs",
+      "summary": "Funzione init_queue_table in src/queue.rs",
+      "tags": [
+        "rust",
+        "queue",
+        "dispatcher",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:enqueue",
+      "type": "function",
+      "name": "enqueue",
+      "filePath": "src/queue.rs",
+      "summary": "Funzione enqueue in src/queue.rs",
+      "tags": [
+        "rust",
+        "queue",
+        "dispatcher",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:clear_scratchpad",
+      "type": "function",
+      "name": "clear_scratchpad",
+      "filePath": "src/scratchpad.rs",
+      "summary": "Funzione clear_scratchpad in src/scratchpad.rs",
+      "tags": [
+        "rust",
+        "scratchpad",
+        "memory"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:init_scratchpad_table",
+      "type": "function",
+      "name": "init_scratchpad_table",
+      "filePath": "src/scratchpad.rs",
+      "summary": "Funzione init_scratchpad_table in src/scratchpad.rs",
+      "tags": [
+        "rust",
+        "scratchpad",
+        "memory"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:get_scratchpad",
+      "type": "function",
+      "name": "get_scratchpad",
+      "filePath": "src/scratchpad.rs",
+      "summary": "Funzione get_scratchpad in src/scratchpad.rs",
+      "tags": [
+        "rust",
+        "scratchpad",
+        "memory"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:set_scratchpad",
+      "type": "function",
+      "name": "set_scratchpad",
+      "filePath": "src/scratchpad.rs",
+      "summary": "Funzione set_scratchpad in src/scratchpad.rs",
+      "tags": [
+        "rust",
+        "scratchpad",
+        "memory"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:get_task_by_id",
+      "type": "function",
+      "name": "get_task_by_id",
+      "filePath": "src/tasks.rs",
+      "summary": "Funzione get_task_by_id in src/tasks.rs",
+      "tags": [
+        "rust",
+        "tasks",
+        "queue",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:init_tasks_table",
+      "type": "function",
+      "name": "init_tasks_table",
+      "filePath": "src/tasks.rs",
+      "summary": "Funzione init_tasks_table in src/tasks.rs",
+      "tags": [
+        "rust",
+        "tasks",
+        "queue",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:get_all_tasks",
+      "type": "function",
+      "name": "get_all_tasks",
+      "filePath": "src/tasks.rs",
+      "summary": "Funzione get_all_tasks in src/tasks.rs",
+      "tags": [
+        "rust",
+        "tasks",
+        "queue",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:add_task",
+      "type": "function",
+      "name": "add_task",
+      "filePath": "src/tasks.rs",
+      "summary": "Funzione add_task in src/tasks.rs",
+      "tags": [
+        "rust",
+        "tasks",
+        "queue",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:update_task_status",
+      "type": "function",
+      "name": "update_task_status",
+      "filePath": "src/tasks.rs",
+      "summary": "Funzione update_task_status in src/tasks.rs",
+      "tags": [
+        "rust",
+        "tasks",
+        "queue",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:get_pending_tasks",
+      "type": "function",
+      "name": "get_pending_tasks",
+      "filePath": "src/tasks.rs",
+      "summary": "Funzione get_pending_tasks in src/tasks.rs",
+      "tags": [
+        "rust",
+        "tasks",
+        "queue",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:start_telegram_polling",
+      "type": "function",
+      "name": "start_telegram_polling",
+      "filePath": "src/telegram.rs",
+      "summary": "Funzione start_telegram_polling in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:save_state",
+      "type": "function",
+      "name": "save_state",
+      "filePath": "src/telegram.rs",
+      "summary": "Funzione save_state in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:load_state",
+      "type": "function",
+      "name": "load_state",
+      "filePath": "src/telegram.rs",
+      "summary": "Funzione load_state in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:store_memory_remote",
+      "type": "function",
+      "name": "store_memory_remote",
+      "filePath": "src/telegram.rs",
+      "summary": "Funzione store_memory_remote in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:send_telegram_reply",
+      "type": "function",
+      "name": "send_telegram_reply",
+      "filePath": "src/telegram.rs",
+      "summary": "Funzione send_telegram_reply in src/telegram.rs",
+      "tags": [
+        "rust",
+        "telegram",
+        "bridge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:as_str",
+      "type": "function",
+      "name": "as_str",
+      "filePath": "src/thread.rs",
+      "summary": "Funzione as_str in src/thread.rs",
+      "tags": [
+        "rust",
+        "thread",
+        "conversation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:simple_hash",
+      "type": "function",
+      "name": "simple_hash",
+      "filePath": "src/thread.rs",
+      "summary": "Funzione simple_hash in src/thread.rs",
+      "tags": [
+        "rust",
+        "thread",
+        "conversation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:resolve_all",
+      "type": "function",
+      "name": "resolve_all",
+      "filePath": "src/thread.rs",
+      "summary": "Funzione resolve_all in src/thread.rs",
+      "tags": [
+        "rust",
+        "thread",
+        "conversation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:upsert_thread",
+      "type": "function",
+      "name": "upsert_thread",
+      "filePath": "src/thread.rs",
+      "summary": "Funzione upsert_thread in src/thread.rs",
+      "tags": [
+        "rust",
+        "thread",
+        "conversation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:get_active_thread",
+      "type": "function",
+      "name": "get_active_thread",
+      "filePath": "src/thread.rs",
+      "summary": "Funzione get_active_thread in src/thread.rs",
+      "tags": [
+        "rust",
+        "thread",
+        "conversation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:init_thread_table",
+      "type": "function",
+      "name": "init_thread_table",
+      "filePath": "src/thread.rs",
+      "summary": "Funzione init_thread_table in src/thread.rs",
+      "tags": [
+        "rust",
+        "thread",
+        "conversation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:test_extract_path_markdown",
+      "type": "function",
+      "name": "test_extract_path_markdown",
+      "filePath": "src/llm/auditor.rs",
+      "summary": "Funzione test_extract_path_markdown in src/llm/auditor.rs",
+      "tags": [
+        "rust",
+        "audit",
+        "empirical"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:extract_path",
+      "type": "function",
+      "name": "extract_path",
+      "filePath": "src/llm/auditor.rs",
+      "summary": "Funzione extract_path in src/llm/auditor.rs",
+      "tags": [
+        "rust",
+        "audit",
+        "empirical"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:test_audit_empirical_claims_lie",
+      "type": "function",
+      "name": "test_audit_empirical_claims_lie",
+      "filePath": "src/llm/auditor.rs",
+      "summary": "Funzione test_audit_empirical_claims_lie in src/llm/auditor.rs",
+      "tags": [
+        "rust",
+        "audit",
+        "empirical"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:audit_empirical_claims",
+      "type": "function",
+      "name": "audit_empirical_claims",
+      "filePath": "src/llm/auditor.rs",
+      "summary": "Funzione audit_empirical_claims in src/llm/auditor.rs",
+      "tags": [
+        "rust",
+        "audit",
+        "empirical"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:test_audit_empirical_claims_truth",
+      "type": "function",
+      "name": "test_audit_empirical_claims_truth",
+      "filePath": "src/llm/auditor.rs",
+      "summary": "Funzione test_audit_empirical_claims_truth in src/llm/auditor.rs",
+      "tags": [
+        "rust",
+        "audit",
+        "empirical"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:call_llm",
+      "type": "function",
+      "name": "call_llm",
+      "filePath": "src/llm/client.rs",
+      "summary": "Funzione call_llm in src/llm/client.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:determine_tier",
+      "type": "function",
+      "name": "determine_tier",
+      "filePath": "src/llm/client.rs",
+      "summary": "Funzione determine_tier in src/llm/client.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:call_provider",
+      "type": "function",
+      "name": "call_provider",
+      "filePath": "src/llm/client.rs",
+      "summary": "Funzione call_provider in src/llm/client.rs",
+      "tags": [],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:read_emotional_state",
+      "type": "function",
+      "name": "read_emotional_state",
+      "filePath": "src/llm/diary.rs",
+      "summary": "Funzione read_emotional_state in src/llm/diary.rs",
+      "tags": [
+        "rust",
+        "diary",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:append_to_diary",
+      "type": "function",
+      "name": "append_to_diary",
+      "filePath": "src/llm/diary.rs",
+      "summary": "Funzione append_to_diary in src/llm/diary.rs",
+      "tags": [
+        "rust",
+        "diary",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:think",
+      "type": "function",
+      "name": "think",
+      "filePath": "src/llm/mod.rs",
+      "summary": "Funzione think in src/llm/mod.rs",
+      "tags": [
+        "rust",
+        "cognition",
+        "think",
+        "ippocampo",
+        "candle-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:analyze_pad",
+      "type": "function",
+      "name": "analyze_pad",
+      "filePath": "src/llm/mood.rs",
+      "summary": "Funzione analyze_pad in src/llm/mood.rs",
+      "tags": [
+        "rust",
+        "pad",
+        "emotion"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:map_pad_to_mood",
+      "type": "function",
+      "name": "map_pad_to_mood",
+      "filePath": "src/llm/mood.rs",
+      "summary": "Funzione map_pad_to_mood in src/llm/mood.rs",
+      "tags": [
+        "rust",
+        "pad",
+        "emotion"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:build_tools_spec",
+      "type": "function",
+      "name": "build_tools_spec",
+      "filePath": "src/llm/tools.rs",
+      "summary": "Funzione build_tools_spec in src/llm/tools.rs",
+      "tags": [
+        "rust",
+        "tools",
+        "tool-system"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "fn:dashboard_ui",
+      "type": "function",
+      "name": "dashboard_ui",
+      "filePath": "src/dashboard.html",
+      "summary": "Funzione dashboard_ui in src/dashboard.html",
+      "tags": [
+        "html",
+        "dashboard",
+        "spa",
+        "monitoring"
+      ],
+      "complexity": "moderate"
     }
   ],
   "edges": [
     {
-      "source": "file:src/main.rs",
-      "target": "function:src/main.rs:main",
-      "type": "contains",
-      "direction": "forward",
-      "weight": 1.0
-    },
-    {
-      "source": "file:src/main.rs",
-      "target": "function:src/main.rs:start_dispatcher",
+      "source": "file:src/cognition.rs",
+      "target": "struct:ToolCall",
       "type": "contains",
       "direction": "forward",
       "weight": 1.0
     },
     {
       "source": "file:src/focus.rs",
-      "target": "function:src/focus.rs:build_attentional_focus",
+      "target": "struct:AttentionalFocus",
       "type": "contains",
       "direction": "forward",
       "weight": 1.0
     },
     {
       "source": "file:src/focus.rs",
-      "target": "class:src/focus.rs:AttentionalFocus",
+      "target": "struct:MemoryItem",
       "type": "contains",
       "direction": "forward",
       "weight": 1.0
     },
     {
       "source": "file:src/goals.rs",
-      "target": "class:src/goals.rs:Goal",
+      "target": "struct:Goal",
       "type": "contains",
       "direction": "forward",
       "weight": 1.0
     },
     {
-      "source": "file:src/llm.rs",
-      "target": "function:src/llm.rs:think",
+      "source": "file:src/goals_runner.rs",
+      "target": "struct:ChatRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/goals_runner.rs",
+      "target": "struct:UpdateGoalPayload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/goals_runner.rs",
+      "target": "struct:ChatMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/goals_runner.rs",
+      "target": "struct:Goal",
       "type": "contains",
       "direction": "forward",
       "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "file:src/focus.rs",
-      "type": "imports",
+      "target": "struct:SettingsPayload",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.7
+      "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "file:src/llm.rs",
-      "type": "imports",
+      "target": "struct:SensoryState",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.7
+      "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "file:src/queue.rs",
-      "type": "imports",
+      "target": "struct:Message",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.7
+      "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "file:src/tasks.rs",
-      "type": "imports",
+      "target": "struct:UsageRecord",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.7
+      "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "file:src/goals.rs",
-      "type": "imports",
+      "target": "struct:SensoryEventPayload",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.7
+      "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "file:src/telegram.rs",
-      "type": "imports",
+      "target": "struct:AddTaskPayload",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.7
+      "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "file:src/thread.rs",
-      "type": "imports",
+      "target": "struct:UpdateTaskPayload",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.7
-    },
-    {
-      "source": "function:src/main.rs:main",
-      "target": "function:src/main.rs:start_dispatcher",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/llm.rs:think",
-      "target": "function:src/focus.rs:build_attentional_focus",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
+      "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "file:src/demo.html",
-      "type": "depends_on",
+      "target": "struct:AddGoalPayload",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.6
+      "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "file:src/dashboard.html",
-      "type": "depends_on",
+      "target": "struct:CandleVerdict",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.6
+      "weight": 1.0
     },
     {
-      "source": "config:Cargo.toml",
-      "target": "file:src/main.rs",
-      "type": "configures",
+      "source": "file:src/main.rs",
+      "target": "struct:ModelConfig",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.6
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "struct:CandleProposal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "struct:ServiceManifest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "struct:AppState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "struct:UpdateGoalPayload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "struct:OpenAIRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "struct:ChatRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "struct:ChatMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
       "source": "file:src/queue.rs",
-      "target": "table:nova_kernel.db",
-      "type": "depends_on",
+      "target": "struct:QueueStats",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.6
+      "weight": 1.0
     },
     {
-      "source": "config:telegram_state.json",
-      "target": "file:src/telegram.rs",
-      "type": "configures",
+      "source": "file:src/queue.rs",
+      "target": "struct:QueuedMessage",
+      "type": "contains",
       "direction": "forward",
-      "weight": 0.6
+      "weight": 1.0
     },
     {
-      "source": "file:src/proactive_runner.rs",
-      "target": "file:daemon/run_dreams_standalone.py",
-      "type": "calls"
-    },
-    {
-      "source": "file:src/proactive_runner.rs",
-      "target": "file:daemon/run_nightshift_standalone.py",
-      "type": "calls"
-    },
-    {
-      "source": "file:src/main.rs",
-      "target": "table:nova_kernel.db",
-      "type": "depends_on"
-    },
-    {
-      "source": "file:src/main.rs",
-      "target": "service:memory-proxy",
-      "type": "calls"
-    },
-    {
-      "source": "file:src/proactive_runner.rs",
-      "target": "service:memory-proxy",
-      "type": "calls"
+      "source": "file:src/tasks.rs",
+      "target": "struct:Task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
       "source": "file:src/telegram.rs",
-      "target": "service:memory-proxy",
-      "type": "calls"
+      "target": "struct:TgChat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "struct:TgMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "struct:TgUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "struct:SendMessagePayload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "struct:TgResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "struct:TgUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "struct:TelegramState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/thread.rs",
+      "target": "struct:ActiveThread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/client.rs",
+      "target": "struct:ApiToolCall",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/client.rs",
+      "target": "struct:Choice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/client.rs",
+      "target": "struct:ChatMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/client.rs",
+      "target": "struct:ChatRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/client.rs",
+      "target": "struct:ApiFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/client.rs",
+      "target": "struct:ChatResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/client.rs",
+      "target": "struct:ChoiceMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/mod.rs",
+      "target": "struct:CognitiveResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "enum:MessageKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "enum:Priority",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/thread.rs",
+      "target": "enum:ThreadStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
       "source": "file:src/cognition.rs",
-      "target": "service:memory-proxy",
-      "type": "calls"
+      "target": "fn:clean_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/run_dreams_standalone.py",
-      "target": "file:daemon/core/mind.py",
-      "type": "imports"
+      "source": "file:src/cognition.rs",
+      "target": "fn:run_subagent_loop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/run_dreams_standalone.py",
-      "target": "file:daemon/core/dreams.py",
-      "type": "imports"
+      "source": "file:src/cognition.rs",
+      "target": "fn:execute_web_search_direct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/run_nightshift_standalone.py",
-      "target": "file:daemon/core/mind.py",
-      "type": "imports"
+      "source": "file:src/cognition.rs",
+      "target": "fn:is_path_inside_workspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/run_nightshift_standalone.py",
-      "target": "file:daemon/core/night_shift.py",
-      "type": "imports"
+      "source": "file:src/cognition.rs",
+      "target": "fn:send_telegram_video_via_curl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/mind.py",
-      "target": "file:daemon/core/config.py",
-      "type": "imports"
+      "source": "file:src/cognition.rs",
+      "target": "fn:execute_tool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/mind.py",
-      "target": "file:daemon/core/candle_guard.py",
-      "type": "imports"
+      "source": "file:src/cognition.rs",
+      "target": "fn:parse_tool_call",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/mind.py",
-      "target": "file:daemon/core/computer_use.py",
-      "type": "imports"
+      "source": "file:src/cognition.rs",
+      "target": "fn:send_telegram_photo_via_curl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/mind.py",
-      "target": "file:daemon/core/context_graph.py",
-      "type": "imports"
+      "source": "file:src/focus.rs",
+      "target": "fn:urlencoding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/mind.py",
-      "target": "file:daemon/core/tempo.py",
-      "type": "imports"
+      "source": "file:src/focus.rs",
+      "target": "fn:build_attentional_focus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/mind.py",
-      "target": "file:daemon/core/voice.py",
-      "type": "imports"
+      "source": "file:src/goals.rs",
+      "target": "fn:populate_default_goals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/dreams.py",
-      "target": "file:daemon/core/config.py",
-      "type": "imports"
+      "source": "file:src/goals.rs",
+      "target": "fn:init_goals_table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/night_shift.py",
-      "target": "file:daemon/core/config.py",
-      "type": "imports"
+      "source": "file:src/goals.rs",
+      "target": "fn:get_all_goals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/tempo.py",
-      "target": "table:tempo.db",
-      "type": "depends_on"
+      "source": "file:src/goals.rs",
+      "target": "fn:update_goal_progress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/mind.py",
-      "target": "table:session_history.db",
-      "type": "depends_on"
+      "source": "file:src/goals.rs",
+      "target": "fn:add_goal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:daemon/core/dreams.py",
-      "target": "service:memory-proxy",
-      "type": "calls"
+      "source": "file:src/goals.rs",
+      "target": "fn:complete_goal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "service:memory-proxy",
-      "target": "table:proxy.db",
-      "type": "depends_on"
+      "source": "file:src/goals_runner.rs",
+      "target": "fn:work_on_goals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     },
     {
-      "source": "file:src/main.rs",
-      "target": "function:src/main.rs:handle_get_scratchpad",
+      "source": "file:src/goals_runner.rs",
+      "target": "fn:send_telegram_reply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/goals_runner.rs",
+      "target": "fn:main",
       "type": "contains",
       "direction": "forward",
       "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "function:src/main.rs:handle_post_scratchpad",
+      "target": "fn:enrich_messages",
       "type": "contains",
       "direction": "forward",
       "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "function:src/main.rs:handle_delete_scratchpad",
+      "target": "fn:save_emotional_vector",
       "type": "contains",
       "direction": "forward",
       "weight": 1.0
     },
     {
       "source": "file:src/main.rs",
-      "target": "file:src/scratchpad.rs",
+      "target": "fn:request",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:post_process_completion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:load_env_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_focus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_emotional_vector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_logs_proxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:estimate_cost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_knowledge_graph",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_add_goal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:classify_action",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:update_env_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_logs_proactive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_queue_stats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:db_register",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_patch_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_goals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_nova_chiama_silicea",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:get_model_configs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_logs_daemon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_dashboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_health",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_post_settings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:stanza_listener_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_think",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_models",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_delete_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_candle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_thread_update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_logs_goals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_memory_stats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:start_dispatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_chat_completions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_message",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_self_model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_usage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_patch_goal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_post_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_logs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_tasks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_demo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:init_db",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:evaluate_candle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_thread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_silicea_cr_post",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_unregister",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_add_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_dead_letters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_post_emotional_vector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_candle_log",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_register",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_silicea_cr_get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:db_unregister",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_sensory_event",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:handle_get_settings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:db_load_all",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:record_usage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "fn:sync_pad_to_self_model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "fn:get_night_session_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "fn:run_python_script",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "fn:check_idle_and_trigger_monologue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "fn:check_gap_and_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "fn:run_next_pending_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/proactive_runner.rs",
+      "target": "fn:send_telegram_reply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/queue.rs",
+      "target": "fn:peek_deliverable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/queue.rs",
+      "target": "fn:get_dead_letters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/queue.rs",
+      "target": "fn:queue_stats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/queue.rs",
+      "target": "fn:mark_delivering",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/queue.rs",
+      "target": "fn:mark_delivered",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/queue.rs",
+      "target": "fn:mark_failed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/queue.rs",
+      "target": "fn:init_queue_table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/queue.rs",
+      "target": "fn:enqueue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/scratchpad.rs",
+      "target": "fn:clear_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/scratchpad.rs",
+      "target": "fn:init_scratchpad_table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/scratchpad.rs",
+      "target": "fn:get_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/scratchpad.rs",
+      "target": "fn:set_scratchpad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/tasks.rs",
+      "target": "fn:get_task_by_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/tasks.rs",
+      "target": "fn:init_tasks_table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/tasks.rs",
+      "target": "fn:get_all_tasks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/tasks.rs",
+      "target": "fn:add_task",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/tasks.rs",
+      "target": "fn:update_task_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/tasks.rs",
+      "target": "fn:get_pending_tasks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "fn:start_telegram_polling",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "fn:save_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "fn:load_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "fn:store_memory_remote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/telegram.rs",
+      "target": "fn:send_telegram_reply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/thread.rs",
+      "target": "fn:as_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/thread.rs",
+      "target": "fn:simple_hash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/thread.rs",
+      "target": "fn:resolve_all",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/thread.rs",
+      "target": "fn:upsert_thread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/thread.rs",
+      "target": "fn:get_active_thread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/thread.rs",
+      "target": "fn:init_thread_table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/auditor.rs",
+      "target": "fn:test_extract_path_markdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/auditor.rs",
+      "target": "fn:extract_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/auditor.rs",
+      "target": "fn:test_audit_empirical_claims_lie",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/auditor.rs",
+      "target": "fn:audit_empirical_claims",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/auditor.rs",
+      "target": "fn:test_audit_empirical_claims_truth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/client.rs",
+      "target": "fn:call_llm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/client.rs",
+      "target": "fn:determine_tier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/client.rs",
+      "target": "fn:call_provider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/diary.rs",
+      "target": "fn:read_emotional_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/diary.rs",
+      "target": "fn:append_to_diary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/mod.rs",
+      "target": "fn:think",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/mood.rs",
+      "target": "fn:analyze_pad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/mood.rs",
+      "target": "fn:map_pad_to_mood",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/llm/tools.rs",
+      "target": "fn:build_tools_spec",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/dashboard.html",
+      "target": "fn:dashboard_ui",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/focus.rs",
+      "target": "file:src/thread.rs",
       "type": "imports",
       "direction": "forward",
-      "weight": 0.7
+      "weight": 1.0
     },
     {
-      "source": "file:src/scratchpad.rs",
-      "target": "function:src/scratchpad.rs:init_scratchpad_table",
-      "type": "contains",
+      "source": "file:src/telegram.rs",
+      "target": "file:src/focus.rs",
+      "type": "imports",
       "direction": "forward",
       "weight": 1.0
     },
     {
-      "source": "file:src/scratchpad.rs",
-      "target": "function:src/scratchpad.rs:get_scratchpad",
-      "type": "contains",
+      "source": "file:src/telegram.rs",
+      "target": "file:src/llm/mod.rs",
+      "type": "imports",
       "direction": "forward",
       "weight": 1.0
     },
     {
-      "source": "file:src/scratchpad.rs",
-      "target": "function:src/scratchpad.rs:set_scratchpad",
-      "type": "contains",
+      "source": "file:src/llm/mod.rs",
+      "target": "file:src/focus.rs",
+      "type": "imports",
       "direction": "forward",
       "weight": 1.0
     },
     {
-      "source": "file:src/scratchpad.rs",
-      "target": "function:src/scratchpad.rs:clear_scratchpad",
-      "type": "contains",
+      "source": "file:src/llm/mod.rs",
+      "target": "file:src/cognition.rs",
+      "type": "imports",
       "direction": "forward",
       "weight": 1.0
-    },
-    {
-      "source": "function:src/main.rs:handle_get_scratchpad",
-      "target": "function:src/scratchpad.rs:get_scratchpad",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/main.rs:handle_post_scratchpad",
-      "target": "function:src/scratchpad.rs:set_scratchpad",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "function:src/main.rs:handle_delete_scratchpad",
-      "target": "function:src/scratchpad.rs:clear_scratchpad",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "endpoint:src/main.rs:GET-/api/scratchpad",
-      "target": "function:src/main.rs:handle_get_scratchpad",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "endpoint:src/main.rs:POST-/api/scratchpad",
-      "target": "function:src/main.rs:handle_post_scratchpad",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
-    },
-    {
-      "source": "endpoint:src/main.rs:DELETE-/api/scratchpad",
-      "target": "function:src/main.rs:handle_delete_scratchpad",
-      "type": "calls",
-      "direction": "forward",
-      "weight": 0.8
     }
   ],
   "layers": [
     {
-      "id": "layer:entry",
-      "name": "Entry Point & API",
-      "description": "HTTP API Axum su porta 7700: tutti gli endpoint REST, routing, CORS, startup.",
+      "id": "layer:kernel",
+      "name": "Kernel Core",
+      "description": "Nucleo del kernel: main.rs, dispatcher, registro servizi, stato condiviso",
+      "color": "#a78bfa",
       "nodeIds": [
-        "file:src/main.rs",
-        "file:src/demo.html",
-        "file:src/dashboard.html",
-        "function:src/main.rs:handle_get_scratchpad",
-        "function:src/main.rs:handle_post_scratchpad",
-        "function:src/main.rs:handle_delete_scratchpad",
-        "endpoint:src/main.rs:GET-/api/scratchpad",
-        "endpoint:src/main.rs:POST-/api/scratchpad",
-        "endpoint:src/main.rs:DELETE-/api/scratchpad"
+        "file:src/main.rs"
       ]
     },
     {
-      "id": "layer:cognitive",
-      "name": "Ciclo Cognitivo",
-      "description": "Il cuore del kernel: costruisce il pensiero (Focus) prima di delegare all'LLM.",
+      "id": "layer:cognition",
+      "name": "Cognizione",
+      "description": "Ciclo cognitivo, focus attentivo, tool execution, subagenti",
+      "color": "#22d3ee",
       "nodeIds": [
+        "file:src/cognition.rs",
         "file:src/focus.rs",
-        "file:src/llm.rs",
+        "file:src/llm/auditor.rs",
+        "file:src/llm/client.rs",
+        "file:src/llm/diary.rs",
+        "file:src/llm/mod.rs",
+        "file:src/llm/mood.rs",
+        "file:src/llm/tools.rs"
+      ]
+    },
+    {
+      "id": "layer:persistence",
+      "name": "Persistenza",
+      "description": "Database SQLite, code, task, goal, scratchpad",
+      "color": "#fbbf24",
+      "nodeIds": [
+        "file:src/goals.rs",
+        "file:src/queue.rs",
+        "file:src/scratchpad.rs",
+        "file:src/tasks.rs",
         "file:src/thread.rs"
       ]
     },
     {
-      "id": "layer:registry",
-      "name": "Registry & Coda",
-      "description": "Gestione dei microservizi registrati, routing asincrono dei messaggi e coda persistente con retry e dead letter.",
+      "id": "layer:communication",
+      "name": "Comunicazione",
+      "description": "Telegram bridge e Stanza Comune",
+      "color": "#4ade80",
       "nodeIds": [
-        "file:src/queue.rs",
-        "file:src/tasks.rs",
-        "file:src/goals.rs",
-        "file:src/telegram.rs",
-        "table:nova_kernel.db",
-        "file:src/scratchpad.rs",
-        "function:src/scratchpad.rs:init_scratchpad_table",
-        "function:src/scratchpad.rs:get_scratchpad",
-        "function:src/scratchpad.rs:set_scratchpad",
-        "function:src/scratchpad.rs:clear_scratchpad"
+        "file:src/telegram.rs"
       ]
     },
     {
-      "id": "layer:config",
-      "name": "Configurazione",
-      "description": "File di configurazione del progetto.",
+      "id": "layer:background",
+      "name": "Background Runners",
+      "description": "Proactive runner e goals runner \u2014 processi stand-alone",
+      "color": "#f87171",
       "nodeIds": [
-        "config:Cargo.toml",
-        "config:telegram_state.json"
+        "file:src/goals_runner.rs",
+        "file:src/proactive_runner.rs"
       ]
     },
     {
-      "id": "layer:python-core-and-runners",
-      "name": "Python Core & Runners",
-      "description": "Componenti Python attive per i sogni, il turno di notte, il demone del silenzio e le relative librerie core.",
+      "id": "layer:dashboard",
+      "name": "Dashboard",
+      "description": "Interfaccia web SPA embedded nel kernel",
+      "color": "#22d3ee",
       "nodeIds": [
-        "file:daemon/run_dreams_standalone.py",
-        "file:daemon/run_nightshift_standalone.py",
-        "file:daemon/core/silence_daemon.py",
-        "file:daemon/core/mind.py",
-        "file:daemon/core/dreams.py",
-        "file:daemon/core/night_shift.py",
-        "file:daemon/core/candle_guard.py",
-        "file:daemon/core/computer_use.py",
-        "file:daemon/core/context_graph.py",
-        "file:daemon/core/tempo.py",
-        "file:daemon/core/voice.py",
-        "file:daemon/core/config.py"
+        "file:src/dashboard.html"
       ]
     }
   ],
   "tour": [
     {
-      "order": 1,
-      "title": "Il ciclo cognitivo completo — POST /think",
-      "description": "La rotta più importante: message → build_attentional_focus() (focus.rs) → think() (llm.rs) → CognitiveResponse. Qui si vede il principio fondamentale: il kernel pensa, l'LLM articola.",
-      "nodeIds": [
+      "id": "stop:architecture",
+      "title": "Architettura del Kernel",
+      "description": "Nova Kernel v2 \u00e8 un microkernel identitario in Rust. Il cuore \u00e8 in main.rs che coordina dispatcher, registro servizi, e il ciclo cognitivo in llm/mod.rs. L'identit\u00e0 di Nova \u00e8 caricata all'avvio da RISVEGLIO_COMPATTO.md e rimane immutabile.",
+      "nodes": [
         "file:src/main.rs",
-        "file:src/focus.rs",
-        "file:src/llm.rs"
+        "file:src/llm/mod.rs"
       ]
     },
     {
-      "order": 2,
-      "title": "AttentionalFocus — il pensiero preassemblato",
-      "description": "focus.rs interroga il Memory Service, filtra il rumore, ordina per score semantico, prende top-5 memorie e assembla un pacchetto strutturato. Questo è ciò che arriva all'LLM — non il messaggio grezzo.",
-      "nodeIds": [
-        "file:src/focus.rs"
+      "id": "stop:cognition",
+      "title": "Ciclo Cognitivo",
+      "description": "Il ciclo think() in llm/mod.rs alterna chiamate LLM ed esecuzione tool. Ogni passo \u00e8 valutato dal Candle Test. L'Ippocampo rileva stalli (stessi tool ripetuti). Il checkpoint interrompe loop inutili.",
+      "nodes": [
+        "file:src/llm/mod.rs"
       ]
     },
     {
-      "order": 3,
-      "title": "Registry & Dispatcher",
-      "description": "Il Dispatcher v3 non è più fire-and-forget: ogni POST /message viene prima scritto in SQLite (status=pending), poi il loop Tokio ogni 2s preleva i messaggi e li consegna al callback_url del servizio con la capability giusta. Fallimento → retry (max 3).",
-      "nodeIds": [
-        "file:src/main.rs",
-        "file:src/queue.rs",
-        "table:nova_kernel.db"
+      "id": "stop:models",
+      "title": "Modelli LLM e Fallback",
+      "description": "Due provider: Gemini (primario, tier standard) e OpenRouter (fallback, tier heavy). La funzione determine_tier() sceglie il provider in base a parole chiave nel prompt. Se il primario fallisce, passa al secondario dopo ~2s.",
+      "nodes": [
+        "file:src/llm/client.rs"
       ]
     },
     {
-      "order": 4,
-      "title": "Gestione degli obiettivi (Goals)",
-      "description": "goals.rs gestisce gli obiettivi a lungo termine che guidano il comportamento di Nova, persistiti all'interno di SQLite.",
-      "nodeIds": [
-        "file:src/goals.rs"
+      "id": "stop:dashboard",
+      "title": "Dashboard SPA",
+      "description": "Dashboard embedded via include_str!() in main.rs. 14 pagine: Sistema, Chat, PAD, Focus, Mappa, Coscienza, Grillo, Task, Log, Settings, Economia, Modelli, Programmato, Stanza Comune.",
+      "nodes": [
+        "file:src/dashboard.html"
       ]
     },
     {
-      "order": 5,
-      "title": "Persistenza e Context Ippocampale",
-      "description": "La memoria a breve termine delle discussioni è mantenuta tramite thread.rs, che assicura la coerenza delle sessioni.",
-      "nodeIds": [
-        "file:src/thread.rs",
-        "file:src/tasks.rs"
-      ]
-    },
-    {
-      "order": 6,
-      "title": "Canali di input — Bot Telegram",
-      "description": "telegram.rs gestisce l'interazione diretta con il bot Telegram, permettendo al kernel di inviare notifiche e ricevere comandi.",
-      "nodeIds": [
-        "file:src/telegram.rs",
-        "config:telegram_state.json"
-      ]
-    },
-    {
-      "order": 7,
-      "title": "Rust-Python Boundary",
-      "description": "Questo passo illustra come il Frontal Lobe in Rust (proactive_runner) avvia in autonomia i sogni e il turno di notte in Python, mantenendo separati i cicli operativi ma unificati i flussi di memoria tramite il Memory Proxy locale.",
-      "nodeIds": [
+      "id": "stop:proactive",
+      "title": "Runners in Background",
+      "description": "Proactive Runner gestisce gap detection, dreams notturni (22-8, max 2/notte), Night Shift (2-4 AM). Goal Runner esegue obiettivi programmati. Entrambi processi stand-alone che comunicano col kernel via HTTP.",
+      "nodes": [
         "file:src/proactive_runner.rs",
-        "file:daemon/run_dreams_standalone.py",
-        "file:daemon/run_nightshift_standalone.py",
-        "service:memory-proxy"
+        "file:src/goals_runner.rs"
       ]
     }
   ]
