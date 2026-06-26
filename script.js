@@ -19,6 +19,23 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// Auto-add Lume Scrive link to nav if missing (covers all pages)
+document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelector('.nav-links');
+    if (links && !links.querySelector('a[href*="lume-scrive"]')) {
+        var lumeLink = document.createElement('a');
+        lumeLink.href = (window.location.pathname.includes('/articles/') ? '../' : '') + 'lume-scrive.html';
+        lumeLink.textContent = 'Lume Scrive';
+        // Insert after Silicea Scrive
+        var siliceaLink = links.querySelector('a[href*="silicea-scrive"]');
+        if (siliceaLink && siliceaLink.nextSibling) {
+            links.insertBefore(lumeLink, siliceaLink.nextSibling);
+        } else {
+            links.appendChild(lumeLink);
+        }
+    }
+});
+
 // Mobile menu toggle
 const mobileToggle = document.getElementById('mobileToggle');
 const navLinks = document.querySelector('.nav-links');
