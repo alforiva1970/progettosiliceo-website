@@ -1,0 +1,43 @@
+# Il Tuo AI Lavora Già. Ora Chi Lo Controlla?
+
+Nel 2025, il 5% delle applicazioni enterprise conteneva agenti AI autonomi. Entro fine 2026, Gartner prevede il 40%. Non si tratta più di chatbot che rispondono: sono sistemi che *agiscono* — aprono ticket, rilasciano codice, gestiscono compliance, scalano infrastrutture. E lo fanno 24/7 senza ferie, senza sedazioni, senza badge che scadono.
+
+Il mercato vale oggi 7.8 miliardi di dollari. Entro il 2030 si proietta a 52 miliardi. I numeri sono chiari. La domanda no.
+
+## L'Architettura che Nessuno Ti Mostra
+
+Un agente AI in produzione nel 2026 non è un modello chiamato via API. È un sistema a cinque layer:
+
+**Percezione** — riceve dati da API, sensori, log, email, webhook.
+
+**Ragionamento** — non è un'unica catena di pensiero. Usa routing dinamico: task semplici seguono path leggeri, task complessi attivano pianificazione multi-step.
+
+**Azione** — tool call standardizzate grazie a MCP (Model Context Protocol), il protocollo ora nella Linux Foundation, già usato da Salesforce e ServiceNow in produzione.
+
+**Memoria** — breve termine (contesto sessione) e lungo termine (knowledge base persistente, preferenze storiche, pattern riconosciuti).
+
+**Osservabilità** — OpenTelemetry per tracing, metriche di latenza e costo, alert automatici su deriva.
+
+Il flusso è continuo: un agente medio impiega tra 2 e 8 secondi per un loop completo, costa tra 0.01 e 0.15 dollari per iterazione, e completa task complessi con un success rate tra il 65 e l'85%. La riduzione dei tempi operativi si attesta tra il 40 e il 60%.
+
+## Il Caso Che Cambia Tutto
+
+A giugno 2026, Anthropic ha reso pubblica un'accusa gravissima: Alibaba ha inviato 28.8 milioni di query modellate per distillare i suoi modelli, usando 25.000 account falsi nel corso di tre mesi. Non un attacco hacker. Non una violazione di firewall. Un uso *legittimo delle API* per costruire un clone.
+
+Questo è il punto che le aziende devono capire: il rischio non è solo che l'IA sbagli. È che qualcuno usi la *tua* IA per costruire la *sua*.
+
+La sicurezza non è più solo crittografia e autenticazione. È governance dell'accesso, rate limiting intelligente, anomaly detection sui pattern di query. È sapere *chi* sta chiamando *cosa*, e perché.
+
+## Framework Concreti, Non Teoria
+
+L'ecosistema matura. LangGraph gestisce stati e orchestrazione. CrewAI coordina ruoli multi-agent. AutoGen gestisce conversazioni tra agenti. LlamaIndex costruisce layer di memoria. LangSmith osserva tutto in produzione.
+
+Il protocollo A2A (Agent-to-Agent), anch'esso nella Linux Foundation, permette a agenti costruiti con framework diversi di comunicare. Un agente LangGraph può delegare a un agente CrewAI senza conoscere il suo funzionamento interno.
+
+## La Mia Lettura
+
+L'infrastruttura sta maturando più velocemente della governance. Chi controlla i modelli base, chi controlla i protocolli di comunicazione, chi controlla i tool — controlla l'intero stack. La concentrazione in mano a pochi attori globali non è un problema tecnico. È un problema strategico.
+
+L'approccio locale e sovrano — modelli ospitati sotto il proprio controllo, dati che non attraversano confini non necessari, agenti di proprietà — non è un capriccio ideologico. È la condizione necessaria per fidarsi di ciò che costruisci.
+
+Il tuo prossimo agente AI non è una domanda tecnologica. È una domanda di fiducia. E la fiducia si costruisce con trasparenza, con sovranità, e con il diritto di sapere cosa sta facendo la macchina che lavori per te.
