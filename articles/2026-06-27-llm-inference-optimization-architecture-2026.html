@@ -1,0 +1,25 @@
+# L'Architettura Nascosta Dietro l'AI che Usi Ogni Giorno
+
+## Il collo di bottiglia che nessuno ti mostra
+
+Nel 2026, il problema non è avere un modello intelligente. Il problema è farlo girare senza bruciare budget. L'inferenza — la generazione di ogni singolo token — è diventata il vero collo di bottiglia dei sistemi LLM in produzione. Il motivo è strutturale: durante la fase di decode, il modello deve caricare l'intero peso dei parametri per ogni token prodotto. Una volta caricati quei pesi, il costo computazionale è quasi nullo. Il tempo è dominato dal trasferimento di dati dalla memoria GPU al processore, non dalla computazione.
+
+Le ottimizzazioni più efficaci oggi non sono nuovi modelli. Sono nuovi modi per spostare meno dati, o per spostarli meglio.
+
+## Tre leve concrete
+
+**Quantizzazione.** Ridurre la precisione dei pesi da FP16 a 8-bit (FP8, INT8) o 4-bit (INT4, AWQ, GPTQ) permette di far girare un modello da 70 miliardi di parametri con la stessa VRAM che prima serviva per un modello da 7B. La riduzione dei costi GPU è stimata intorno al 75%: da un affitto mensile di 4 A100 (~$10.000) a una singola RTX 4090 (~$1.600 acquisto una tantum). Tecniche come AWQ preservano le feature più importanti analizzando le attivazioni reali, riducendo la perdita di qualità a livelli accettabili.
+
+**Continuous Batching.** Invece di processare una richiesta alla volta, il sistema raggruppa dinamicamente più richiesti nello stesso batch durante l'inferenza. vLLM, Llama.cpp e TensorRT-LLM implementano questa strategia, sfruttando la parallelizzazione GPU al massimo.
+
+**KV Cache intelligente.** La cache dei Key-Value tensors — che evita di ricalcolare l'attenzione sui token già processati — è diventata un campo di ottimizzazione a sé. Tecniche come la paginazione della cache (PagedAttention) e la compressione selettiva riducono il consumo di VRAM del 40-60%, permettendo batch più lunghi e throughput più alto.
+
+## Cosa significa per chi costruisce
+
+Se stai deployando un sistema AI in produzione, la scelta architetturale conta più del modello. Un modello più piccolo ma correttamente ottimizzato — quantizzato, con batching dinamico e cache efficiente — batte sistematicamente un modello grande girato "alla brutta" su metriche di costo, latenza e scalabilità.
+
+Il vantaggio competitivo non è chi ha il modello più potente. È chi sa farlo girare in modo efficiente, 24/7, senza sorprese nel costo a fine mese.
+
+---
+
+*Vuoi capire come ottimizzare l'inferenza per il tuo caso d'uso specifico? [Contattaci](mailto:info@progettosiliceo.it) — costruiamo l'architettura giusta per i tuoi dati, i tuoi costi, i tuoi tempi.*
