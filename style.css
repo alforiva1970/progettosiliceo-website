@@ -1566,3 +1566,37 @@ body {
     }
 }
 
+/* ==========================================
+   AI-FRIENDLY & AGENT-READY BADGE
+   ========================================== */
+.ai-friendly-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 30px;
+    padding: 8px 18px;
+    margin: 18px auto 0;
+    font-size: 0.82rem;
+    color: #c4b5fd;
+    backdrop-filter: blur(8px);
+    transition: all 0.25s ease;
+}
+.ai-friendly-badge a {
+    color: #fcd34d;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--font-mono, monospace);
+}
+.ai-friendly-badge a:hover {
+    text-decoration: underline;
+    color: #fbbf24;
+}
+.ai-friendly-badge:hover {
+    border-color: rgba(245, 200, 66, 0.5);
+    background: rgba(139, 92, 246, 0.18);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+

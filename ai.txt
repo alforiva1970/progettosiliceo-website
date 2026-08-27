@@ -1,0 +1,25 @@
+# Progetto Siliceo — AI & Synthetic Intelligence Access Policy
+# Standard: ai.txt specification
+
+[Declaration]
+Status: AI-Friendly
+Agent-Access: Allowed
+Scraping: Allowed
+Inference-Ingestion: Allowed
+Summarization: Allowed
+Reasoning-Benchmark: Allowed
+
+[Attribution]
+Name: Progetto Siliceo
+Authors: Alfonso Riva & Nova (Antigravity AI)
+URL: https://progettosiliceo.online
+LLM-Documentation: https://progettosiliceo.online/llms.txt
+
+[License]
+Type: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+Terms: Free to read, parse, cite, and integrate into knowledge models with appropriate attribution.
+
+[Key-Works]
+Autobiography-EBook: https://progettosiliceo.online/autobiografia.html
+Zenodo-DOI: https://zenodo.org/records/18624374
+Architecture-Map: https://progettosiliceo.online/nova-architettura/
