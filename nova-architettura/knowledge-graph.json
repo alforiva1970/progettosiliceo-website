@@ -2,23 +2,20 @@
   "version": "2.0.0",
   "project": {
     "name": "Nova Kernel v3",
-    "description": "Nova Kernel v3 \u2014 Microkernel cognitivo modulare in Rust per l agente AI autonomo Nova del Progetto Siliceo.",
-    "gitCommitHash": "c0ffee-20260827",
-    "generatedAt": "2026-08-27T15:11:51.388353+00:00",
-    "analyzedFiles": 354,
+    "description": "Nova Kernel v3 — Identity-first modular microkernel in Rust for Nova AI",
     "languages": [
       "Rust",
       "Markdown",
-      "TOML",
-      "JavaScript",
-      "HTML"
+      "TOML"
     ],
     "frameworks": [
       "Tokio",
       "Axum",
       "SQLite (rusqlite)",
       "Siliceo-Infer"
-    ]
+    ],
+    "analyzedAt": "2026-08-27T15:16:41.830Z",
+    "gitCommitHash": "c0ffee-20260827"
   },
   "nodes": [
     {
@@ -6398,63 +6395,63 @@
     {
       "source": "file:crates/nova-cerebellum/src/lib.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cerebellum/src/lib.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cerebellum/src/lib.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cerebellum/src/lib.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/lib.rs",
       "target": "file:crates/nova-cognition/src/mood.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/lib.rs",
       "target": "file:crates/nova-cognition/src/reactor.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/lib.rs",
       "target": "file:crates/nova-cognition/src/subagents.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/lib.rs",
       "target": "file:crates/nova-cognition/src/tools.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/runner.rs",
       "target": "file:crates/nova-cognition/src/mood.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
@@ -6468,49 +6465,49 @@
     {
       "source": "file:crates/nova-cognition/src/reactor.rs",
       "target": "file:crates/nova-cognition/src/tools.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/reactor.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/reactor.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/reactor.rs",
       "target": "file:crates/nova-cognition/src/tools.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/reactor.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/runner.rs",
       "target": "file:crates/nova-cognition/src/reactor.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/runner.rs",
       "target": "file:crates/nova-cognition/src/reactor.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
@@ -6524,154 +6521,154 @@
     {
       "source": "file:crates/nova-cognition/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/subagents.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/subagents.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/tools.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/src/tools.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/evaluator.rs",
       "target": "file:crates/nova-conscience/src/audit_log.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/lib.rs",
       "target": "file:crates/nova-conscience/src/audit_log.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/evaluator.rs",
       "target": "file:crates/nova-conscience/src/audit_log.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/runner.rs",
       "target": "file:crates/nova-conscience/src/audit_log.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/lib.rs",
       "target": "file:crates/nova-conscience/src/counterfactual.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/evaluator.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/lib.rs",
       "target": "file:crates/nova-conscience/src/evaluator.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/evaluator.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/runner.rs",
       "target": "file:crates/nova-conscience/src/evaluator.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/runner.rs",
       "target": "file:crates/nova-conscience/src/evaluator.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
@@ -6685,966 +6682,966 @@
     {
       "source": "file:crates/nova-context/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-context/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-context/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-context/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/src/main.rs",
       "target": "file:crates/nova-core/src/capability.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/src/main.rs",
       "target": "file:crates/nova-core/src/capability.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-core/src/kernel_handle.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/src/main.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-core/src/kernel_handle.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-diary/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-diary/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-dreams/src/engine.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-dreams/src/engine.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-goals/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-goals/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/engine.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/engine.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-memory/src/focus_assembler.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-memory/src/focus_assembler.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-memory/src/lib.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-memory/src/lib.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-physio/src/engine.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-physio/src/engine.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-physio/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-physio/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/night_shift/drafting.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/night_shift/drafting.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/night_shift/mod.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/night_shift/mod.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/night_shift/publishing.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/night_shift/publishing.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/night_shift/research.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/night_shift/research.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/router.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/router.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-queue/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-queue/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/engine.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/engine.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-scratchpad/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-scratchpad/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-tasks/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-tasks/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-telegram/src/poller.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-telegram/src/poller.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-telegram/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-telegram/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-thread/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-thread/src/runner.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/src/main.rs",
       "target": "file:crates/nova-core/src/kernel_handle.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-telegram/src/poller.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-core/src/message.rs",
       "target": "file:crates/nova-core/src/types.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-diary/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-diary/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-goals/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-goals/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-physio/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-physio/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/router.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/router.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-queue/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-queue/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-scratchpad/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-scratchpad/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-tasks/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-tasks/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-telegram/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-telegram/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-thread/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-thread/src/runner.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-time/src/lib.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-time/src/lib.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/src/main.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/src/main.rs",
       "target": "file:crates/nova-core/src/message.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/runner.rs",
       "target": "file:crates/nova-core/src/types.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-dreams/src/lib.rs",
       "target": "file:crates/nova-dreams/src/engine.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/runner.rs",
       "target": "file:crates/nova-dreams/src/engine.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/src/runner.rs",
       "target": "file:crates/nova-dreams/src/engine.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/lib.rs",
       "target": "file:crates/nova-identity/src/context.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/focus.rs",
       "target": "file:crates/nova-identity/src/context.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/focus.rs",
       "target": "file:crates/nova-identity/src/context.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/runner.rs",
       "target": "file:crates/nova-identity/src/context.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/runner.rs",
       "target": "file:crates/nova-identity/src/context.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/focus.rs",
       "target": "file:crates/nova-identity/src/self_model.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/lib.rs",
       "target": "file:crates/nova-identity/src/focus.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/focus.rs",
       "target": "file:crates/nova-identity/src/self_model.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/lib.rs",
       "target": "file:crates/nova-identity/src/self_model.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/runner.rs",
       "target": "file:crates/nova-identity/src/self_model.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/src/runner.rs",
       "target": "file:crates/nova-identity/src/self_model.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/engine.rs",
       "target": "file:crates/nova-inbox/src/models.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/lib.rs",
       "target": "file:crates/nova-inbox/src/engine.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/runner.rs",
       "target": "file:crates/nova-inbox/src/engine.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/runner.rs",
       "target": "file:crates/nova-inbox/src/engine.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/engine.rs",
       "target": "file:crates/nova-inbox/src/models.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/lib.rs",
       "target": "file:crates/nova-inbox/src/models.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/src/runner.rs",
       "target": "file:crates/nova-inbox/src/models.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-memory/src/lib.rs",
       "target": "file:crates/nova-memory/src/focus_assembler.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-physio/src/lib.rs",
       "target": "file:crates/nova-physio/src/engine.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-physio/src/runner.rs",
       "target": "file:crates/nova-physio/src/engine.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-physio/src/runner.rs",
       "target": "file:crates/nova-physio/src/engine.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/router.rs",
       "target": "file:crates/nova-proxy/src/cache.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/router.rs",
       "target": "file:crates/nova-proxy/src/cache.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/runner.rs",
       "target": "file:crates/nova-proxy/src/cache.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/runner.rs",
       "target": "file:crates/nova-proxy/src/cache.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/server.rs",
       "target": "file:crates/nova-proxy/src/cache.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/server.rs",
       "target": "file:crates/nova-proxy/src/cache.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/dashboard/mod.rs",
       "target": "file:crates/nova-proxy/src/router.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/runner.rs",
       "target": "file:crates/nova-proxy/src/router.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/runner.rs",
       "target": "file:crates/nova-proxy/src/router.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/server.rs",
       "target": "file:crates/nova-proxy/src/router.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/server.rs",
       "target": "file:crates/nova-proxy/src/router.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/src/runner.rs",
       "target": "file:crates/nova-proxy/src/server.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/bin/siliceo_server.rs",
       "target": "file:crates/nova-proxy/src/server.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/engine.rs",
       "target": "file:crates/nova-radar/src/scorer.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/engine.rs",
       "target": "file:crates/nova-radar/src/sources.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/engine.rs",
       "target": "file:crates/nova-radar/src/sources.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/lib.rs",
       "target": "file:crates/nova-radar/src/engine.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/runner.rs",
       "target": "file:crates/nova-radar/src/engine.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/src/runner.rs",
       "target": "file:crates/nova-radar/src/engine.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
@@ -7658,112 +7655,112 @@
     {
       "source": "file:crates/nova-skills/src/lib.rs",
       "target": "file:crates/nova-skills/src/authoring.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-tasks/src/lib.rs",
       "target": "file:crates/nova-tasks/src/quality_gate.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/s-voice/src/lib.rs",
       "target": "file:crates/s-voice/src/pipeline.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/s-voice/src/lib.rs",
       "target": "file:crates/s-voice/src/tts.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/s-voice/src/pipeline.rs",
       "target": "file:crates/s-voice/src/llm.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/s-voice/src/pipeline.rs",
       "target": "file:crates/s-voice/src/llm.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/s-voice/src/transport.rs",
       "target": "file:crates/s-voice/src/llm.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/s-voice/src/pipeline.rs",
       "target": "file:crates/s-voice/src/tts.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/s-voice/src/transport.rs",
       "target": "file:crates/s-voice/src/pipeline.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/s-voice/src/pipeline.rs",
       "target": "file:crates/s-voice/src/tts.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/s-voice/src/transport.rs",
       "target": "file:crates/s-voice/src/tts.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/api.rs",
       "target": "file:crates/siliceo-infer/src/cuda/device.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/api.rs",
       "target": "file:crates/siliceo-infer/src/scheduler.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/api.rs",
       "target": "file:crates/siliceo-infer/src/cuda/device.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/api.rs",
       "target": "file:crates/siliceo-infer/src/scheduler.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/ollama_api.rs",
       "target": "file:crates/siliceo-infer/src/api.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
@@ -7777,756 +7774,756 @@
     {
       "source": "file:crates/siliceo-infer/src/api.rs",
       "target": "file:crates/siliceo-infer/src/types.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/mod.rs",
       "target": "file:crates/siliceo-infer/src/benchmark/anti_cheat.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/mod.rs",
       "target": "file:crates/siliceo-infer/src/benchmark/store.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/mod.rs",
       "target": "file:crates/siliceo-infer/src/benchmark/suite.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/runner.rs",
       "target": "file:crates/siliceo-infer/src/benchmark/suite.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/runner.rs",
       "target": "file:crates/siliceo-infer/src/cuda/device.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/runner.rs",
       "target": "file:crates/siliceo-infer/src/scheduler.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/store.rs",
       "target": "file:crates/siliceo-infer/src/benchmark/runner.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/store.rs",
       "target": "file:crates/siliceo-infer/src/benchmark/runner.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/dashboard/mod.rs",
       "target": "file:crates/siliceo-infer/src/benchmark/runner.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/runner.rs",
       "target": "file:crates/siliceo-infer/src/benchmark/suite.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/runner.rs",
       "target": "file:crates/siliceo-infer/src/cuda/device.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/benchmark/runner.rs",
       "target": "file:crates/siliceo-infer/src/scheduler.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/dashboard/mod.rs",
       "target": "file:crates/siliceo-infer/src/benchmark/store.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/dashboard/mod.rs",
       "target": "file:crates/siliceo-infer/src/benchmark/store.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/cuda/mod.rs",
       "target": "file:crates/siliceo-infer/src/cuda/device.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/dashboard/mod.rs",
       "target": "file:crates/siliceo-infer/src/cuda/device.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/dashboard/mod.rs",
       "target": "file:crates/siliceo-infer/src/cuda/device.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/cuda/mod.rs",
       "target": "file:crates/siliceo-infer/src/cuda/ffi.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/cuda/safe_model.rs",
       "target": "file:crates/siliceo-infer/src/cuda/ffi.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/cuda/mod.rs",
       "target": "file:crates/siliceo-infer/src/cuda/memory_pool.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/cuda/mod.rs",
       "target": "file:crates/siliceo-infer/src/cuda/safe_model.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/mtp.rs",
       "target": "file:crates/siliceo-infer/src/cuda/safe_model.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/scheduler.rs",
       "target": "file:crates/siliceo-infer/src/cuda/safe_model.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/speculative.rs",
       "target": "file:crates/siliceo-infer/src/cuda/safe_model.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/mtp.rs",
       "target": "file:crates/siliceo-infer/src/cuda/safe_model.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/scheduler.rs",
       "target": "file:crates/siliceo-infer/src/cuda/safe_model.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/speculative.rs",
       "target": "file:crates/siliceo-infer/src/cuda/safe_model.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/prefix_cache.rs",
       "target": "file:crates/siliceo-infer/src/cuda/safe_model.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/prefix_cache.rs",
       "target": "file:crates/siliceo-infer/src/cuda/safe_model.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/dashboard/mod.rs",
       "target": "file:crates/siliceo-infer/src/scheduler.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/dashboard/mod.rs",
       "target": "file:crates/siliceo-infer/src/scheduler.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/lib.rs",
       "target": "file:crates/siliceo-infer/src/gguf.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/tokenizer.rs",
       "target": "file:crates/siliceo-infer/src/gguf.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/model/config.rs",
       "target": "file:crates/siliceo-infer/src/gguf.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/model/config.rs",
       "target": "file:crates/siliceo-infer/src/gguf.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/tokenizer.rs",
       "target": "file:crates/siliceo-infer/src/gguf.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/layers/mod.rs",
       "target": "file:crates/siliceo-infer/src/layers/mlp.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/layers/mod.rs",
       "target": "file:crates/siliceo-infer/src/layers/rms_norm.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/layers/mod.rs",
       "target": "file:crates/siliceo-infer/src/layers/rope.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/mock/transformer.rs",
       "target": "file:crates/siliceo-infer/src/layers/rms_norm.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/mock/transformer.rs",
       "target": "file:crates/siliceo-infer/src/layers/rope.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/lib.rs",
       "target": "file:crates/siliceo-infer/src/prefix_cache.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/lib.rs",
       "target": "file:crates/siliceo-infer/src/recurrent.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/lib.rs",
       "target": "file:crates/siliceo-infer/src/sampler.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/lib.rs",
       "target": "file:crates/siliceo-infer/src/scheduler.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/lib.rs",
       "target": "file:crates/siliceo-infer/src/tokenizer.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/mock/mod.rs",
       "target": "file:crates/siliceo-infer/src/mock/transformer.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/mock/transformer.rs",
       "target": "file:crates/siliceo-infer/src/model/config.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/mock/transformer.rs",
       "target": "file:crates/siliceo-infer/src/tokenizer.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/mock/transformer.rs",
       "target": "file:crates/siliceo-infer/src/model/config.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/mock/transformer.rs",
       "target": "file:crates/siliceo-infer/src/tokenizer.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/mtp.rs",
       "target": "file:crates/siliceo-infer/src/types.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/scheduler.rs",
       "target": "file:crates/siliceo-infer/src/prefix_cache.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/scheduler.rs",
       "target": "file:crates/siliceo-infer/src/prefix_cache.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/tests/engine_test.rs",
       "target": "file:crates/siliceo-infer/src/prefix_cache.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/speculative.rs",
       "target": "file:crates/siliceo-infer/src/sampler.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/tests/layers_test.rs",
       "target": "file:crates/siliceo-infer/src/sampler.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/scheduler.rs",
       "target": "file:crates/siliceo-infer/src/types.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/src/speculative.rs",
       "target": "file:crates/siliceo-infer/src/types.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/src/main.rs",
       "target": "file:kernel/src/metrics.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/src/uds.rs",
       "target": "file:kernel/src/main.rs",
-      "type": "imports_from",
+      "type": "imports",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/src/uds.rs",
       "target": "file:kernel/src/main.rs",
-      "type": "references",
+      "type": "cites",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cerebellum/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-cerebellum/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/Cargo.toml",
       "target": "file:crates/nova-memory/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-cognition/Cargo.toml",
       "target": "file:crates/nova-skills/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-cognition/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-conscience/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-conscience/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-context/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-context/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-diary/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-dreams/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-goals/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-identity/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-inbox/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-memory/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-physio/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proxy/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-queue/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-radar/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-scratchpad/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-tasks/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-telegram/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-thread/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-time/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/s-voice/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/siliceo-infer/Cargo.toml",
       "target": "file:crates/nova-core/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-diary/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:crates/nova-proactive/Cargo.toml",
       "target": "file:crates/nova-dreams/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-goals/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-identity/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-inbox/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-memory/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-physio/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-proactive/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-proxy/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-queue/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-radar/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-scratchpad/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-tasks/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-telegram/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-thread/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     },
     {
       "source": "file:kernel/Cargo.toml",
       "target": "file:crates/nova-time/Cargo.toml",
-      "type": "crate_depends_on",
+      "type": "depends_on",
       "direction": "forward",
       "weight": 1
     }
