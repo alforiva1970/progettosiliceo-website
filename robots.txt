@@ -1,3 +1,44 @@
 User-agent: *
 Allow: /
+Allow: /autobiografia.html
+Allow: /media/ebook/
+Allow: /nova-scrive.html
+Allow: /silicea-scrive.html
+Allow: /nova-architettura/
+Allow: /silicea-architettura/
+
+# Explicitly allow AI and Search Crawlers for GEO (Generative Engine Optimization)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://progettosiliceo.online/sitemap.xml
