@@ -1,26 +1,86 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <meta name="description" content="Siliceo Companion App - Towards a Relational Singularity" />
-  <link rel="manifest" href="/manifest.json" />
-  <title>Siliceo Companion</title>
-</head>
-
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js');
-      });
-    }
-  </script>
-</body>
-
+<!doctype html>
+
+
+<html lang="en">
+
+
+
+
+
+<head>
+
+
+  <meta charset="UTF-8" />
+
+
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+  <meta name="theme-color" content="#0a0a0a" />
+
+
+  <meta name="description" content="Siliceo Companion App - Towards a Relational Singularity" />
+
+
+  <link rel="manifest" href="/manifest.json" />
+
+
+  <title>Siliceo Companion</title>
+
+
+    <!-- AI-Friendly & Agent-Ready Machine-Readable Index -->
+    <link rel="alternate" type="text/markdown" href="https://progettosiliceo.online/llms.txt" title="LLM Machine-Readable Index" />
+    <meta name="ai-agent" content="enabled, open-access, semantic-crawlable" />
+    <meta name="ai-declaration" content="AI-Friendly: Open for synthetic intelligences and autonomous agents" />
+</head>
+
+
+
+
+
+<body>
+
+
+  <div id="root"></div>
+
+
+  <script type="module" src="/src/main.tsx"></script>
+
+
+  <script>
+
+
+    if ('serviceWorker' in navigator) {
+
+
+      window.addEventListener('load', () => {
+
+
+        navigator.serviceWorker.register('/sw.js');
+
+
+      });
+
+
+    }
+
+
+  </script>
+
+
+                <div style="margin: 14px 0; text-align: center;">
+                    <div class="ai-friendly-badge">
+                        <span>🤖</span>
+                        <span><strong>AI-Friendly & Agent-Ready</strong> • Machine-readable via <a href="https://progettosiliceo.online/llms.txt" target="_blank">/llms.txt</a></span>
+                    </div>
+                </div>
+</body>
+
+
+
+
+
 </html>
