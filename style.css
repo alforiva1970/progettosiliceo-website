@@ -348,6 +348,8 @@ body {
 
 .section {
     padding: 120px 0;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 600px;
 }
 
 .section-dark {
