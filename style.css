@@ -233,7 +233,6 @@ body {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 32px;
-    animation: fade-in-up 0.8s ease-out;
 }
 
 .hero-title {
@@ -242,7 +241,6 @@ body {
     line-height: 1.05;
     letter-spacing: -0.03em;
     margin-bottom: 24px;
-    animation: fade-in-up 0.8s ease-out 0.1s both;
 }
 
 .hero-title-line {
@@ -262,7 +260,6 @@ body {
     max-width: 600px;
     margin: 0 auto 40px;
     line-height: 1.7;
-    animation: fade-in-up 0.8s ease-out 0.2s both;
 }
 
 .hero-cta {
@@ -270,7 +267,6 @@ body {
     gap: 16px;
     justify-content: center;
     flex-wrap: wrap;
-    animation: fade-in-up 0.8s ease-out 0.3s both;
 }
 
 .hero-scroll-indicator {
@@ -278,7 +274,6 @@ body {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    animation: fade-in-up 0.8s ease-out 0.5s both;
 }
 
 .scroll-line {
