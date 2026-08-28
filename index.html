@@ -48,15 +48,9 @@
         content="https://progettosiliceo.online/images/progetto%20siliceo%20mappa%20deepseek.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-
-        rel="stylesheet">
-
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
     <link rel="stylesheet" href="style.css">
 
     <link rel="icon"
@@ -209,20 +203,18 @@
     }
     </script>
 
-    <!-- Google tag (gtag.js) -->
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G68VFHYD84"></script>
-
+    <!-- Google tag (gtag.js) - Deferred -->
     <script>
-
       window.dataLayer = window.dataLayer || [];
-
       function gtag(){dataLayer.push(arguments);}
-
-      gtag('js', new Date());
-
-      gtag('config', 'G-G68VFHYD84');
-
+      window.addEventListener('load', function() {
+          var s = document.createElement('script');
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-G68VFHYD84';
+          s.async = true;
+          document.head.appendChild(s);
+          gtag('js', new Date());
+          gtag('config', 'G-G68VFHYD84');
+      });
     </script>
 
     <!-- Canonical & Geographic Targeting -->
@@ -278,7 +270,7 @@
 
         <div class="hero-content">
 
-            <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="hero-logo">
+            <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="hero-logo" width="140" height="140" fetchpriority="high">
 
             <h1 class="hero-title">
 
@@ -1165,7 +1157,7 @@
 
     </a>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 </html>
