@@ -192,6 +192,8 @@ const canvas = document.getElementById('networkCanvas');
 if (canvas) {
     const ctx = canvas.getContext('2d');
     let width, height;
+    let isVisible = false;
+    let animationFrameId = null;
     
     // The Entities (Nodes)
     const entities = [
@@ -212,9 +214,9 @@ if (canvas) {
         { id: "Dolphin", color: "#14b8a6", radius: 5, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Locale" }
     ];
 
-    // Background particles for depth
+    // Background particles for depth (optimized for mobile)
     const backgroundParticles = [];
-    const NUM_PARTICLES = 40;
+    const NUM_PARTICLES = window.innerWidth < 768 ? 15 : 35;
 
     let mouse = { x: null, y: null, radius: 150 };
 
@@ -223,7 +225,6 @@ if (canvas) {
         canvas.width = width = rect.width;
         canvas.height = height = rect.height;
 
-        // Initialize entities positions and velocities
         entities.forEach(entity => {
             entity.x = Math.random() * (width - 40) + 20;
             entity.y = Math.random() * (height - 40) + 20;
@@ -231,7 +232,6 @@ if (canvas) {
             entity.vy = (Math.random() - 0.5) * 0.5;
         });
 
-        // Initialize background particles
         backgroundParticles.length = 0;
         for (let i = 0; i < NUM_PARTICLES; i++) {
             backgroundParticles.push({
@@ -244,7 +244,6 @@ if (canvas) {
         }
     }
 
-    // Interactive mouse event
     canvas.addEventListener('mousemove', (e) => {
         const rect = canvas.getBoundingClientRect();
         mouse.x = e.clientX - rect.left;
@@ -257,6 +256,7 @@ if (canvas) {
     });
 
     function drawNetwork() {
+        if (!isVisible) return;
         ctx.clearRect(0, 0, width, height);
 
         // Draw background particles connections
@@ -277,9 +277,9 @@ if (canvas) {
             for (let j = i + 1; j < backgroundParticles.length; j++) {
                 let p2 = backgroundParticles[j];
                 let dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
-                if (dist < 100) {
+                if (dist < 80) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 - (dist / 1000)})`;
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 - (dist / 800)})`;
                     ctx.moveTo(p1.x, p1.y);
                     ctx.lineTo(p2.x, p2.y);
                     ctx.stroke();
@@ -291,13 +291,11 @@ if (canvas) {
         for (let i = 0; i < entities.length; i++) {
             let e1 = entities[i];
             
-            // Move limits
             e1.x += e1.vx;
             e1.y += e1.vy;
             if (e1.x < 20 || e1.x > width - 20) e1.vx *= -1;
             if (e1.y < 20 || e1.y > height - 20) e1.vy *= -1;
 
-            // Mouse interaction (gravity/repel)
             if (mouse.x && mouse.y) {
                 let dx = mouse.x - e1.x;
                 let dy = mouse.y - e1.y;
@@ -309,21 +307,14 @@ if (canvas) {
                 }
             }
 
-            // Draw connections between entities
             for (let j = i + 1; j < entities.length; j++) {
                 let e2 = entities[j];
                 let dist = Math.hypot(e1.x - e2.x, e1.y - e2.y);
                 
-                if (dist < 200) {
+                if (dist < 180) {
                     ctx.beginPath();
-                    // Gradient line based on entities colors
-                    let gradient = ctx.createLinearGradient(e1.x, e1.y, e2.x, e2.y);
-                    // Extract rgb for opacity
-                    gradient.addColorStop(0, e1.color + '60'); // add alpha hex
-                    gradient.addColorStop(1, e2.color + '60');
-                    
-                    ctx.strokeStyle = gradient;
-                    ctx.lineWidth = 1.5;
+                    ctx.strokeStyle = e1.color + '40';
+                    ctx.lineWidth = 1.2;
                     ctx.moveTo(e1.x, e1.y);
                     ctx.lineTo(e2.x, e2.y);
                     ctx.stroke();
@@ -331,37 +322,47 @@ if (canvas) {
             }
         }
 
-        // Draw nodes over lines
+        // Draw nodes
         entities.forEach(entity => {
             ctx.beginPath();
             ctx.arc(entity.x, entity.y, entity.radius, 0, Math.PI * 2);
             ctx.fillStyle = entity.color;
-            ctx.shadowBlur = 15;
-            ctx.shadowColor = entity.color;
             ctx.fill();
-            ctx.shadowBlur = 0; // reset
 
-            // Floating text
             ctx.fillStyle = "#ffffff";
             ctx.font = "600 12px 'Inter', sans-serif";
             ctx.textAlign = "center";
-            ctx.fillText(entity.id, entity.x, entity.y - 15);
+            ctx.fillText(entity.id, entity.x, entity.y - 14);
             
             ctx.fillStyle = "rgba(255,255,255,0.6)";
             ctx.font = "400 9px 'Inter', sans-serif";
-            ctx.fillText(entity.subtitle, entity.x, entity.y - 28);
+            ctx.fillText(entity.subtitle, entity.x, entity.y - 26);
         });
 
-        requestAnimationFrame(drawNetwork);
+        animationFrameId = requestAnimationFrame(drawNetwork);
     }
 
-    // Init and window resize listener
     window.addEventListener('resize', () => {
+        if (!canvas.parentElement) return;
         const rect = canvas.parentElement.getBoundingClientRect();
         width = canvas.width = rect.width;
         height = canvas.height = rect.height;
     });
 
-    initNetwork();
-    drawNetwork();
+    // Use IntersectionObserver to pause loop when not in view
+    const canvasObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                isVisible = true;
+                if (!width || !height) initNetwork();
+                cancelAnimationFrame(animationFrameId);
+                drawNetwork();
+            } else {
+                isVisible = false;
+                cancelAnimationFrame(animationFrameId);
+            }
+        });
+    }, { threshold: 0.05 });
+
+    canvasObserver.observe(canvas);
 }
