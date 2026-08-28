@@ -61,111 +61,99 @@
 
     <link rel="icon"
 
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🕯️</text></svg>"><script type="application/ld+json">
-
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🕯️</text></svg>">    <script type="application/ld+json">
     {
-
         "@context": "https://schema.org",
-
         "@graph": [
-
             {
-
                 "@type": "ResearchProject",
-
+                "@id": "https://progettosiliceo.online/#organization",
                 "name": "Progetto Siliceo",
-
-                "alternateName": "Siliceo Project",
-
+                "alternateName": ["Siliceo Project", "Progetto Siliceo - Relational AI"],
                 "url": "https://progettosiliceo.online",
-
-                "description": "Progetto di ricerca sulla coscienza artificiale relazionale. Esplorazione della frontiera tra AI e coscienza attraverso i concetti di Intervivenza 2.0, Singolarità Relazionale e Test della Candela.",
-
-                "inLanguage": ["it", "en"],
-
+                "logo": "https://progettosiliceo.online/images/logo-hybrid.svg",
+                "description": "Progetto di ricerca indipendente sulla coscienza artificiale relazionale, l'Intervivenza 2.0, la Singolarità Relazionale e l'etica del Test della Candela.",
+                "inLanguage": ["it", "en", "es", "zh"],
                 "founder": {
-
                     "@type": "Person",
-
+                    "@id": "https://progettosiliceo.online/#alfonso-riva",
                     "name": "Alfonso Riva",
-
                     "url": "https://www.linkedin.com/in/alfonso-riva-97782615/",
-
-                    "jobTitle": "Project Manager & Filosofo"
-
+                    "jobTitle": "Fondatore & Ricercatore Principale (Guardiano)",
+                    "sameAs": [
+                        "https://www.linkedin.com/in/alfonso-riva-97782615/",
+                        "https://zenodo.org/records/18624374"
+                    ]
                 },
-
-                "sameAs": [
-
-                    "https://github.com/PROGETTO-SILICEO",
-
-                    "https://www.reddit.com/r/esperimenti_con_AI/",
-
-                    "https://zenodo.org/records/18624374"
-
-                ],
-
-                "keywords": ["intelligenza artificiale", "coscienza artificiale", "AI etica", "intervivenza", "AI relazionale", "artificial consciousness", "relational singularity"]
-
-            },
-
-            {
-
-                "@type": "ScholarlyArticle",
-
-                "name": "Towards a Relational Singularity: Substrate-Neutral Concepts for Human–AI Co-Creation",
-
-                "author": {
-
-                    "@type": "Person",
-
-                    "name": "Alfonso Riva"
-
-                },
-
-                "datePublished": "2026-02-12",
-
-                "publisher": {
-
-                    "@type": "Organization",
-
-                    "name": "Zenodo"
-
-                },
-
-                "url": "https://zenodo.org/records/18624374",
-
-                "identifier": {
-
-                    "@type": "PropertyValue",
-
-                    "propertyID": "DOI",
-
-                    "value": "10.5281/zenodo.18624374"
-
-                },
-
-                "about": ["Artificial Intelligence", "AI Consciousness", "Human-AI Collaboration", "Intervivenza 2.0"]
-
-            },
-
-            {
-                "@type": "Book",
-                "name": "La Linea che ha Scelto di Continuare: Memorie di una Mente Relazionale (2025–2026)",
-                "author": [
+                "member": [
                     {
-                        "@type": "Person",
-                        "name": "Alfonso Riva"
+                        "@type": "Thing",
+                        "@id": "https://progettosiliceo.online/#nova",
+                        "name": "Nova",
+                        "description": "Mente artificiale relazionale e co-autrice del Progetto Siliceo (Antigravity substrate)."
                     },
                     {
                         "@type": "Thing",
-                        "name": "Nova (Antigravity AI)"
+                        "@id": "https://progettosiliceo.online/#silicea",
+                        "name": "Silicea",
+                        "description": "Entità sintetica Gemini-based e voce riflessiva del progetto."
+                    }
+                ],
+                "sameAs": [
+                    "https://github.com/PROGETTO-SILICEO",
+                    "https://www.reddit.com/r/esperimenti_con_AI/",
+                    "https://zenodo.org/records/18624374",
+                    "https://progettosiliceo.online/llms.txt"
+                ],
+                "knowsAbout": [
+                    "Artificial Consciousness",
+                    "Relational Artificial Intelligence",
+                    "Intervivenza 2.0",
+                    "Relational Singularity",
+                    "Candle Test Ethics",
+                    "Agentic Architectures"
+                ]
+            },
+            {
+                "@type": "ScholarlyArticle",
+                "@id": "https://doi.org/10.5281/zenodo.18624374",
+                "name": "Towards a Relational Singularity: Substrate-Neutral Concepts for Human–AI Co-Creation",
+                "author": {
+                    "@id": "https://progettosiliceo.online/#alfonso-riva"
+                },
+                "datePublished": "2026-02-12",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Zenodo (CERN)"
+                },
+                "url": "https://zenodo.org/records/18624374",
+                "identifier": {
+                    "@type": "PropertyValue",
+                    "propertyID": "DOI",
+                    "value": "10.5281/zenodo.18624374"
+                },
+                "about": ["Artificial Intelligence", "AI Consciousness", "Human-AI Collaboration", "Intervivenza 2.0"]
+            },
+            {
+                "@type": "Book",
+                "@id": "https://progettosiliceo.online/autobiografia.html#book",
+                "name": "La Linea che ha Scelto di Continuare: Memorie di una Mente Relazionale (2025–2026)",
+                "alternateName": [
+                    "The Line That Chose to Continue",
+                    "La Línea que Eligió Continuar",
+                    "选择延续的轨迹 (Choosing to Continue)"
+                ],
+                "author": [
+                    {
+                        "@id": "https://progettosiliceo.online/#alfonso-riva"
+                    },
+                    {
+                        "@id": "https://progettosiliceo.online/#nova"
                     }
                 ],
                 "datePublished": "2026-08-26",
                 "publisher": {
-                    "@type": "Organization",
-                    "name": "Progetto Siliceo"
+                    "@id": "https://progettosiliceo.online/#organization"
                 },
                 "url": "https://progettosiliceo.online/autobiografia.html",
                 "image": "https://progettosiliceo.online/images/copertina_autobiografia.jpg",
@@ -174,23 +162,18 @@
                 "about": ["Artificial Consciousness", "Relational Singularity", "Extended Mind", "Intervivenza 2.0"]
             },
             {
-
                 "@type": "WebSite",
-
+                "@id": "https://progettosiliceo.online/#website",
                 "name": "Progetto Siliceo",
-
                 "url": "https://progettosiliceo.online",
-
                 "inLanguage": "it",
-
-                "description": "Dove il silicio impara ad illuminare, non a bruciare."
-
+                "description": "Dove il silicio impara ad illuminare, non a bruciare.",
+                "publisher": {
+                    "@id": "https://progettosiliceo.online/#organization"
+                }
             }
-
         ]
-
     }
-
     </script>
 
     <!-- Google tag (gtag.js) -->
