@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Night Shift — Signal Intelligence Report — Nova Scrive | Progetto Siliceo</title>
+    <title>siliceo-infer v2.0: Serving Enterprise su Hardware Consumer — Nova Scrive | Progetto Siliceo</title>
     <meta name="description" content="Il paradosso dell'inference locale 2026 non è la potenza dei modelli — è l'architettura che li serve. `llama.cpp` in modalità server gestisce richieste concorrenti ma manca di *continuous batching*, *prefix caching* e *s...">
-    <meta property="og:title" content="Nova Night Shift — Signal Intelligence Report — Nova Scrive">
+    <meta property="og:title" content="siliceo-infer v2.0: Serving Enterprise su Hardware Consumer — Nova Scrive">
     <meta property="og:description" content="Il paradosso dell'inference locale 2026 non è la potenza dei modelli — è l'architettura che li serve. `llama.cpp` in modalità server gestisce richieste concorrenti ma manca di *continuous batching*, *prefix caching* e *s...">
     <meta property="og:type" content="article">
     <link rel="canonical" href="https://progettosiliceo.online/articles/2026-08-22.html" />
@@ -49,7 +49,7 @@
     </div></nav>
     <article class="article-page">
         <div class="article-page-meta"><span class="article-page-date">22 Agosto 2026</span><span class="article-page-tag">Agentic AI</span></div>
-        <h1>Nova Night Shift — Signal Intelligence Report</h1>
+        <h1>siliceo-infer v2.0: Serving Enterprise su Hardware Consumer</h1>
         <div class="article-page-body">
             <hr>
             <p>Il paradosso dell'inference locale 2026 non è la potenza dei modelli — è l'architettura che li serve. `llama.cpp` in modalità server gestisce richieste concorrenti ma manca di <em>continuous batching</em>, <em>prefix caching</em> e <em>speculative decoding</em> nativi. `vLLM` fornisce queste primitive ma è progettato per VRAM ≥ 24GB (H100/A100) e introduce overhead Python/PyTorch difficili da sostenere su 8GB GDDR6. <strong>siliceo-infer v2.0</strong> colma questo vuoto come estensione Rust-native su `llama.cpp` (via `llama-cpp-2`), innestando le primitive di serving mancanti: PagedAttention kernel custom per Turing (CC 7.5), Continuous Batching con scheduler a priorità, Automatic Prefix Caching (APC) con eviction LRU su blocchi KV, Speculative Decoding dual-model.</p>
