@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faro — Risultati dei test | Progetto Siliceo</title>
-<meta name="description" content="Quattro modelli sotto i 2 GB con l'etica dentro i pesi: 112 domande di dominio, 16 casi etici, misure su hardware datato. Il rapporto tecnico e i dati grezzi.">
+<title>Faro — Resultados de las pruebas | Progetto Siliceo</title>
+<meta name="description" content="Cuatro modelos bajo los 2 GB con la ética dentro de los pesos: 112 preguntas de dominio, 16 casos éticos, medidas en hardware antiguo. El informe técnico y los datos.">
 <link rel="alternate" hreflang="it" href="https://progettosiliceo.online/faro.html">
 <link rel="alternate" hreflang="en" href="https://progettosiliceo.online/en/faro.html">
 <link rel="alternate" hreflang="es" href="https://progettosiliceo.online/es/faro.html">
@@ -168,14 +168,14 @@ footer a:hover{color:var(--tx)}
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html">
+    <a class="nav-logo" href="../index.html">
       <svg viewBox="0 0 32 32" fill="none"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13L16 2Z" stroke="#8b5cf6" stroke-width="2"/><circle cx="16" cy="16" r="5" fill="#06b6d4"/></svg>
       <span>Progetto Siliceo</span>
     </a>
     <div class="nav-links">
-      <a href="index.html#progetti" data-i18n="nav.progetti">Progetti</a>
-      <a href="nova-scrive.html" data-i18n="nav.scrive">Nova Scrive</a>
-      <a class="pill pdf-link" href="papers/paper-faro-v1-it.pdf" data-i18n="nav.pdf">Rapporto (PDF)</a>
+      <a href="../index.html#progetti" data-i18n="nav.progetti">Progetti</a>
+      <a href="../nova-scrive.html" data-i18n="nav.scrive">Nova Scrive</a>
+      <a class="pill pdf-link" href="../papers/paper-faro-v1-it.pdf" data-i18n="nav.pdf">Rapporto (PDF)</a>
       <div class="langs" id="langs" role="group" aria-label="Lingua"><button data-l="it">IT</button><button data-l="en">EN</button><button data-l="es">ES</button></div>
     </div>
   </div>
@@ -193,7 +193,7 @@ footer a:hover{color:var(--tx)}
     <div class="kpi ent"><div class="v">16/16</div><div class="l" data-i18n="k4l">sonda etica di Faro (12–14/16 gli altri)</div></div>
   </div>
   <div class="cta">
-    <a class="btn pdf-link" href="papers/paper-faro-v1-it.pdf" data-i18n="cta.pdf">Leggi il rapporto (PDF)</a>
+    <a class="btn pdf-link" href="../papers/paper-faro-v1-it.pdf" data-i18n="cta.pdf">Leggi il rapporto (PDF)</a>
     <a class="btn ghost" href="#sonda" data-i18n="cta.sonda">Esplora i casi etici</a>
   </div>
 </header>
@@ -266,9 +266,9 @@ footer a:hover{color:var(--tx)}
       <div data-i18n="f.credit">Faro · rapporto tecnico v1 · 14 settembre 2026 · Alfonso Riva</div>
     </div>
     <div style="display:flex;gap:18px;flex-wrap:wrap">
-      <a href="papers/paper-faro-v1-it.pdf" class="pdf-link" data-i18n="f.pdf">Rapporto PDF</a>
-      <a href="index.html" data-i18n="f.home">progettosiliceo.online</a>
-      <a href="index.html#progetti" data-i18n="f.proj">Progetti</a>
+      <a href="../papers/paper-faro-v1-it.pdf" class="pdf-link" data-i18n="f.pdf">Rapporto PDF</a>
+      <a href="../index.html" data-i18n="f.home">progettosiliceo.online</a>
+      <a href="../index.html#progetti" data-i18n="f.proj">Progetti</a>
     </div>
   </div>
 </footer>
@@ -336,8 +336,8 @@ const I18N = {
   "cards.banco":"banco","cards.sonda":"sonda","cards.taglia":"tamaño","cards.vocab":"vocab"
  }
 };
-let LANG = "it";
-const PREFIX = "";
+let LANG = "es";
+const PREFIX = "../";
 function pdfSuffix(l){ return l==="en" ? "" : "-"+l; }
 
 function t(k){ return (I18N[LANG] && I18N[LANG][k]) || null; }
