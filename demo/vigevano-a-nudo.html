@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vigevano a nudo — come sono spesi e incassati i soldi del Comune</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+  :root{
+    --ink:#0e1a2b; --ink2:#33415c; --mut:#7b8aa0; --line:#e3e8ef; --bg:#f7f5f1; --card:#fff;
+    --accent:#1d4ed8; --accent-bg:#eef3ff; --ok:#0a7b46; --ok-bg:#e9f7ef; --bad:#a3231f; --bad-bg:#fdecea;
+    --warn:#9a6200; --warn-bg:#fdf3e3; --gray-bg:#f1f2f4;
+    --serif:Georgia,'Times New Roman',serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1000px;margin:0 auto;padding:26px 18px 80px}
+  header.top{border-bottom:3px solid var(--ink);padding:14px 0 20px}
+  .kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+  h1{font-family:var(--serif);font-size:36px;letter-spacing:-.01em;line-height:1.12}
+  .sub{color:var(--ink2);font-size:15.5px;margin-top:10px;max-width:760px}
+  .date{font-size:13px;color:var(--mut);margin-top:10px}
+  section{margin-top:34px}
+  h2{font-family:var(--serif);font-size:24px;margin-bottom:6px}
+  .lead{color:var(--ink2);font-size:15px;margin-bottom:14px}
+  .big{background:var(--ink);color:#fff;border-radius:12px;padding:20px 22px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .big .n{font-family:var(--serif);font-size:44px;line-height:1}
+  .big .t{font-size:14px;color:#c9d3e0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-top:12px}
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  th,td{text-align:right;padding:8px 6px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+  th:first-child,td:first-child{text-align:left}
+  .chart{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .row{display:grid;grid-template-columns:minmax(170px,44%) 1fr 96px;gap:10px;align-items:center;padding:6px 0;border-bottom:1px dashed var(--line)}
+  .row:last-child{border-bottom:none}
+  .row .name{font-size:13.5px;font-weight:600}
+  .row .name small{display:block;font-weight:400;color:var(--mut);font-size:11.5px}
+  .track{position:relative;height:20px;background:var(--gray-bg);border-radius:6px;overflow:hidden}
+  .bar{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:linear-gradient(90deg,#7f8ea8,#5b6b85)}
+  .bar.g{background:linear-gradient(90deg,#0e9f5a,#0a7b46)}
+  .val{text-align:right;font-variant-numeric:tabular-nums;font-size:13px;font-weight:700}
+  .an{border-left:5px solid var(--warn);background:var(--warn-bg);border-radius:10px;padding:14px 16px;margin-top:12px}
+  .an h3{font-size:15px;margin-bottom:4px}
+  .an .money{font-variant-numeric:tabular-nums;font-weight:800}
+  .an .ask{margin-top:8px;font-size:13.5px;background:#fff;border:1px dashed var(--warn);border-radius:8px;padding:8px 10px}
+  .note{font-size:12.5px;color:var(--mut);margin-top:10px}
+  .warnbox{background:var(--bad-bg);border:1px solid #f2c7c3;border-radius:10px;padding:12px 15px;font-size:13.5px;margin-top:12px}
+  .askcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:10px}
+  .askcard .q{font-size:14.5px}
+  .askcard .why{font-size:12.5px;color:var(--mut);margin-top:6px}
+  footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:12px;font-size:12.5px;color:var(--mut)}
+  @media(max-width:640px){.row{grid-template-columns:1fr 74px}.row .track{display:none}h1{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="kicker">Elaborazione su dati pubblici · SIOPE / Ragioneria Generale dello Stato (MEF)</div>
+  <h1>Vigevano a nudo</h1>
+  <div class="sub">Come il Comune incassa e spende i soldi. Solo <b>dati ufficiali</b> e cifre verificabili — nessuna notizia, nessuna opinione. Ogni segnalazione è una <b>domanda da verificare</b>, non un'accusa.</div>
+  <div class="date">Dati al 21/09/2026 · fonte: dump SIOPE (OpenBDAP) · popolazione ISTAT 62.515</div>
+</header>
+
+<section>
+  <h2>Il quadro</h2>
+  <div class="card">
+    <table>
+      <tr><th>Anno</th><th>Pagamenti (spese)</th><th>Incassi (entrate)</th></tr>
+      <tr><td>2024 (completo)</td><td>75.872.661 €</td><td>79.277.808 €</td></tr>
+      <tr><td>2025</td><td>14.858.530 € (gen–mar)</td><td>85.088.810 €</td></tr>
+      <tr><td>2026</td><td>58.733.555 € (gen–ago)</td><td>62.284.564 € (gen–ago)</td></tr>
+    </table>
+    <p class="note">Vista di <b>cassa</b> (quando si paga/incassa), non di competenza. <b>Buco dichiarato</b>: nella fonte ufficiale le spese 2025 della Lombardia si fermano a marzo — quindi il 2025-spese non è confrontabile. Le entrate 2025 sono complete.</p>
+  </div>
+
+  <div class="big" style="margin-top:14px">
+    <div class="n">1.214 €</div>
+    <div class="t">pagamenti del Comune <b>per abitante</b> nel 2024 — è il metro per capire dove va il gettito (IMU, TARI, addizionale) e i trasferimenti dello Stato.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Dove vanno i soldi (spese 2024, per titolo)</h2>
+  <div class="chart">
+    <div class="row"><div class="name">Spese correnti<small>funzionamento: personale, servizi, utenze, sociale</small></div><div class="track"><div class="bar" style="width:85%"></div></div><div class="val">58,35 M€</div></div>
+    <div class="row"><div class="name">Uscite per conto terzi<small>partite di giro: non sono spesa propria</small></div><div class="track"><div class="bar" style="width:13%"></div></div><div class="val">8,94 M€</div></div>
+    <div class="row"><div class="name">Investimenti (conto capitale)<small>opere e beni durevoli</small></div><div class="track"><div class="bar" style="width:12.3%"></div></div><div class="val">8,47 M€</div></div>
+    <div class="row"><div class="name">Rimborso prestiti<small>quota capitale dei mutui</small></div><div class="track"><div class="bar" style="width:0.16%"></div></div><div class="val">0,11 M€</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Le 10 voci di spesa più grandi (2024)</h2>
+  <div class="chart">
+    <div class="row"><div class="name">Raccolta rifiuti</div><div class="track"><div class="bar" style="width:100%"></div></div><div class="val">10,41 M€</div></div>
+    <div class="row"><div class="name">Stipendi personale</div><div class="track"><div class="bar" style="width:78%"></div></div><div class="val">8,13 M€</div></div>
+    <div class="row"><div class="name">Altri contratti di servizio pubblico</div><div class="track"><div class="bar" style="width:45%"></div></div><div class="val">4,66 M€</div></div>
+    <div class="row"><div class="name">IVA – split payment</div><div class="track"><div class="bar" style="width:41%"></div></div><div class="val">4,24 M€</div></div>
+    <div class="row"><div class="name">Assistenza sociale residenziale</div><div class="track"><div class="bar" style="width:33%"></div></div><div class="val">3,45 M€</div></div>
+    <div class="row"><div class="name">Contributi obbligatori personale</div><div class="track"><div class="bar" style="width:25%"></div></div><div class="val">2,57 M€</div></div>
+    <div class="row"><div class="name">Energia elettrica</div><div class="track"><div class="bar" style="width:22%"></div></div><div class="val">2,24 M€</div></div>
+    <div class="row"><div class="name">Ristorazione (mense)</div><div class="track"><div class="bar" style="width:21%"></div></div><div class="val">2,21 M€</div></div>
+    <div class="row"><div class="name">Fabbricati scolastici</div><div class="track"><div class="bar" style="width:18%"></div></div><div class="val">1,86 M€</div></div>
+    <div class="row"><div class="name">Gas</div><div class="track"><div class="bar" style="width:16%"></div></div><div class="val">1,65 M€</div></div>
+  </div>
+  <p class="note">Le voci sono codici ufficiali del “nuovo piano dei conti”: i nomi sono quelli dei dati, non interpretazioni.</p>
+</section>
+
+<section>
+  <h2>Da dove arrivano i soldi (entrate 2025, le principali)</h2>
+  <div class="chart">
+    <div class="row"><div class="name">TARI (rifiuti)</div><div class="track"><div class="bar g" style="width:100%"></div></div><div class="val">11,99 M€</div></div>
+    <div class="row"><div class="name">IMU</div><div class="track"><div class="bar g" style="width:96%"></div></div><div class="val">11,51 M€</div></div>
+    <div class="row"><div class="name">Fondi perequativi dallo Stato</div><div class="track"><div class="bar g" style="width:70%"></div></div><div class="val">8,37 M€</div></div>
+    <div class="row"><div class="name">Addizionale comunale IRPEF</div><div class="track"><div class="bar g" style="width:70%"></div></div><div class="val">8,36 M€</div></div>
+    <div class="row"><div class="name">Contributi investimenti da Ministeri</div><div class="track"><div class="bar g" style="width:44%"></div></div><div class="val">5,26 M€</div></div>
+    <div class="row"><div class="name">Trasferimenti dalla Regione</div><div class="track"><div class="bar g" style="width:43%"></div></div><div class="val">5,20 M€</div></div>
+    <div class="row"><div class="name">Multe codice della strada</div><div class="track"><div class="bar g" style="width:26%"></div></div><div class="val">3,09 M€</div></div>
+    <div class="row"><div class="name">Proventi mense</div><div class="track"><div class="bar g" style="width:15%"></div></div><div class="val">1,76 M€</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Tre cose che non tornano (da verificare)</h2>
+  <p class="lead">Queste non sono conclusioni: sono <b>domande con i numeri</b>. Ognuna ha una spiegazione possibile e legittima — per confermarla servono gli atti del Comune.</p>
+
+  <div class="an">
+    <h3>① Contributi agli investimenti da Ministeri: <span class="money">+3,60 M€</span> (2024→2025)</h3>
+    <div>Da 1,66 M€ a 5,26 M€. <b>Quasi tutto a febbraio 2025: +2,88 M€ in un mese solo.</b> Profilo da tranche di finanziamento (es. PNC/PNRR o altro programma) incassata in blocco.</div>
+    <div class="ask">➜ Da chiedere: <b>quale opera o programma</b> ha generato questi contributi; con quale atto; a che punto è la spesa (per non rischiare la restituzione dei fondi non spesi).</div>
+  </div>
+
+  <div class="an">
+    <h3>② TARI incassata: <span class="money">+1,55 M€</span> (2024→2025)</h3>
+    <div>Da 10,44 M€ a 11,99 M€ (+15%). Gli incassi si concentrano a marzo (+4,03 M€) e a dicembre (+2,85 M€).</div>
+    <div class="ask">➜ Da chiedere: è dovuto a <b>aumento delle tariffe, recupero evasione o semplice anticipo di pagamenti</b>? Quale delibera ha determinato la variazione?</div>
+  </div>
+
+  <div class="an">
+    <h3>③ Fondi perequativi dallo Stato: <span class="money">−1,08 M€</span> (2024→2025)</h3>
+    <div>Da 9,44 M€ a 8,37 M€ (−11%).</div>
+    <div class="ask">➜ Da chiedere: come è stata <b>compensata</b> questa minore entrata nel bilancio, e se il calcolo del fondo è stato contestato o verificato.</div>
+  </div>
+
+  <div class="warnbox"><b>Cosa manca a questa pagina</b> — e perché conta: la <b>competenza</b> (bilancio di previsione e consuntivo, con missioni/programmi e <b>residui</b>). La cassa dice quando si paga; la competenza dice <i>cosa</i> è stanziato e quanto resta da spendere. Con i residui si vedono le risorse ferme; con i capitoli si costruiscono le domande che contano. <b>Come si colma</b>: bilancio di previsione/consuntivo del Comune (pubblicati o con accesso agli atti).</div>
+</section>
+
+<section>
+  <h2>Tre domande pronte (bozze da usare in consiglio)</h2>
+  <div class="askcard"><div class="q"><b>1.</b> «Dai dati SIOPE della Ragioneria risulta che i contributi agli investimenti da Ministeri sono passati da 1,66 a 5,26 milioni di euro, con 2,88 milioni incassati a febbraio 2025. Si chiede: <b>quali opere o programmi</b> riguardano, con quali atti, e a che punto è la relativa spesa.»</div><div class="why">Fonte: SIOPE/OpenBDAP — citabile.</div></div>
+  <div class="askcard"><div class="q"><b>2.</b> «Gli incassi TARI del 2025 (fonte SIOPE) sono superiori di 1,55 milioni a quelli del 2024. Si chiede: <b>a cosa è dovuto l'aumento</b> — tariffe, recupero evasione, o anticipi — e con quali atti.»</div><div class="why">Fonte: SIOPE/OpenBDAP — citabile.</div></div>
+  <div class="askcard"><div class="q"><b>3.</b> «I fondi perequativi incassati sono calati di 1,08 milioni tra 2024 e 2025. Si chiede <b>come è stata compensata la minore entrata</b> e se il calcolo è stato verificato.»</div><div class="why">Fonte: SIOPE/OpenBDAP — citabile.</div></div>
+  <p class="note">Sono bozze: chi le usa le adatta a sé. Nessuna è un'accusa — sono richieste di verifica basate su dati pubblici.</p>
+</section>
+
+<footer>
+  Fonti: SIOPE via OpenBDAP (Ragioneria Generale dello Stato – MEF), dump ufficiali; popolazione ISTAT. Vista di cassa. Elaborazione ripetibile da chiunque con gli stessi dati.<br>
+  Metodo: solo dati pubblici · ogni cifra citabile · i buchi dichiarati · nessuna accusa, solo domande da verificare.<br>
+  <a href="https://progettosiliceo.online/demo/il-sistema.html" style="color:var(--mut)">Come funziona il sistema →</a>
+</footer>
+
+</div>
+</body>
+</html>
