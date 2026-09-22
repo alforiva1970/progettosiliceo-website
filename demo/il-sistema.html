@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il sistema — come funziona, di cosa ha bisogno, cosa dovete fare voi</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+  :root{--ink:#0e1a2b;--ink2:#33415c;--mut:#7b8aa0;--line:#e3e8ef;--bg:#f7f5f1;--card:#fff;--accent:#1d4ed8;--accent-bg:#eef3ff;--ok:#0a7b46;--ok-bg:#e9f7ef;--bad:#a3231f;--bad-bg:#fdecea;--warn:#9a6200;--warn-bg:#fdf3e3;--serif:Georgia,'Times New Roman',serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1000px;margin:0 auto;padding:26px 18px 80px}
+  header.top{border-bottom:3px solid var(--ink);padding:14px 0 20px}
+  .kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+  h1{font-family:var(--serif);font-size:34px;letter-spacing:-.01em;line-height:1.12}
+  .sub{color:var(--ink2);font-size:15.5px;margin-top:10px;max-width:780px}
+  section{margin-top:32px}
+  h2{font-family:var(--serif);font-size:23px;margin-bottom:6px}
+  .lead{color:var(--ink2);font-size:15px;margin-bottom:12px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .card h3{font-size:15px;margin-bottom:5px}
+  .card p{font-size:13.8px;color:var(--ink2)}
+  .flow{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .step{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line)}
+  .step:last-child{border-bottom:none}
+  .step .n{font-family:var(--serif);font-size:20px;color:var(--accent);line-height:1.2}
+  .step .t{font-size:14.2px}
+  .need{background:var(--warn-bg);border:1px solid #ecd9b4;border-radius:12px;padding:16px 18px}
+  .need h3{font-size:15.5px;color:var(--warn);margin-bottom:6px}
+  .need ul{margin-left:18px;font-size:14px}
+  .need li{margin:5px 0}
+  .do{background:var(--ok-bg);border:1px solid #bfe3cf;border-radius:12px;padding:16px 18px}
+  .do h3{font-size:15.5px;color:var(--ok);margin-bottom:6px}
+  .do ol{margin-left:18px;font-size:14px}
+  .do li{margin:6px 0}
+  .no{background:var(--bad-bg);border:1px solid #f2c7c3;border-radius:12px;padding:16px 18px}
+  .no h3{font-size:15.5px;color:var(--bad);margin-bottom:6px}
+  .no ul{margin-left:18px;font-size:14px}
+  .pill{display:inline-block;font-size:11px;font-weight:700;border-radius:20px;padding:2px 9px;margin-right:6px;vertical-align:middle}
+  .p-fact{background:var(--ink);color:#fff}.p-norm{background:#5b3fa8;color:#fff}.p-der{background:var(--warn);color:#fff}.p-open{background:#fff;border:1px solid var(--mut);color:var(--ink2)}
+  .final{background:var(--ink);color:#eef2f7;border-radius:12px;padding:20px 22px;margin-top:14px}
+  .final h3{font-family:var(--serif);font-size:19px;color:#fff;margin-bottom:8px}
+  .final p{font-size:14.5px;color:#d7e0ec}
+  footer{margin-top:40px;border-top:2px solid var(--ink);padding-top:12px;font-size:12.5px;color:var(--mut)}
+  @media(max-width:640px){h1{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="kicker">Documento di presentazione · strumento su dati pubblici</div>
+  <h1>Il sistema: cosa fa, di cosa ha bisogno, cosa serve da voi</h1>
+  <div class="sub">Uno strumento per leggere i bilanci pubblici con <b>numeri verificabili</b>. Qui trovate: come funziona, cosa ha già prodotto, ciò che gli manca e <b>cosa dovete fare voi</b> per farlo rendere — e cosa non fa.</div>
+</header>
+
+<section>
+  <h2>1 · Cos'è</h2>
+  <div class="cards">
+    <div class="card"><h3>Decostruisce il bilancio</h3><p>Da dove vengono i soldi, dove vanno, quanto per abitante, con i confronti. Ogni cifra viene da una <b>fonte ufficiale citabile</b>.</p></div>
+    <div class="card"><h3>Cerca ciò che non torna</h3><p>Movimenti anomali, residui, scostamenti, fondi fermi, vincoli. Le trova come <b>domande da verificare</b> — mai come accuse.</p></div>
+    <div class="card"><h3>Arma le vostre domande</h3><p>Trasforma le segnalazioni in <b>interrogazioni e richieste di accesso agli atti</b> già scritte, con i numeri e la fonte dentro.</p></div>
+    <div class="card"><h3>E, su richiesta, trova le risorse</h3><p>Dato un progetto: dove stanno le coperture possibili e <b>quali norme vanno toccate</b> per sbloccarle.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>2 · Come funziona (in quattro passi)</h2>
+  <div class="flow">
+    <div class="step"><div class="n">1</div><div class="t"><b>Fonti primarie.</b> SIOPE e bilanci pubblici (Ragioneria dello Stato), Gazzetta Ufficiale e testi normativi. <b>Nessuna notizia, nessuna opinione.</b></div></div>
+    <div class="step"><div class="n">2</div><div class="t"><b>Decostruzione.</b> Il bilancio viene smontato: entrate, spese, per titolo e voce, per abitante, anno per anno — con i <b>buchi dichiarati</b> quando la fonte è incompleta.</div></div>
+    <div class="step"><div class="n">3</div><div class="t"><b>Check.</b> Controlli automatici e ripetibili: variazioni anomale, residui alti, scostamenti, capitoli fermi, vincoli normativi.</div></div>
+    <div class="step"><div class="n">4</div><div class="t"><b>Output tipizzato.</b> Ogni voce è etichettata: <span class="pill p-fact">FATTO</span> <span class="pill p-norm">NORMA</span> <span class="pill p-der">DERIVAZIONE</span> <span class="pill p-open">DA VERIFICARE</span>. Si vede a occhio cosa è provato e cosa no.</div></div>
+  </div>
+  <p class="note" style="font-size:12.5px;color:var(--mut);margin-top:10px">Tutto è <b>ripetibile</b>: chiunque, con gli stessi dati pubblici, ottiene gli stessi numeri. È questo che rende lo strumento “sicuro” da usare.</p>
+</section>
+
+<section>
+  <h2>3 · Cosa ha già prodotto (esempio: Vigevano)</h2>
+  <div class="cards">
+    <div class="card"><h3>Il quadro</h3><p>Nel 2024 il Comune ha pagato <b>75,9 milioni</b> (1.214 € per abitante): correnti 58,4 · investimenti 8,5 · conto terzi 8,9.</p></div>
+    <div class="card"><h3>Le voci più pesanti</h3><p>Rifiuti 10,4 M€ · personale 8,1 · servizi 4,7 · sociale 3,45 · energia e gas 3,9 · mense 2,2 · scuole 1,9.</p></div>
+    <div class="card"><h3>Tre segnalazioni</h3><p>Contributi investimenti da Ministeri <b>+3,6 M€</b> · TARI <b>+1,55 M€</b> · fondi perequativi <b>−1,08 M€</b> — ognuna con la domanda pronta.</p></div>
+    <div class="card"><h3>Un buco dichiarato</h3><p>Le spese 2025 della Lombardia nella fonte ufficiale si fermano a marzo: lo scriviamo in testa, non lo nascondiamo.</p></div>
+  </div>
+  <p style="margin-top:12px;font-size:14.5px;background:var(--accent-bg);border:1px solid #cdd9f7;border-radius:10px;padding:12px 15px"><b>👉 La pagina dell'esempio (Vigevano):</b> <a href="https://progettosiliceo.online/demo/vigevano-a-nudo.html" style="color:var(--accent)">progettosiliceo.online/demo/vigevano-a-nudo.html</a></p>
+</section>
+
+<section>
+  <h2>4 · Di cosa ha bisogno il sistema (che oggi non abbiamo)</h2>
+  <div class="need">
+    <h3>⚠️ Questi pezzi non sono pubblici o non li abbiamo — e servono per andare a fondo</h3>
+    <ul>
+      <li><b>La competenza</b>: bilanci di previsione e consuntivo in forma leggibile (missioni, programmi, capitoli, <b>residui</b>). Oggi lavoriamo sulla cassa: dice <i>quando</i> si paga, non <i>cosa</i> è stanziato e quanto resta fermo.</li>
+      <li><b>Gli atti del Comune</b>: delibere e determinazioni che accompagnano le voci (per trasformare “da verificare” in “verificato”).</li>
+      <li><b>I piani delle opere</b> e i programmi finanziati (PNRR/PNC o altri): per collegare i soldi incassati alle opere promesse.</li>
+      <li><b>I documenti specifici</b>: contratti di servizio, concessioni, piani tariffari — quando si entra nel merito di una voce.</li>
+      <li><b>I dati che gli uffici hanno e non pubblicano</b>: banali da ottenere <i>se chiesti</i>, ma vanno chiesti.</li>
+      <li>Per la parte “trovare le risorse”: le <b>norme applicabili</b> e i <b>dati di copertura</b> (li cerchiamo noi, ma serve sapere <i>quale progetto</i>).</li>
+    </ul>
+    <p class="note" style="font-size:13px;color:var(--ink2);margin-top:8px"><b>Tutto ciò che è pubblico lo prendiamo noi.</b> Ciò che non è pubblico va richiesto — e lo strumento vi prepara la richiesta (accesso agli atti) in cui chiedere esattamente ciò che serve.</p>
+  </div>
+</section>
+
+<section>
+  <h2>5 · Cosa dovete fare voi (per farlo funzionare)</h2>
+  <div class="do">
+    <h3>✅ Cinque cose, tutte brevi</h3>
+    <ol>
+      <li><b>Indicare 2-3 temi</b> che vi interessano. La priorità è una scelta politica: la fate voi, non lo strumento.</li>
+      <li><b>Fornire (o far chiedere) i documenti</b> che avete: bilanci, atti, piani. Se non li avete, vi prepariamo la richiesta di accesso agli atti.</li>
+      <li><b>Verificare le segnalazioni</b> con gli uffici o gli atti. Lo strumento dice “da verificare”: la conferma arriva dal documento, non da noi.</li>
+      <li><b>Usare gli output come volete</b>: le domande sono materiale grezzo — le adattate, le firmate, le portate dove decidete voi.</li>
+      <li><b>Dare un riscontro</b> (senza obbligo): cosa è stato utile, cosa manca. Più il riscontro è preciso, più lo strumento migliora — sui vostri problemi, non sui nostri.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h2>6 · Cosa NON fa (e non farà)</h2>
+  <div class="no">
+    <h3>⛔ I confini, dichiarati in anticipo</h3>
+    <ul>
+      <li><b>Non fa politica</b> e non decide priorità: mostra percorsi e domande, non giudizi.</li>
+      <li><b>Non accusa nessuno</b>: senza fonte e senza atto, non c'è conclusione — solo domande.</li>
+      <li><b>Non sostituisce gli uffici</b>: i numeri ufficiali restano la loro parola; noi li leggiamo e li ordiniamo.</li>
+      <li><b>Cassa ≠ competenza</b>: finché non arrivano i bilanci completi, una parte del quadro resta dichiaratamente incompleta.</li>
+      <li><b>Non pubblica niente</b> per conto suo: ciò che esce, esce perché lo fate uscire voi.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="final">
+    <h3>Lo strumento è vostro</h3>
+    <p>Chi lo costruisce non se lo intesta: <b>nessuna firma, nessun logo, nessuna condizione</b>. Noi costruiamo, voi decidete cosa farne. Se serve, lo miglioriamo insieme sui vostri temi; se non serve, resta qui senza chiedere nulla.</p>
+  </div>
+</section>
+
+<footer>
+  Fonti: SIOPE / OpenBDAP (Ragioneria Generale dello Stato – MEF), bilanci e atti pubblici, Gazzetta Ufficiale. Metodo: solo fonti primarie, ogni cifra citabile, buchi dichiarati, nessuna accusa — solo domande da verificare.
+</footer>
+
+</div>
+</body>
+</html>
