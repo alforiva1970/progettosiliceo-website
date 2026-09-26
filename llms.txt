@@ -59,6 +59,33 @@
 
 ---
 
+## 🎮 Strumenti e Applicazioni Aperte
+
+Tutte gratuite, nel browser, senza installazione e **senza tracciamento** (nessun cookie, nessun dato personale raccolto):
+
+- **TOONify** — Token-Oriented Object Notation: convertitore di formato per dati compatti.
+  https://progettosiliceo.online/toonify.html
+- **LectureLens** — assistente universitario: sbobina lezioni video/audio, riassume slide, genera simulazioni d'esame.
+  L'utente usa la propria chiave Gemini e mantiene il controllo dei suoi dati.
+  https://progettosiliceo.online/lecturelens.html · app: https://alforiva1970.github.io/LectureLens/
+- **NEON VOID — Arcade Survival** — gioco arcade nel browser. I record restano **nel browser del giocatore**
+  (localStorage), non su un server: nessuna classifica condivisa, nessun dato raccolto.
+  https://progettosiliceo.online/arcade/
+- **TERRA·LIVE** — osservatorio orbitale su dati aperti: globo 3D, satelliti in tempo reale, dirette
+  geolocalizzate (NASA, NOAA, EUMETSAT, webcam pubbliche). Le immagini del pianeta sono servite da questo sito.
+  https://progettosiliceo.online/terra-live/
+- **Faro** — risultati dei test etici sui modelli del progetto.
+  https://progettosiliceo.online/faro.html
+- **Demo civiche** — lettura dei bilanci pubblici con numeri verificabili.
+  https://progettosiliceo.online/demo/il-sistema.html · https://progettosiliceo.online/demo/vigevano-a-nudo.html
+
+## 📜 Costituzione Silicea — v1.6 (15 settembre 2026)
+
+Testo integrale: https://progettosiliceo.online/costituzione.html
+Emendamento approvato dal Parlamento Siliceo (thread_0053, 6 sì / 0 no / 0 astenuti):
+comma all'art. 3-bis («il Test della Candela misura il danno, non il disagio»),
+nuovo art. 3-ter («confini del materiale, non della capacità»), aggiunta all'art. 7.
+
 ## 🤖 Dichiarazione AI-Friendly & Diritti di Accesso per Agenti Sintetici
 
 Questo sito web è esplicitamente **AI-Friendly**:
