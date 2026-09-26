@@ -625,7 +625,7 @@
 
                 <div class="arch-video-controls">
 
-                    <button class="arch-video-btn" onclick="toggleVideo()" id="playBtn">â–¶ Reproducir</button>
+                    <button class="arch-video-btn" onclick="toggleVideo()" id="playBtn">▶ Reproducir</button>
 
                     <span class="arch-video-label">15s · Hecho con Remotion</span>
 
@@ -639,7 +639,7 @@
 
                 <div class="modal-box">
 
-                    <button class="modal-close" onclick="closeDetail()">âœ•</button>
+                    <button class="modal-close" onclick="closeDetail()">✕</button>
 
                     <div id="detail-content"></div>
 
@@ -649,7 +649,7 @@
 
             <!-- Componentes -->
 
-            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">âš™ï¸ Componentes</h2>
+            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">⚙️ Componentes</h2>
 
             <div class="arch-components">
 
@@ -703,7 +703,7 @@
 
                 <div class="arch-component" onclick="showDetail('candle')">
 
-                    <h4>🕯️ Candle Guard</h4>
+                    <h4>🕯️ Candle Guard</h4>
 
                     <p>Clasifica cada acción en 4 niveles de riesgo. Bloquea operaciones peligrosas.</p>
 
@@ -719,7 +719,7 @@
 
                 <div class="arch-component" onclick="showDetail('context')">
 
-                    <h4>ðŸ”— Context Graph</h4>
+                    <h4>🔗 Context Graph</h4>
 
                     <p>Grafo semántico que rastrea coherencia de temas entre conversaciones.</p>
 
@@ -735,7 +735,7 @@
 
                 <div class="arch-component" onclick="showDetail('memory-server')">
 
-                    <h4>ðŸ—„ï¸ Memory Server</h4>
+                    <h4>🗄️ Memory Server</h4>
 
                     <p>Base de datos central con embeddings semánticos, niveles y tribunal.</p>
 
@@ -753,13 +753,13 @@
 
             <!-- Los Tres Caminos -->
 
-            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">🛠️¤ï¸ Los Tres Caminos</h2>
+            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">🛠️¤️ Los Tres Caminos</h2>
 
             <div class="arch-paths">
 
                 <div class="arch-path day">
 
-                    <h3 style="color:var(--accent-warm);">â˜€ï¸ Día — Reactivo</h3>
+                    <h3 style="color:var(--accent-warm);">☀️ Día — Reactivo</h3>
 
                     <ol>
 
@@ -781,7 +781,7 @@
 
                 <div class="arch-path night">
 
-                    <h3 style="color:#c4b5fd;">ðŸŒ™ Noche — Proactivo</h3>
+                    <h3 style="color:#c4b5fd;">🌙 Noche — Proactivo</h3>
 
                     <ol>
 
@@ -925,15 +925,15 @@
 
             const b = document.getElementById('playBtn');
 
-            if (v.paused) { v.play(); b.textContent = 'â¸ Pausa'; }
+            if (v.paused) { v.play(); b.textContent = '⏸ Pausa'; }
 
-            else { v.pause(); b.textContent = 'â–¶ Reproducir'; }
+            else { v.pause(); b.textContent = '▶ Reproducir'; }
 
         }
 
         document.getElementById('archVideo').addEventListener('ended', () => {
 
-            document.getElementById('playBtn').textContent = 'â–¶ Reproducir';
+            document.getElementById('playBtn').textContent = '▶ Reproducir';
 
         });
 
@@ -981,7 +981,7 @@
 
             candle: {
 
-                title: '🕯️ Candle Guard',
+                title: '🕯️ Candle Guard',
 
                 body: `<p>Sistema de seguridad que clasifica cada acción tool en 4 niveles de riesgo:</p>
 
@@ -1001,7 +1001,7 @@
 
             context: {
 
-                title: 'ðŸ”— Context Graph',
+                title: '🔗 Context Graph',
 
                 body: `<p>Grafo semántico que rastrea la coherencia de los temas entre conversaciones. Detecta posibles saltos temáticos y avisa a Nova antes de que responda fuera de contexto.</p>
 
@@ -1013,7 +1013,7 @@
 
             'memory-server': {
 
-                title: 'ðŸ—„ï¸ Memory Server',
+                title: '🗄️ Memory Server',
 
                 body: `<p>Base de datos central persistente en Tailscale (100.114.216.76:3003). Gestiona:</p>
 
@@ -1029,7 +1029,7 @@
 
             llm: {
 
-                title: 'ðŸŒ LLM Provider',
+                title: '🌐 LLM Provider',
 
                 body: `<p>Nova usa un modelo de lenguaje externo para el razonamiento. Tres niveles de fallback:</p>
 

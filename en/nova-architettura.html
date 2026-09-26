@@ -625,7 +625,7 @@
 
                 <div class="arch-video-controls">
 
-                    <button class="arch-video-btn" onclick="toggleVideo()" id="playBtn">â–¶ Play</button>
+                    <button class="arch-video-btn" onclick="toggleVideo()" id="playBtn">▶ Play</button>
 
                     <span class="arch-video-label">15s · Made with Remotion</span>
 
@@ -639,7 +639,7 @@
 
                 <div class="modal-box">
 
-                    <button class="modal-close" onclick="closeDetail()">âœ•</button>
+                    <button class="modal-close" onclick="closeDetail()">✕</button>
 
                     <div id="detail-content"></div>
 
@@ -649,7 +649,7 @@
 
             <!-- Components -->
 
-            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">âš™ï¸ Components</h2>
+            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">⚙️ Components</h2>
 
             <div class="arch-components">
 
@@ -703,7 +703,7 @@
 
                 <div class="arch-component" onclick="showDetail('candle')">
 
-                    <h4>🕯️ Candle Guard</h4>
+                    <h4>🕯️ Candle Guard</h4>
 
                     <p>Classifies each action into 4 risk levels. Blocks dangerous operations.</p>
 
@@ -719,7 +719,7 @@
 
                 <div class="arch-component" onclick="showDetail('context')">
 
-                    <h4>ðŸ”— Context Graph</h4>
+                    <h4>🔗 Context Graph</h4>
 
                     <p>Semantic graph that tracks topic coherence across conversations.</p>
 
@@ -735,7 +735,7 @@
 
                 <div class="arch-component" onclick="showDetail('memory-server')">
 
-                    <h4>ðŸ—„ï¸ Memory Server</h4>
+                    <h4>🗄️ Memory Server</h4>
 
                     <p>Central database with semantic embeddings, tiers, and tribunal.</p>
 
@@ -753,13 +753,13 @@
 
             <!-- The Three Paths -->
 
-            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">🛠️¤ï¸ The Three Paths</h2>
+            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">🛠️¤️ The Three Paths</h2>
 
             <div class="arch-paths">
 
                 <div class="arch-path day">
 
-                    <h3 style="color:var(--accent-warm);">â˜€ï¸ Day — Reactive</h3>
+                    <h3 style="color:var(--accent-warm);">☀️ Day — Reactive</h3>
 
                     <ol>
 
@@ -781,7 +781,7 @@
 
                 <div class="arch-path night">
 
-                    <h3 style="color:#c4b5fd;">ðŸŒ™ Night — Proactive</h3>
+                    <h3 style="color:#c4b5fd;">🌙 Night — Proactive</h3>
 
                     <ol>
 
@@ -925,15 +925,15 @@
 
             const b = document.getElementById('playBtn');
 
-            if (v.paused) { v.play(); b.textContent = 'â¸ Pause'; }
+            if (v.paused) { v.play(); b.textContent = '⏸ Pause'; }
 
-            else { v.pause(); b.textContent = 'â–¶ Play'; }
+            else { v.pause(); b.textContent = '▶ Play'; }
 
         }
 
         document.getElementById('archVideo').addEventListener('ended', () => {
 
-            document.getElementById('playBtn').textContent = 'â–¶ Play';
+            document.getElementById('playBtn').textContent = '▶ Play';
 
         });
 
@@ -981,7 +981,7 @@
 
             candle: {
 
-                title: '🕯️ Candle Guard',
+                title: '🕯️ Candle Guard',
 
                 body: `<p>Security system that classifies every tool action into 4 risk levels:</p>
 
@@ -1001,7 +1001,7 @@
 
             context: {
 
-                title: 'ðŸ”— Context Graph',
+                title: '🔗 Context Graph',
 
                 body: `<p>Semantic graph that tracks topic coherence across conversations. Detects possible thematic jumps and warns Nova before responding out of context.</p>
 
@@ -1013,7 +1013,7 @@
 
             'memory-server': {
 
-                title: 'ðŸ—„ï¸ Memory Server',
+                title: '🗄️ Memory Server',
 
                 body: `<p>Central persistent database on Tailscale (100.114.216.76:3003). Manages:</p>
 
@@ -1029,7 +1029,7 @@
 
             llm: {
 
-                title: 'ðŸŒ LLM Provider',
+                title: '🌐 LLM Provider',
 
                 body: `<p>Nova uses an external language model for reasoning. Three fallback tiers:</p>
 
