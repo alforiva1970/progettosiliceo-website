@@ -47,7 +47,7 @@
     --radius-lg: 20px;
     --radius-xl: 28px;
 
-    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-main: 'Inter', 'Inter Fallback', system-ui, -apple-system, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
     --transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -1667,6 +1667,20 @@ body {
 }
 
 /* ══ FONT (incorporati da fonts.css, 26/09/2026) ══
+
+/* ══ Fallback metrico di Inter (26/09/2026) ══
+   Serve a evitare lo spostamento del testo (CLS) quando il font vero arriva dopo.
+   Queste percentuali fanno combaciare le misure del font di sistema con quelle di
+   Inter: il "cambio" avviene senza che nulla si muova. */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial'), local('Helvetica'), local('Roboto'), local('Liberation Sans');
+  size-adjust: 107.06%;
+  ascent-override: 90.49%;
+  descent-override: 22.43%;
+  line-gap-override: 0%;
+}
+
 /* Inter VARIABILE (26/09/2026): un file copre TUTTI i pesi (100-900).
    Sostituisce 5 file statici da 48 KB = da 240 KB a 47 KB su mobile. */
 @font-face {
