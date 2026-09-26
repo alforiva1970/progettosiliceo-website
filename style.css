@@ -1934,7 +1934,17 @@ body {
 .art-index a:hover { color: var(--accent-primary); }
 .art-index-num { display: inline-block; min-width: 34px; color: var(--accent-primary); font-weight: 700; font-family: var(--font-mono, monospace); font-size: .82rem; }
 
-.art-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 22px 24px; margin-bottom: 18px; scroll-margin-top: 100px; transition: border-color .2s ease; }
+.art-card {
+    background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0) 140px), var(--bg-card);
+    border: 1px solid rgba(255,255,255,.13);
+    border-left: 4px solid var(--accent-primary);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 22px rgba(0,0,0,.28);
+    scroll-margin-top: 100px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
 .art-card:hover { border-color: var(--border-accent); }
 .art-card:target { border-color: var(--accent-primary); box-shadow: 0 0 0 3px var(--accent-glow); }
 .art-preambolo { border-left: 3px solid var(--accent-secondary); }
@@ -1944,10 +1954,12 @@ body {
 .art-ver { font-size: .72rem; color: var(--text-muted); background: rgba(255,255,255,.05); padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
 .art-card-body p { color: var(--text-secondary); line-height: 1.75; margin-bottom: .9rem; }
 .art-card-body p:last-child { margin-bottom: 0; }
+.art-card-body a { color: var(--accent-secondary); text-decoration: underline; text-underline-offset: 3px; }
+.art-card-body a:hover { color: var(--accent-primary); }
 .art-card-body blockquote { border-left: 3px solid var(--accent-primary); padding-left: 1.2rem; font-style: italic; color: var(--text-primary); margin: 1rem 0; }
 .art-card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border-subtle); }
-.art-link { color: var(--text-muted); text-decoration: none; font-family: var(--font-mono, monospace); font-size: .82rem; }
-.art-link:hover { color: var(--accent-primary); }
+.art-link { color: #9494a0; text-decoration: none; font-family: var(--font-mono, monospace); font-size: .82rem; padding: 2px 8px; border-radius: 6px; transition: color .15s ease, background .15s ease; }
+.art-link:hover { color: var(--accent-primary); background: rgba(139,92,246,.12); }
 .art-comments-note { color: var(--text-muted); font-size: .78rem; opacity: .7; }
 
 /* ══ Pagina Papers (26/09/2026) ══ */
