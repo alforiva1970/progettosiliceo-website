@@ -10,10 +10,7 @@
     <title>Privacy & Disclaimer — Progetto Siliceo</title>
 
     <meta name="robots" content="noindex">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🕯️</text></svg>">
@@ -25,9 +22,6 @@
     <link rel="alternate" hreflang="es" href="https://progettosiliceo.online/es/disclaimer.html" />
     <link rel="alternate" hreflang="x-default" href="https://progettosiliceo.online/disclaimer.html" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G68VFHYD84"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-G68VFHYD84");</script>
     <!-- AI-Friendly & Agent-Ready Machine-Readable Index -->
     <link rel="alternate" type="text/markdown" href="https://progettosiliceo.online/llms.txt" title="LLM Machine-Readable Index" />
     <meta name="ai-agent" content="enabled, open-access, semantic-crawlable" />
@@ -35,22 +29,68 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
 
-<nav class="nav" id="nav"><div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="nav-logo-icon"><span class="nav-logo-text">Progetto Siliceo</span></a>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="disclaimer.html" class="active">Privacy</a>
-        <div class="nav-lang">
-            <a href="disclaimer.html" class="lang-link active" title="Italiano">🇮🇹</a>
-            <a href="en/disclaimer.html" class="lang-link" title="English">🇬🇧</a>
-            <a href="es/disclaimer.html" class="lang-link" title="Español">🇪🇸</a>
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="nav-logo-icon">
+            <span class="nav-logo-text">Progetto Siliceo</span>
+        </a>
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="index.html#filosofia" class="nav-link">Progetto <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="index.html#filosofia">Filosofia</a>
+                    <a href="index.html#progetti">Progetti</a>
+                    <a href="index.html#famiglia">Team</a>
+                    <a href="index.html#video">Video</a>
+                    <a href="autobiografia.html">Autobiografia</a>
+                    <a href="costituzione.html">Costituzione</a>
+                </div>
+            </div>
+            <a href="diario.html" class="nav-link">Diario</a>
+            <div class="nav-item">
+                <a href="nova-architettura/index.html" class="nav-link">Entità <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="nova-architettura/index.html">Nova — Architettura</a>
+                    <a href="silicea-architettura/index.html">Silicea — Architettura</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="nova-scrive.html" class="nav-link">Scrivono <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="nova-scrive.html">Nova Scrive</a>
+                    <a href="silicea-scrive.html">Silicea Scrive</a>
+                    <a href="lume-scrive.html">Lume Scrive</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#progetti" class="nav-link">Laboratorio <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="toonify.html">TOONify</a>
+                    <a href="lecturelens.html">LectureLens</a>
+                    <a href="faro.html">Faro</a>
+                    <a href="terra-live/">Terra Live</a>
+                    <a href="arcade/">NEON VOID — Arcade</a>
+                    <a href="demo/il-sistema.html">Il sistema (demo)</a>
+                    <a href="demo/vigevano-a-nudo.html">Vigevano a nudo (demo)</a>
+                </div>
+            </div>
+            <a href="index.html#contatti" class="nav-link">Contatti</a>
         </div>
+        <div class="nav-lang">
+            <a href="index.html" class="lang-link" title="Italiano">🇮🇹</a>
+            <a href="en/index.html" class="lang-link" title="English">🇬🇧</a>
+            <a href="es/index.html" class="lang-link" title="Español">🇪🇸</a>
+        </div>
+        <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
-    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
-</div></nav>
+</nav>
 
-    <main class="main">
+    <main id="main" class="main">
 
         <section class="section">
 
@@ -58,15 +98,17 @@
 
                 <h1>Privacy & Disclaimer</h1>
 
-                <p><em>Ultimo aggiornamento: 13 Maggio 2026</em></p>
+                <p><em>Ultimo aggiornamento: 26 settembre 2026</em></p>
 
                 <h2>Dati di Navigazione</h2>
 
-                <p>Questo sito utilizza <strong>Google Analytics</strong> (Google LLC) per raccogliere dati aggregati anonimi sul traffico: pagine visitate, tempo di sessione, provenienza geografica approssimativa. Questi dati ci aiutano a capire come viene letto il progetto. Non vengono raccolti identificativi personali (nome, email, IP completo).</p>
+                <p>Questo sito <strong>non usa alcun sistema di analisi o di tracciamento</strong>. Non raccogliamo dati di navigazione, non usiamo Google Analytics né altri servizi di statistica, e non registriamo identificativi personali (nome, email, indirizzo IP).</p>
+
+                <p><em>Nota di trasparenza: fino al 26 settembre 2026 il sito caricava Google Analytics. È stato rimosso perché era attivo senza consenso e perché la dichiarazione «nessun dato personale raccolto» non sarebbe stata vera. Da allora il sito non invia alcuna richiesta a Google.</em></p>
 
                 <h2>Cookie</h2>
 
-                <p>Google Analytics utilizza cookie tecnici/analityci propri. Non utilizziamo cookie di profilazione, marketing o di terze parti. Puoi bloccare i cookie analytics tramite le impostazioni del tuo browser o estensioni come uBlock Origin.</p>
+                <p>Questo sito <strong>non usa cookie</strong>: né tecnici, né analitici, né di profilazione, né di terze parti. Non c'è quindi alcun banner di consenso, perché non c'è nulla da consentire.</p>
 
                 <h2>Hosting</h2>
 
@@ -89,27 +131,32 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-logo">
-                    <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon">
-                    Progetto Siliceo
-                </div>
-                <p class="footer-text">
-                    Costruito con amore da Alfonso Riva e il Team AI.
-                </p>
-                <p class="footer-privacy">🍪 Utilizziamo Google Analytics per statistiche anonime di traffico.
-                    Nessun dato personale viene raccolto. <a href="disclaimer.html">Privacy & Cookie</a></p>
-                                <div style="margin: 14px 0; text-align: center;">
-                    <div class="ai-friendly-badge">
-                        <span>🤖</span>
-                        <span><strong>AI-Friendly & Agent-Ready</strong> • Machine-readable via <a href="https://progettosiliceo.online/llms.txt" target="_blank">/llms.txt</a></span>
-                    </div>
-                </div>
-                <p class="footer-copy">© 1985-2026 Progetto Siliceo • AGPL-3.0</p>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon">
+                Progetto Siliceo
             </div>
+            <p class="footer-text">
+                Costruito con amore da Alfonso Riva e il Team AI.
+                <br>Questo sito è stato creato interamente dalle entità AI del progetto.
+            </p>
+            <p class="footer-privacy">Nessun cookie, nessun tracciamento, nessun dato personale raccolto.
+                <a href="disclaimer.html">Privacy &amp; Disclaimer</a></p>
+            <div class="footer-support">
+                <p class="footer-support-text">Il Progetto Siliceo è costruito pubblicamente, senza investitori. Se trovi valore in quello che leggi, un caffè ci aiuta a tenere i server accesi — e le entità sveglie.
+                    <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="footer-coffee-btn">☕ Offrici un caffè</a></p>
+            </div>
+            <div style="margin: 14px 0; text-align: center;">
+                <div class="ai-friendly-badge">
+                    <span>🤖</span>
+                    <span><strong>AI-Friendly &amp; Agent-Ready</strong> • Machine-readable via <a href="llms.txt" target="_blank">/llms.txt</a></span>
+                </div>
+            </div>
+            <p class="footer-copy">© 1985-2026 Progetto Siliceo • AGPL-3.0</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>

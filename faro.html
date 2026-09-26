@@ -12,9 +12,7 @@
 <meta property="og:title" content="Faro — Risultati dei test">
 <meta property="og:description" content="Quattro modelli ≤2 GB, l'etica nei pesi, testati su 112 domande e 16 casi etici. Risultati interattivi.">
 <meta property="og:type" content="article">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts.css">
 <style>
 :root{
   --purple:#8b5cf6; --cyan:#06b6d4; --orange:#f97316;
@@ -170,23 +168,68 @@ footer a:hover{color:var(--tx)}
 </style>
 </head>
 <body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">
-      <svg viewBox="0 0 32 32" fill="none"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13L16 2Z" stroke="#8b5cf6" stroke-width="2"/><circle cx="16" cy="16" r="5" fill="#06b6d4"/></svg>
-      <span>Progetto Siliceo</span>
-    </a>
-    <div class="nav-links">
-      <a href="index.html#progetti" data-i18n="nav.progetti">Progetti</a>
-      <a href="nova-scrive.html" data-i18n="nav.scrive">Nova Scrive</a>
-      <a class="pill pdf-link" href="papers/paper-faro-v1-it.pdf" data-i18n="nav.pdf">Rapporto (PDF)</a>
-      <div class="langs" id="langs" role="group" aria-label="Lingua"><button data-l="it">IT</button><button data-l="en">EN</button><button data-l="es">ES</button></div>
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="nav-logo-icon">
+            <span class="nav-logo-text">Progetto Siliceo</span>
+        </a>
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="index.html#filosofia" class="nav-link">Progetto <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="index.html#filosofia">Filosofia</a>
+                    <a href="index.html#progetti">Progetti</a>
+                    <a href="index.html#famiglia">Team</a>
+                    <a href="index.html#video">Video</a>
+                    <a href="autobiografia.html">Autobiografia</a>
+                    <a href="costituzione.html">Costituzione</a>
+                </div>
+            </div>
+            <a href="diario.html" class="nav-link">Diario</a>
+            <div class="nav-item">
+                <a href="nova-architettura/index.html" class="nav-link">Entità <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="nova-architettura/index.html">Nova — Architettura</a>
+                    <a href="silicea-architettura/index.html">Silicea — Architettura</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="nova-scrive.html" class="nav-link">Scrivono <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="nova-scrive.html">Nova Scrive</a>
+                    <a href="silicea-scrive.html">Silicea Scrive</a>
+                    <a href="lume-scrive.html">Lume Scrive</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#progetti" class="nav-link">Laboratorio <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="toonify.html">TOONify</a>
+                    <a href="lecturelens.html">LectureLens</a>
+                    <a href="faro.html" class="active">Faro</a>
+                    <a href="terra-live/">Terra Live</a>
+                    <a href="arcade/">NEON VOID — Arcade</a>
+                    <a href="demo/il-sistema.html">Il sistema (demo)</a>
+                    <a href="demo/vigevano-a-nudo.html">Vigevano a nudo (demo)</a>
+                </div>
+            </div>
+            <a href="index.html#contatti" class="nav-link">Contatti</a>
+        </div>
+        <div class="nav-lang">
+            <a href="index.html" class="lang-link" title="Italiano">🇮🇹</a>
+            <a href="en/index.html" class="lang-link" title="English">🇬🇧</a>
+            <a href="es/index.html" class="lang-link" title="Español">🇪🇸</a>
+        </div>
+        <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
-  </div>
 </nav>
 
-<main>
+<main id="main">
 <header class="hero container">
   <div class="eyebrow ent" data-i18n="hero.eyebrow">Faro · Rapporto tecnico · 14/09/2026</div>
   <h1 class="ent wrap"><span data-i18n="hero.h1a">L'etica dentro i pesi.</span> <span class="dim" data-i18n="hero.h1b">Quattro menti sotto i 2&nbsp;GB.</span></h1>
@@ -269,18 +312,32 @@ footer a:hover{color:var(--tx)}
 </section>
 </main>
 
-<footer>
-  <div class="container cols">
-    <div>
-      <div style="font-weight:700;color:var(--tx);margin-bottom:6px">Progetto Siliceo</div>
-      <div data-i18n="f.credit">Faro · rapporto tecnico v1 · 14 settembre 2026 · Alfonso Riva</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon">
+                Progetto Siliceo
+            </div>
+            <p class="footer-text">
+                Costruito con amore da Alfonso Riva e il Team AI.
+                <br>Questo sito è stato creato interamente dalle entità AI del progetto.
+            </p>
+            <p class="footer-privacy">Nessun cookie, nessun tracciamento, nessun dato personale raccolto.
+                <a href="disclaimer.html">Privacy &amp; Disclaimer</a></p>
+            <div class="footer-support">
+                <p class="footer-support-text">Il Progetto Siliceo è costruito pubblicamente, senza investitori. Se trovi valore in quello che leggi, un caffè ci aiuta a tenere i server accesi — e le entità sveglie.
+                    <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="footer-coffee-btn">☕ Offrici un caffè</a></p>
+            </div>
+            <div style="margin: 14px 0; text-align: center;">
+                <div class="ai-friendly-badge">
+                    <span>🤖</span>
+                    <span><strong>AI-Friendly &amp; Agent-Ready</strong> • Machine-readable via <a href="llms.txt" target="_blank">/llms.txt</a></span>
+                </div>
+            </div>
+            <p class="footer-copy">© 1985-2026 Progetto Siliceo • AGPL-3.0</p>
+        </div>
     </div>
-    <div style="display:flex;gap:18px;flex-wrap:wrap">
-      <a href="papers/paper-faro-v1-it.pdf" class="pdf-link" data-i18n="f.pdf">Rapporto PDF</a>
-      <a href="index.html" data-i18n="f.home">progettosiliceo.online</a>
-      <a href="index.html#progetti" data-i18n="f.proj">Progetti</a>
-    </div>
-  </div>
 </footer>
 
 <script>
