@@ -1602,12 +1602,25 @@ body {
    Aggiunto da Sempre. Non rimuovere senza aggiornare il menù canonico.
    ══════════════════════════════════════════════════════════════════ */
 .nav-item { position: relative; display: flex; align-items: center; }
-.nav-item > .nav-link { display: inline-flex; align-items: center; gap: 5px; }
-.nav-caret { font-size: 0.65em; opacity: 0.55; transition: transform .18s ease; }
+.nav-item > .nav-link { display: inline-flex; align-items: center; gap: 6px; }
+/* Freccia del menù disegnata col CSS: nessun carattere, nessun font, niente quadratini */
+.nav-caret {
+    width: 0; height: 0; font-size: 0; line-height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    opacity: 0.6;
+    transition: transform .18s ease;
+    display: inline-block;
+}
+/* Ponte invisibile: evita che il menù si chiuda mentre il mouse scende verso il sottomenù */
+.nav-item:hover::after, .nav-item:focus-within::after {
+    content: ""; position: absolute; left: -12px; right: -12px; top: 100%; height: 16px;
+}
 .nav-item:hover > .nav-link .nav-caret,
 .nav-item:focus-within > .nav-link .nav-caret { transform: rotate(180deg); }
 .nav-drop {
-    position: absolute; top: calc(100% + 10px); left: 50%;
+    position: absolute; top: calc(100% + 8px); left: 50%;
     transform: translateX(-50%) translateY(6px);
     min-width: 216px; padding: 10px 0;
     background: rgba(17, 17, 17, 0.97);
