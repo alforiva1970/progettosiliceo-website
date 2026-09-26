@@ -728,7 +728,7 @@ body {
 
 .gallery-sub {
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: #9494a0;
     margin-top: 4px;
 }
 
@@ -821,12 +821,12 @@ body {
 
 .footer-privacy {
     font-size: 0.75rem;
-    color: #666;
+    color: #9494a0;
     margin-bottom: 0.5rem;
 }
 
 .footer-copy {
-    color: var(--text-muted);
+    color: #9494a0;
     font-size: 0.8rem;
 }
 
@@ -839,7 +839,7 @@ body {
 
 .footer-support-text {
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: #9494a0;
     line-height: 1.6;
     margin-bottom: 14px;
     max-width: 460px;
