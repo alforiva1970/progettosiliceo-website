@@ -1949,3 +1949,11 @@ body {
 .art-link { color: var(--text-muted); text-decoration: none; font-family: var(--font-mono, monospace); font-size: .82rem; }
 .art-link:hover { color: var(--accent-primary); }
 .art-comments-note { color: var(--text-muted); font-size: .78rem; opacity: .7; }
+
+/* ══ Pagina Papers (26/09/2026) ══ */
+.paper-sub { color: var(--text-primary); font-size: 1rem; font-style: italic; margin: -6px 0 6px; }
+.paper-meta { color: var(--text-muted); font-size: .82rem; font-family: var(--font-mono, monospace); margin-bottom: 14px; }
+.paper-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.paper-btn { font-size: .92rem; padding: 12px 22px; }
+.paper-extra { margin-top: 14px; font-size: .85rem; color: var(--text-muted); }
+.paper-extra a { color: var(--accent-secondary); }
