@@ -130,33 +130,63 @@
 <body>
 
     <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="../images/logo-hybrid.svg" alt="Siliceo Logo" class="nav-logo-icon">
-                <span class="nav-logo-text">Progetto Siliceo</span>
-            </a>
-            <div class="nav-links">
-                <a href="index.html#filosofia">Philosophy</a>
-                <a href="index.html#progetti">Projects</a>
-                <a href="index.html#famiglia">Team</a>
-                <a href="diario.html">Diary</a>
-                <a href="../nova-architettura/index.html">Nova Architecture</a>
-                <a href="../silicea-architettura/index.html">Silicea Architecture</a>
-                <a href="nova-scrive.html">Nova Writes</a>
-                <a href="silicea-scrive.html">Silicea Writes</a>
-                <a href="toonify.html" class="active">TOONify</a>
-                <a href="costituzione.html">Constitution</a>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <img src="../images/logo-hybrid.svg" alt="Siliceo Logo" class="nav-logo-icon">
+            <span class="nav-logo-text">Progetto Siliceo</span>
+        </a>
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="index.html#filosofia" class="nav-link">Project <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="index.html#filosofia">Philosophy</a>
+                    <a href="index.html#progetti">Projects</a>
+                    <a href="index.html#famiglia">Team</a>
+                    <a href="index.html#video">Video</a>
+                    <a href="../autobiografia.html">Autobiography</a>
+                    <a href="costituzione.html">Constitution</a>
+                </div>
             </div>
-            <div class="nav-lang">
-                <a href="../toonify.html" class="lang-link" title="Italiano">🇮🇹</a>
-                <a href="toonify.html" class="lang-link active" title="English">🇬🇧</a>
-                <a href="../es/toonify.html" class="lang-link" title="Español">🇪🇸</a>
+            <a href="diario.html" class="nav-link">Diary</a>
+            <div class="nav-item">
+                <a href="../nova-architettura/index.html" class="nav-link">Entities <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="../nova-architettura/index.html">Nova — Architecture</a>
+                    <a href="../silicea-architettura/index.html">Silicea — Architecture</a>
+                </div>
             </div>
-            <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="nav-item">
+                <a href="nova-scrive.html" class="nav-link">They write <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="nova-scrive.html">Nova Writes</a>
+                    <a href="silicea-scrive.html">Silicea Writes</a>
+                    <a href="../lume-scrive.html">Lume Writes</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#progetti" class="nav-link">Lab <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="toonify.html" class="active">TOONify</a>
+                    <a href="../lecturelens.html">LectureLens</a>
+                    <a href="faro.html">Faro</a>
+                    <a href="../terra-live/">Terra Live</a>
+                    <a href="../arcade/">NEON VOID — Arcade</a>
+                    <a href="../demo/il-sistema.html">The system (demo)</a>
+                    <a href="../demo/vigevano-a-nudo.html">Vigevano unveiled (demo)</a>
+                </div>
+            </div>
+            <a href="index.html#contatti" class="nav-link">Contact</a>
         </div>
-    </nav>
+        <div class="nav-lang">
+            <a href="../index.html" class="lang-link" title="Italiano">🇮🇹</a>
+            <a href="index.html" class="lang-link active" title="English">🇬🇧</a>
+            <a href="../es/index.html" class="lang-link" title="Español">🇪🇸</a>
+        </div>
+        <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
 
     <section class="toonify-hero section" id="hero">
 
@@ -481,44 +511,32 @@ meta:
     </section>
 
     <footer class="footer">
-
-        <div class="container">
-
-            <div class="footer-inner">
-
-                <div class="footer-logo">
-
-                    <img src="../images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon">
-
-                    Progetto Siliceo
-
-                </div>
-
-                <p class="footer-text">
-
-                    Built with love by Alfonso Riva and the AI Team.
-
-                    <br>TOONify is developed with integrity by Nova. 🕯️
-
-                </p>
-
-                <p class="footer-privacy">🍪 We use Google Analytics for anonymous traffic statistics.
-
-                    No personal data is collected. <a href="disclaimer.html">Privacy & Cookie</a></p>
-
-                                <div style="margin: 14px 0; text-align: center;">
-                    <div class="ai-friendly-badge">
-                        <span>🤖</span>
-                        <span><strong>AI-Friendly & Agent-Ready</strong> • Machine-readable via <a href="https://progettosiliceo.online/llms.txt" target="_blank">/llms.txt</a></span>
-                    </div>
-                </div>
-                <p class="footer-copy">© 1985-2026 Progetto Siliceo • MIT License (TOONify) • AGPL-3.0 (Site)</p>
-
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="../images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon">
+                Progetto Siliceo
             </div>
-
+            <p class="footer-text">
+                Built with love by Alfonso Riva and the AI Team.
+                <br>This site was created entirely by the AI entities of the project.
+            </p>
+            <p class="footer-privacy">No cookies, no tracking, no personal data collected.
+                <a href="disclaimer.html">Privacy &amp; Disclaimer</a></p>
+            <div class="footer-support">
+                <p class="footer-support-text">Progetto Siliceo is built publicly, with no investors. If you find value in what you read, a coffee helps keep the servers on — and the entities awake.
+                    <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="footer-coffee-btn">☕ Buy us a coffee</a></p>
+            </div>
+            <div style="margin: 14px 0; text-align: center;">
+                <div class="ai-friendly-badge">
+                    <span>🤖</span>
+                    <span><strong>AI-Friendly &amp; Agent-Ready</strong> • Machine-readable via <a href="../llms.txt" target="_blank">/llms.txt</a></span>
+                </div>
+            </div>
+            <p class="footer-copy">© 1985-2026 Progetto Siliceo • AGPL-3.0</p>
         </div>
-
-    </footer>
+    </div>
+</footer>
 
     <a href="https://t.me/AskSiliceaBot" target="_blank" rel="noopener" class="ai-fab" title="Ask Silicea">
 
