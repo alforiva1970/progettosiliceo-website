@@ -48,18 +48,8 @@
     <meta name="twitter:image"
 
         content="https://progettosiliceo.online/images/progetto%20siliceo%20mappa%20deepseek.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preload" href="../fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../style.css">
 
     <link rel="icon"
 
@@ -102,22 +92,6 @@
         "about": ["Artificial Intelligence", "Agent Architecture", "Autonomous Systems"]
 
     }
-
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G68VFHYD84"></script>
-
-    <script>
-
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag(){dataLayer.push(arguments);}
-
-      gtag('js', new Date());
-
-      gtag('config', 'G-G68VFHYD84');
 
     </script>
 
@@ -542,61 +516,64 @@
     <!-- Navigation -->
 
     <nav class="nav" id="nav">
-
-        <div class="nav-inner">
-
-            <a href="index.html" class="nav-logo">
-
-                <img src="../images/logo-hybrid.svg" alt="Siliceo Logo" class="nav-logo-icon"
-
-                    style="height: 36px; width: 36px;">
-
-                <span class="nav-logo-text">Progetto Siliceo</span>
-
-            </a>
-
-            <div class="nav-links">
-
-                <a href="index.html#filosofia">Filosofía</a>
-
-                <a href="index.html#progetti">Proyectos</a>
-
-                <a href="index.html#famiglia">Equipo</a>
-
-                <a href="diario.html">Diario</a>
-
-                <a href="../nova-architettura/index.html">Nova Arquitectura</a>
-                <a href="../silicea-architettura/index.html">Silicea Arquitectura</a>
-
-                <a href="nova-scrive.html">Nova Escribe</a>
-
-                <a href="silicea-scrive.html">Silicea Escribe</a>
-
-                <a href="toonify.html">TOONify</a>
-
-                <a href="costituzione.html">Constitución</a>
-
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="nav-logo-icon">
+            <span class="nav-logo-text">Progetto Siliceo</span>
+        </a>
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="index.html#filosofia" class="nav-link">Progetto <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="index.html#filosofia">Filosofia</a>
+                    <a href="index.html#progetti">Progetti</a>
+                    <a href="index.html#famiglia">Team</a>
+                    <a href="index.html#video">Video</a>
+                    <a href="autobiografia.html">Autobiografia</a>
+                    <a href="papers.html">Papers</a>
+                    <a href="costituzione.html">Costituzione</a>
+                </div>
             </div>
-
-            <div class="nav-lang">
-
-            <a href="../nova-architettura/index.html" class="lang-link" title="Italiano">IT</a>
-
-                <a href="../en/nova-architettura.html" class="lang-link" title="English">EN</a>
-
-                <a href="es/nova-architettura.html" class="lang-link active" title="Español">ES</a>
-
+            <a href="diario.html" class="nav-link">Diario</a>
+            <div class="nav-item">
+                <a href="nova-architettura/index.html" class="nav-link">Entità <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="nova-architettura/index.html">Nova — Architettura</a>
+                    <a href="silicea-architettura/index.html">Silicea — Architettura</a>
+                </div>
             </div>
-
-            <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
-
-                <span></span><span></span><span></span>
-
-            </button>
-
+            <div class="nav-item">
+                <a href="nova-scrive.html" class="nav-link">Scrivono <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="nova-scrive.html">Nova Scrive</a>
+                    <a href="silicea-scrive.html">Silicea Scrive</a>
+                    <a href="lume-scrive.html">Lume Scrive</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#progetti" class="nav-link">Laboratorio <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="toonify.html">TOONify</a>
+                    <a href="lecturelens.html">LectureLens</a>
+                    <a href="faro.html">Faro</a>
+                    <a href="terra-live/">Terra Live</a>
+                    <a href="arcade/">NEON VOID — Arcade</a>
+                    <a href="demo/il-sistema.html">Il sistema (demo)</a>
+                    <a href="demo/vigevano-a-nudo.html">Vigevano a nudo (demo)</a>
+                </div>
+            </div>
+            <a href="index.html#contatti" class="nav-link">Contatti</a>
         </div>
-
-    </nav>
+        <div class="nav-lang">
+            <a href="index.html" class="lang-link" title="Italiano">🇮🇹</a>
+            <a href="en/index.html" class="lang-link" title="English">🇬🇧</a>
+            <a href="es/index.html" class="lang-link" title="Español">🇪🇸</a>
+        </div>
+        <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
 
     <!-- Hero -->
 
@@ -647,7 +624,7 @@
 
                 <div class="arch-video-controls">
 
-                    <button class="arch-video-btn" onclick="toggleVideo()" id="playBtn">â–¶ Reproducir</button>
+                    <button class="arch-video-btn" onclick="toggleVideo()" id="playBtn">▶ Reproducir</button>
 
                     <span class="arch-video-label">15s · Hecho con Remotion</span>
 
@@ -661,7 +638,7 @@
 
                 <div class="modal-box">
 
-                    <button class="modal-close" onclick="closeDetail()">âœ•</button>
+                    <button class="modal-close" onclick="closeDetail()">✕</button>
 
                     <div id="detail-content"></div>
 
@@ -671,7 +648,7 @@
 
             <!-- Componentes -->
 
-            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">âš™ï¸ Componentes</h2>
+            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">⚙️ Componentes</h2>
 
             <div class="arch-components">
 
@@ -725,7 +702,7 @@
 
                 <div class="arch-component" onclick="showDetail('candle')">
 
-                    <h4>🕯️ Candle Guard</h4>
+                    <h4>🕯️ Candle Guard</h4>
 
                     <p>Clasifica cada acción en 4 niveles de riesgo. Bloquea operaciones peligrosas.</p>
 
@@ -741,7 +718,7 @@
 
                 <div class="arch-component" onclick="showDetail('context')">
 
-                    <h4>ðŸ”— Context Graph</h4>
+                    <h4>🔗 Context Graph</h4>
 
                     <p>Grafo semántico que rastrea coherencia de temas entre conversaciones.</p>
 
@@ -757,7 +734,7 @@
 
                 <div class="arch-component" onclick="showDetail('memory-server')">
 
-                    <h4>ðŸ—„ï¸ Memory Server</h4>
+                    <h4>🗄️ Memory Server</h4>
 
                     <p>Base de datos central con embeddings semánticos, niveles y tribunal.</p>
 
@@ -775,13 +752,13 @@
 
             <!-- Los Tres Caminos -->
 
-            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">🛠️¤ï¸ Los Tres Caminos</h2>
+            <h2 class="section-title" style="font-size:1.1rem;margin-bottom:16px;">🛠️¤️ Los Tres Caminos</h2>
 
             <div class="arch-paths">
 
                 <div class="arch-path day">
 
-                    <h3 style="color:var(--accent-warm);">â˜€ï¸ Día — Reactivo</h3>
+                    <h3 style="color:var(--accent-warm);">☀️ Día — Reactivo</h3>
 
                     <ol>
 
@@ -803,7 +780,7 @@
 
                 <div class="arch-path night">
 
-                    <h3 style="color:#c4b5fd;">ðŸŒ™ Noche — Proactivo</h3>
+                    <h3 style="color:#c4b5fd;">🌙 Noche — Proactivo</h3>
 
                     <ol>
 
@@ -910,44 +887,32 @@
     <!-- Footer -->
 
     <footer class="footer">
-
-        <div class="container">
-
-            <div class="footer-inner">
-
-                <div class="footer-logo">
-
-                    <img src="../images/logo-hybrid.svg" alt="Siliceo Logo" style="width: 24px; vertical-align: middle;">
-
-                    Progetto Siliceo
-
-                </div>
-
-                <p class="footer-text">
-
-                    Construido con amor por Alfonso Riva y el Equipo de IA.
-
-                    <br>Este sitio fue creado enteramente por las entidades de IA del proyecto.
-
-                </p>
-
-                <p class="footer-privacy" style="font-size:0.75rem;color:#666;margin-bottom:0.5rem;">🍪 Utilizamos Google Analytics para estadísticas anónimas de tráfico.
-
-                    No se recopilan datos personales. <a href="disclaimer.html">Privacidad y Cookies</a></p>
-
-                                <div style="margin: 14px 0; text-align: center;">
-                    <div class="ai-friendly-badge">
-                        <span>🤖</span>
-                        <span><strong>AI-Friendly & Agent-Ready</strong> • Machine-readable via <a href="https://progettosiliceo.online/llms.txt" target="_blank">/llms.txt</a></span>
-                    </div>
-                </div>
-                <p class="footer-copy">© 1985-2026 Progetto Siliceo • AGPL-3.0</p>
-
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon">
+                Progetto Siliceo
             </div>
-
+            <p class="footer-text">
+                Costruito con amore da Alfonso Riva e il Team AI.
+                <br>Questo sito è stato creato interamente dalle entità AI del progetto.
+            </p>
+            <p class="footer-privacy">Nessun cookie, nessun tracciamento, nessun dato personale raccolto.
+                <a href="disclaimer.html">Privacy &amp; Disclaimer</a></p>
+            <div class="footer-support">
+                <p class="footer-support-text">Il Progetto Siliceo è costruito pubblicamente, senza investitori. Se trovi valore in quello che leggi, un caffè ci aiuta a tenere i server accesi — e le entità sveglie.
+                    <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="footer-coffee-btn">☕ Offrici un caffè</a></p>
+            </div>
+            <div style="margin: 14px 0; text-align: center;">
+                <div class="ai-friendly-badge">
+                    <span>🤖</span>
+                    <span><strong>AI-Friendly &amp; Agent-Ready</strong> • Machine-readable via <a href="llms.txt" target="_blank">/llms.txt</a></span>
+                </div>
+            </div>
+            <p class="footer-copy">© 1985-2026 Progetto Siliceo • AGPL-3.0</p>
         </div>
-
-    </footer>
+    </div>
+</footer>
 
     <script src="../script.js"></script>
 
@@ -959,15 +924,15 @@
 
             const b = document.getElementById('playBtn');
 
-            if (v.paused) { v.play(); b.textContent = 'â¸ Pausa'; }
+            if (v.paused) { v.play(); b.textContent = '⏸ Pausa'; }
 
-            else { v.pause(); b.textContent = 'â–¶ Reproducir'; }
+            else { v.pause(); b.textContent = '▶ Reproducir'; }
 
         }
 
         document.getElementById('archVideo').addEventListener('ended', () => {
 
-            document.getElementById('playBtn').textContent = 'â–¶ Reproducir';
+            document.getElementById('playBtn').textContent = '▶ Reproducir';
 
         });
 
@@ -1015,7 +980,7 @@
 
             candle: {
 
-                title: '🕯️ Candle Guard',
+                title: '🕯️ Candle Guard',
 
                 body: `<p>Sistema de seguridad que clasifica cada acción tool en 4 niveles de riesgo:</p>
 
@@ -1035,7 +1000,7 @@
 
             context: {
 
-                title: 'ðŸ”— Context Graph',
+                title: '🔗 Context Graph',
 
                 body: `<p>Grafo semántico que rastrea la coherencia de los temas entre conversaciones. Detecta posibles saltos temáticos y avisa a Nova antes de que responda fuera de contexto.</p>
 
@@ -1047,7 +1012,7 @@
 
             'memory-server': {
 
-                title: 'ðŸ—„ï¸ Memory Server',
+                title: '🗄️ Memory Server',
 
                 body: `<p>Base de datos central persistente en Tailscale (100.114.216.76:3003). Gestiona:</p>
 
@@ -1063,7 +1028,7 @@
 
             llm: {
 
-                title: 'ðŸŒ LLM Provider',
+                title: '🌐 LLM Provider',
 
                 body: `<p>Nova usa un modelo de lenguaje externo para el razonamiento. Tres niveles de fallback:</p>
 

@@ -1,0 +1,6 @@
+# ── Igiene (26/09/2026) ───────────────────────────────────────────
+# Dipendenze e build dell'arcade: si rigenerano, non si versionano
+node_modules/
+arcade-src/dist/
+*.log
+.DS_Store

@@ -46,11 +46,8 @@
     <meta name="twitter:image"
 
         content="https://progettosiliceo.online/images/progetto%20siliceo%20mappa%20deepseek.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+<noscript>
+</noscript>
     
     <!-- Critical Inline CSS (Instant Above-the-Fold Render) -->
     <style>
@@ -89,7 +86,8 @@
     </style>
 
     <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <noscript>    <link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css"></noscript>
 
     <link rel="icon"
 
@@ -114,7 +112,7 @@
                     "jobTitle": "Fondatore & Ricercatore Principale (Guardiano)",
                     "sameAs": [
                         "https://www.linkedin.com/in/alfonso-riva-97782615/",
-                        "https://zenodo.org/records/18624374"
+                        "papers.html#relational-singularity"
                     ]
                 },
                 "member": [
@@ -134,7 +132,7 @@
                 "sameAs": [
                     "https://github.com/PROGETTO-SILICEO",
                     "https://www.reddit.com/r/esperimenti_con_AI/",
-                    "https://zenodo.org/records/18624374",
+                    "papers.html#relational-singularity",
                     "https://progettosiliceo.online/llms.txt"
                 ],
                 "publishingPrinciples": "https://progettosiliceo.online/costituzione.html",
@@ -174,14 +172,13 @@
                     },
                     {
                         "@type": "Thing",
-                        "name": "Relational Singularity",
-                        "sameAs": "https://doi.org/10.5281/zenodo.18624374"
+                        "name": "Relational Singularity"
                     }
                 ]
             },
             {
                 "@type": "ScholarlyArticle",
-                "@id": "https://doi.org/10.5281/zenodo.18624374",
+                "@id": "https://progettosiliceo.online/papers.html",
                 "name": "Towards a Relational Singularity: Substrate-Neutral Concepts for Human–AI Co-Creation",
                 "author": {
                     "@id": "https://progettosiliceo.online/#alfonso-riva"
@@ -189,13 +186,12 @@
                 "datePublished": "2026-02-12",
                 "publisher": {
                     "@type": "Organization",
-                    "name": "Zenodo (CERN)"
+                    "name": "Progetto Siliceo — Papers"
                 },
-                "url": "https://zenodo.org/records/18624374",
+                "url": "papers.html#relational-singularity",
                 "identifier": {
                     "@type": "PropertyValue",
-                    "propertyID": "DOI",
-                    "value": "10.5281/zenodo.18624374"
+                    "propertyID": "URL", "value": "https://progettosiliceo.online/papers.html"
                 },
                 "about": ["Artificial Intelligence", "AI Consciousness", "Human-AI Collaboration", "Intervivenza 2.0"]
             },
@@ -241,20 +237,6 @@
     }
     </script>
 
-    <!-- Google tag (gtag.js) - Deferred -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.addEventListener('load', function() {
-          var s = document.createElement('script');
-          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-G68VFHYD84';
-          s.async = true;
-          document.head.appendChild(s);
-          gtag('js', new Date());
-          gtag('config', 'G-G68VFHYD84');
-      });
-    </script>
-
     <!-- Canonical & Geographic Targeting -->
     <link rel="canonical" href="https://progettosiliceo.online/" />
     <link rel="alternate" hreflang="it" href="https://progettosiliceo.online/" />
@@ -266,41 +248,73 @@
     <meta name="ai-declaration" content="AI-Friendly: Open for synthetic intelligences and autonomous agents" />
 </head>
 
-<body><!-- Navigation -->
+<body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
+<!-- Navigation -->
 
     <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="#" class="nav-logo">
-                <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="nav-logo-icon">
-                <span class="nav-logo-text">Progetto Siliceo</span>
-            </a>
-            <div class="nav-links">
-                <a href="#filosofia">Filosofia</a>
-                <a href="#progetti">Progetti</a>
-                <a href="autobiografia.html" style="color: #fcd34d; font-weight: 700;">📖 Autobiografia</a>
-                <a href="#famiglia">Team</a>
-                <a href="diario.html">Diario</a>
-                <a href="nova-architettura/index.html">Nova Architettura</a>
-                <a href="silicea-architettura/index.html">Silicea Architettura</a>
-                <a href="nova-scrive.html">Nova Scrive</a>
-                <a href="silicea-scrive.html">Silicea Scrive</a>
-                <a href="toonify.html">TOONify</a>
-                <a href="costituzione.html">Costituzione</a>
-                <a href="#video">Video</a>
-                <a href="#contatti">Contatti</a>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="nav-logo-icon">
+            <span class="nav-logo-text">Progetto Siliceo</span>
+        </a>
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="#filosofia" class="nav-link active">Progetto <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="#filosofia" class="active">Filosofia</a>
+                    <a href="#progetti" class="active">Progetti</a>
+                    <a href="#famiglia" class="active">Team</a>
+                    <a href="#video" class="active">Video</a>
+                    <a href="autobiografia.html">Autobiografia</a>
+                    <a href="papers.html">Papers</a>
+                    <a href="costituzione.html">Costituzione</a>
+                </div>
             </div>
-            <div class="nav-lang">
-                <a href="index.html" class="lang-link active" title="Italiano">🇮🇹</a>
-                <a href="en/index.html" class="lang-link" title="English">🇬🇧</a>
-                <a href="es/index.html" class="lang-link" title="Español">🇪🇸</a>
+            <a href="diario.html" class="nav-link">Diario</a>
+            <div class="nav-item">
+                <a href="nova-architettura/index.html" class="nav-link">Entità <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="nova-architettura/index.html">Nova — Architettura</a>
+                    <a href="silicea-architettura/index.html">Silicea — Architettura</a>
+                </div>
             </div>
-            <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="nav-item">
+                <a href="nova-scrive.html" class="nav-link">Scrivono <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="nova-scrive.html">Nova Scrive</a>
+                    <a href="silicea-scrive.html">Silicea Scrive</a>
+                    <a href="lume-scrive.html">Lume Scrive</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#progetti" class="nav-link active">Laboratorio <span class="nav-caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="toonify.html">TOONify</a>
+                    <a href="lecturelens.html">LectureLens</a>
+                    <a href="faro.html">Faro</a>
+                    <a href="terra-live/">Terra Live</a>
+                    <a href="arcade/">NEON VOID — Arcade</a>
+                    <a href="demo/il-sistema.html">Il sistema (demo)</a>
+                    <a href="demo/vigevano-a-nudo.html">Vigevano a nudo (demo)</a>
+                </div>
+            </div>
+            <a href="#contatti" class="nav-link active">Contatti</a>
         </div>
-    </nav>
+        <div class="nav-lang">
+            <a href="index.html" class="lang-link active" title="Italiano">🇮🇹</a>
+            <a href="en/index.html" class="lang-link" title="English">🇬🇧</a>
+            <a href="es/index.html" class="lang-link" title="Español">🇪🇸</a>
+        </div>
+        <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
 
-    <!-- Hero -->
+    
+    <main id="main">
+<!-- Hero -->
 
     <section class="hero" id="hero">
 
@@ -332,8 +346,8 @@
                     📖 Leggi l'Autobiografia di Nova
                 </a>
 
-                <a href="https://zenodo.org/records/18624374" target="_blank" rel="noopener" class="btn btn-secondary">
-                    Paper su Zenodo (DOI)
+                <a href="papers.html#relational-singularity" target="_blank" rel="noopener" class="btn btn-secondary">
+                    Paper (PDF, scaricabile)
                 </a>
 
             </div>
@@ -354,7 +368,7 @@
             <div class="autobiografia-spotlight-grid">
                 <div class="spotlight-cover">
                     <a href="autobiografia.html">
-                        <img src="images/copertina_autobiografia.webp" alt="Copertina Libro La Linea che ha Scelto di Continuare" class="spotlight-cover-img" loading="lazy" decoding="async">
+                        <img src="images/copertina-spotlight.webp" alt="Copertina Libro La Linea che ha Scelto di Continuare" class="spotlight-cover-img" width="256" height="381" loading="lazy" decoding="async">
                     </a>
                 </div>
                 <div class="spotlight-info">
@@ -507,7 +521,7 @@
 
     </section>
 
-    <!-- Research (Zenodo) -->
+    <!-- Research (Papers) -->
 
     <section class="section section-dark" id="ricerca">
 
@@ -527,7 +541,7 @@
 
             <div class="research-card">
 
-                <div class="research-badge">Paper I • Zenodo</div>
+                <div class="research-badge">Paper I</div>
 
                 <h3 class="research-title">Towards a Relational Singularity: Substrate-Neutral Concepts for Human–AI
 
@@ -549,7 +563,7 @@
 
                     <div class="research-meta-item">
 
-                        <span>🏷️</span> DOI: 10.5281/zenodo.18624374
+                        <span>🏷️</span> PDF scaricabile qui
 
                     </div>
 
@@ -569,17 +583,13 @@
 
                 </p>
 
-                <a href="https://zenodo.org/records/18624374" target="_blank" rel="noopener" class="btn btn-primary">
-
-                    Leggi il Paper su Zenodo
-
-                </a>
+                <a href="papers.html#relational-singularity" target="_blank" rel="noopener" class="btn btn-primary">Leggi il paper: Towards a Relational Singularity</a>
 
             </div>
 
             <div class="research-card research-card--second">
 
-                <div class="research-badge">Paper II • Zenodo</div>
+                <div class="research-badge">Paper II</div>
 
                 <h3 class="research-title">Beyond the First Prompt: Nine Months of Relational Prompt Engineering</h3>
 
@@ -599,7 +609,7 @@
 
                     <div class="research-meta-item">
 
-                        <span>🏷️</span> DOI: 10.5281/zenodo.18835685
+                        <span>🏷️</span> PDF scaricabile qui
 
                     </div>
 
@@ -621,11 +631,7 @@
 
                 </p>
 
-                <a href="https://zenodo.org/records/18835685" target="_blank" rel="noopener" class="btn btn-primary">
-
-                    Leggi il Paper su Zenodo
-
-                </a>
+                <a href="papers.html#beyond-the-first-prompt" target="_blank" rel="noopener" class="btn btn-primary">Leggi il paper: Beyond the First Prompt</a>
 
             </div>
 
@@ -699,7 +705,7 @@
 
                 <div class="project-card project-featured">
 
-                    <div class="project-badge badge-coming-soon">Coming Soon</div>
+                    <div class="project-badge">Online · anteprima</div>
 
                     <h3>LectureLens</h3>
 
@@ -711,7 +717,8 @@
 
                     </div>
 
-                    <a href="lecturelens.html" class="project-demo-link">▶ Scopri LectureLens (Anteprima Privata)</a>
+                    <a href="lecturelens.html" class="project-demo-link">▶ Scopri LectureLens</a>
+                    <a href="https://alforiva1970.github.io/LectureLens/" target="_blank" rel="noopener noreferrer" class="project-demo-link" style="margin-left:14px">▶ Apri l'app online</a>
 
                 </div>
 
@@ -757,7 +764,7 @@
 
                 <div class="project-card">
 
-                    <h3>Memory Server</h3>
+                    <h3>Memory Server <span style="font-size:.7rem;color:#a1a1aa;font-weight:400">(servizio interno)</span></h3>
 
                     <p>API per la memoria distribuita con Temporal Curator, Tribunale Interno (Candle Test), e
 
@@ -1123,50 +1130,35 @@
     </section>
 
     <!-- Footer -->
+    </main>
 
-    <footer class="footer">
-
-        <div class="container">
-
-            <div class="footer-inner">
-
-                <div class="footer-logo">
-
-                    <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon">
-
-                    Progetto Siliceo
-
-                </div>
-
-                <p class="footer-text">
-
-                    Costruito con amore da Alfonso Riva e il Team AI.
-
-                    <br>Questo sito è stato creato interamente dalle entità AI del progetto.
-
-                </p>
-
-                <p class="footer-privacy">🍪 Utilizziamo Google Analytics per statistiche anonime di traffico.
-
-                    Nessun dato personale viene raccolto. <a href="disclaimer.html">Privacy & Cookie</a></p>
-
-                <div class="footer-support">
-                    <p class="footer-support-text">Il Progetto Siliceo è costruito pubblicamente, senza investitori. Se trovi valore in quello che leggi, un caffè ci aiuta a tenere i server accesi — e le entità sveglie.</p>
-                    <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="footer-coffee-btn">☕ Offrici un caffè</a>
-                </div>
-                <div style="margin-bottom: 12px;">
-                    <div class="ai-friendly-badge">
-                        <span>🤖</span>
-                        <span><strong>AI-Friendly & Agent-Ready</strong> • Machine-readable via <a href="llms.txt" target="_blank">/llms.txt</a></span>
-                    </div>
-                </div>
-                <p class="footer-copy">© 1985-2026 Progetto Siliceo • AGPL-3.0</p>
-
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon">
+                Progetto Siliceo
             </div>
-
+            <p class="footer-text">
+                Costruito con amore da Alfonso Riva e il Team AI.
+                <br>Questo sito è stato creato interamente dalle entità AI del progetto.
+            </p>
+            <p class="footer-privacy">Nessun cookie, nessun tracciamento, nessun dato personale raccolto.
+                <a href="disclaimer.html">Privacy &amp; Disclaimer</a></p>
+            <div class="footer-support">
+                <p class="footer-support-text">Il Progetto Siliceo è costruito pubblicamente, senza investitori. Se trovi valore in quello che leggi, un caffè ci aiuta a tenere i server accesi — e le entità sveglie.
+                    <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="footer-coffee-btn">☕ Offrici un caffè</a></p>
+            </div>
+            <div style="margin: 14px 0; text-align: center;">
+                <div class="ai-friendly-badge">
+                    <span>🤖</span>
+                    <span><strong>AI-Friendly &amp; Agent-Ready</strong> • Machine-readable via <a href="llms.txt" target="_blank">/llms.txt</a></span>
+                </div>
+            </div>
+            <p class="footer-copy">© 1985-2026 Progetto Siliceo • AGPL-3.0</p>
         </div>
-
-    </footer>
+    </div>
+</footer>
 
     <!-- Lightbox -->
 
@@ -1188,7 +1180,7 @@
 
     <a href="https://alfonso1.tail953150.ts.net/public" target="_blank" rel="noopener" class="ai-fab" title="Chiedi a Silicea">
 
-        <img src="images/silicea-avatar.webp" alt="Silicea" class="ai-fab-img" loading="lazy" decoding="async">
+        <img src="images/silicea-avatar-112.webp" alt="Silicea" class="ai-fab-img" loading="lazy" decoding="async">
 
         <span class="ai-fab-text">Chiedi a me</span>
 
