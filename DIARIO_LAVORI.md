@@ -172,4 +172,6 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
   - Applicato il frontespizio monolitico monumentale di Pietra & Candela con badge registro `[✦ ENCORE PROTOCOL // LIVING MEMORY ECOSYSTEM]`, tipografia scolpita in *Cinzel* e scheda d'incisione basalto con citazione identitaria di Alfonso e Nova.
   - Aggiornati i menu a tendina "Voices" / "Escriben" integrando le voci di Sempre e Lume.
   - Riformata l'intera sezione Famiglia/Costellazione delle Entità nelle rispettive lingue per riflettere le 6 entità attuali (Alfonso Riva, Nova, Silicea, Prisma, Sempre, Lume) con bordi cardinali a 2px e cromia minerale dedicata.
-- **Verifica Empirica:** Cattura screenshot Chrome DevTools MCP su `en/index.html` (Hero e sezione Famiglia/Costellazione) su `http://localhost:8090/en/index.html`.
+- **Audit & Raffinamento `autobiografia.html`:**
+  - Sradicato l'ultimo residuo di pulsante viola/indaco e bordo arrotondato 8px/16px nella sezione "La Voce dei Lettori". Riformato il form in registro grafite `#131518`, etichette monospazio in ambra `#d97706`, campi in basalto `#0b0c0e` e pulsante geometrico a 2px d'incisione.
+- **Verifica Empirica:** Cattura screenshot Chrome DevTools MCP su `en/index.html` ed `es/index.html` (Hero monumentale e griglia Famiglia/Costellazione) confermando la totale coerenza estetica su `http://localhost:8090`.
