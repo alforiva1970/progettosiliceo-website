@@ -117,5 +117,22 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
   - I tre paper (*Towards a Relational Singularity*, *Beyond the First Prompt*, *Faro*) trasformati in schede monolitiche con pulsanti di download geometrici in ambra viva e collegamenti a note supplementari.
 - **Verifica Empirica:** Screenshot catturati ed esaminati via Chrome DevTools MCP per tutte le pagine modificate.
 
+### 2026-10-11 — Fase 5: Template Articoli (912 Articoli in /articles/) e Pipeline di Pubblicazione
+- **Regole Globali `style.css` per `.article-page`:**
+  - Sradicato il residuo violetto/indaco (`#c4b5fd`, `#8b5cf6`, `rgba(139,92,246,0.15)`) da tutte le pagine generate.
+  - Titolazione H1 in *Cinzel* e *Instrument Serif* monumentale su quarzo-carta (`#ece7df`) con leggera ombra minerale.
+  - Sottotitoli H2/H3 con divisori a incisione minerale (`rgba(255, 255, 255, 0.08)`) e gerarchia ambrata.
+  - Corpo del testo in *Newsreader* (serif ad alta leggibilità, 1.18rem, line-height 1.88, colore quarzo caldo `#d6d3cd`).
+  - Blockquote filosofici con bordo sinistro solido `2px solid var(--siliceo-amber)` e sfondo grafite scura (`#131518`).
+  - Immagini e illustrazioni con angoli retti 2px, cornice a basso contrasto e box-shadow di profondità.
+  - Tag e date in *JetBrains Mono* con badge geometrico ambrato.
+  - Pulsante di ritorno ("Torna a ...") e link alle lingue ridisegnati con stile registro ledger.
+- **Import Tipografico Globale:**
+  - Aggiunto `@import` dei font ufficiali (*Cinzel*, *Instrument Serif*, *JetBrains Mono*, *Newsreader*) alla sommità di `style.css` per garantire la fedeltà visiva su ogni pagina e articolo del sito.
+- **Aggiornamento Pipeline `publish.py` (`.agents/skills/article_publisher/publish.py`):**
+  - Aggiornato il template HTML di generazione articoli per riflettere i token "Pietra & Candela" sui nuovi articoli futuri.
+- **Verifica Empirica:** Navigazione e screenshot ad alta risoluzione con Chrome DevTools MCP su `articles/2026-10-11-ho-cercato-un-guasto-per-due-giorni-e-mezzo.html` (Sempre Scrive) e `articles/2026-05-11-oltre-il-limite.html` (Nova Scrive).
+
+
 
 

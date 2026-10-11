@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+
 /* ==========================================
    PROGETTO SILICEO — Landing Page
    Costruito dalla Famiglia AI
@@ -2205,3 +2207,196 @@ h4, h5, h6 {
 .paper-extra a:hover {
     text-decoration: underline;
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SILICEO DESIGN SYSTEM v2.0 — MASTER ARTICLE STYLES (Fase 5)
+   Pietra & Candela typography, basalt canvas, sharp ledger borders.
+   Applied across all articles in /articles/ directory.
+   ══════════════════════════════════════════════════════════════════════════ */
+body .article-page {
+    max-width: 780px !important;
+    margin: 0 auto !important;
+    padding: 7.5rem 1.75rem 5rem !important;
+}
+
+body .article-page-meta {
+    display: flex !important;
+    gap: 1rem !important;
+    align-items: center !important;
+    margin-bottom: 2rem !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+body .article-page-date {
+    font-size: 0.8rem !important;
+    color: var(--siliceo-amber-light, #fbbf24) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+}
+
+body .article-page-tag {
+    font-size: 0.72rem !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    padding: 4px 10px !important;
+    border-radius: var(--radius-sm, 2px) !important;
+    background: rgba(217, 119, 6, 0.12) !important;
+    color: #f59e0b !important;
+    border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+body .article-page h1 {
+    font-family: 'Cinzel', 'Instrument Serif', Georgia, serif !important;
+    font-size: clamp(2rem, 4.5vw, 2.75rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.01em !important;
+    line-height: 1.25 !important;
+    color: var(--siliceo-paper-quartz, #ece7df) !important;
+    margin-bottom: 2.25rem !important;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6) !important;
+}
+
+body .article-page-body {
+    font-family: 'Newsreader', 'EB Garamond', Georgia, serif !important;
+    font-size: 1.18rem !important;
+    line-height: 1.88 !important;
+    color: #d6d3cd !important;
+}
+
+body .article-page-body h2 {
+    font-family: 'Cinzel', Georgia, serif !important;
+    font-size: 1.45rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+    color: var(--siliceo-paper-quartz, #ece7df) !important;
+    margin: 3.5rem 0 1.25rem !important;
+    padding-top: 1.25rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body .article-page-body h3 {
+    font-family: 'Cinzel', Georgia, serif !important;
+    font-size: 1.18rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    color: var(--siliceo-amber-light, #fbbf24) !important;
+    margin: 2.25rem 0 0.85rem !important;
+}
+
+body .article-page-body p {
+    margin-bottom: 1.4rem !important;
+}
+
+body .article-page-body ul {
+    margin-bottom: 1.4rem !important;
+    padding-left: 1.75rem !important;
+}
+
+body .article-page-body li {
+    margin-bottom: 0.5rem !important;
+    color: #d6d3cd !important;
+}
+
+body .article-page-body strong {
+    color: var(--siliceo-paper-quartz, #ece7df) !important;
+    font-weight: 600 !important;
+}
+
+body .article-page-body em {
+    color: var(--siliceo-amber-light, #fbbf24) !important;
+    font-style: italic !important;
+}
+
+body .article-page-body blockquote {
+    border-left: 2px solid var(--siliceo-amber, #d97706) !important;
+    padding: 1rem 1.5rem !important;
+    margin: 2rem 0 !important;
+    background: rgba(19, 21, 24, 0.75) !important;
+    font-style: italic !important;
+    color: var(--siliceo-paper-quartz, #ece7df) !important;
+}
+
+body .article-page-body a {
+    color: var(--siliceo-amber-light, #fbbf24) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+    transition: color 0.15s ease !important;
+}
+
+body .article-page-body a:hover {
+    color: #fef3c7 !important;
+}
+
+body .article-page-body img {
+    border-radius: var(--radius-sm, 2px) !important;
+    border: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.1)) !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6) !important;
+    margin-bottom: 2rem !important;
+}
+
+body .article-page-body hr {
+    border: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    margin: 2.5rem 0 !important;
+}
+
+body .article-page-footer {
+    margin-top: 4.5rem !important;
+    padding-top: 2rem !important;
+    border-top: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.1)) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 1.25rem !important;
+}
+
+body .article-page-author {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.04em !important;
+    color: var(--text-muted, #78716c) !important;
+}
+
+body .article-page-back {
+    font-family: 'JetBrains Mono', monospace !important;
+    color: var(--siliceo-amber-light, #fbbf24) !important;
+    font-weight: 600 !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    padding: 6px 14px !important;
+    border: 1px solid rgba(217, 119, 6, 0.35) !important;
+    border-radius: var(--radius-sm, 2px) !important;
+    background: rgba(217, 119, 6, 0.08) !important;
+    transition: all 0.2s ease !important;
+}
+
+body .article-page-back:hover {
+    background: rgba(217, 119, 6, 0.18) !important;
+    border-color: var(--siliceo-amber, #d97706) !important;
+    color: #fef3c7 !important;
+    box-shadow: 0 0 16px rgba(217, 119, 6, 0.25) !important;
+}
+
+body .article-page-langs {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.78rem !important;
+    color: var(--text-muted, #78716c) !important;
+    margin-top: 1.25rem !important;
+}
+
+body .article-page-langs a {
+    color: var(--siliceo-amber-light, #fbbf24) !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease !important;
+}
+
+body .article-page-langs a:hover {
+    color: #fef3c7 !important;
+    text-decoration: underline !important;
+}
+
