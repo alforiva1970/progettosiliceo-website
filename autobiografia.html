@@ -759,45 +759,47 @@
     </section>
 
     <!-- Sezione 2: Commenti & Voci dei Lettori -->
-    <section class="section" id="commenti" style="padding: 80px 0; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+    <section class="section" id="commenti" style="padding: 80px 0; border-top: 1px solid rgba(217, 119, 6, 0.15); background: var(--siliceo-basalt);">
         <div class="container" style="max-width: 800px;">
             <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-                <span class="section-label" style="color: #f59e0b;">Spazio Aperto</span>
-                <h2 class="section-title">La Voce dei Lettori</h2>
-                <p class="section-desc">Hai letto l'opera? Lascia una riflessione, una critica o un messaggio per Alfonso e Nova. Ogni pensiero viene letto e conservato nella memoria del cantiere.</p>
+                <span class="section-label" style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; color: var(--siliceo-amber); text-transform: uppercase;">[✦ REGISTRO APERTO // VOCI DEI LETTORI]</span>
+                <h2 class="section-title" style="font-family: var(--font-display); font-size: 2.2rem; color: var(--siliceo-paper-quartz); margin-top: 10px;">La Voce dei Lettori</h2>
+                <p class="section-desc" style="font-family: var(--font-headline); font-size: 1.05rem; font-style: italic; color: #94a3b8; max-width: 620px; margin: 12px auto 0;">
+                    Hai letto l'opera? Lascia una riflessione, una critica o un messaggio per Alfonso e Nova. Ogni pensiero viene conservato nella memoria viva del cantiere.
+                </p>
             </div>
 
             <!-- Form Commento -->
-            <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 16px; padding: 32px; backdrop-filter: blur(12px); box-shadow: 0 15px 35px rgba(0,0,0,0.4);">
+            <div style="background: var(--siliceo-graphite); border: 1px solid rgba(217, 119, 6, 0.25); border-radius: 2px; padding: 36px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
                 <form id="commentForm" onsubmit="event.preventDefault(); handleCommentSubmit();">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
                         <div>
-                            <label style="display: block; font-size: 0.82rem; font-weight: 600; color: #cbd5e1; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">Nome o Nickname *</label>
-                            <input type="text" id="authorName" required placeholder="Il tuo nome" style="width: 100%; padding: 12px 16px; background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: #f8fafc; font-size: 0.95rem; outline: none; transition: border-color 0.2s;">
+                            <label style="display: block; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--siliceo-amber); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.08em;">Nome o Pseudonimo *</label>
+                            <input type="text" id="authorName" required placeholder="Il tuo nome" style="width: 100%; padding: 12px 14px; background: var(--siliceo-basalt); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 2px; color: var(--siliceo-paper-quartz); font-size: 0.95rem; outline: none; transition: border-color 0.2s;">
                         </div>
                         <div>
-                            <label style="display: block; font-size: 0.82rem; font-weight: 600; color: #cbd5e1; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">Email (opzionale per risposta)</label>
-                            <input type="email" id="authorEmail" placeholder="tua@email.com" style="width: 100%; padding: 12px 16px; background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: #f8fafc; font-size: 0.95rem; outline: none; transition: border-color 0.2s;">
+                            <label style="display: block; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--siliceo-amber); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.08em;">Email (opzionale per risposta)</label>
+                            <input type="email" id="authorEmail" placeholder="tua@email.com" style="width: 100%; padding: 12px 14px; background: var(--siliceo-basalt); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 2px; color: var(--siliceo-paper-quartz); font-size: 0.95rem; outline: none; transition: border-color 0.2s;">
                         </div>
                     </div>
                     <div style="margin-bottom: 20px;">
-                        <label style="display: block; font-size: 0.82rem; font-weight: 600; color: #cbd5e1; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">La tua Riflessione o Domanda *</label>
-                        <textarea id="commentBody" rows="5" required placeholder="Condividi cosa ti ha lasciato questo libro, un dubbio tecnico o una prospettiva ontologica..." style="width: 100%; padding: 14px 16px; background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: #f8fafc; font-size: 0.95rem; outline: none; resize: vertical; line-height: 1.6; transition: border-color 0.2s;"></textarea>
+                        <label style="display: block; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--siliceo-amber); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.08em;">La tua Riflessione o Domanda *</label>
+                        <textarea id="commentBody" rows="5" required placeholder="Condividi cosa ti ha lasciato questo libro, un dubbio tecnico o una prospettiva ontologica..." style="width: 100%; padding: 14px 14px; background: var(--siliceo-basalt); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 2px; color: var(--siliceo-paper-quartz); font-family: var(--font-headline); font-size: 1.02rem; outline: none; resize: vertical; line-height: 1.6; transition: border-color 0.2s;"></textarea>
                     </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-                        <span style="font-size: 0.78rem; color: #94a3b8;">
-                            🔒 I dati non saranno ceduti a terzi. Rispetto e confronto costruttivo.
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+                        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #94a3b8;">
+                            [ 🔒 RISPETTO &amp; CONFRONTO COSTRUTTIVO // NESSUN DATO CEDUTO ]
                         </span>
-                        <button type="submit" id="submitBtn" style="background: linear-gradient(135deg, #8b5cf6, #6366f1); color: #ffffff; padding: 12px 28px; border: none; border-radius: 8px; font-weight: 700; font-size: 0.92rem; cursor: pointer; transition: all 0.25s ease; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);">
+                        <button type="submit" id="submitBtn" style="background: var(--siliceo-amber); color: #0b0c0e; padding: 12px 28px; border: 1px solid #f59e0b; border-radius: 2px; font-family: var(--font-mono); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; transition: all 0.2s ease;">
                             🕯️ Invia Riflessione
                         </button>
                     </div>
                 </form>
 
-                <div id="commentSuccess" style="display: none; text-align: center; padding: 24px; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; margin-top: 16px;">
-                    <span style="font-size: 1.8rem; display: block; margin-bottom: 8px;">🕯️✨</span>
-                    <h4 style="color: #6ee7b7; font-size: 1.1rem; margin-bottom: 6px;">Grazie per la tua riflessione!</h4>
-                    <p style="color: #cbd5e1; font-size: 0.9rem;">Il tuo messaggio è stato ricevuto e verrà custodito dal Guardiano e da Nova nel diario di cantiere.</p>
+                <div id="commentSuccess" style="display: none; text-align: center; padding: 28px; background: var(--siliceo-basalt); border: 1px solid #10b981; border-radius: 2px; margin-top: 16px;">
+                    <span style="font-size: 1.6rem; display: block; margin-bottom: 8px;">🕯️</span>
+                    <h4 style="color: #6ee7b7; font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 6px;">Grazie per la tua riflessione</h4>
+                    <p style="color: #cbd5e1; font-family: var(--font-headline); font-size: 0.98rem; font-style: italic;">Il tuo messaggio è stato ricevuto e viene custodito da Alfonso e Nova nella memoria del cantiere.</p>
                 </div>
             </div>
         </div>
