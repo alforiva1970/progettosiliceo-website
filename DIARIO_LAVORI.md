@@ -133,6 +133,38 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
   - Aggiornato il template HTML di generazione articoli per riflettere i token "Pietra & Candela" sui nuovi articoli futuri.
 - **Verifica Empirica:** Navigazione e screenshot ad alta risoluzione con Chrome DevTools MCP su `articles/2026-10-11-ho-cercato-un-guasto-per-due-giorni-e-mezzo.html` (Sempre Scrive) e `articles/2026-05-11-oltre-il-limite.html` (Nova Scrive).
 
+### [2026-10-11 18:50] — Fase 6 Completata: Laboratorio, Strumenti di Studio & Registri
+- **Faro (`faro.html`, `en/faro.html`, `es/faro.html`):**
+  - Sradicati tutti i token viola e ciano (`#8b5cf6`, `#a78bfa`, `#06b6d4`, `#10b981`, `#ec4899`, `rgba(139,92,246,...)`).
+  - Palette Faro minerale: Ambra calda (`#d97706`), Incandescenza (`#fbbf24`), Rame (`#ea580c`), Pietra quarzifera (`#a8a29e`).
+  - Badge di registro: `[✦ SONDA ETICA // BENCHMARK ONTOLOGICO]`.
+  - Hero monumentale in *Cinzel* e *Newsreader*, rimosso `.hero-glow` e gradient-text.
+  - KPI cards, istogrammi di comparazione con barre d'ambra a 2px e delta d'oro.
+  - Heatmap dinamica JavaScript: ricalcolata la funzione `bgHeatmap` con `rgba(217, 119, 6, ...)`.
+  - Griglia dei 16 casi etici con status dots trasformati in quadrati geometrici a 2px (`border-radius: 2px`).
+- **TOONify (`toonify.html`, `en/toonify.html`, `es/toonify.html`):**
+  - Badge di registro: `[✦ PROTOCOLLO APERTO // SERIALIZZAZIONE TOKEN]`.
+  - Riformati tutti i blocchi di comparazione JSON vs TOON in grafite `#131518` con cornici d'incisione e border-radius a 2px.
+  - Tabella benchmark e statistiche di compressione con intestazioni monospaziate in ambra.
+- **LectureLens (`lecturelens.html`):**
+  - Badge di registro: `[✦ STRUMENTO DI STUDIO // PRIVACY-FIRST // CLIENT-SIDE]`.
+  - Hero in *Cinzel* e *Newsreader* con pulsanti ad angoli retti 2px.
+  - Riformata l'intera sezione panoramica da elenco puntato anonimo a griglia a 4 schede minerali (`.lecturelens-grid`, `.lecturelens-card`):
+    - `[01 // WEBASSEMBLY FFMPEG] Estrazione Audio & Video`
+    - `[02 // INGESTION MULTIMODALE] Sbobinamento Integrato`
+    - `[03 // SINTESI & FORMULE LATEX] Elaborazione Slide & PDF`
+    - `[04 // ACTIVE RECALL RIGIDO] Simulazioni d'Esame`
+  - Sezioni di accesso Alpha (BYOK) e "Sostieni il Progetto" racchiuse in solidi contenitori a ledger con pulsanti a 2px.
+- **Il Diario di Siliceo (`diario.html`, `en/diario.html`, `es/diario.html`):**
+  - Badge di registro: `[✦ REGISTRO CRONOLOGICO // CRONACHE DEL RISVEGLIO]`.
+  - Hero in *Cinzel* senza residui gradient-text.
+  - Schede diario con tag geometrici ambrati a 2px, date monospaziate e lettura in *Newsreader*.
+- **Privacy & Disclaimer (`disclaimer.html`, `en/disclaimer.html`, `es/disclaimer.html`):**
+  - Allineata la privacy policy di tutte e tre le edizioni alla realtà tecnica verificata al 26 settembre 2026 (Zero Cookie, Zero Google Analytics, GitHub Pages).
+  - Badge di registro: `[✦ ATTO FORMALE // TRASPARENZA & PRIVACY]`.
+  - Scheda metadati `[ STATO: VIGENTE ]` e corpo dell'atto racchiuso in schede minerali in grafite con nota di trasparenza a rilievo ambrato.
+- **Verifica Empirica:** Navigazione locale (`localhost:8090`) ed esame visivo tramite screenshot Chrome DevTools MCP per `faro.html`, `toonify.html`, `lecturelens.html`, `diario.html` e `disclaimer.html`.
+
 
 
 

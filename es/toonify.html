@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="es">
 <head>
@@ -57,60 +57,34 @@
 
     <style>
 
+        /* TOONify-specific styles — extends style.css */
         .toonify-hero { padding: 8rem 0 4rem; text-align: center; }
-
-        .toonify-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.5rem; }
-
-        .toonify-hero .subtitle { font-size: 1.15rem; color: var(--text-secondary); max-width: 650px; margin: 0 auto 2rem; line-height: 1.7; }
-
+        .toonify-hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; color: var(--siliceo-paper-quartz, #ece7df); margin-bottom: 1.5rem; }
+        .toonify-hero .subtitle { font-family: 'Newsreader', Georgia, serif; font-size: 1.22rem; color: var(--siliceo-sand, #a8a29e); max-width: 680px; margin: 0 auto 2.5rem; line-height: 1.75; }
         .toonify-hero .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
         .comparison-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; margin-top: 2rem; }
-
-        .comparison-grid .card { background: var(--glass-bg); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; backdrop-filter: blur(20px); }
-
-        .comparison-grid .card h3 { margin-bottom: 1rem; font-size: 1.1rem; }
-
-        .comparison-grid .card pre { background: rgba(0,0,0,0.4); border-radius: var(--radius-md); padding: 1.25rem; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1rem; }
-
-        .comparison-grid .card.toon { border-color: rgba(139, 92, 246, 0.4); box-shadow: 0 0 30px rgba(139, 92, 246, 0.1); }
-
-        .comparison-grid .card.toon pre { color: #c4b5fd; }
-
-        .comparison-grid .arrow { font-size: 2.5rem; text-align: center; }
-
-        .token-count { font-size: 0.95rem; color: var(--text-secondary); }
-
-        .token-count.highlight { color: #a78bfa; font-weight: 600; }
-
+        .comparison-grid .card { background: var(--siliceo-graphite, #131518); border: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08)); border-radius: var(--radius-sm, 2px); padding: 2rem; }
+        .comparison-grid .card h3 { font-family: 'Cinzel', serif; margin-bottom: 1rem; font-size: 1.15rem; color: var(--siliceo-paper-quartz, #ece7df); }
+        .comparison-grid .card pre { background: rgba(11, 12, 14, 0.85); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius-sm, 2px); padding: 1.25rem; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1rem; }
+        .comparison-grid .card.toon { border-color: rgba(217, 119, 6, 0.4); box-shadow: 0 0 30px rgba(217, 119, 6, 0.1); }
+        .comparison-grid .card.toon pre { color: #fbbf24; border-color: rgba(217, 119, 6, 0.25); }
+        .comparison-grid .arrow { font-size: 2.5rem; text-align: center; color: var(--siliceo-amber-light, #fbbf24); }
+        .token-count { font-family: 'JetBrains Mono', monospace; font-size: 0.88rem; color: var(--text-secondary); }
+        .token-count.highlight { color: var(--siliceo-amber-light, #fbbf24); font-weight: 600; }
         .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-
-        .feat-card { background: var(--glass-bg); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform 0.3s, box-shadow 0.3s; }
-
-        .feat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(139, 92, 246, 0.12); }
-
-        .feat-card .icon { font-size: 2rem; margin-bottom: 1rem; }
-
-        .feat-card h3 { margin-bottom: 0.75rem; font-size: 1.1rem; }
-
-        .feat-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
-
-        .benchmark-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.95rem; }
-
-        .benchmark-table th, .benchmark-table td { padding: 1rem 1.5rem; text-align: left; border-bottom: 1px solid var(--border-subtle); }
-
-        .benchmark-table th { color: var(--text-secondary); font-weight: 500; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
-
-        .benchmark-table td:last-child { color: #a78bfa; font-weight: 700; }
-
-        .benchmark-table tr:hover { background: rgba(139, 92, 246, 0.05); }
-
-        .spec-card { background: var(--glass-bg); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.5rem; margin-top: 2rem; }
-
-        .spec-card pre { background: rgba(0,0,0,0.4); border-radius: var(--radius-md); padding: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.7; color: #c4b5fd; overflow-x: auto; }
-
+        .feat-card { background: var(--siliceo-graphite, #131518); border: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08)); border-radius: var(--radius-sm, 2px); padding: 2rem; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
+        .feat-card:hover { transform: translateY(-3px); border-color: rgba(217, 119, 6, 0.35); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5); }
+        .feat-card .icon { font-size: 1.8rem; margin-bottom: 1rem; }
+        .feat-card h3 { font-family: 'Cinzel', serif; margin-bottom: 0.75rem; font-size: 1.1rem; color: var(--siliceo-paper-quartz, #ece7df); }
+        .feat-card p { color: var(--siliceo-sand, #a8a29e); font-size: 0.92rem; line-height: 1.6; }
+        .benchmark-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.92rem; font-family: 'JetBrains Mono', monospace; }
+        .benchmark-table th, .benchmark-table td { padding: 1rem 1.5rem; text-align: left; border-bottom: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08)); }
+        .benchmark-table th { color: var(--siliceo-sand, #a8a29e); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; }
+        .benchmark-table td:last-child { color: var(--siliceo-amber-light, #fbbf24); font-weight: 700; }
+        .benchmark-table tr:hover { background: rgba(217, 119, 6, 0.06); }
+        .spec-card { background: var(--siliceo-graphite, #131518); border: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08)); border-radius: var(--radius-sm, 2px); padding: 2.5rem; margin-top: 2rem; }
+        .spec-card pre { background: rgba(11, 12, 14, 0.85); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius-sm, 2px); padding: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.7; color: var(--siliceo-paper-quartz, #ece7df); overflow-x: auto; }
         @media (max-width: 768px) { .comparison-grid { grid-template-columns: 1fr; } .comparison-grid .arrow { transform: rotate(90deg); } }
-
     </style>
 
     <!-- Canonical & Geographic Targeting -->
@@ -190,23 +164,13 @@
     <section class="toonify-hero section" id="hero">
 
         <div class="container">
-
-            <span class="section-label">Producto • Código Abierto</span>
-
+            <span class="section-label">[✦ PROTOCOLO ABIERTO // SERIALIZACIÓN DE TOKENS]</span>
             <h1>
-
                 <span>Deja de pagar por paréntesis.</span><br>
-
-                <span class="gradient-text">Paga por las ideas.</span>
-
+                <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;color:var(--siliceo-amber-light,#fbbf24);">Paga por las ideas.</span>
             </h1>
-
             <p class="subtitle">
-
-                TOONify optimiza los datos para LLMs, reduciendo los costes de API hasta un 60% y liberando
-
-                espacio en el contexto para lo que realmente importa.
-
+                TOONify optimiza la densidad de datos para LLMs, reduciendo los costes de API hasta un 60% y liberando memoria de contexto para el razonamiento puro.
             </p>
 
             <div class="hero-btns">

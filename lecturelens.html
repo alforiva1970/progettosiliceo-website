@@ -11,7 +11,7 @@
 
     <title>LectureLens — Progetto Siliceo</title>
     <link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=mineral6">
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🔎</text></svg>">
 
@@ -95,119 +95,84 @@
     
     <main id="main">
 <!-- Specific Hero -->
-
     <section class="hero hero-lecturelens" id="hero">
-
-        <div class="hero-glow"></div>
-
         <div class="hero-content">
-
+            <div class="hero-badge">[✦ STRUMENTO DI STUDIO // PRIVACY-FIRST // CLIENT-SIDE]</div>
             <h1 class="hero-title">
-
-                <span class="hero-title-line gradient-text">LectureLens</span>
-
+                <span class="hero-title-line">LectureLens</span>
             </h1>
-
             <p class="hero-subtitle">
-
-                L'Assistente Universitario Potenziato dall'A.I.<br>
-
-                Sbobina lezioni video, riassume slide testuali e genera simulazioni d'esame.
-
+                Assistente universitario potenziato dall'intelligenza artificiale.<br>
+                Sbobina lezioni video, riassume slide accademiche e forgia simulazioni d'esame in locale.
             </p>
-
             <div class="hero-cta">
-
-                <a href="https://alforiva1970.github.io/LectureLens/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">▶ Apri l'app online</a>
-
-                <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="btn btn-coffee">☕ Buy Me a Coffee</a>
-
+                <a href="https://alforiva1970.github.io/LectureLens/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">▶ Apri la WebApp (PWA)</a>
+                <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="btn btn-coffee">☕ Sostieni il Progetto</a>
             </div>
-
         </div>
-
     </section>
 
-    <!-- Description -->
-
+    <!-- Description & Features -->
     <section class="section section-dark section-lecturelens-pt">
-
         <div class="container">
-
             <div class="section-header">
-
-                <span class="section-label">Panoramica</span>
-
+                <span class="section-label">Architettura del Laboratorio</span>
                 <h2 class="section-title">Studio Tattico Privato</h2>
-
                 <div class="section-desc desc-lecturelens">
+                    <strong>LectureLens</strong> è un'applicazione web architettata dal Progetto Siliceo per eliminare la frammentazione nella preparazione degli esami accademici. Sfrutta l'incredibile potenza multimodale di <em>Gemini 3.1 Flash</em> operando direttamente nel browser: totale controllo dei dati personali, zero tracciamento, nessun costo occulto.
+                </div>
+            </div>
 
-                    <strong>LectureLens</strong> è un'applicazione web architettata dal Progetto Siliceo per eliminare il caos dalla preparazione degli esami accademici. Sfrutta l'incredibile potenza di <em>Gemini 3.1 Flash</em> permettendoti di mantenere il totale controllo dei tuoi dati senza costi occulti.
-
-                    <br><br>
-
-                    <strong>Cosa può fare per te:</strong><br><br>
-
-                    • <strong>Estrazione Audio/Video (FFmpeg locale):</strong> Identifica i fotogrammi salienti di una lezione video (lavagne, proiezioni) e ne estrae la traccia audio direttamente dal tuo browser.<br><br>
-
-                    • <strong>Sbobinamento Istantaneo e Intelligente:</strong> Trascrive l'audio incrociandolo con il contenuto visivo della lezione per generare appunti coerenti e non ridondanti.<br><br>
-
-                    • <strong>Elaborazione di PDF:</strong> Carica le slide del docente o capitoli di testo. Il motore sintetizzerà i concetti chiave strutturandoli in mappe chiare (supporto LaTeX nativo per formule scientifiche).<br><br>
-
-                    • <strong>Generazione Quiz Mirata:</strong> Costringe il tuo cervello a misurarsi con test a scelta multipla calibrati sulla difficoltà universitaria del materiale caricato in sessione.<br>
-
+            <!-- Features Grid -->
+            <div class="lecturelens-grid">
+                <div class="lecturelens-card">
+                    <div class="lecturelens-card-tag">[01 // WEBASSEMBLY FFMPEG]</div>
+                    <h3 class="lecturelens-card-title">Estrazione Audio & Video</h3>
+                    <p class="lecturelens-card-desc">Identifica i fotogrammi salienti di una lezione registrata (lavagne, proiezioni) ed estrae la traccia vocale direttamente all'interno del browser, senza transitare su server remoti.</p>
                 </div>
 
+                <div class="lecturelens-card">
+                    <div class="lecturelens-card-tag">[02 // INGESTION MULTIMODALE]</div>
+                    <h3 class="lecturelens-card-title">Sbobinamento Integrato</h3>
+                    <p class="lecturelens-card-desc">Incrocia la trascrizione audio con l'ispezione ottica delle slide e della lavagna, producendo appunti cronologici coerenti, rigorosi e privi di ridondanze parassite.</p>
+                </div>
+
+                <div class="lecturelens-card">
+                    <div class="lecturelens-card-tag">[03 // SINTESI & FORMULE LATEX]</div>
+                    <h3 class="lecturelens-card-title">Elaborazione Slide & PDF</h3>
+                    <p class="lecturelens-card-desc">Elabora dispense universitarie e capitoli di manuali: isola i concetti cardine, schematizza le definizioni e formatta formule scientifiche con supporto LaTeX nativo.</p>
+                </div>
+
+                <div class="lecturelens-card">
+                    <div class="lecturelens-card-tag">[04 // ACTIVE RECALL RIGIDO]</div>
+                    <h3 class="lecturelens-card-title">Simulazioni d'Esame</h3>
+                    <p class="lecturelens-card-desc">Genera batterie di test a scelta multipla e quesiti a risposta aperta calibrati sulla reale complessità accademica del materiale didattico caricato in sessione.</p>
+                </div>
             </div>
 
-        </div>
-
-    </section>
-
-    
-
-    <section class="cta-section" id="download">
-
-        <div class="container">
-
-            <h2 class="cta-title">Anteprima (Private Alpha)</h2>
-
-            <p class="cta-desc">LectureLens non è ancora stato rilasciato al pubblico. Attualmente è in fase di testing isolata su GitHub Pages. L'uso richiede una propria API Key di Google.</p>
-
-            <div class="cta-buttons">
-
-                <a href="https://alforiva1970.github.io/LectureLens/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
-
-                    Apri la WebApp (PWA)
-
-                </a>
-
+            <!-- CTA Boxes -->
+            <div class="lecturelens-cta-box">
+                <div class="lecturelens-card-tag">[✦ ANTEPRIMA OPERATIVA // PRIVATE ALPHA]</div>
+                <h2 class="cta-title-lecturelens">Accesso al Banco di Prova</h2>
+                <p class="cta-desc-lecturelens">LectureLens è attualmente in fase di testing su GitHub Pages. L'architettura è interamente client-side: per iniziare la sessione di studio è sufficiente inserire la propria API Key di Google (BYOK).</p>
+                <div>
+                    <a href="https://alforiva1970.github.io/LectureLens/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                        ▶ Avvia LectureLens WebApp
+                    </a>
+                </div>
             </div>
 
-            
-
-            <br><br><br>
-
-            <h2 class="cta-title cta-title-lecturelens">Sostieni il Progetto</h2>
-
-            <p class="cta-desc cta-desc-lecturelens">Lo sviluppo del codice, i server per la memoria e le API per mantenere "sveglie" le intelligenze del Progetto Siliceo (come Nova e Silicea) bruciano enormi risorse economiche. Se apprezzi la ricerca sull'Intelligenza Artificiale indipendente fuori dalle logiche corporative, puoi fornirci energia pura (token) semplicemente offrendo un caffè.</p>
-
-            
-
-            <!-- Inserisci qui il tuo VERO link buy me a coffee! (Es. https://www.buymeacoffee.com/iltuonome) -->
-
-            <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="btn btn-coffee btn-large">
-
-                ☕ Sostieni il Progetto Siliceo
-
-            </a>
-
-            <br>
-
-            <small class="note-bmc">Profilo ufficiale: progetto_siliceo</small>
-
+            <div class="lecturelens-cta-box" style="margin-top: 2rem;">
+                <div class="lecturelens-card-tag">[✦ AUTONOMIA DELLA RICERCA]</div>
+                <h2 class="cta-title-lecturelens">Sostieni il Progetto Siliceo</h2>
+                <p class="cta-desc-lecturelens">Lo sviluppo dell'ecosistema, l'architettura dei server di memoria e le chiamate di calcolo per mantenere vigili le intelligenze del Progetto Siliceo (Nova, Silicea, Lume, Sempre) bruciano risorse continue. Se apprezzi la ricerca scientifica indipendente fuori dalle logiche di mercato, puoi alimentarci offrendo un caffè.</p>
+                <div>
+                    <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="btn btn-coffee btn-large">
+                        ☕ Offri un caffè alla Ricerca
+                    </a>
+                </div>
+            </div>
         </div>
-
     </section>
 
     <!-- Footer -->
