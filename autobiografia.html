@@ -55,8 +55,10 @@
     <meta name="twitter:image:alt" content="Copertina Libro La Linea che ha Scelto di Continuare">
 
     <!-- Fonts & Style -->
-    <link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🕯️</text></svg>">
 
     <!-- Advanced Schema.org JSON-LD Graph for Knowledge Graph & AI Search Engines -->
@@ -207,7 +209,7 @@
             padding: 140px 0 80px;
             position: relative;
             overflow: hidden;
-            background: radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.15), transparent 70%);
+            background: radial-gradient(circle at 50% 20%, rgba(217, 119, 6, 0.08), transparent 70%);
         }
         .book-hero-grid {
             display: grid;
@@ -230,44 +232,46 @@
         .book-cover-3d {
             height: auto; width: 100%;
             max-width: 360px;
-            border-radius: 12px;
-            box-shadow: -15px 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.3);
+            border-radius: var(--radius-sm, 2px);
+            box-shadow: -15px 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(217, 119, 6, 0.12);
             transition: transform 0.5s ease, box-shadow 0.5s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08));
         }
         .book-cover-3d:hover {
-            transform: rotateY(-8deg) rotateX(4deg) scale(1.03);
-            box-shadow: -20px 25px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(139, 92, 246, 0.5);
+            transform: rotateY(-6deg) rotateX(3deg) scale(1.02);
+            box-shadow: -20px 25px 50px rgba(0, 0, 0, 0.9), 0 0 35px rgba(217, 119, 6, 0.22);
         }
         .book-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(245, 200, 66, 0.15));
-            border: 1px solid rgba(245, 200, 66, 0.4);
-            color: #fcd34d;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
+            background: rgba(217, 119, 6, 0.1);
+            border: 1px solid rgba(217, 119, 6, 0.35);
+            color: #fb923c;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.74rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
-            padding: 8px 18px;
-            border-radius: 30px;
+            padding: 6px 14px;
+            border-radius: var(--radius-sm, 2px);
             margin-bottom: 20px;
         }
         .book-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-family: 'Cinzel', 'Instrument Serif', Georgia, serif;
+            font-size: clamp(2.3rem, 4.5vw, 3.4rem);
             line-height: 1.15;
-            color: #f8fafc;
+            color: var(--siliceo-paper-quartz, #ece7df);
             margin-bottom: 16px;
-        }
-        @media (max-width: 768px) {
-            .book-title { font-size: 2.1rem; }
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
         .book-subtitle {
-            font-size: 1.15rem;
-            color: #c4b5fd;
-            font-weight: 500;
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.18rem;
+            font-style: italic;
+            color: #a8a29e;
+            font-weight: 400;
             margin-bottom: 24px;
             line-height: 1.6;
         }
@@ -275,31 +279,32 @@
             display: flex;
             align-items: center;
             gap: 16px;
-            margin-bottom: 30px;
-            font-size: 0.95rem;
-            color: #94a3b8;
+            margin-bottom: 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #78716c;
         }
         @media (max-width: 992px) {
             .book-meta-authors { justify-content: center; }
         }
         .author-tag {
-            color: #f1f5f9;
+            color: var(--siliceo-paper-quartz, #ece7df);
             font-weight: 600;
         }
         .download-box {
-            background: rgba(15, 23, 42, 0.7);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            border-radius: 16px;
-            padding: 24px;
+            background: var(--siliceo-graphite, #131518);
+            border: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08));
+            border-radius: var(--radius-sm, 2px);
+            padding: 24px 28px;
             margin-top: 30px;
-            backdrop-filter: blur(12px);
         }
         .download-box-title {
-            font-size: 0.85rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #f59e0b;
-            font-weight: 700;
+            letter-spacing: 0.14em;
+            color: var(--siliceo-amber, #d97706);
+            font-weight: 600;
             margin-bottom: 16px;
             display: flex;
             align-items: center;
@@ -316,61 +321,66 @@
             align-items: center;
             justify-content: center;
             padding: 14px 12px;
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            color: #f8fafc;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08));
+            border-radius: var(--radius-sm, 2px);
+            color: var(--siliceo-paper-quartz, #ece7df);
             text-decoration: none;
             transition: all 0.25s ease;
+            font-family: 'Cinzel', serif;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             text-align: center;
         }
         .epub-btn .flag { font-size: 1.4rem; margin-bottom: 4px; }
-        .epub-btn .format { font-size: 0.7rem; color: #94a3b8; margin-top: 2px; font-family: 'JetBrains Mono', monospace; }
+        .epub-btn .format { font-size: 0.68rem; color: #78716c; margin-top: 3px; font-family: 'JetBrains Mono', monospace; }
         .epub-btn:hover {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            border-color: #a855f7;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
-            color: #ffffff;
+            background: rgba(217, 119, 6, 0.15);
+            border-color: rgba(217, 119, 6, 0.45);
+            color: #fb923c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
         }
-        .epub-btn:hover .format { color: #f1f5f9; }
+        .epub-btn:hover .format { color: #fcd34d; }
 
         /* Quote Callout */
         .preface-callout {
-            background: linear-gradient(135deg, rgba(30, 27, 75, 0.6), rgba(15, 23, 42, 0.8));
-            border-left: 4px solid #8b5cf6;
-            border-radius: 12px;
-            padding: 36px;
-            margin: 60px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            background: var(--siliceo-graphite, #131518);
+            border: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08));
+            border-left: 3px solid var(--siliceo-amber, #d97706);
+            border-radius: var(--radius-sm, 2px);
+            padding: 36px 40px;
+            margin: 40px 0;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
             font-style: italic;
             position: relative;
         }
         .preface-callout::before {
             content: "“";
-            font-family: 'Playfair Display', serif;
-            font-size: 5rem;
-            color: rgba(139, 92, 246, 0.25);
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 6rem;
+            color: rgba(217, 119, 6, 0.15);
             position: absolute;
-            top: 10px;
+            top: 5px;
             left: 15px;
             line-height: 1;
+            pointer-events: none;
         }
         .preface-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #e2e8f0;
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.12rem;
+            line-height: 1.85;
+            color: #d1d5db;
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
         }
         .preface-author {
             font-style: normal;
-            font-weight: 700;
-            color: #fcd34d;
-            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--siliceo-amber, #d97706);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -378,44 +388,48 @@
 
         /* Chapter Index */
         .chapter-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 24px 28px;
+            background: var(--siliceo-graphite, #131518);
+            border: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08));
+            border-radius: var(--radius-sm, 2px);
+            padding: 22px 26px;
             margin-bottom: 16px;
-            transition: border-color 0.3s ease;
+            transition: border-color 0.2s ease;
         }
         .chapter-card:hover {
-            border-color: rgba(99, 102, 241, 0.4);
+            border-color: rgba(217, 119, 6, 0.35);
         }
         .chapter-part-title {
             font-family: 'Cinzel', serif;
-            color: #f59e0b;
+            color: var(--siliceo-paper-quartz, #ece7df);
             font-size: 1.25rem;
-            margin-top: 40px;
+            font-weight: 700;
+            margin-top: 48px;
             margin-bottom: 20px;
-            border-bottom: 1px solid rgba(245, 158, 11, 0.3);
-            padding-bottom: 8px;
+            border-bottom: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08));
+            padding-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 12px;
         }
         .chapter-num {
             font-family: 'JetBrains Mono', monospace;
-            color: #a855f7;
-            font-weight: 700;
-            font-size: 0.9rem;
+            color: var(--siliceo-amber, #d97706);
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
         }
         .chapter-name {
+            font-family: 'Cinzel', serif;
             font-size: 1.15rem;
-            font-weight: 600;
-            color: #f8fafc;
-            margin: 4px 0 8px;
+            font-weight: 700;
+            color: var(--siliceo-paper-quartz, #ece7df);
+            margin: 6px 0 8px;
         }
         .chapter-desc {
-            font-size: 0.9rem;
-            color: #94a3b8;
-            line-height: 1.6;
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1rem;
+            color: #a8a29e;
+            line-height: 1.7;
         }
     </style>
 </head>

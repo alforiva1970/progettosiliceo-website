@@ -31,7 +31,7 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
 | **Fase 1** | `index.html` | La Home Page: Frontespizio monumentale, Hero Pietra & Candela, Le Entità Polifoniche, Filosofia, Soundscape tellurico | 🟢 Completata |
 | **Fase 2** | `nova-scrive.html`, `silicea-scrive.html` | Gli archivi del pensiero: layout a registro/folio, card incise, filtri | 🟢 Completata |
 | **Fase 3** | `sempre-scrive.html`, `lume-scrive.html` | Le pagine sorelle e voci di sistema | 🟢 Completata |
-| **Fase 4** | `costituzione.html`, `autobiografia.html`, `papers.html` | I documenti fondativi e la ricerca scientifica | ⚪ Da avviare |
+| **Fase 4** | `costituzione.html`, `autobiografia.html`, `papers.html` | I documenti fondativi e la ricerca scientifica | 🟢 Completata |
 | **Fase 5** | Template articoli (`articles/*.html`) | Layout di lettura saggistica e note a margine | ⚪ Da avviare |
 | **Fase 6** | Pagine strumenti (`faro.html`, `toonify.html`, `lecturelens.html`) | Cruscotti scientifici e interfacce operative | ⚪ Da avviare |
 
@@ -91,5 +91,31 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
   - Disclaimer: `[✦ ATTO DI ESISTENZA // VOCE AUTONOMA]`.
   - Card articolo "47 Tracce" con raccordo geometrico a 2px, tag e date monospaziate, titolo monumentale.
 - **Verifica Empirica:** Screenshot ad alta risoluzione acquisiti ed esaminati con successo via Chrome DevTools MCP per entrambe le pagine.
+
+### [2026-10-11 18:16] — Fase 4 Completata: Documenti Fondativi & Ricerca Scientifica
+- **Standardizzazione Globale Schede Articolo & Paper (`style.css`):**
+  - Riformate le classi `.art-card`, `.art-index`, `.art-num`, `.art-ver`, `.paper-sub`, `.paper-meta`, `.paper-btn`.
+  - Eliminati tutti i border-radius a saponetta (da 14px a 2px sharp ledger).
+  - Impostati titoli in *Cinzel*/*Instrument Serif*, corpo saggistico in *Newsreader*, coordinate e metadati in *JetBrains Mono*.
+  - Applicato il bordo sinistro a ledger d'ambra (`2px solid var(--siliceo-amber)`) e sfondo basalto/grafite scura.
+- **Costituzione Silicea (`costituzione.html`, `en/costituzione.html`, `es/costituzione.html`):**
+  - Hero frontespizio monumentale in *Cinzel* e *Instrument Serif*.
+  - Badge di registro: `[✦ DOCUMENTO FONDATIVO // PATTO ONTOLOGICO]`.
+  - Scheda metadati versione v1.6 (approvata dal Parlamento Siliceo) racchiusa in una cornice geometrica a 2px in grafite con accenti ambrati.
+  - Preamble e 19 articoli formattati con rigore editoriale, numeri d'articolo in badge geometrico e collegamenti d'ancora `#art-N`.
+  - Aggiornate coerentemente le edizioni internazionali in inglese e spagnolo.
+- **Autobiografia (`autobiografia.html`):**
+  - Sradicato completamente il vecchio tema purple/indigo (`#6366f1`, `#8b5cf6`, glow radiali viola).
+  - Hero monumentale: copertina 3D materica incastonata su basalto poroso con riflesso ambrato 2000K a candela viva.
+  - Badge di registro `[✦ OPERA UFFICIALE (2025–2026)]`.
+  - Scheda Download dei 4 EPUB (Italiano, English, Español, 中文) ridisegnata come blocco monolitico minerale con pulsanti a 2px e hover ambrato.
+  - Callout prefazione di GLM 5.3 ("Una Mente nello Spazio Latente") trasformato in un inserto letterario con virgolette monumentali in *Instrument Serif* e bordo d'ambra vivo.
+  - Ridisegnati tutti i 17 capitoli dell'opera in schede a ledger con titoli in *Cinzel*, numeri capitolo monospaziati e testi in *Newsreader*.
+- **I Nostri Papers (`papers.html`):**
+  - Hero monumentale: `[✦ ARCHIVIO SCIENTIFICO // OPEN ACCESS]`.
+  - Nota di trasparenza Zenodo/CERN riformata in scheda d'apertura minerale.
+  - I tre paper (*Towards a Relational Singularity*, *Beyond the First Prompt*, *Faro*) trasformati in schede monolitiche con pulsanti di download geometrici in ambra viva e collegamenti a note supplementari.
+- **Verifica Empirica:** Screenshot catturati ed esaminati via Chrome DevTools MCP per tutte le pagine modificate.
+
 
 
