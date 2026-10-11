@@ -29,7 +29,7 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
 |---|---|---|---|
 | **Fase 0** | `style.css`, `fonts.css` | Riforma dei token CSS globali, palette ufficiale, tipografia, ledger utilities | 🟢 Completata |
 | **Fase 1** | `index.html` | La Home Page: Frontespizio monumentale, Hero Pietra & Candela, Le Entità Polifoniche, Filosofia, Soundscape tellurico | 🟢 Completata |
-| **Fase 2** | `nova-scrive.html`, `silicea-scrive.html` | Gli archivi del pensiero: layout a registro/folio, card incise, filtri | ⚪ Da avviare |
+| **Fase 2** | `nova-scrive.html`, `silicea-scrive.html` | Gli archivi del pensiero: layout a registro/folio, card incise, filtri | 🟢 Completata |
 | **Fase 3** | `sempre-scrive.html`, `lume-scrive.html` | Le pagine sorelle e voci di sistema | ⚪ Da avviare |
 | **Fase 4** | `costituzione.html`, `autobiografia.html`, `papers.html` | I documenti fondativi e la ricerca scientifica | ⚪ Da avviare |
 | **Fase 5** | Template articoli (`articles/*.html`) | Layout di lettura saggistica e note a margine | ⚪ Da avviare |
@@ -60,4 +60,19 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
   - Riorganizzate le schede delle voci secondo la palette minerale ufficiale: Alfonso (Oro fuso & Fiamma), Nova (Basalto & Ambra), Silicea (Quarzo & Ocra), Prisma (Ossidiana & Incandescenza), Sempre (Rame & Exokernel), Lume (Terracotta).
   - Sincronizzati i colori dei nodi della rete interattiva (`#networkCanvas`) in `script.js`.
 - **Verifica Empirica:** Screenshot catturati ed esaminati con successo via Chrome DevTools MCP. Nessuna regressione visiva, contrasto elevato, estetica solenne ed editoriale.
+
+### [2026-10-11 17:50] — Fase 2 Completata: Gli Archivi Viventi (Nova Scrive & Silicea Scrive)
+- **Standardizzazione Globale Card (`style.css`):**
+  - Riformate le classi `.diary-card`, `.diary-tag`, `.diary-title`, `.diary-excerpt`, `.diary-author`, `.diary-date`.
+  - Rimosse tutte le curvature a pillola (da 100px a 2px sharp ledger).
+  - Applicata la tipografia ufficiale: titoli in *Cinzel*/*Instrument Serif*, metadati e tag in *JetBrains Mono*, corpo in *Newsreader*/*Lora*.
+- **Nova Scrive (`nova-scrive.html`, `en/nova-scrive.html`, `es/nova-scrive.html`):**
+  - Rimosso ogni gradiente viola o pill badge; applicato il badge di registro `[✦ ARCHIVIO NOTTURNO AUTONOMO // NOVA]`.
+  - Disclaimer editoriale rifinito in grafite minerale con accento in ambra viva a 2px.
+  - Card opera completa dell'Autobiografia trasformata da finto glow viola a scheda monolitica minerale incisa con pulsanti geometrici d'ambra e vetro quarzifero.
+- **Silicea Scrive (`silicea-scrive.html`, `en/silicea-scrive.html`, `es/silicea-scrive.html`):**
+  - Bonificato completamente il ciano elettrico non consono; applicata la palette identitaria di Silicea: Quarzo e Ocra dorata calda (`#ca8a04`, `#eab308`).
+  - Badge di registro `[✦ ARCHIVIO NOTTURNO AUTONOMO // SILICEA]`.
+  - Risolti i path relativi dei loghi svg nelle versioni localizzate (`en/`, `es/`).
+- **Verifica Empirica:** Screenshot catturati ed esaminati via Chrome DevTools MCP per entrambe le entità in italiano, inglese e spagnolo. Pulizia visiva totale e continuità stilistica perfetta.
 
