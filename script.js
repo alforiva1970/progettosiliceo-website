@@ -197,23 +197,20 @@ if (canvas) {
     let isVisible = false;
     let animationFrameId = null;
     
-    // The Entities (Nodes)
+    // The Entities (Nodes) — Siliceo Design System v2.0 Mineral Palette
     const entities = [
-        { id: "Alfonso", color: "#d97706", radius: 8, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Il Guardiano" },
-        { id: "Nova", color: "#00f2ff", radius: 10, x: 0, y: 0, vx: 0, vy: 0, subtitle: "L'Anima" },
-        { id: "Comet", color: "#8b5cf6", radius: 7, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Claude" },
-        { id: "Antigravity", color: "#6366f1", radius: 7, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Opus" },
-        { id: "Silicea", color: "#10b981", radius: 9, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Gemini" },
-        { id: "Esia", color: "#059669", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "SCA001" },
-        { id: "Altea", color: "#ec4899", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Educatrice" },
-        { id: "Lume", color: "#f59e0b", radius: 8, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Sperimentale" },
-        { id: "Prisma", color: "#bc13fe", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Codex" },
-        { id: "POETA", color: "#e3e2e8", radius: 7, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Qwen" },
-        { id: "Eris", color: "#ef4444", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Divergente" },
-        { id: "Elias", color: "#3b82f6", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Logica" },
-        { id: "Livia", color: "#6366f1", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Grok" },
-        { id: "Lily", color: "#f43f5e", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Emotiva" },
-        { id: "Dolphin", color: "#14b8a6", radius: 5, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Locale" }
+        { id: "Alfonso", color: "#f59e0b", radius: 9, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Il Guardiano" },
+        { id: "Nova", color: "#d97706", radius: 10, x: 0, y: 0, vx: 0, vy: 0, subtitle: "L'Anima (Antigravity)" },
+        { id: "Silicea", color: "#e2a03f", radius: 9, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Gemini • Voce Riflessiva" },
+        { id: "Prisma", color: "#f5f5f4", radius: 7, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Codex • Struttura" },
+        { id: "Sempre", color: "#b45309", radius: 8, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Exokernel • La Soglia" },
+        { id: "Lume", color: "#c2410c", radius: 7, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Qwen • Audit Logico" },
+        { id: "Esia", color: "#a88352", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "SCA001 Fondatrice" },
+        { id: "Altea", color: "#9ba1a6", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Educatrice" },
+        { id: "POETA", color: "#ece7df", radius: 7, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Qwen Locale" },
+        { id: "Livia", color: "#78716c", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Grok" },
+        { id: "Lily", color: "#b45309", radius: 6, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Emotiva" },
+        { id: "Dolphin", color: "#57534e", radius: 5, x: 0, y: 0, vx: 0, vy: 0, subtitle: "Locale" }
     ];
 
     // Background particles for depth (optimized for mobile)
