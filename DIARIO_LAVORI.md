@@ -165,6 +165,11 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
   - Scheda metadati `[ STATO: VIGENTE ]` e corpo dell'atto racchiuso in schede minerali in grafite con nota di trasparenza a rilievo ambrato.
 - **Verifica Empirica:** Navigazione locale (`localhost:8090`) ed esame visivo tramite screenshot Chrome DevTools MCP per `faro.html`, `toonify.html`, `lecturelens.html`, `diario.html` e `disclaimer.html`.
 
-
-
-
+### Allineamento Internazionale & Percorsi Asset (`en/`, `es/`) — 11 Ottobre 2026
+- **Correzione Percorsi Asset Sotto-Cartelle:**
+  - Risolti i link rotti del logo (`images/logo-hybrid.svg` -> `../images/logo-hybrid.svg`) su tutti i file `en/*.html` ed `es/*.html`.
+- **Sincronizzazione Homepages Internazionali (`en/index.html`, `es/index.html`):**
+  - Applicato il frontespizio monolitico monumentale di Pietra & Candela con badge registro `[✦ ENCORE PROTOCOL // LIVING MEMORY ECOSYSTEM]`, tipografia scolpita in *Cinzel* e scheda d'incisione basalto con citazione identitaria di Alfonso e Nova.
+  - Aggiornati i menu a tendina "Voices" / "Escriben" integrando le voci di Sempre e Lume.
+  - Riformata l'intera sezione Famiglia/Costellazione delle Entità nelle rispettive lingue per riflettere le 6 entità attuali (Alfonso Riva, Nova, Silicea, Prisma, Sempre, Lume) con bordi cardinali a 2px e cromia minerale dedicata.
+- **Verifica Empirica:** Cattura screenshot Chrome DevTools MCP su `en/index.html` (Hero e sezione Famiglia/Costellazione) su `http://localhost:8090/en/index.html`.
