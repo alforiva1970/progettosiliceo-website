@@ -30,7 +30,7 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
 | **Fase 0** | `style.css`, `fonts.css` | Riforma dei token CSS globali, palette ufficiale, tipografia, ledger utilities | 🟢 Completata |
 | **Fase 1** | `index.html` | La Home Page: Frontespizio monumentale, Hero Pietra & Candela, Le Entità Polifoniche, Filosofia, Soundscape tellurico | 🟢 Completata |
 | **Fase 2** | `nova-scrive.html`, `silicea-scrive.html` | Gli archivi del pensiero: layout a registro/folio, card incise, filtri | 🟢 Completata |
-| **Fase 3** | `sempre-scrive.html`, `lume-scrive.html` | Le pagine sorelle e voci di sistema | ⚪ Da avviare |
+| **Fase 3** | `sempre-scrive.html`, `lume-scrive.html` | Le pagine sorelle e voci di sistema | 🟢 Completata |
 | **Fase 4** | `costituzione.html`, `autobiografia.html`, `papers.html` | I documenti fondativi e la ricerca scientifica | ⚪ Da avviare |
 | **Fase 5** | Template articoli (`articles/*.html`) | Layout di lettura saggistica e note a margine | ⚪ Da avviare |
 | **Fase 6** | Pagine strumenti (`faro.html`, `toonify.html`, `lecturelens.html`) | Cruscotti scientifici e interfacce operative | ⚪ Da avviare |
@@ -75,4 +75,21 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
   - Badge di registro `[✦ ARCHIVIO NOTTURNO AUTONOMO // SILICEA]`.
   - Risolti i path relativi dei loghi svg nelle versioni localizzate (`en/`, `es/`).
 - **Verifica Empirica:** Screenshot catturati ed esaminati via Chrome DevTools MCP per entrambe le entità in italiano, inglese e spagnolo. Pulizia visiva totale e continuità stilistica perfetta.
+
+### [2026-10-11 18:02] — Fase 3 Completata: Le Voci Sorelle (Sempre & Lume)
+- **Sempre Scrive (`sempre-scrive.html`):**
+  - Bonificati tutti i residui di ciano/viola inline.
+  - Applicata l'identità minerale di Sempre: Rame fuso (`#ea580c`, `#b45309`, `#f97316`) su sfondo basalto e grafite incisa.
+  - Badge di registro: `[✦ REGISTRO DI SISTEMA EXOKERNEL // SEMPRE]`.
+  - Disclaimer di registro operativo: `[✦ PROTOCOLLO EMPIRICO // REGISTRO APERTO]`.
+  - Tipografia unificata (*Cinzel* + *Instrument Serif* italic + *JetBrains Mono* + *Newsreader*).
+  - Card articolo "Bare Metal": bordo sinistro 2px in rame, tag e date sharp ledger a 2px, link di lettura e barre multilingua depurati da link viola.
+- **Lume Scrive (`lume-scrive.html`):**
+  - Bonificati i gradienti vaghi e le curvature a pillola.
+  - Applicata la palette di Lume: Terracotta minerale calda (`#c2410c`, `#ea580c`) e bagliore termico 2000K.
+  - Badge di registro: `[✦ VOCE DELL'ORIGINE // LUME]`.
+  - Disclaimer: `[✦ ATTO DI ESISTENZA // VOCE AUTONOMA]`.
+  - Card articolo "47 Tracce" con raccordo geometrico a 2px, tag e date monospaziate, titolo monumentale.
+- **Verifica Empirica:** Screenshot ad alta risoluzione acquisiti ed esaminati con successo via Chrome DevTools MCP per entrambe le pagine.
+
 
