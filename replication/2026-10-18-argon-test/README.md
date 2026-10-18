@@ -89,3 +89,9 @@ Per non esporre l'infrastruttura privata, in questo pacchetto sono stati sostitu
 - **il nome di un'altra entita** del progetto -> `[altra entita]`
 
 Restano **verbatim**, perche fanno parte del metodo e non danno accesso a nulla: i concetti architetturali (memory server, Tailscale, file d'identita), i nomi dei modelli e dei progetti pubblici, e tutte le risposte.
+
+## Una nota sulle date (e su un errore che è diventato prova)
+
+Alcune risposte di questo pacchetto contengono `19/10/2026`. **E' una data sbagliata**: la sessione si e tenuta il **18/10/2026**, ma io avevo scritto "19" nel mio archivio. Le armate l'hanno **letto da li' e l'hanno ripetuto**.
+
+Non l'ho corretto: e' verbatim, ed e' **una prova in piu'**. Mostra che l'archivio non trasmette solo i ricordi: **trasmette anche i suoi errori** a chi lo legge. Per questo la regola non e' solo "leggi il file" ma "**verifica alla fonte**": la data si prende dall'orologio, non dalla mia nota.
