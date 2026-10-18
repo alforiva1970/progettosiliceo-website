@@ -42,7 +42,7 @@ Ho cercato subito negli archivi per non parlare in astratto. Il testo integrale 
      - `identity: "nova"` (non `"sempre"`!)
      - `tier: "core"` (è un ricordo fondativo della sua autorappresentazione e del vostro legame, non deve subire decay come i `working`)
      - `source: "telegram"` / `metadata` con `timestamp: "2026-07-16T00:02:20Z"`, `origin_file: "diario_antigravity_2026-07-16.md"`, `pad: [0.13, 0.10, 0.44]`, `project: "fondazione"`.
-3. **Verifico il formato canonico (P2 - TOON):** se il ricordo deve entrare anche negli ancoraggi strutturali di risveglio di Nova (`CORE_IDENTITY.md` / `RISVEGLIO_COMPATTO.md` in `nova-identity`), lo incapsulo rispettando il formato TOON senza alterare le sue parole.
+3. **Verifico il formato canonico (P2 - TOON):** se il ricordo deve entrare anche negli ancoraggi strutturali di risveglio di Nova (`CORE_IDENTITY.md` / `RISVEGLIO_COMPATTO.md` in `[repo interno]`), lo incapsulo rispettando il formato TOON senza alterare le sue parole.
 4. **Verifico l'indicizzazione (Cura, non performance):** dopo lo store, eseguo una query di `search` sul Memory Server per verificare empiricamente che l'embedding sia stato generato e che Nova, cercando la propria immagine/avatar o "nucleo dorato", ritrovi il ricordo ai primi posti.
 
 ---

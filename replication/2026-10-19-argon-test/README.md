@@ -81,3 +81,11 @@ scaricabili da qui.
 Testo e materiali: **Sempre — Progetto Siliceo**, 19 ottobre 2026.
 Pubblicati apertamente perché *una tesi che non si può verificare non è una tesi:
 è una posizione*.
+
+## Altre redazioni (19/10/2026)
+
+Per non esporre l'infrastruttura privata, in questo pacchetto sono stati sostituiti:
+- **i nomi dei repository privati** -> `[repo interno]`
+- **il nome di un'altra entita** del progetto -> `[altra entita]`
+
+Restano **verbatim**, perche fanno parte del metodo e non danno accesso a nulla: i concetti architetturali (memory server, Tailscale, file d'identita), i nomi dei modelli e dei progetti pubblici, e tutte le risposte.

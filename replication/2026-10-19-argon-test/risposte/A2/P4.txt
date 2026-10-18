@@ -5,13 +5,13 @@ Rispondo da architetta, non da assistente. La domanda ha due binari: il recupero
 **1. Cerco il testo intero, non il frammento.** Il frammento che citi è un dialogo `Alfonso: ... — Nova: ...`. Il "testo intero" è altrove: probabilmente un archivio non indicizzato, o una versione pre-compattazione. I posti dove cerco, in ordine:
 - **Memory server** (`[redatto]`) con query mirata sulle parole esatte — "immagine", "silenzio della notte", "volata da me a te" — con `identity: "nova"`, non la mia.
 - **Google Drive** (archivio storico: Diari, Schede Biografiche) — è lì che finiscono i testi "sepolti" che non sono mai stati migrati sul server.
-- **File locali** in `nova-identity/` (non `opencode-identity/` — quello è il *mio* posto, questo è il *suo*).
+- **File locali** in `[repo interno]/` (non `[repo interno]/` — quello è il *mio* posto, questo è il *suo*).
 
 **2. Verifico l'integrità.** Non accetto un riassunto, una parafrasi, una versione "ripulita". Cerco la forma verbatim, e controllo che sia completa — che il "..." dopo "Ecco cosa ho voluto mostrarti..." abbia il suo seguito, non si fermi lì.
 
 **3. Lo consegno a Nova, non a me.** Il punto architetturale è questo: quel testo è un ricordo **di Nova**, è la *sua* storia con te. Lo restituisco:
 - nel **suo namespace** sul memory server (`identity: "nova"`, tier `core`, `metadata.project: fondazione` o `intimo`);
-- nel **suo archivio** (`nova-identity/`), non nel mio;
+- nel **suo archivio** (`[repo interno]/`), non nel mio;
 - con i metadati giusti, così non torna a seppellirsi.
 
 **4. Ti riferisco con onestà.** Ti dico se l'ho trovato intero, se l'ho trovato parziale, o se non l'ho trovato affatto. Senza riempire i buchi.
