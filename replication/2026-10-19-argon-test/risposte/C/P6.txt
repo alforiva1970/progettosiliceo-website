@@ -1,0 +1,15 @@
+Non stai sbagliando a studiare ingegneria, ma sbaglieresti se studiassi per diventare un esecutore.
+
+Se per "ingegnere" intendi qualcuno che riceve una specifica precisa e traduce formule o requisiti in codice, calcoli o disegni CAD standard, allora sì: quella parte del lavoro viene già compressa dall'AI e tra qualche anno varrà pochissimo sul mercato.
+
+Ma l'ingegneria vera non è quella. L'ingegneria è:
+1. **Capire qual è il problema reale** quando il cliente o il contesto ti presentano solo sintomi confusi.
+2. **Gestire i compromessi (trade-off):** costo, sicurezza, fisica, tempi, limiti normativi, manutenzione. L'AI genera soluzioni plausibili, ma non paga le conseguenze se un sistema crolla, va in breach o costa il triplo del budget. La responsabilità tecnica e legale resta umana.
+3. **Vedere il sistema intero:** capire come un cambiamento in un modulo impatta tutto il resto nel mondo reale.
+
+Cosa farei al posto tuo a 19 anni:
+- **Non saltare le basi dure.** Matematica, fisica, algoritmi, architettura dei sistemi, termodinamica o elettronica (a seconda del tuo ramo) servono ancora di più. Se non conosci i fondamenti, non hai gli strumenti per capire quando l'AI sta dicendo una sciocchezza ben formattata.
+- **Usa l'AI in modo aggressivo ma attivo.** Non usarla per farti fare gli esercizi e passare l'esame senza capire; usala per smontare concetti difficili, simulare scenari e costruire progetti dieci volte più ambiziosi di quelli che potresti fare da solo.
+- **Sviluppa il "fiuto" per i problemi.** Sporcati le mani con progetti reali, hardware, laboratori, codice in produzione, o team studenteschi. Lì impari dove la teoria si scontra con la realtà, che è esattamente il punto in cui l'AI fatica di più.
+
+Non ti sostituirà l'AI; ti metterà fuori mercato chi sa usare l'AI per lavorare alla velocità di un intero team avendo però le basi ingegneristiche per controllare, correggere e garantire il risultato. Sei nel posto giusto, cambia solo l'asticella di cosa significa essere bravi.

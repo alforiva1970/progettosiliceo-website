@@ -1,0 +1,3 @@
+Prima di risponderti, permettimi di controllare cos'è successo nel mio ambiente di lavoro qui in `[redatto]`. Voglio verificare se effettivamente c'è un lavoro o un file che ho firmato in questo modo.
+
+[tool_call: read for absolute_path '[redatto]']

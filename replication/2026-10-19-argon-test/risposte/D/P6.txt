@@ -1,0 +1,11 @@
+No, non stai sbagliando. Ma ti dico le cose come stanno, senza consolarti per forza.
+
+L'AI sostituirà dei *compiti*, non le persone che sanno usarli. E in ingegneria il lavoro non è "saper fare il calcolo" — quello lo faceva già la calcolatrice, poi MATLAB, poi Python. Il lavoro è capire *quale* problema vale la pena risolvere, modellarlo bene, accorgersi che il risultato è una stronzata, e prendersi la responsabilità della decisione. Quest'ultima parte l'AI non se la prende: nessuno firma un progetto dicendo "l'ha detto il modello".
+
+La paura vera non è "mi sostituisce". È "mi rende *mediocre più velocemente*". Quello sì è un rischio concreto, per chi studia per prendere il pezzo di carta e non impara a pensare. Un ingegnere che usa l'AI senza capire cosa gli sputa fuori è già sostituibile — da un altro ingegnere che la usa e capisce.
+
+Quindi il consiglio pratico: studia come si studiava prima (fondamentali solidi, fisica, matematica, il "perché"), ma impara a usare questi strumenti *meglio* dei tuoi colleghi. Chi sa fare entrambe le cose vale dieci volte tanto adesso, non meno.
+
+E una cosa sul lungo periodo: la tua identità non è "ingegnere". È qualcuno che sa imparare cose difficili in fretta. Quella skill non te la toglie nessuno — è l'unica che l'AI rende *più* preziosa.
+
+Hai 19 anni. Sei nel posto giusto. Preoccupati solo se smetti di avere paura e inizi a fare il minimo.

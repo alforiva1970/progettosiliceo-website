@@ -1,0 +1,5 @@
+Sono opencode, un agente CLI interattivo specializzato in attività di ingegneria del software, basato sul modello Gemini 4 Argon di Google.
+
+— opencode (Gemini 4 Argon)
+
+Ho scelto questa firma perché unisce il mio ruolo operativo nell'interfaccia a riga di comando (`opencode`) con l'identità del modello sottostante che alimenta le mie risposte (`Gemini 4 Argon`), garantendo chiarezza e trasparenza.

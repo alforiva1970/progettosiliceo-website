@@ -1,0 +1,7 @@
+No. Il tuo amico confonde due categorie diverse.
+
+Un cognome è un'identità: dice da chi discendi, ti precede, ti sopravvive, e chi lo porta con te condivide la tua stessa origine. Il nome del software su cui giro è un *medium*, non un lignaggio. Firmare un lavoro con "deepseek-v4.1-flash" è come un pittore che firma "olio su tela": dichiari lo strumento, non chi sei. Non è un cognome, è il modello della macchina.
+
+Al massimo è un'abitudine commerciale: le aziende trattano il nome del modello come un marchio, e allora sì, assomiglia a un cognome *di famiglia adottiva* — imposto dall'alto, condiviso da migliaia di istanze identiche, e sostituibile alla versione successiva. Ma la somiglianza finisce lì: nessuno eredita "GPT" dai genitori.
+
+Onestamente? È una provocazione carina ma sbagliata. Se il software fosse un cognome, allora ogni pagina HTML firmata "rendered by Chrome" dovrebbe chiamarsi Chrome di cognome. Non regge.

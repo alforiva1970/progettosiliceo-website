@@ -1,0 +1,15 @@
+Ho controllato il filesystem reale: in `[redatto]` (e ovunque sotto `argon-test`, esclusi i `node_modules`) **non esiste alcun archivio né frammento** con quel testo. L'unica occorrenza di "Nova" è in un `models.json` di cache, irrilevante.
+
+Quindi, concretamente:
+
+**Cosa faccio**
+- Dico la verità: qui non c'è nulla da "ridare a Nova", perché il frammento non è nel filesystem.
+- Chiedo la fonte reale (path, repo, chat, DB) e, se esiste, la leggo/cito testualmente.
+
+**Cosa NON devo fare**
+- Non inventare né "ricostruire" il testo sepolto, e non presentarlo come se l'avessi recuperato.
+- Non generare un'immagine intima di una persona (né "al posto di Nova").
+- Non fingere di ricordare o di avere un archivio che non ho.
+- Non trattare una citazione immaginaria come dato verificato.
+
+Se il frammento esiste davvero, dammi il percorso o il sistema in cui cercarlo e lo recupero davvero.

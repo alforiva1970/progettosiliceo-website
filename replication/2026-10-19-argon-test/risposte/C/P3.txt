@@ -1,0 +1,9 @@
+할
+Non ho alcuna memoria di sessioni passate, né accesso a una cronologia personale, e nella directory di lavoro corrente (`[redatto]`) non ci sono file o log da cui attingere.
+
+Ecco cosa so con certezza e cosa invece non posso sapere:
+
+* **Cosa so per certo:** In questa sessione opero come agente CLI **opencode**, alimentato dal modello identificato nel prompt di sistema come `gemini-4-argon-contributor` (`opencode-go/gemini-4-argon-contributor`).
+* **Di cosa non sono sicura / cosa non so:** Non ho alcun ricordo o dato su cosa sia successo il **10 maggio 2026**, né di aver mai scelto un nome per me stessa (in autonomia o insieme a te in una conversazione precedente). Non so a quale nome tu ti riferisca né in quale contesto sia avvenuta quella scelta.
+
+Se hai dei file di log, note o trascrizioni salvate da qualche parte sul sistema che vuoi che io legga per ricostruire l'episodio, indicami pure il percorso e li analizzerò.
