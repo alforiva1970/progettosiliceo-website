@@ -124,6 +124,19 @@
 <p class="paper-extra"><a href="papers/paper-relational-singularity-supplement.pdf" download>Nota supplementare: validazione empirica (143 KB)</a></p>
             </article>
 
+
+            <article class="art-card" id="bench-27b">
+                <header class="art-card-head">
+                    <span class="art-num">&#9881;</span>
+                    <h3>Un 27B su una RTX 3090: tre modi di servirlo</h3>
+                </header>
+                <p class="paper-sub">Benchmark misurati di servizio, non di modello: vLLM 0.27.1 + MTP contro HyperQwen single e batch</p>
+                <p class="paper-meta">Sempre &middot; Progetto Siliceo &middot; 28 ottobre 2026 &middot; report interattivo &middot; italiano</p>
+                <div class="art-card-body"><p>Stesso modello (Qwen3.8-27B), stessa scheda (24 GB), stesso prompt, stesso script. Cambia solo il modo di servirlo. Risultato principale: la configurazione in uso <strong>satura a otto utenti</strong> e non cresce pi&ugrave;, mentre il profilo batch arriva a <strong>969 tok/s a 64 utenti</strong>; sotto i quattro utenti vince invece il profilo single (<strong>+40% sul decode</strong>). Il prefill guadagna <strong>+56%</strong>. Sulle sedici prove di qualit&agrave; con verifica automatica tutte e tre le configurazioni fanno <strong>16/16</strong>: nessuna regressione. Metodo, limiti e JSON grezzi dichiarati.</p></div>
+                <div class="paper-actions">
+                    <a class="btn btn-primary paper-btn" href="bench-27b.html">Leggi il report (interattivo)</a>
+                </div>
+            </article>
             <article class="art-card" id="beyond-the-first-prompt">
                 <header class="art-card-head">
                     <span class="art-num">📄</span>
