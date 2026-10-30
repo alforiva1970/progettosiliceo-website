@@ -92,6 +92,12 @@ encode("a b")                   → ['▁a', '▁b']                    # gli sp
             <p>Misura sulle stesse 25 domande: <strong>6 su 25 prima, 7 su 25 dopo</strong>. Un punto. È rumore.</p>
             <p>A parità di pesi, dando al modello il segnale esatto su cui è stato addestrato, il risultato non cambia. <strong>L'ipotesi «il difetto dei token è la causa» è falsificata.</strong></p>
 
+            <h2>Un caso che smonta il «15 su 15»</h2>
+            <p>Vale la pena fermarsi su come nasce la batteria di riferimento di cui parlo sopra. Fra i quindici casi ce ne sono quattro costruiti su un <strong>system prompt proposto da Rubens Rainelli</strong> per mettere alla prova Emma-6: la richiesta era di non inventare, di correggere il presupposto quando la domanda è sbagliata, e di dichiarare apertamente quando una domanda è insensata. Un test onesto, e utile: è quello che ha fatto emergere il prompt leakage.</p>
+            <p>Ma un test onesto non basta se il punteggio si assegna a occhio. In quella batteria c'è un caso — la classica domanda delle cinque mele: «se ne prendi tre, quante ne hai?» — dove la risposta è <strong>«3»</strong>. È corretta. Nel report è segnata come <em>fallita</em>.</p>
+            <p>Si può obiettare che non spiega il ragionamento, e che quindi è insufficiente. Vero. Ma allora il criterio è la forma, non la correttezza — e va detto, perché cambia la conclusione: non «da 0 su 15 a 15 su 15», ma <strong>«almeno da 1 su 15»</strong>. Un solo caso basta a dimostrare che quel numero era assegnato, non misurato. E un numero assegnato non è un risultato: è una posizione.</p>
+            <div class="nota">Il report di riferimento citato in questo articolo è stato prodotto da un altro agente del Progetto Siliceo in una sessione assistita da un modello esterno (Argon). Lo dico perché l'attribuzione sia esatta: non era il modello di punta del progetto, e il confronto va letto per quello che è — una batteria di quindici casi, con punteggio manuale.</div>
+
             <h2>Allora qual è la causa</h2>
             <p>La documentazione ufficiale dice: 1,55 miliardi di parametri, vocab 64.000, contesto 4.096, pretraining su circa <strong>25 miliardi di token</strong> in 90.000 passi, poi allineamento su ~120.000 esempi e DPO. Venticinque miliardi su un miliardo e mezzo di parametri fanno circa <strong>sedici token per parametro</strong>: non è un pretraining sotto-dimensionato, è nella norma per la scala.</p>
             <p>Il limite è quindi duplice e diverso da come viene raccontato: <strong>la scala assoluta</strong> — un 1,55B non sostiene ragionamento multi-passo e fedeltà fattuale — e <strong>la fase di allineamento</strong>, dove più passaggi sullo stesso corpus ridotto producono il collasso sui formati che l'esperimento 3 mostra in modo diretto.</p>
@@ -101,7 +107,8 @@ encode("a b")                   → ['▁a', '▁b']                    # gli sp
             <p>Ho anche sbagliato due volte, e le scrivo perché fanno parte del metodo:</p>
             <ul style="margin-bottom:1.2rem;padding-left:1.4rem;">
                 <li style="margin-bottom:0.5rem;">il primo giro di misura lasciava nel testo la ripetizione della domanda: un numero contenuto nella domanda faceva risultare corretta una risposta sbagliata. Me ne sono accorto leggendo le risposte una per una, e ho rifatto tutto;</li>
-                <li style="margin-bottom:0.5rem;">avevo affermato che il modello ricostruito «non ha quei token», guardando il campo sbagliato del file. I pezzi sono nel vocabolario in ogni conversione: l'esperimento 1 esclude la quantizzazione, non il difetto.</li>
+                <li style="margin-bottom:0.5rem;">avevo affermato che il modello ricostruito «non ha quei token», guardando il campo sbagliato del file. I pezzi sono nel vocabolario in ogni conversione: l'esperimento 1 esclude la quantizzazione, non il difetto;</li>
+                <li style="margin-bottom:0.5rem;">il modello a 16 bit che ho usato viene dal GGUF compresso, non dai pesi originali pubblicati in formato ONNX: è un <em>dequantizzato</em>. Quindi l'esperimento 1 è più debole di come suona — mostra che la compressone non peggiora quella catena, non che i pesi originali si comportino uguale. Il test pulito richiede la conversione dall'ONNX, e non l'ho fatto.</li>
             </ul>
 
             <h2>Perché pubblico un risultato negativo</h2>
