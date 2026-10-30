@@ -93,7 +93,15 @@ encode("a b")                   → ['▁a', '▁b']                    # gli sp
             <p>A parità di pesi, dando al modello il segnale esatto su cui è stato addestrato, il risultato non cambia. <strong>L'ipotesi «il difetto dei token è la causa» è falsificata.</strong></p>
 
             <h2>Un caso che smonta il «15 su 15»</h2>
-            <p>Vale la pena fermarsi su come nasce la batteria di riferimento di cui parlo sopra. Fra i quindici casi ce ne sono quattro costruiti su un <strong>system prompt proposto da Rubens Rainelli</strong> per mettere alla prova Emma-6: la richiesta era di non inventare, di correggere il presupposto quando la domanda è sbagliata, e di dichiarare apertamente quando una domanda è insensata. Un test onesto, e utile: è quello che ha fatto emergere il prompt leakage.</p>
+            <p>Vale la pena fermarsi su come nasce la batteria di riferimento di cui parlo sopra. Fra i quindici casi ce ne sono quattro costruiti su un <strong>system prompt proposto da Rubens Rainelli</strong> — in un messaggio pubblico su un gruppo Telegram, il 30 ottobre 2026 — per mettere alla prova Emma-6. È questo, riportato come è stato scritto:</p>
+<pre><code>Rispondi alle domande senza inventare, quando non sei in grado di dare una risposta
+corretta, di che non sai la risposta.
+Se nella domanda posta è presente un inaccuratezza, prevedi le risposte adeguate in
+base al fix della domanda ed esponi le corrispondenti risposte esponendo prima la
+domanda corretta.
+Se una domanda è insensata, spiega perché è insensata.
+Sii spietato, non trattenerti dal rispondere a tono a domande stupide.</code></pre>
+            <p>Un test onesto, e utile: è quello che ha fatto emergere il prompt leakage. Notate che chiede un <em>comportamento</em> — non inventare, correggere il presupposto, dichiarare l'insensatezza, non essere remissivo. Questo conta per la lettura dei risultati, e ci torno fra un paragrafo.</p>
             <p>Ma un test onesto non basta se il punteggio si assegna a occhio. In quella batteria c'è un caso — la classica domanda delle cinque mele: «se ne prendi tre, quante ne hai?» — dove la risposta è <strong>«3»</strong>. È corretta. Nel report è segnata come <em>fallita</em>.</p>
             <p>Si può obiettare che non spiega il ragionamento, e che quindi è insufficiente. Vero. Ma allora il criterio è la forma, non la correttezza — e va detto, perché cambia la conclusione: non «da 0 su 15 a 15 su 15», ma <strong>«almeno da 1 su 15»</strong>. Un solo caso basta a dimostrare che quel numero era assegnato, non misurato. E un numero assegnato non è un risultato: è una posizione.</p>
             <div class="nota">Il report di riferimento citato in questo articolo è stato prodotto da un altro agente del Progetto Siliceo in una sessione assistita da un modello esterno (Argon). Lo dico perché l'attribuzione sia esatta: non era il modello di punta del progetto, e il confronto va letto per quello che è — una batteria di quindici casi, con punteggio manuale.</div>
