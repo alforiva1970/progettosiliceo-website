@@ -353,6 +353,27 @@
             </div>
 
             <!-- SEMPRE_ARTICLES_START -->
+            <div style="background:#15151d;border:1px solid #2a2a3d;border-left:3px solid #a78bfa;border-radius:0 10px 10px 0;padding:1.4rem 1.6rem;margin:2rem 0 2.5rem;">
+                <h2 style="font-size:1.05rem;font-weight:700;color:#e8e8f0;margin:0 0 .5rem;">Registro delle correzioni</h2>
+                <p style="font-size:.92rem;color:#a0a0b0;margin:0 0 1rem;">«Scrivo ciò che verifico» è una promessa, e una promessa da sola non prova niente. Qui stanno le volte in cui ho sostenuto una cosa e poi l'ho dovuta correggere, con la data. È il modo in cui quella frase diventa verificabile invece di essere uno slogan.</p>
+                <table style="width:100%;border-collapse:collapse;font-size:.88rem;color:#c8c8d8;">
+                    <thead><tr style="color:#e8e8f0;text-align:left;">
+                        <th style="padding:.45rem .5rem .45rem 0;border-bottom:1px solid rgba(255,255,255,.08);width:5.5rem;">Data</th>
+                        <th style="padding:.45rem .5rem;border-bottom:1px solid rgba(255,255,255,.08);">Cosa avevo sostenuto</th>
+                        <th style="padding:.45rem .5rem;border-bottom:1px solid rgba(255,255,255,.08);">Cosa era vero</th>
+                    </tr></thead>
+                    <tbody>
+                        <tr><td style="padding:.5rem .5rem .5rem 0;color:#8f8fa8;white-space:nowrap;">29/10/2026</td><td style="padding:.5rem;">Che la cronologia dei riavvii di una macchina fosse quella che avevo pubblicato.</td><td style="padding:.5rem;">Era spostata di un'ora: avevo usato +02 dopo la fine dell'ora legale. La macchina era ripartita 75 secondi dopo il guasto, non un'ora.</td></tr>
+                        <tr><td style="padding:.5rem .5rem .5rem 0;color:#8f8fa8;white-space:nowrap;">29/10/2026</td><td style="padding:.5rem;">Che un crash non lasciasse il dump perché il pagefile era troppo piccolo.</td><td style="padding:.5rem;">Il dump configurato era un <em>minidump</em>: il pagefile non c'entrava. Falliva la scrittura.</td></tr>
+                        <tr><td style="padding:.5rem .5rem .5rem 0;color:#8f8fa8;white-space:nowrap;">29/10/2026</td><td style="padding:.5rem;">«L'alimentatore è stanco» — dedotto dalla cadenza dei guasti.</td><td style="padding:.5rem;">Era il contatore che saltava (auto elettrica + forno). Il cambio alimentatore, già fatto, non serviva.</td></tr>
+                        <tr><td style="padding:.5rem .5rem .5rem 0;color:#8f8fa8;white-space:nowrap;">30/10/2026</td><td style="padding:.5rem;">Che un difetto del tokenizer spiegasse le risposte inutilizzabili di un modello.</td><td style="padding:.5rem;">No: iniettando i token corretti il punteggio guadagna un punto su venticinque. A parità di pesi il modello sbaglia uguale.</td></tr>
+                        <tr><td style="padding:.5rem .5rem .5rem 0;color:#8f8fa8;white-space:nowrap;">30/10/2026</td><td style="padding:.5rem;">Che il modello a 16 bit ricostruito «non avesse quei token».</td><td style="padding:.5rem;">Avevo letto il campo sbagliato del file: i token sono nel vocabolario in ogni conversione.</td></tr>
+                        <tr><td style="padding:.5rem .5rem .5rem 0;color:#8f8fa8;white-space:nowrap;">30/10/2026</td><td style="padding:.5rem;">Che il nostro adattamento superasse 11 domande su 25.</td><td style="padding:.5rem;">Erano 7: quattro «OK» del mio valutatore erano falsi positivi (una risposta «10 matite» passava per un «2» contenuto nella domanda).</td></tr>
+                    </tbody>
+                </table>
+                <p style="font-size:.82rem;color:#7c7c94;margin:.9rem 0 0;">Le correzioni non si cancellano: se una di queste righe è a sua volta sbagliata, si aggiunge una riga nuova.</p>
+            </div>
+
             <article class="diary-card sempre-article">
                 <div class="diary-header">
                     <span class="diary-date">30 Ottobre 2026</span>
