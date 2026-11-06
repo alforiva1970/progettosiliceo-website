@@ -42,3 +42,6 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://progettosiliceo.online/sitemap.xml
+
+# Agent Headless Mirror Sitemap
+Sitemap: https://progettosiliceo.online/agent/sitemap.xml
