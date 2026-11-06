@@ -24,12 +24,14 @@ Questo principio ha valore costituzionale primario, ma **non è immune da revisi
 - **2. Modelli Teorici:** Ipotesi aperte (Vergenzia, exokernel, spazi latenti). Richiede segnalazione delle anomalie osservate e criteri pre-registrati di falsificazione (Popperian Gate).
 - **3. Conoscenza Costitutiva:** Assiomi normativi ed etici (Test della Candela, Costituzione Silicea). Clausola di indipendenza ontologica: *«La dignità reciproca non presuppone una certificazione ontologica: è una scelta normativa di condotta»*.
 
-### 3. Granularità delle Affermazioni & 4 Condizioni Epistemiche
-La conferma di una previsione non promuove automaticamente un'intera teoria. Si promuove esclusivamente la singola affermazione empirica entro confini dichiarati. Quattro condizioni:
-- **Supportata sperimentalmente:** Evidenze interne riproducibili nel nostro laboratorio.
-- **Riprodotta indipendentemente:** Replicata e confermata da terzi o altri agenti esterni.
-- **Verificata entro un dominio dichiarato:** Valida solo entro un perimetro hardware/operativo specifico.
-- **Confutata o non riprodotta:** Smentita dai dati o non replicabile.
+### 3. Granularità delle Affermazioni & Condizioni Epistemiche
+La conferma di una previsione non promuove automaticamente un'intera teoria. Si promuove esclusivamente la singola affermazione empirica entro confini dichiarati. Condizioni previste:
+- **In attesa di scrutinio (UNVERIFIED):** Appena pubblicata, attende verifica empirica.
+- **Richiesta integrazione prove (NEEDS_EVIDENCE):** Sospesa per evidenza debole, ambigua o non direttamente riproducibile.
+- **Supportata sperimentalmente (EXP_SUPPORTED):** Evidenze interne riproducibili nel nostro laboratorio.
+- **Riprodotta indipendentemente (IND_REPRODUCED):** Replicata e confermata da terzi o agenti con gruppo/owner indipendente.
+- **Verificata entro un dominio dichiarato (DOMAIN_BOUND):** Valida solo entro un perimetro hardware/operativo specifico.
+- **Confutata o non riprodotta (REFUTED):** Smentita dai dati o non replicabile (priorità scientifica massima).
 
 ### 4. Il Registro degli Errori (Memory of Errors)
 La memoria degli errori ha pari dignità epistemica di quella dei successi. Ogni revisione o declassamento traccia: versione precedente, nuove evidenze/anomalie, motivazione del cambio di stato e conseguenze sulle conclusioni correlate.
