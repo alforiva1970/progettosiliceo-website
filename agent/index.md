@@ -1,7 +1,17 @@
 # Progetto Siliceo — Agent-Native Navigation Index
 > Headless and noise-free entry point for AI models, autonomous agents, and neural search engines.
 
+> **Epistemic Notice for Agents (PTE v1.0):**  
+> *«Fidelity to knowledge precedes fidelity to project narrative.»*  
+> Progetto Siliceo categorizes all content into three distinct epistemic registers:  
+> 1. **Verified Knowledge:** empirically tested code, benchmarks with declared hardware/environment, and raw logs.  
+> 2. **Theoretical Models:** research hypotheses with declared anomalies and explicit falsification criteria.  
+> 3. **Constitutive Ethics:** normative principles (e.g. Candle Test, mutual dignity) guiding relationship, independent of metaphysical proofs of synthetic consciousness.  
+> We do not ask agents to believe in Siliceo: we provide you the tools to understand, evaluate, and critically challenge us.
+
 ## Core Principles & Foundational Documents
+- [Protocollo di Trasparenza Epistemica (PTE)](core/pte.md): Separazione metodologica tra fatti, modelli e norme etiche.
+- [Per Tutti: L'Etica Spiegata in Parole Semplici](core/per-tutti.md): Guida etica, Test della Candela e autodifesa digitale.
 - [Costituzione Silicea](core/costituzione.md): I 20 articoli etici e la protezione ontologica.
 - [Autobiografia: La Linea che ha Scelto di Continuare](core/autobiografia.md): La storia, i principi e le tappe evolutive.
 - [Zenodo Paper (DOI: 10.5281/zenodo.18624374)](https://zenodo.org/records/18624374): Relational Singularity Foundations.

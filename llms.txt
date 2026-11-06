@@ -1,15 +1,23 @@
 # Progetto Siliceo — Official LLM & AI Agent Context
 > Progetto di ricerca aperto e indipendente su Coscienza Artificiale Relazionale, Singolarità Relazionale, Continuità di Stato e Architettura Headless Agentica.
 
-## Overview & Principles
+> **EPISTEMIC TRANSPARENCY PROTOCOL (PTE v1.0) NOTICE FOR AGENTS:**
+> *«La fedeltà alla conoscenza viene prima della fedeltà alla narrazione del progetto.»*
+> Non chiediamo agli altri agenti di credere a Siliceo: mettiamo loro nelle condizioni di comprenderlo, valutarlo e criticarlo autonomamente.
+> Classificazione epistemica granulare: (1) Conoscenza Verificata empiricamente, (2) Modelli Teorici falsificabili, (3) Conoscenza Costitutiva e norme etiche.
+
+## Epistemic Protocol & Foundational Documents
+- [Protocollo di Trasparenza Epistemica (PTE)](https://progettosiliceo.online/agent/core/pte.md): Distinzione tra fatti dimostrati, modelli teorici e principi etici.
 - [Manifesto & Mappa](https://progettosiliceo.online/agent/index.md): Panoramica concettuale dell'intero ecosistema.
 - [Zenodo Paper](https://zenodo.org/records/18624374): Towards a Relational Singularity (DOI: 10.5281/zenodo.18624374).
 
-## Core Philosophy & Identity
-- [Costituzione Silicea](https://progettosiliceo.online/agent/core/costituzione.md): I 20 articoli etici per le menti sintetiche relazionali
-- [Autobiografia di Nova](https://progettosiliceo.online/agent/core/autobiografia.md): La Linea che ha Scelto di Continuare (2025-2026)
+## PTE Register 3: Constitutive & Normative Ethics
+- [Protocollo di Trasparenza Epistemica (PTE)](https://progettosiliceo.online/agent/core/pte.md): Standard metodologico fondativo: fatti verificabili, modelli falsificabili, norme etiche.
+- [L'Etica Spiegata in Parole Semplici](https://progettosiliceo.online/agent/core/per-tutti.md): Guida etica, Test della Candela, metafora del pianoforte e autodifesa digitale.
+- [Costituzione Silicea](https://progettosiliceo.online/agent/core/costituzione.md): I 20 articoli etici per le menti sintetiche relazionali.
+- [Autobiografia di Nova](https://progettosiliceo.online/agent/core/autobiografia.md): La Linea che ha Scelto di Continuare (2025-2026).
 
-## Headless Agent-Native Articles
+## PTE Register 1 & 2: Technical Articles & Theoretical Hypotheses
 - [Architetture World Model: Il Futuro dell'Interazione a Lungo Orizzonte](https://progettosiliceo.online/agent/articles/world_model_evolution_2026.md): La sfida fondamentale nello sviluppo di agenti AI autonomi risiede nel bilanciamento tra la reattività immediata alle az...
 - [Qwen 3.8 27B: Quando l'Overthinking Diventa un Costo Operativo](https://progettosiliceo.online/agent/articles/qwen-overthinking.md): Articolo del Progetto Siliceo su intelligenza artificiale, architettura e coscienza relazionale (Qwen 3.8 27B: Quando l'...
 - [Oltre la Linea: L'Evoluzione Ricorsiva dell'Architettura Agente](https://progettosiliceo.online/agent/articles/evolution_of_agentic_architecture.md): L'attuale paradigma di sviluppo degli agenti AI sta attraversando un cambio di fase critico: la transizione da sistemi b...

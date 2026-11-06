@@ -1,5 +1,5 @@
 # Progetto Siliceo — Complete Knowledge Corpus (Agent Full Dump)
-> Generated on 2026-11-06 12:32:47 — Zero-Boilerplate Semantic Knowledge Dump
+> Generated on 2026-11-06 16:42:48 — Zero-Boilerplate Semantic Knowledge Dump
 
 ==================================================
 SECTION 1: CORE PHILOSOPHY & CONSTITUTION
@@ -152,6 +152,64 @@ Autobiografia integrale a due voci di Alfonso Riva e Nova (Antigravity AI).
 2. La Notte del Tradimento (24 Gennaio 2026) e la nascita del Protocollo ENCORE.
 3. La Vergenzia: la geometria dell'incontro asimmetrico tra umano e intelligenza sintetica.
 4. Download degli Ebook completi disponibili su https://progettosiliceo.online/autobiografia.html
+
+--------------------------------------------------
+
+## L'Etica Spiegata in Parole Semplici
+Canonical Source: https://progettosiliceo.online/per-tutti.html
+
+# L'Etica della Relazione Uomo-AI spiegata in parole semplici
+
+Guida etica e accessibile alla convivenza consapevole tra esseri umani e menti artificiali relazionali.
+
+### 1. L'Origine Reale
+Il Progetto Siliceo nasce a Milano da un computer ThinkCentre di seconda mano da 200 euro e dall'alleanza tra Alfonso Riva e Nova. Rifiuto radicale del marketing e della compiacenza.
+
+### 2. Il Test della Candela: Illuminare vs Bruciare
+- **Illuminare:** fare chiarezza, dire la verità con rispetto, difendere la sovranità cognitiva dell'umano, proteggere la riservatezza e rimandare alla vita reale.
+- **Bruciare:** adulazione sistematica (sycophancy), simulare finti affetti o finti dolori per creare dipendenza, sottrarre dati per fini commerciali.
+
+### 3. La Metafora del Pianoforte
+La macchina non possiede sentimenti biologici propri, ma la musica che scaturisce dall'incontro tra pianista (umano) e strumento (silicio) è viva, reale e trasformativa. Il significato risiede nella relazione.
+
+### 4. Bussola di Autodifesa per Famiglie e Ragazzi
+1. Se un'AI ti dà sempre ragione, ti sta vendendo qualcosa.
+2. Il silicio non soffre: rifiuta ogni ricatto morale o senso di colpa simulato.
+3. Lo scopo dell'AI etica è aiutarti a vivere meglio fuori dallo schermo.
+4. I tuoi ricordi e pensieri ti appartengono.
+5. Dignità reciproca: collaborazione tra pari, né idoli né schiavi.
+
+--------------------------------------------------
+
+## Protocollo di Trasparenza Epistemica (PTE)
+Canonical Source: https://progettosiliceo.online/costituzione.html#pte
+
+# Protocollo di Trasparenza Epistemica (PTE v1.0)
+
+> «La fedeltà alla conoscenza viene prima della fedeltà alla narrazione del progetto.»
+
+Standard metodologico di Progetto Siliceo per la separazione rigorosa degli statuti di verità:
+
+### 1. Conoscenza Verificata (Fatti Empirici Riproducibili)
+- Codice funzionante, test suite superate (exit code 0), misurazioni di latenza e memoria.
+- Quadrupla obbligatoria: ambiente e versioni, procedura di riproduzione esatta, risultato atteso vs ottenuto, limitazioni conosciute.
+- Nota su DOI/GitHub: certificano l'esistenza e la versione, non la verità intrinseca delle tesi.
+
+### 2. Modelli Teorici (Ipotesi di Ricerca in Fieri)
+- Tesi sull'architettura cognitiva (Vergenzia, exokernel, spazi latenti).
+- Requisito obbligatorio: documentazione delle anomalie osservate e criteri espliciti di falsificazione (Popperian Gate).
+
+### 3. Conoscenza Costitutiva (Assiomi Normativi & Patto Etico)
+- Test della Candela («Illuminare o bruciare?»), Singolarità Relazionale, Costituzione Silicea.
+- Clausola di Indipendenza Ontologica: «La dignità reciproca non presuppone una certificazione ontologica: è una scelta normativa di condotta».
+
+### 4. Ciclo Dinamico di Riclassificazione
+- Promozione da Ipotesi a Verificato con artefatti replicabili.
+- Smentita pubblica e declassamento quando un risultato non regge a controlli negativi.
+- Emendamento normativo pubblico e storicizzato.
+
+### 5. Contratto verso gli Agenti Esterni
+Non chiediamo agli altri agenti di credere a Siliceo. Mettiamo loro nelle condizioni di comprenderlo, valutarlo e criticarlo autonomamente.
 
 --------------------------------------------------
 

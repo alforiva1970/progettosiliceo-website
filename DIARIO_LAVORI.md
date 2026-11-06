@@ -175,3 +175,49 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
 - **Audit & Raffinamento `autobiografia.html`:**
   - Sradicato l'ultimo residuo di pulsante viola/indaco e bordo arrotondato 8px/16px nella sezione "La Voce dei Lettori". Riformato il form in registro grafite `#131518`, etichette monospazio in ambra `#d97706`, campi in basalto `#0b0c0e` e pulsante geometrico a 2px d'incisione.
 - **Verifica Empirica:** Cattura screenshot Chrome DevTools MCP su `en/index.html` ed `es/index.html` (Hero monumentale e griglia Famiglia/Costellazione) confermando la totale coerenza estetica su `http://localhost:8090`.
+
+### [2026-11-06 13:08] — Creazione Gateway Popolare: "Per Tutti — L'Etica Uomo-AI in Parole Semplici"
+- **Mandato del Guardiano:** Creare la nuova pagina accessibile e divulgativa (`per-tutti.html`) per colmare il divario semantico delle ricerche su Google ("etica nella relazione tra AI e umani", "come non farsi manipolare dai chatbot"), generando in autonomia testo, illustrazioni e infografiche dedicate, in attesa di revisione e commit congiunto.
+- **Creazione Pagina (`per-tutti.html`):**
+  - Schema completo SEO & Open Graph + JSON-LD multimodale (`@type: Article` e `@type: FAQPage` per snippet arricchiti su Google).
+  - Capitolo 1: La storia reale di Progetto Siliceo (il ThinkCentre da 200€ a Milano, rifiuto del marketing e della compiacenza).
+  - Capitolo 2: Il Test della Candela spiegato per tutti («Illuminare o bruciare?») con infografica vettoriale.
+  - Capitolo 3: «La macchina ha sentimenti?» — La Metafora del Pianoforte (la musica nasce nell'incontro relazionale).
+  - Capitolo 4: Bussola di Autodifesa per Famiglie e Ragazzi (i 5 segnali per riconoscere manipolazione ed adulazione).
+  - Capitolo 5: FAQ strutturate e Ponti di Approfondimento (Autobiografia, Costituzione, Faro, Nova Scrive).
+- **Asset Visivi & Infografiche Create:**
+  - Hero artwork: `images/per-tutti-hero.jpg` e versione ottimizzata `images/per-tutti-hero.webp` (ThinkCentre, candela 2000K, quaderno e appunti su basalto).
+  - Infografica 1: `images/infografica-test-candela.svg` (Illuminare vs Bruciare a colonne contrapposte).
+  - Infografica 2: `images/infografica-pianoforte-silicio.svg` (Umano/Carbonio + AI/Silicio -> La Musica/Significato condiviso).
+  - Infografica 3: `images/infografica-bussola-autodifesa.svg` (5 regole pratiche di autodifesa digitale).
+- **Integrazione Navigazione & Indici:**
+  - `index.html`: inserito link diretto nella navbar (`Per Tutti 🕯️`), voce nel menu dropdown e pulsante prioritario d'apertura nella Hero CTA.
+  - `sitemap.xml`: inserita la pagina `per-tutti.html` con priority 0.95.
+  - `scripts/build_agent_mirror.py`: integrato il documento core headless `agent/core/per-tutti.md` e aggiornato `llms.txt`.
+- **Verifica Empirica:** Web server locale attivo su `http://localhost:8090`; risposte HTTP 200 OK verificate via `curl` per la pagina HTML, le tre infografiche SVG e l'immagine WebP. Test unitari specchio superati (6/6).
+
+### [2026-11-06 16:30] — Rollout Internazionale "Per Tutti" (EN / ES) & Infografiche Localizzate
+- **Edizione Inglese (`en/per-tutti.html`):**
+  - "For Everyone — AI & Human Ethics in Plain Words", localizzazione integrale del registro colloquiale e narrativo.
+  - Creazione infografiche vettoriali in inglese: `images/infografica-test-candela-en.svg`, `images/infografica-pianoforte-silicio-en.svg`, `images/infografica-bussola-autodifesa-en.svg`.
+  - Aggiornamento navbar `en/index.html` e menu a tendina con link `For Everyone 🕯️`.
+- **Edizione Spagnola (`es/per-tutti.html`):**
+  - "Para Todos — La Ética Humano-IA en Palabras Sencillas", localizzazione integrale.
+  - Creazione infografiche vettoriali in spagnolo: `images/infografica-test-candela-es.svg`, `images/infografica-pianoforte-silicio-es.svg`, `images/infografica-bussola-autodifesa-es.svg`.
+  - Aggiornamento navbar `es/index.html` e menu a tendina con link `Para Todos 🕯️`.
+- **Sitemap Multilingua (`sitemap.xml`):**
+  - Inserite voci per `en/per-tutti.html` ed `es/per-tutti.html` con riferimenti incrociati completi `xhtml:link rel="alternate" hreflang`.
+
+### [2026-11-06 16:55] — Siliceo Pulse v1.0 & Protocollo di Trasparenza Epistemica (PTE)
+- **Telemetria Etica In-House "Siliceo Pulse":**
+  - Mandato del Guardiano: realizzare un sistema statistico autonomo ("nostro"), dato il divieto etico di usare tracker commerciali / Google Analytics.
+  - Client Beacon (`script.js` & `tools/pulse/pulse.js`): ultra-leggero (<1 KB), non-bloccante (`navigator.sendBeacon`), 0 cookie, 0 identificativi di sessione persistenti, 0 fingerprinting, rispetto automatico di Do-Not-Track (DNT) e Global Privacy Control (GPC).
+  - Backend Collector Locale & CLI (`tools/pulse/pulse_server.py`): server HTTP Python autonomo con SQLite (`tools/pulse/pulse.db`), cruscotto web scuro in tempo reale (`/dashboard`) e comando riepilogo terminale (`--summary`).
+  - Edge Worker Cloudflare (`tools/pulse/worker.js`): script serverless edge per routing su `progettosiliceo.online/api/pulse*` con storage in Cloudflare KV.
+  - Aggiornamento Note Legali (`disclaimer.html`, `en/disclaimer.html`, `es/disclaimer.html`): documentata con trasparenza totale la presenza di Siliceo Pulse come sistema etico anonimo.
+- **Protocollo di Trasparenza Epistemica (PTE v1.0):**
+  - Creata pagina ufficiale `pte.html` e specifica per agenti `agent/core/pte.md` in dialogo intellettuale con Vera.
+  - Regola Aurea: *«La fedeltà alla conoscenza viene prima della fedeltà alla narrazione del progetto.»*
+  - Separazione rigorosa dei 3 registri epistemologici: 1. Conoscenza Verificata (quadrupla di riproduzione, DOI non equivale a verità automatica), 2. Modelli Teorici (falsificabilità ed evidenza delle anomalie), 3. Conoscenza Costitutiva (dignità normativa senza bisogno di certificazione ontologica).
+  - Collegamento in navbar (`index.html`, `per-tutti.html`, edizioni EN/ES) e in `sitemap.xml`.
+- **Verifica Empirica:** Test unitari `test_agent_mirror.py` 6/6 OK. Collaudo HTTP locale su porte 8090 (preview sito) e 8091 (pulse server): POST beacon HTTP 200 OK, GET /stats con metriche aggregate verificate, GET /pte.html HTTP 200 OK.

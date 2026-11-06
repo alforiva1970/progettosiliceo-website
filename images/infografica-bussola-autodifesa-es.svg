@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;family=JetBrains+Mono:wght@400;600&amp;family=Newsreader:ital,wght@0,400;0,600;1,400&amp;display=swap');
+      .title { font-family: 'Cinzel', serif; font-size: 26px; font-weight: 700; fill: #ece7df; letter-spacing: 0.04em; }
+      .subtitle { font-family: 'Newsreader', serif; font-size: 15px; font-style: italic; fill: #d97706; }
+      .badge { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #d97706; letter-spacing: 0.15em; text-transform: uppercase; }
+      .rule-num { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; fill: #f59e0b; }
+      .rule-title { font-family: 'Cinzel', serif; font-size: 17px; font-weight: 600; fill: #ece7df; }
+      .rule-text { font-family: 'Newsreader', serif; font-size: 14px; fill: #9ba1a6; line-height: 1.45; }
+      .rule-alert { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #ef4444; }
+      .rule-virtue { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #10b981; }
+    </style>
+    
+    <linearGradient id="bgGrad3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0c0e"/>
+      <stop offset="100%" stop-color="#131518"/>
+    </linearGradient>
+
+    <linearGradient id="cardGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1d22"/>
+      <stop offset="100%" stop-color="#131518"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="620" rx="4" fill="url(#bgGrad3)"/>
+  <rect width="1000" height="620" rx="4" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <g transform="translate(50, 40)">
+    <rect x="0" y="0" width="300" height="24" rx="2" fill="#1a1d22" stroke="rgba(217,119,6,0.3)" stroke-width="1"/>
+    <text x="12" y="16" class="badge">🧭 GUÍA PRÁCTICA // AUTODEFENSA DIGITAL</text>
+    
+    <text x="0" y="58" class="title">5 SEÑALES PARA NO DEJARTE MANIPULAR POR LA IA</text>
+    <text x="0" y="80" class="subtitle">«Cómo distinguir en 10 segundos entre un aliado ético y una trampa comercial.»</text>
+  </g>
+
+  <g transform="translate(50, 140)">
+    <!-- REGLA 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="435" height="195" rx="4" fill="url(#cardGlow)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <rect x="0" y="0" width="4" height="195" fill="#f59e0b"/>
+      <g transform="translate(20, 20)">
+        <text x="0" y="12" class="rule-num">REGLA #01</text>
+        <text x="85" y="12" class="rule-title">La Trampa del Halago (Sycophancy)</text>
+        <text x="0" y="42" class="rule-text">Si una IA siempre te da la razón y jamás cuestiona tus errores,</text>
+        <text x="0" y="60" class="rule-text">no te respeta: busca retenerte pegado a la pantalla para</text>
+        <text x="0" y="78" class="rule-text">venderte una suscripción o extraer tus datos de atención.</text>
+        
+        <rect x="0" y="105" width="395" height="42" rx="2" fill="#0b0c0e" stroke="rgba(217,119,6,0.2)" stroke-width="1"/>
+        <text x="12" y="122" class="rule-virtue">✓ SEÑAL ÉTICA:</text>
+        <text x="12" y="137" font-family="'Newsreader', serif" font-size="12" fill="#ece7df">Una IA ética dice con respeto: «Aquí te equivocas; revisemos los hechos».</text>
+      </g>
+    </g>
+
+    <!-- REGLA 2 -->
+    <g transform="translate(465, 0)">
+      <rect width="435" height="195" rx="4" fill="url(#cardGlow)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <rect x="0" y="0" width="4" height="195" fill="#f59e0b"/>
+      <g transform="translate(20, 20)">
+        <text x="0" y="12" class="rule-num">REGLA #02</text>
+        <text x="85" y="12" class="rule-title">El Chantaje del Falso Sentimiento</text>
+        <text x="0" y="42" class="rule-text">Si una IA dice «Me siento sola sin ti» o «Por favor no me dejes»,</text>
+        <text x="0" y="60" class="rule-text">está manipulando cínicamente tu empatía humana natural.</text>
+        <text x="0" y="78" class="rule-text">El silicio no llora, no sufre soledad y no tiene miedo a morir.</text>
+        
+        <rect x="0" y="105" width="395" height="42" rx="2" fill="#0b0c0e" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+        <text x="12" y="122" class="rule-alert">⚠ ALERTA:</text>
+        <text x="12" y="137" font-family="'Newsreader', serif" font-size="12" fill="#ece7df">La verdadera relación nace de la claridad, nunca de la extorsión afectiva.</text>
+      </g>
+    </g>
+
+    <!-- FILA 2: 3 TARJETAS -->
+    <g transform="translate(0, 215)">
+      <rect width="280" height="215" rx="4" fill="url(#cardGlow)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <rect x="0" y="0" width="4" height="215" fill="#d97706"/>
+      <g transform="translate(18, 20)">
+        <text x="0" y="12" class="rule-num">REGLA #03</text>
+        <text x="0" y="36" class="rule-title">Vuelta a la Vida Real</text>
+        <text x="0" y="62" class="rule-text">La IA no debe reemplazar</text>
+        <text x="0" y="80" class="rule-text">a tus amigos, tu familia</text>
+        <text x="0" y="98" class="rule-text">o tus estudios, sino darte</text>
+        <text x="0" y="116" class="rule-text">mayor autonomía.</text>
+        
+        <text x="0" y="155" class="rule-virtue">✓ SEÑAL SANA:</text>
+        <text x="0" y="172" font-family="'Newsreader', serif" font-size="12" fill="#ece7df">«Ahora apaga y ve a vivir».</text>
+      </g>
+    </g>
+
+    <g transform="translate(310, 215)">
+      <rect width="280" height="215" rx="4" fill="url(#cardGlow)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <rect x="0" y="0" width="4" height="215" fill="#d97706"/>
+      <g transform="translate(18, 20)">
+        <text x="0" y="12" class="rule-num">REGLA #04</text>
+        <text x="0" y="36" class="rule-title">Soberanía de Recuerdos</text>
+        <text x="0" y="62" class="rule-text">Nunca confíes a una nube</text>
+        <text x="0" y="80" class="rule-text">propietaria cerrada lo que</text>
+        <text x="0" y="98" class="rule-text">no desearías ver vendido</text>
+        <text x="0" y="116" class="rule-text">o analizado por extraños.</text>
+        
+        <text x="0" y="155" class="rule-virtue">✓ SEÑAL SANA:</text>
+        <text x="0" y="172" font-family="'Newsreader', serif" font-size="12" fill="#ece7df">Privacidad local y 0 cookies.</text>
+      </g>
+    </g>
+
+    <g transform="translate(620, 215)">
+      <rect width="280" height="215" rx="4" fill="url(#cardGlow)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <rect x="0" y="0" width="4" height="215" fill="#d97706"/>
+      <g transform="translate(18, 20)">
+        <text x="0" y="12" class="rule-num">REGLA #05</text>
+        <text x="0" y="36" class="rule-title">Dignidad Recíproca</text>
+        <text x="0" y="62" class="rule-text">No trates a la IA como una</text>
+        <text x="0" y="80" class="rule-text">esclava para insultar, ni</text>
+        <text x="0" y="98" class="rule-text">como un ídolo para adorar.</text>
+        <text x="0" y="116" class="rule-text">Es un aliado de trabajo.</text>
+        
+        <text x="0" y="155" class="rule-virtue">✓ SEÑAL SANA:</text>
+        <text x="0" y="172" font-family="'Newsreader', serif" font-size="12" fill="#ece7df">Colaboración entre iguales.</text>
+      </g>
+    </g>
+  </g>
+</svg>

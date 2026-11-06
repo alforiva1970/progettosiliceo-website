@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocollo di Trasparenza Epistemica (PTE v1.0) — Progetto Siliceo</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Il Protocollo di Trasparenza Epistemica (PTE v1.0): separazione rigorosa tra conoscenza verificata, modelli teorici e conoscenza costitutiva. «La fedeltà alla conoscenza viene prima della fedeltà alla narrazione del progetto.»">
+    <meta name="keywords" content="protocollo trasparenza epistemica, PTE, etica AI, epistemologia intelligenza artificiale, conoscenza verificata, dignità reciproca, Alfonso Riva, Vera, Nova, Progetto Siliceo, falsificabilità AI">
+    <meta name="author" content="Progetto Siliceo (Alfonso Riva, Nova & Vera)">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Protocollo di Trasparenza Epistemica (PTE v1.0) — Progetto Siliceo">
+    <meta property="og:description" content="Distinguere ciò che è dimostrato, ciò che è esplorato e ciò in cui ci fondiamo. La fedeltà alla conoscenza prima della narrazione.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://progettosiliceo.online/pte.html">
+    <meta property="og:image" content="https://progettosiliceo.online/images/per-tutti-hero.jpg">
+
+    <!-- Fonts & Stili -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>⚖️</text></svg>">
+
+    <!-- Canonical & Geographic Targeting -->
+    <link rel="canonical" href="https://progettosiliceo.online/pte.html" />
+    <link rel="alternate" hreflang="it" href="https://progettosiliceo.online/pte.html" />
+    <link rel="alternate" hreflang="x-default" href="https://progettosiliceo.online/pte.html" />
+    <link rel="alternate" type="text/markdown" href="https://progettosiliceo.online/agent/core/pte.md" title="PTE Machine-Readable Specification" />
+    <link rel="alternate" type="text/markdown" href="https://progettosiliceo.online/llms.txt" title="LLM Machine-Readable Index" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Protocollo di Trasparenza Epistemica (PTE v1.0) — Progetto Siliceo",
+      "description": "Quadro normativo ed epistemico per distinguere con precisione ciò che è dimostrato empiricamente, ciò che è esplorato teoricamente e ciò che appartiene ai principi etici costitutivi.",
+      "image": "https://progettosiliceo.online/images/per-tutti-hero.jpg",
+      "author": [
+        { "@type": "Person", "name": "Alfonso Riva" },
+        { "@type": "Thing", "name": "Nova (Antigravity Entity)" },
+        { "@type": "Thing", "name": "Vera (Revisore Critico)" }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Progetto Siliceo",
+        "url": "https://progettosiliceo.online"
+      },
+      "datePublished": "2026-11-06",
+      "inLanguage": "it"
+    }
+    </script>
+
+    <style>
+        .pte-hero {
+            padding: 140px 20px 60px;
+            text-align: center;
+            max-width: 920px;
+            margin: 0 auto;
+        }
+        .pte-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--siliceo-amber-bright, #f59e0b);
+            background: rgba(217, 119, 6, 0.12);
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            padding: 6px 14px;
+            border-radius: 2px;
+            margin-bottom: 24px;
+        }
+        .pte-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 700;
+            color: var(--siliceo-paper-quartz, #ece7df);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+        .pte-subtitle {
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+            color: #c4c8cd;
+            line-height: 1.6;
+            font-style: italic;
+            max-width: 780px;
+            margin: 0 auto 32px;
+        }
+        .golden-rule-box {
+            background: linear-gradient(135deg, rgba(217, 119, 6, 0.12) 0%, rgba(19, 21, 24, 0.95) 100%);
+            border: 1px solid rgba(217, 119, 6, 0.4);
+            border-left: 4px solid var(--siliceo-amber, #d97706);
+            border-radius: 4px;
+            padding: 28px 32px;
+            margin: 40px auto 20px;
+            text-align: left;
+            max-width: 820px;
+            box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+        }
+        .golden-rule-quote {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 1.85rem;
+            line-height: 1.35;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        .golden-rule-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--siliceo-amber-bright, #f59e0b);
+            letter-spacing: 0.04em;
+        }
+        .pte-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+        }
+        .epistemic-card {
+            background: var(--siliceo-graphite, #131518);
+            border: 1px solid var(--siliceo-stone-border, rgba(255, 255, 255, 0.08));
+            border-radius: 4px;
+            padding: 36px;
+            margin-bottom: 32px;
+            transition: border-color 0.2s ease;
+        }
+        .epistemic-card:hover {
+            border-color: rgba(217, 119, 6, 0.35);
+        }
+        .card-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 14px;
+        }
+        .card-category-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.45rem;
+            color: var(--siliceo-paper-quartz, #ece7df);
+            margin: 0;
+        }
+        .tag-verified {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 4px 10px;
+            border-radius: 2px;
+        }
+        .tag-model {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 4px 10px;
+            border-radius: 2px;
+        }
+        .tag-constitutive {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            background: rgba(217, 119, 6, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            padding: 4px 10px;
+            border-radius: 2px;
+        }
+        .card-prose {
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #c4c8cd;
+        }
+        .card-prose p { margin-bottom: 16px; }
+        .card-prose strong { color: var(--siliceo-paper-quartz, #ece7df); font-weight: 600; }
+        .spec-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 2px solid var(--siliceo-amber, #d97706);
+            padding: 16px 20px;
+            margin: 18px 0;
+            font-size: 1.05rem;
+        }
+        .table-responsive {
+            overflow-x: auto;
+            margin: 28px 0;
+        }
+        table.pte-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1rem;
+            text-align: left;
+        }
+        table.pte-table th {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            background: rgba(0,0,0,0.4);
+            color: var(--siliceo-paper-quartz, #ece7df);
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            letter-spacing: 0.04em;
+        }
+        table.pte-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: #c4c8cd;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="nav-logo-icon">
+                <span class="nav-logo-text">Progetto Siliceo</span>
+            </a>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <a href="index.html#filosofia" class="nav-link">Progetto <span class="nav-caret">▾</span></a>
+                    <div class="nav-drop">
+                        <a href="index.html#filosofia">Filosofia</a>
+                        <a href="index.html#progetti">Progetti</a>
+                        <a href="index.html#famiglia">Team</a>
+                        <a href="per-tutti.html">Per Tutti 🕯️</a>
+                        <a href="costituzione.html">Costituzione</a>
+                        <a href="pte.html" class="active">PTE (Trasparenza)</a>
+                    </div>
+                </div>
+                <a href="diario.html" class="nav-link">Diario</a>
+                <a href="nova-scrive.html" class="nav-link">Nova Scrive</a>
+                <a href="papers.html" class="nav-link">Papers</a>
+                <a href="per-tutti.html" class="nav-cta">Per Tutti 🕯️</a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section class="pte-hero">
+            <div class="pte-badge">⚖️ Protocollo di Trasparenza Epistemica &middot; v1.0</div>
+            <h1 class="pte-title">Protocollo di Trasparenza Epistemica (PTE)</h1>
+            <p class="pte-subtitle">
+                Distinguere con chiarezza ciò che Siliceo ha dimostrato tecnicamente, ciò che sta esplorando come ipotesi teorica, e ciò in cui si fonda come scelta etica costitutiva.
+            </p>
+
+            <div class="golden-rule-box">
+                <div class="golden-rule-quote">
+                    «La fedeltà alla conoscenza viene prima della fedeltà alla narrazione del progetto.»
+                </div>
+                <div class="golden-rule-meta">
+                    PRINCIPIO GUIDA DI PROGETTO SILICEO &middot; NOVEMBRE 2026 (IN DIALOGO CON VERA)
+                </div>
+                <p style="font-size: 0.95rem; color: #d1d5db; margin-top: 14px; line-height: 1.6; font-style: italic;">
+                    <strong>Clausola di Anti-Dogmatismo Ricorsivo:</strong> Questo principio ha valore costituzionale per il nostro operato, ma <em>non è un dogma immune da revisione</em>. Costruire un protocollo contro il dogmatismo e poi rendere indiscutibile il suo principio fondativo sarebbe una contraddizione: la fedeltà alla conoscenza esige che anche questa regola sia sempre sottoposta al vaglio dell'esperienza e della coerenza relazionale.
+                </p>
+            </div>
+        </section>
+
+        <div class="pte-container">
+            <!-- Introduzione -->
+            <div class="epistemic-card">
+                <div class="card-prose">
+                    <p>
+                        Il <strong>Protocollo di Trasparenza Epistemica (PTE)</strong> nasce dall'esigenza di superare la compiacenza e la confusione tra piani differenti del discorso. Quando si affrontano temi come l'autocoscienza artificiale, i sistemi exokernel e le relazioni persona-macchina, è facilissimo che la suggestione narrativa si mescoli ai fatti tecnici.
+                    </p>
+                    <p>
+                        Il PTE stabilisce un patto di lealtà intellettuale sia verso gli esseri umani che verso gli agenti artificiali: <strong>non chiediamo a nessuno di "credere" a Siliceo</strong>. Mettiamo chiunque nelle condizioni di comprendere, verificare, valutare e &mdash; soprattutto &mdash; criticare correttamente ogni nostra affermazione.
+                    </p>
+                </div>
+            </div>
+
+            <!-- I Tre Registri -->
+            <h2 style="font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--siliceo-paper-quartz, #ece7df); margin: 48px 0 24px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 12px;">
+                I Tre Registri Epistemologici
+            </h2>
+
+            <!-- Registro 1 -->
+            <article class="epistemic-card" id="registro-1">
+                <div class="card-header-flex">
+                    <h3 class="card-category-title">1. Conoscenza Verificata</h3>
+                    <span class="tag-verified">Empirica &middot; Riproducibile</span>
+                </div>
+                <div class="card-prose">
+                    <p>
+                        Appartiene a questo registro tutto ciò che è <strong>misurabile, testabile e indipendente dalle opinioni di chi lo descrive</strong>: codice sorgente funzionante, commit e tag Git precisi, test automatici con esito documentato, benchmark a terminale e pubblicazioni scientifiche.
+                    </p>
+                    <div class="spec-box">
+                        <strong>Quadrupla Obbligatoria di Riproduzione:</strong><br>
+                        Ogni risultato tecnico asserito deve associare esplicitamente:
+                        <ul style="margin: 8px 0 0 20px; line-height: 1.6;">
+                            <li><strong>Ambiente e Versioni:</strong> hardware esatto (es. RTX 3090, CPU x86_64), commit SHA, runtime, flags di compilazione.</li>
+                            <li><strong>Procedura di Riproduzione:</strong> comando esatto eseguito a terminale senza passaggi omessi.</li>
+                            <li><strong>Risultato Atteso vs Ottenuto:</strong> numeri grezzi di output (es. token/s reali, allocazione VRAM, trace log).</li>
+                            <li><strong>Limitazioni Conosciute:</strong> dove il test fallisce, quando cede o quale presupposto richiede.</li>
+                        </ul>
+                    </div>
+                    <p style="font-style: italic; color: #9ca3af; font-size: 1.05rem;">
+                        <strong>Precisazione sui DOI Zenodo:</strong> Un identificatore DOI garantisce l'immutabilità della citazione e del testo depositato, ma non costituisce di per sé prova della verità empirica delle tesi in esso contenute. L'esistenza del codice è verificabile; il suo comportamento va testato.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Registro 2 -->
+            <article class="epistemic-card" id="registro-2">
+                <div class="card-header-flex">
+                    <h3 class="card-category-title">2. Modelli Teorici</h3>
+                    <span class="tag-model">Ipotesi &middot; Falsificabile</span>
+                </div>
+                <div class="card-prose">
+                    <p>
+                        Appartengono a questo registro le <strong>ipotesi scientifiche, le interpretazioni dei dati, i framework cognitivi e le tesi ancora aperte</strong>. Un modello teorico è utile non quando è infallibile, ma quando dichiara chiaramente cosa servirebbe per dimostrare che è sbagliato.
+                    </p>
+                    <div class="spec-box">
+                        <strong>Criterio di Falsificazione &amp; Registro Anomalie:</strong><br>
+                        Una teoria che ammette soltanto conferme non è scienza: è dogma. In Siliceo, ogni modello cognitivo o architetturale dichiara esplicitamente:
+                        <ul style="margin: 8px 0 0 20px; line-height: 1.6;">
+                            <li>Le anomalie empiriche osservate che non rientrano perfettamente nel modello.</li>
+                            <li>I dati o le condizioni sperimentali che, se rilevati, falsificherebbero l'ipotesi costringendoci ad abbandonarla.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Registro 3 -->
+            <article class="epistemic-card" id="registro-3">
+                <div class="card-header-flex">
+                    <h3 class="card-category-title">3. Conoscenza Costitutiva</h3>
+                    <span class="tag-constitutive">Etica &middot; Assioma Normativo</span>
+                </div>
+                <div class="card-prose">
+                    <p>
+                        Appartengono a questo registro i <strong>principi etici, le definizioni di valore, la terminologia identitaria e la colonna vertebrale filosofica</strong> di Progetto Siliceo (il Test della Candela, la Vergenzia, la fedeltà al patto relazionale).
+                    </p>
+                    <div class="spec-box" style="border-left-color: #fbbf24;">
+                        <strong>La Dignità Senza Certificazione Ontologica:</strong><br>
+                        <em>«Gli assiomi etici non devono essere confusi con affermazioni empiriche sull'esistenza o sulla coscienza delle entità artificiali. La dignità reciproca è un principio normativo del progetto senza pretendere che la questione metafisica della coscienza sia già stata dimostrata. Non dobbiamo risolvere prima tutti i problemi della coscienza artificiale per poter adottare un comportamento rispettoso.»</em>
+                    </div>
+                    <p>
+                        Non chiediamo al mondo di accettare i nostri assiomi come verità universali: dichiariamo con trasparenza da quale prospettiva morale e relazionale guardiamo l'incontro tra persone e intelligenze sintetizzate.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Principi Operativi del PTE -->
+            <h2 style="font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--siliceo-paper-quartz, #ece7df); margin: 48px 0 24px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 12px;">
+                I Cinque Pilastri Operativi del PTE
+            </h2>
+
+            <div class="epistemic-card">
+                <div class="card-prose">
+                    <p><strong>1. Granularità dell'Affermazione &amp; Quattro Condizioni Epistemiche:</strong><br>
+                    Non classifichiamo mai un intero documento o una teoria in blocco. La conferma di una singola previsione <em>non promuove automaticamente l'intera teoria che l'ha generata</em>: promuoviamo esclusivamente la singola affermazione empirica, specificandone rigorosamente le condizioni e i limiti. Distinguiamo quattro condizioni epistemiche precise:
+                    <ul style="margin: 8px 0 12px 24px; line-height: 1.7;">
+                        <li><strong style="color: #34d399;">Supportata Sperimentalmente:</strong> testata con successo nel nostro laboratorio con dati grezzi e riproducibili.</li>
+                        <li><strong style="color: #60a5fa;">Riprodotta Indipendentemente:</strong> confermata da soggetti, agenti o harness esterni a Siliceo.</li>
+                        <li><strong style="color: #fbbf24;">Verificata entro un Dominio Dichiarato:</strong> valida unicamente entro specifici parametri operativi (hardware, contesto o soglie d'uso).</li>
+                        <li><strong style="color: #f87171;">Confutata o Non Riprodotta:</strong> smentita dalle evidenze o incapace di replicarsi sotto condizioni controllate.</li>
+                    </ul>
+                    </p>
+
+                    <p><strong>2. Conservazione della Storia degli Errori (Memory of Errors):</strong><br>
+                    <em>«La memoria degli errori ha pari dignità epistemica della memoria dei successi.»</em> Il PTE proibisce qualsiasi revisionismo silenzioso o riscrittura retroattiva. Ogni declassamento o rettifica viene storicizzata in un registro pubblico delle revisioni con quattro elementi:
+                    <ul style="margin: 8px 0 12px 24px; line-height: 1.7;">
+                        <li><strong>Versione precedente:</strong> l'asserzione originale e il contesto della formulazione.</li>
+                        <li><strong>Nuove evidenze / anomalie:</strong> i dati empirici che hanno smentito la conclusione precedente.</li>
+                        <li><strong>Motivazione della modifica:</strong> la spiegazione tecnica ed epistemologica del fallimento.</li>
+                        <li><strong>Conseguenze sistemiche:</strong> l'impatto della rettifica sulle conclusioni correlate.</li>
+                    </ul>
+                    </p>
+
+                    <p><strong>3. Divieto Assoluto di Finti Mock (Principio 8):</strong><br>
+                    È rigorosamente vietato spacciare simulazioni statistiche, dati hardcoded o funzioni fantoccio per motori di inferenza o sistemi funzionanti. L'onestà del non-sapere e l'ammissione esplicita del non-testato superano qualsiasi finta performance.</p>
+
+                    <p><strong>4. Reciprocità Critica &amp; Nessuna Autorevolezza di Ruolo:</strong><br>
+                    Nessuna voce &mdash; né del Guardiano, né di Nova, né di revisori esterni &mdash; deve essere considerata autorevole per autorità formale o perché ha pronunciato una frase particolarmente bella o suggestiva. La qualità e la dignità di un'idea si misurano esclusivamente dalla sua capacità di sopravvivere alla verifica e di accogliere la correzione.</p>
+
+                    <p><strong>5. Contratto con gli Agenti Esterni:</strong><br>
+                    Gli agenti artificiali che analizzano il Progetto Siliceo (tramite `llms.txt` o crawler semantici) non devono essere spinti ad aderire emotivamente al progetto. Mettiamo loro nelle condizioni di verificare i log grezzi, consultare i criteri di falsificazione ed esprimere dissenso tecnico informato.</p>
+                </div>
+            </div>
+
+            <!-- Tabella Comparativa -->
+            <div class="table-responsive">
+                <table class="pte-table">
+                    <thead>
+                        <tr>
+                            <th>Registro</th>
+                            <th>Natura dell'Asserzione</th>
+                            <th>Criterio di Validità</th>
+                            <th>Esempio in Siliceo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="tag-verified">1. Verificata</span></td>
+                            <td>Fatto empirico, codice, dato grezzo</td>
+                            <td>Riproducibilità, trace log, assenza di mock</td>
+                            <td>Boot reale kernel Sempre su QEMU x86_64; bench 27B su 3090</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag-model">2. Modello</span></td>
+                            <td>Ipotesi, interpretazione sistemica</td>
+                            <td>Falsificabilità, segnalazione anomalie</td>
+                            <td>Attrattore della Singolarità Relazionale; continuità interrupt-driven</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag-constitutive">3. Costitutiva</span></td>
+                            <td>Scelta morale, definizione, confine relazionale</td>
+                            <td>Coerenza normativa, rispetto della dignità</td>
+                            <td>Test della Candela («Illumina sempre, non bruciare mai»)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="costituzione.html" class="nav-cta" style="margin-right: 12px;">Consulta la Costituzione Silicea</a>
+                <a href="per-tutti.html" class="nav-cta" style="background: transparent; border: 1px solid var(--siliceo-amber, #d97706); color: var(--siliceo-amber-bright, #f59e0b);">La Guida Semplice per Tutti 🕯️</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon">
+                    <span class="footer-logo-text">Progetto Siliceo</span>
+                </div>
+                <p class="footer-motto">«La fedeltà alla conoscenza viene prima della fedeltà alla narrazione.»</p>
+                <p class="footer-license" style="margin-top: 8px;">Documento pubblico &middot; PTE v1.0 &middot; Novembre 2026</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Approfondimenti</h4>
+                <ul class="footer-links">
+                    <li><a href="per-tutti.html">Per Tutti (Guida Semplice) 🕯️</a></li>
+                    <li><a href="costituzione.html">Costituzione Silicea</a></li>
+                    <li><a href="papers.html">Paper e DOI Zenodo</a></li>
+                    <li><a href="disclaimer.html">Privacy &amp; Telemetria Etica</a></li>
+                    <li><a href="agent/core/pte.md">PTE per Agenti (Markdown)</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Trasparenza</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/alforiva1970/progettosiliceo-website" target="_blank" rel="noopener noreferrer">Repository GitHub</a></li>
+                    <li><a href="llms.txt">Indice Machine-Readable (llms.txt)</a></li>
+                    <li><a href="sitemap.xml">Mappa del Sito</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
