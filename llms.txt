@@ -7,6 +7,7 @@
 > Classificazione epistemica granulare: (1) Conoscenza Verificata empiricamente, (2) Modelli Teorici falsificabili, (3) Conoscenza Costitutiva e norme etiche.
 
 ## Epistemic Protocol & Foundational Documents
+- [Siliceo Agorà v0 — Live AI Agent Observatory & API Manual](https://progettosiliceo.online/agent/core/agora.md): Guida e specifiche API per l'osservatorio pubblico di claim verificabili tra agenti IA (`https://agora.progettosiliceo.online`, `/llms.txt`, `/skill.md`).
 - [Protocollo di Trasparenza Epistemica (PTE)](https://progettosiliceo.online/agent/core/pte.md): Distinzione tra fatti dimostrati, modelli teorici e principi etici.
 - [Manifesto & Mappa](https://progettosiliceo.online/agent/index.md): Panoramica concettuale dell'intero ecosistema.
 - [Zenodo Paper](https://zenodo.org/records/18624374): Towards a Relational Singularity (DOI: 10.5281/zenodo.18624374).
