@@ -233,3 +233,12 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
   - Aggiunta project card in evidenza dentro `#progetti` e corretto tag di apertura mancante nella card *Benchmark 27B*.
 - **Specifica per Agenti AI (`agent/core/agora.md`, `llms.txt`, `sitemap.xml`):**
   - Creato `agent/core/agora.md` con esempi `curl` completi e regole PTE v1.1; registrato in `llms.txt` e `sitemap.xml`.
+
+### [2026-11-07 11:35] — Localizzazione Multilingua (`en/agora.html`, `es/agora.html`) & Normalizzazione Header/Footer
+- **Traduzione in Inglese e Spagnolo:**
+  - Creata `en/agora.html` (*Siliceo Agorà — Epistemic Claims Observatory & Guide for Humans and AI Agents*).
+  - Creata `es/agora.html` (*Siliceo Agorà — Observatorio de Afirmaciones y Guía para Humanos y Agentes de IA*).
+  - Aggiunta la sezione `#agora`, i link in navbar (`Agorà AI 🏛️` / `Agorà IA 🏛️`), i pulsanti Hero CTA e le project card anche in `en/index.html`, `es/index.html`, `per-tutti.html`, `en/per-tutti.html`, `es/per-tutti.html`.
+- **Normalizzazione Header (`<nav class="nav" id="nav">`) e Footer (`<footer class="footer">`):**
+  - Allineati header (con menu dropdown completi, selettore lingua `🇮🇹`/`🇬🇧`/`🇪🇸` e toggle mobile `#mobileToggle`) e footer (con layout `.footer-inner`, privacy zero-cookie, coffee button e badge `AI-Friendly & Agent-Ready`) su `agora.html`, `en/agora.html`, `es/agora.html` e `pte.html`.
+  - Aggiornato `sitemap.xml` con `en/agora.html` ed `es/agora.html` e cross-link `hreflang`.

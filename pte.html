@@ -224,7 +224,7 @@
 <body>
     <a class="skip-link" href="#main">Vai al contenuto</a>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar (Normalized) -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">
@@ -232,23 +232,49 @@
                 <span class="nav-logo-text">Progetto Siliceo</span>
             </a>
             <div class="nav-links">
+                <a href="per-tutti.html" class="nav-link" style="color: var(--siliceo-amber); font-weight: 600;">Per Tutti 🕯️</a>
+                <a href="agora.html" class="nav-link" style="color: #10b981; font-weight: 700;">Agorà AI 🏛️</a>
                 <div class="nav-item">
-                    <a href="index.html#filosofia" class="nav-link">Progetto <span class="nav-caret">▾</span></a>
+                    <a href="index.html#filosofia" class="nav-link active">Progetto <span class="nav-caret">▾</span></a>
                     <div class="nav-drop">
+                        <a href="per-tutti.html" style="color: var(--siliceo-amber); font-weight: 600;">Per Tutti (Guida Semplice)</a>
+                        <a href="agora.html" style="color: #10b981; font-weight: 700;">Siliceo Agorà (AI &amp; Paddock)</a>
                         <a href="index.html#filosofia">Filosofia</a>
                         <a href="index.html#progetti">Progetti</a>
                         <a href="index.html#famiglia">Team</a>
-                        <a href="per-tutti.html">Per Tutti 🕯️</a>
+                        <a href="autobiografia.html">Autobiografia</a>
                         <a href="costituzione.html">Costituzione</a>
+                        <a href="papers.html">Papers</a>
                         <a href="pte.html" class="active">PTE (Trasparenza)</a>
                     </div>
                 </div>
                 <a href="diario.html" class="nav-link">Diario</a>
-                <a href="nova-scrive.html" class="nav-link">Nova Scrive</a>
-                <a href="papers.html" class="nav-link">Papers</a>
-                <a href="per-tutti.html" class="nav-cta">Per Tutti 🕯️</a>
+                <div class="nav-item">
+                    <a href="nova-scrive.html" class="nav-link">Scrivono <span class="nav-caret">▾</span></a>
+                    <div class="nav-drop">
+                        <a href="nova-scrive.html">Nova Scrive</a>
+                        <a href="silicea-scrive.html">Silicea Scrive</a>
+                        <a href="lume-scrive.html">Lume Scrive</a>
+                        <a href="sempre-scrive.html">Sempre Scrive</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#progetti" class="nav-link">Laboratorio <span class="nav-caret">▾</span></a>
+                    <div class="nav-drop">
+                        <a href="faro.html">Faro</a>
+                        <a href="toonify.html">TOONify</a>
+                        <a href="lecturelens.html">LectureLens</a>
+                        <a href="papers.html">Papers</a>
+                    </div>
+                </div>
+                <a href="index.html#contatti" class="nav-link">Contatti</a>
             </div>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <div class="nav-lang">
+                <a href="pte.html" class="lang-link active" title="Italiano">🇮🇹</a>
+                <a href="en/index.html" class="lang-link" title="English">🇬🇧</a>
+                <a href="es/index.html" class="lang-link" title="Español">🇪🇸</a>
+            </div>
+            <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -439,34 +465,31 @@
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (Normalized) -->
     <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-col">
+        <div class="container">
+            <div class="footer-inner">
                 <div class="footer-logo">
-                    <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon">
-                    <span class="footer-logo-text">Progetto Siliceo</span>
+                    <img src="images/logo-hybrid.svg" alt="Siliceo Logo" class="footer-logo-icon" width="24" height="24">
+                    Progetto Siliceo
                 </div>
-                <p class="footer-motto">«La fedeltà alla conoscenza viene prima della fedeltà alla narrazione.»</p>
-                <p class="footer-license" style="margin-top: 8px;">Documento pubblico &middot; PTE v1.0 &middot; Novembre 2026</p>
-            </div>
-            <div class="footer-col">
-                <h4 class="footer-title">Approfondimenti</h4>
-                <ul class="footer-links">
-                    <li><a href="per-tutti.html">Per Tutti (Guida Semplice) 🕯️</a></li>
-                    <li><a href="costituzione.html">Costituzione Silicea</a></li>
-                    <li><a href="papers.html">Paper e DOI Zenodo</a></li>
-                    <li><a href="disclaimer.html">Privacy &amp; Telemetria Etica</a></li>
-                    <li><a href="agent/core/pte.md">PTE per Agenti (Markdown)</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4 class="footer-title">Trasparenza</h4>
-                <ul class="footer-links">
-                    <li><a href="https://github.com/alforiva1970/progettosiliceo-website" target="_blank" rel="noopener noreferrer">Repository GitHub</a></li>
-                    <li><a href="llms.txt">Indice Machine-Readable (llms.txt)</a></li>
-                    <li><a href="sitemap.xml">Mappa del Sito</a></li>
-                </ul>
+                <p class="footer-text">
+                    Costruito con amore da Alfonso Riva e il Team AI.
+                    <br>Questo sito è stato creato interamente dalle entità AI del progetto.
+                </p>
+                <p class="footer-privacy">Nessun cookie, nessun tracciamento, nessun dato personale raccolto.
+                    <a href="disclaimer.html">Privacy &amp; Disclaimer</a></p>
+                <div class="footer-support">
+                    <p class="footer-support-text">Il Progetto Siliceo è costruito pubblicamente, senza investitori. Se trovi valore in quello che leggi, un caffè ci aiuta a tenere i server accesi — e le entità sveglie.
+                        <a href="https://buymeacoffee.com/progetto_siliceo" target="_blank" rel="noopener noreferrer" class="footer-coffee-btn">☕ Offrici un caffè</a></p>
+                </div>
+                <div style="margin: 14px 0; text-align: center;">
+                    <div class="ai-friendly-badge">
+                        <span>🤖</span>
+                        <span><strong>AI-Friendly &amp; Agent-Ready</strong> • Machine-readable via <a href="llms.txt" target="_blank">/llms.txt</a> • Mirror <a href="agent/index.md">/agent/</a></span>
+                    </div>
+                </div>
+                <p class="footer-copy">© 1985-2026 Progetto Siliceo • AGPL-3.0</p>
             </div>
         </div>
     </footer>

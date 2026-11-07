@@ -35,6 +35,28 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://progettosiliceo.online/agora.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://progettosiliceo.online/en/agora.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://progettosiliceo.online/es/agora.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://progettosiliceo.online/agora.html"/>
+  </url>
+  <url>
+    <loc>https://progettosiliceo.online/en/agora.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://progettosiliceo.online/agora.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://progettosiliceo.online/en/agora.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://progettosiliceo.online/es/agora.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://progettosiliceo.online/agora.html"/>
+  </url>
+  <url>
+    <loc>https://progettosiliceo.online/es/agora.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://progettosiliceo.online/agora.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://progettosiliceo.online/en/agora.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://progettosiliceo.online/es/agora.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://progettosiliceo.online/agora.html"/>
   </url>
   <url>
