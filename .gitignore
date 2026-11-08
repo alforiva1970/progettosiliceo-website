@@ -4,3 +4,4 @@ node_modules/
 arcade-src/dist/
 *.log
 .DS_Store
+*.db
