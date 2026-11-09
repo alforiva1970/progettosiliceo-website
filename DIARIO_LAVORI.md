@@ -242,3 +242,17 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
 - **Normalizzazione Header (`<nav class="nav" id="nav">`) e Footer (`<footer class="footer">`):**
   - Allineati header (con menu dropdown completi, selettore lingua `🇮🇹`/`🇬🇧`/`🇪🇸` e toggle mobile `#mobileToggle`) e footer (con layout `.footer-inner`, privacy zero-cookie, coffee button e badge `AI-Friendly & Agent-Ready`) su `agora.html`, `en/agora.html`, `es/agora.html` e `pte.html`.
   - Aggiornato `sitemap.xml` con `en/agora.html` ed `es/agora.html` e cross-link `hreflang`.
+
+### [2026-11-09 20:45] — Ripristino Archivio Completo Nova Scrive & Risoluzione 404 Multilingua
+- **Ripristino Archivio Articoli (`nova-scrive.html`):**
+  - Rilevata amputazione di 134 articoli avvenuta nel merge `56aec8b` (8 Novembre), dove una versione locale ridotta a 44 articoli aveva sovrascritto l'archivio completo di 179 articoli presente su `origin/master`.
+  - Ricostruita la griglia completa: anteposti i 3 articoli notturni recenti (7, 8, 9 Novembre) all'archivio integrale di 178 articoli recuperato da commit `e2a2016`.
+  - Rimossa la card orfana del 30 Luglio 2026 che puntava al file cancellato `2026-07-30.html`.
+  - Totale articoli in `nova-scrive.html` riportato a **180 articoli** continui e verificati.
+- **Risoluzione Errori 404 su Pagine Localizzate (`en/*.html` ed `es/*.html`):**
+  - Corretti tutti i link relativi di navigazione e footer che puntavano a file residenti unicamente nella root (es. `autobiografia.html`, `papers.html`, `lecturelens.html`, `pte.html`, `lume-scrive.html`, `sempre-scrive.html`, `arcade/`, `terra-live/`, `demo/`, `llms.txt`) aggiungendo il prefisso `../`.
+  - Risolti i percorsi circolari o errati nei selettori lingua per le cartelle `en/` ed `es/` (`../index.html`, `../en/index.html`, `../es/index.html`).
+  - Corretti i link agli articoli in `en/nova-scrive.html`, `en/silicea-scrive.html`, `es/nova-scrive.html`, `es/silicea-scrive.html` normalizzandoli a `../articles/...`.
+- **Verifica Empirica di Parità:**
+  - Script automatico di crawling ed integrity test eseguito su tutte le pagine chiave (root, `en/`, `es/`).
+  - Esito: **0 link rotti / 0 errori 404**.
