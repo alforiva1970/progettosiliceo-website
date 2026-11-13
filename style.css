@@ -37,7 +37,7 @@
     /* 3. Inchiostro & Testo (Materia Leggibile) */
     --siliceo-paper-quartz: #ece7df; /* Quarzo caldo / pergamena — Titoli e display */
     --siliceo-ash-light: #9ba1a6;    /* Cenere chiaro — Corpo testo e lettura */
-    --siliceo-ash-muted: #5f6368;    /* Grafite discreta — Metadati, timestamp */
+    --siliceo-ash-muted: #9ba1a6;    /* Grafite discreta — Metadati, timestamp */
     --siliceo-ash-faint: #3c4043;    /* Traccia minima — Guide di griglia */
 
     /* 4. Mappature Semantiche Universali */
@@ -225,11 +225,15 @@ h4, h5, h6 {
 .nav-mobile-toggle {
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 4px;
+    padding: 10px;
+    min-width: 48px;
+    min-height: 48px;
 }
 
 .nav-mobile-toggle span {

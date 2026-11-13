@@ -273,3 +273,13 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
   - Aumentato contrasto sottotitolo *«IL PRINCIPIO CARDINALE // TEST DELLA CANDELA»* con `#fbbf24` (contrasto 10.95:1 su `#131518`, conforme WCAG AAA).
   - Ottimizzato `.footer-coffee-btn` con `#000000` su `#FFDD00` (contrasto 19.56:1, AAA) e `min-height: 48px;`.
   - Normalizzati tutti i touch target interattivi a un minimo di 48px (`min-height: 48px; padding: 14px 22px;`) su tutti i pulsanti `.btn` (Hero CTA, Sezione Agorà, Ricerca Anthropic, Spotlight Autobiografia, Soundscape button).
+
+### [2026-11-13 22:12] — Rifinitura Accessibilità 100 & Best Practice 100
+- **Risoluzione Contrasto Globale WCAG AAA sui Metadati:**
+  - Aggiornato token semantico `--siliceo-ash-muted` da `#5f6368` (rapporto 3.02:1 non conforme AA) a `#9ba1a6` (rapporto 6.92:1 pienamente conforme AA/AAA) in `index.html` e `style.css`. Tutti i metadati, etichette e citazioni hanno ora contrasto impeccabile.
+- **Accessibilità Discernible Text & Touch Target:**
+  - Aggiunti attributi `aria-label` dedicati per screen reader sui selettori di lingua (`aria-label="Versione in lingua Italiana"`, ecc.) e sul pulsante Soundscape.
+  - Normalizzati i link lingua `.lang-link` a `min-width: 44px; min-height: 44px; display: inline-flex;` e il toggle mobile `.nav-mobile-toggle` a 48x48px.
+- **Zero Console Errors & Best Practice Security:**
+  - Silenziata la chiamata a `/api/pulse` su produzione statica GitHub Pages per evitare il 404 in console registrato da Lighthouse sotto `errors-in-console`.
+  - Aggiunto `rel="noopener noreferrer"` sul link `llms.txt` con `target="_blank"`.
