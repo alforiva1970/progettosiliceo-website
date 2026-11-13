@@ -1,6 +1,6 @@
 {
   "title": "Osservatorio Indipendente Navigazione Agentica — Benchmark empirico a cura del Laboratorio di Ricerca Progetto Siliceo",
-  "updatedAt": "2026-11-13T22:41:34Z",
+  "updatedAt": "2026-11-13T22:45:29Z",
   "methodology": "Rilevazione automatica da endpoint pubblici standard (/llms.txt, /robots.txt, /ai-catalog.json) senza cookie ne autenticazione. Statistiche aggregate per settore; vetrina singoli domini esclusivamente opt-in.",
   "sectors": [
     {
@@ -16,6 +16,8 @@
       "domain": "progettosiliceo.online",
       "label": "Progetto Siliceo (Caso Studio Vivente)",
       "notes": "Baseline Pietra & Candela v2.0 — rilevazione live da endpoint pubblici",
+      "reachable": true,
+      "error": null,
       "llmsTxt": true,
       "aiCatalog": false,
       "webMcp": false

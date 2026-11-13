@@ -9,14 +9,13 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 CLI_DIR = ROOT / "tools" / "agent-audit-cli"
 if str(CLI_DIR) not in sys.path:
     sys.path.insert(0, str(CLI_DIR))
 
-from siliceo_audit import _fetch, audit_origin  # noqa: E402
+from siliceo_audit import audit_origin, fetch_url, normalize_target  # noqa: E402
 
 OBSERVATORY_TITLE = (
     "Osservatorio Indipendente Navigazione Agentica — "
@@ -27,15 +26,10 @@ _WEBMCP_MARKER_RE = re.compile(r"navigator\.modelContext|\btoolname\s*=", re.IGN
 
 def _probe_webmcp(origin: str) -> bool:
     for path in ("/", "/agent-ready.html"):
-        status, ct, body, _ = _fetch(f"{origin}{path}")
+        status, ct, body, _, _ = fetch_url(f"{origin}{path}")
         if status == 200 and "html" in ct.lower() and _WEBMCP_MARKER_RE.search(body):
             return True
     return False
-
-
-def _domain_key(origin_or_url: str) -> str:
-    parsed = urlparse(origin_or_url if "://" in origin_or_url else f"https://{origin_or_url}")
-    return parsed.netloc.lower()
 
 
 def build_observatory_snapshot(
@@ -44,15 +38,20 @@ def build_observatory_snapshot(
 ) -> dict[str, Any]:
     """Aggrega rilevazioni live per settore e aggiorna la vetrina opt-in senza dati finti."""
     sectors: list[dict[str, Any]] = []
-    audits_by_domain: dict[str, dict[str, Any]] = {}
+    audits_by_origin: dict[str, dict[str, Any]] = {}
 
     for sector_name, urls in samples.items():
         if not urls:
             continue
-        audits = [audit_origin(u) for u in urls]
-        for audit in audits:
+        audits: list[dict[str, Any]] = []
+        for raw_url in urls:
+            _, req_origin, _ = normalize_target(raw_url)
+            audit = audit_origin(raw_url)
+            audits.append(audit)
+            if req_origin:
+                audits_by_origin[req_origin] = audit
             if audit.get("origin"):
-                audits_by_domain[_domain_key(audit["origin"])] = audit
+                audits_by_origin[audit["origin"]] = audit
 
         reachable = [a for a in audits if a["homepage_status"] == 200]
         total = len(reachable)
@@ -81,16 +80,33 @@ def build_observatory_snapshot(
         domain = str(entry.get("domain", "")).strip()
         if not domain:
             continue
-        key = _domain_key(domain)
-        audit = audits_by_domain.get(key) or audit_origin(
-            domain if "://" in domain else f"https://{domain}"
-        )
-        origin = audit.get("origin")
-        web_mcp_live = _probe_webmcp(origin) if origin and audit["homepage_status"] == 200 else False
 
         item = dict(entry)
-        item["llmsTxt"] = bool(audit["llms_txt"]["present"] and audit["llms_txt"]["has_h1"])
-        item["aiCatalog"] = bool(audit["ai_catalog"]["valid_ard"])
+        _, req_origin, url_err = normalize_target(domain)
+        if url_err or req_origin is None:
+            item["reachable"] = False
+            item["error"] = url_err or "URL non valido."
+            item["llmsTxt"] = False
+            item["aiCatalog"] = False
+            item["webMcp"] = False
+            resolved_opt_in.append(item)
+            continue
+
+        audit = audits_by_origin.get(req_origin) or audit_origin(req_origin)
+        effective_origin = audit.get("origin")
+        is_reachable = audit["homepage_status"] == 200
+        web_mcp_live = (
+            _probe_webmcp(effective_origin)
+            if is_reachable and effective_origin
+            else False
+        )
+
+        item["reachable"] = is_reachable
+        item["error"] = None if is_reachable else (audit.get("error") or "Host non raggiungibile.")
+        item["llmsTxt"] = bool(
+            is_reachable and audit["llms_txt"]["present"] and audit["llms_txt"]["has_h1"]
+        )
+        item["aiCatalog"] = bool(is_reachable and audit["ai_catalog"]["valid_ard"])
         item["webMcp"] = web_mcp_live
         resolved_opt_in.append(item)
 
