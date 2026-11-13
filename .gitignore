@@ -8,3 +8,6 @@ arcade-src/dist/
 
 # SDD / Git worktrees
 .worktrees/
+
+# Rust build artifacts
+target/

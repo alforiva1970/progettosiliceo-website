@@ -335,13 +335,14 @@
         </section>
 
         <section aria-labelledby="cliHeading" class="audit-section" style="margin-top:60px;">
-            <h2 id="cliHeading" class="audit-section-title">CLI Open-Source Locale (AGPL-3.0)</h2>
+            <h2 id="cliHeading" class="audit-section-title">CLI Open-Source Locale in Rust (AGPL-3.0)</h2>
             <p style="color:var(--siliceo-ash-light, #9ba1a6);max-width:780px;">
-                Puoi eseguire le stesse verifiche endpoint in autonomia da terminale usando gli script Python open-source del laboratorio (zero dipendenze esterne, anti-SSRF integrato):
+                Puoi compilare ed eseguire le stesse verifiche endpoint in autonomia da terminale con la CLI nativa in Rust del laboratorio (concorrenza parallela, anti-SSRF anche su risoluzione DNS pre-socket):
             </p>
             <div class="audit-cli-box">
-                <pre>python3 tools/agent-audit-cli/siliceo_audit.py https://progettosiliceo.online
-python3 tools/agent-audit-cli/validate_ard.py ai-catalog.json</pre>
+                <pre>cargo run --manifest-path tools/siliceo-audit-rs/Cargo.toml -- check https://progettosiliceo.online
+cargo run --manifest-path tools/siliceo-audit-rs/Cargo.toml -- validate-ard ai-catalog.json
+cargo run --manifest-path tools/siliceo-audit-rs/Cargo.toml -- observatory data/observatory.json</pre>
             </div>
         </section>
     </main>

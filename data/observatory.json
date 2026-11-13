@@ -1,6 +1,6 @@
 {
   "title": "Osservatorio Indipendente Navigazione Agentica — Benchmark empirico a cura del Laboratorio di Ricerca Progetto Siliceo",
-  "updatedAt": "2026-11-13T23:34:05Z",
+  "updatedAt": "2026-11-13T23:49:57Z",
   "methodology": "Rilevazione automatica da endpoint pubblici standard (/llms.txt, /robots.txt, /ai-catalog.json) senza cookie ne autenticazione. Statistiche aggregate per settore; vetrina singoli domini esclusivamente opt-in.",
   "sectors": [
     {
@@ -8,7 +8,7 @@
       "sampleSize": 1,
       "llmsTxtValidPct": 100.0,
       "aiCatalogValidPct": 100.0,
-      "avgHtmlNoisePct": 83.0
+      "avgHtmlNoisePct": 82.9
     }
   ],
   "optInShowcase": [

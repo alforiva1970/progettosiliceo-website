@@ -297,3 +297,11 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
 - **Integrazione Ecosistema (`index.html`, `llms.txt`, `sitemap.xml`):**
   - Aggiunti `<link rel="ai-catalog" href="/ai-catalog.json">`, discovery WebMCP tramite `js/agent-audit.js` (`defer`), voce `Agent-Ready Hub` nel dropdown *Laboratorio* della navbar, project card dedicata in `#progetti` e link `/ai-catalog.json` nel badge footer di `index.html`.
   - Registrati `agent-ready.html` e `ai-catalog.json` sotto `## Epistemic Protocol & Foundational Documents` in `llms.txt` e aggiunto `agent-ready.html` in `sitemap.xml`.
+
+### [2026-11-14 00:50] — Riscrittura Completa CLI & Osservatorio in Rust Nativo (`tools/siliceo-audit-rs`)
+- **Migrazione 100% Rust (`tools/siliceo-audit-rs/`, AGPL-3.0):**
+  - Sostituiti integralmente gli script Python `tools/agent-audit-cli/*.py` e `tools/observatory/update_observatory.py` con l'unico crate Rust sovrano `siliceo-audit` (`edition = "2024"`, `ureq 3.5`, `serde`, `serde_json`), coerente con l'intero ecosistema Siliceo.
+  - Moduli separati (`ssrf.rs`, `html.rs`, `ard.rs`, `audit.rs`, `observatory.rs`) con controllo DNS pre-socket anti-DNS-rebinding, redirect manuali limitati (max 3 hop), parser HTML puro senza allocazioni esterne, e aggregatore parallelo multi-thread (`std::thread::scope`).
+- **Verifica Live Worker + Sito & Aggiornamento Riferimenti:**
+  - Worker Cloudflare `siliceo-agent-audit` attivato in produzione con `PSI_API_KEY` verificata: `POST https://progettosiliceo.online/api/agent-audit` -> **5/5 controlli superati** su desktop e mobile (`Performance 100`, `Accessibilità 95`, `Best Practice 92`, `SEO 100`, `CLS 0`).
+  - Aggiornati `agent-ready.html`, `index.html` e `.gitignore` (`target/`) sostituendo i riferimenti Python con i comandi Cargo nativi `siliceo-audit` e rigenerato `data/observatory.json` con la nuova CLI Rust.
