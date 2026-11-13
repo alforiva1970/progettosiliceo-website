@@ -1,0 +1,7 @@
+name = "siliceo-agent-audit"
+main = "agent-audit-worker.js"
+compatibility_date = "2026-10-01"
+
+routes = [
+  { pattern = "progettosiliceo.online/api/agent-audit*", zone_name = "progettosiliceo.online" }
+]
