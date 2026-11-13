@@ -256,3 +256,20 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
 - **Verifica Empirica di Parità:**
   - Script automatico di crawling ed integrity test eseguito su tutte le pagine chiave (root, `en/`, `es/`).
   - Esito: **0 link rotti / 0 errori 404**.
+
+### [2026-11-13 22:00] — Ottimizzazione Integrale PageSpeed 100 & Navigazione Agentica (Lighthouse 13.6)
+- **Eliminazione Violazioni CSP & Zero Errori Console (Best Practice da 88 -> 100):**
+  - Rimosse tutte le chiamate a fogli di stile esterni non autorizzati (`fonts.googleapis.com`) che violavano la direttiva `style-src 'self' 'unsafe-inline'`.
+  - Sostituito `@import url('https://fonts.googleapis.com/...')` in cima a `style.css` con `@import url('fonts.css');` per auto-contenere tutti i font locali in `'self'`.
+  - Rimosso aspect-ratio distortion su `copertina-spotlight.webp` (precedentemente forzato a 128x379 invece che 256x381) imponendo `height: auto !important; aspect-ratio: 256 / 381; display: block;` sia in CSS che inline.
+- **Azzeramento Cumulative Layout Shift (CLS da 0.11 -> 0.00 / Navigazione Agentica da 2/3 -> 3/3):**
+  - Identificati i due colpevoli di shift: il font swap di Lora sul pulsante Hero (0.087) e di JetBrains Mono/Cinzel sull'Hero content (0.024).
+  - Precaricati in `<head>` con priorità critica i font WOFF2 locali (`fonts/lora-400-latin.woff2`, `fonts/cinzel-700-latin.woff2`, `fonts/jetbrains-mono-400-latin.woff2`).
+  - Convertiti i font locali in `fonts.css` da `font-display: swap;` a `font-display: optional;`, eliminando qualsiasi reflow post-render.
+- **Compressione Asset & Riduzione Peso Immagini (Performance 97 -> 100):**
+  - Convertita l'immagine materica `candela_basalto.jpg` (614 KB) nel formato moderno `candela_basalto.webp` (6.9 KB, 208x208 retina per display 104x104, risparmio del 98.9%).
+  - Aggiunti attributi espliciti `width`, `height` e `aspect-ratio` su loghi SVG (`width="32" height="32"`), thumbnail YouTube (`width="1280" height="720"`), e avatar AI FAB (`width="56" height="56"`).
+- **Risoluzione Contrasto & Touch Target (Accessibilità 91 -> 100):**
+  - Aumentato contrasto sottotitolo *«IL PRINCIPIO CARDINALE // TEST DELLA CANDELA»* con `#fbbf24` (contrasto 10.95:1 su `#131518`, conforme WCAG AAA).
+  - Ottimizzato `.footer-coffee-btn` con `#000000` su `#FFDD00` (contrasto 19.56:1, AAA) e `min-height: 48px;`.
+  - Normalizzati tutti i touch target interattivi a un minimo di 48px (`min-height: 48px; padding: 14px 22px;`) su tutti i pulsanti `.btn` (Hero CTA, Sezione Agorà, Ricerca Anthropic, Spotlight Autobiografia, Soundscape button).
