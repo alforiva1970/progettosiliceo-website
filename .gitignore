@@ -5,3 +5,6 @@ arcade-src/dist/
 *.log
 .DS_Store
 *.db
+
+# SDD / Git worktrees
+.worktrees/
