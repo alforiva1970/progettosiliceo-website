@@ -206,7 +206,15 @@
           required: ['url'],
         },
         async execute(args) {
-          const data = await runAudit(args.url, args.strategy || 'desktop');
+          const url = (args && args.url) || '';
+          const strategy = (args && args.strategy) || 'desktop';
+          if (!String(url).trim()) {
+            return {
+              isError: true,
+              content: [{ type: 'text', text: JSON.stringify({ error: 'Parametro obbligatorio "url" mancante.' }) }],
+            };
+          }
+          const data = await runAudit(url, strategy);
           return { content: [{ type: 'text', text: JSON.stringify(data) }] };
         },
       });
@@ -221,7 +229,12 @@
   // Load Independent Observatory JSON
   if (observatoryBox || observatoryShowcase) {
     fetch('data/observatory.json')
-      .then((r) => (r.ok ? r.json() : null))
+      .then((r) => {
+        if (!r.ok) {
+          throw new Error(`HTTP ${r.status}`);
+        }
+        return r.json();
+      })
       .then((obs) => {
         if (!obs) return;
 
