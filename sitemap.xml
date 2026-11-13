@@ -30,6 +30,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://progettosiliceo.online/pte.html"/>
   </url>
   <url>
+    <loc>https://progettosiliceo.online/agent-ready.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://progettosiliceo.online/agent-ready.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://progettosiliceo.online/agent-ready.html"/>
+  </url>
+  <url>
     <loc>https://progettosiliceo.online/agora.html</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>

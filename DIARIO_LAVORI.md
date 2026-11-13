@@ -283,3 +283,17 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
 - **Zero Console Errors & Best Practice Security:**
   - Silenziata la chiamata a `/api/pulse` su produzione statica GitHub Pages per evitare il 404 in console registrato da Lighthouse sotto `errors-in-console`.
   - Aggiunto `rel="noopener noreferrer"` sul link `llms.txt` con `target="_blank"`.
+
+
+### [2026-11-13 23:55] — Siliceo Agentic Hub (WebMCP, ARD ai-catalog.json, Worker, CLI Open-Source & Osservatorio)
+- **Cloudflare Worker Same-Origin (`worker/agent-audit-worker.js`, `worker/agent-audit-worker.test.js`, `worker/wrangler.toml`):**
+  - Implementato endpoint serverless `POST /api/agent-audit` (licenza AGPL-3.0) con protezione anti-SSRF (`isBlockedHost` per IPv4/IPv6 loopback/private/ULA/link-local, validazione schemi e redirect), rate limiting per IP, probe diretti (`llms.txt`, `robots.txt` per crawler AI, `ai-catalog.json` ARD) e integrazione opzionale Google PageSpeed Insights v5.
+- **Manifest ARD & Validatore Locale (`ai-catalog.json`, `tools/agent-audit-cli/validate_ard.py`, `tools/agent-audit-cli/test_validate_ard.py`):**
+  - Creato manifest `ai-catalog.json` conforme allo standard Agentic Resource Discovery (`specVersion`, `host` `did:web:progettosiliceo.online`, `entries` URN `urn:air:progettosiliceo:*`) e validatore Python senza dipendenze esterne.
+- **CLI Open-Source & Generatore Osservatorio (`tools/agent-audit-cli/siliceo_audit.py`, `tools/agent-audit-cli/test_audit.py`, `data/observatory.json`):**
+  - Realizzata CLI Python AGPL-3.0 con protezione anti-SSRF su redirect/credenziali/host:port, analisi `llms.txt`, `robots.txt`, `ai-catalog.json`, calcolo Token Noise Ratio HTML e generazione del dataset `data/observatory.json` con stato esplicito di raggiungibilità ed errori per i casi opt-in.
+- **Pagina Ricerca Aperta, WebMCP & Cruscotto (`agent-ready.html`, `js/agent-audit.js`):**
+  - Creata `agent-ready.html` in design system *Pietra & Candela v2.0* (font self-hosted zero-CSP, touch target 48px, contrasto AAA) con scanner WebMCP dichiarativo (`toolname="siliceo_agent_audit"`) e registrazione imperativa (`navigator.modelContext.registerTool`), oltre al cruscotto per l'**Osservatorio Indipendente Navigazione Agentica — Benchmark empirico a cura del Laboratorio di Ricerca Progetto Siliceo**.
+- **Integrazione Ecosistema (`index.html`, `llms.txt`, `sitemap.xml`):**
+  - Aggiunti `<link rel="ai-catalog" href="/ai-catalog.json">`, discovery WebMCP tramite `js/agent-audit.js` (`defer`), voce `Agent-Ready Hub` nel dropdown *Laboratorio* della navbar, project card dedicata in `#progetti` e link `/ai-catalog.json` nel badge footer di `index.html`.
+  - Registrati `agent-ready.html` e `ai-catalog.json` sotto `## Epistemic Protocol & Foundational Documents` in `llms.txt` e aggiunto `agent-ready.html` in `sitemap.xml`.

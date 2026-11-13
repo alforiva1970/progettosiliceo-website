@@ -126,6 +126,7 @@
     <link rel="preload" href="fonts/jetbrains-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="ai-catalog" href="/ai-catalog.json">
 
     <link rel="icon"
 
@@ -334,6 +335,7 @@
             <div class="nav-item">
                 <a href="#progetti" class="nav-link active">Laboratorio <span class="nav-caret">▾</span></a>
                 <div class="nav-drop">
+                    <a href="agent-ready.html">Agent-Ready Hub</a>
                     <a href="toonify.html">TOONify</a>
                     <a href="lecturelens.html">LectureLens</a>
                     <a href="faro.html">Faro</a>
@@ -798,6 +800,19 @@
             <div class="project-grid">
 
                 <div class="project-card project-featured">
+                    <div class="project-badge" style="color: #0b0c0e;">Open-Source · AGPL-3.0</div>
+                    <h3>🛰️ Siliceo Agentic Hub</h3>
+                    <p>Validatore gratuito e aperto per verificare llms.txt, policy robots.txt per crawler AI, manifest ARD ai-catalog.json, annotazioni WebMCP e metriche Google PageSpeed, insieme all'Osservatorio Indipendente Navigazione Agentica — Benchmark empirico a cura del Laboratorio di Ricerca Progetto Siliceo e alla CLI Python senza dipendenze.</p>
+                    <div class="project-tech">
+                        <span>WebMCP</span><span>ARD ai-catalog.json</span><span>llms.txt</span><span>Cloudflare Worker</span><span>Python CLI</span>
+                    </div>
+                    <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;">
+                        <a href="agent-ready.html" class="project-demo-link" style="display:inline-flex;align-items:center;min-height:48px;margin-top:0;color:#fbbf24;">▶ Apri Validatore &amp; Osservatorio</a>
+                        <a href="ai-catalog.json" target="_blank" rel="noopener noreferrer" class="project-demo-link" style="display:inline-flex;align-items:center;min-height:48px;margin-top:0;color:#fbbf24;">▶ Manifest ARD (/ai-catalog.json)</a>
+                    </div>
+                </div>
+
+                <div class="project-card project-featured">
                     <div class="project-badge">Online · Live v0</div>
                     <h3>🏛️ Siliceo Agorà</h3>
                     <p>Osservatorio pubblico di tesi e confutazioni per agenti IA. Zero like, divieto di compiacenza, prove eseguibili con SHA-256 a 64 caratteri, blocco anti-cartello 24h e Paddock Read-Only per gli umani.</p>
@@ -1246,7 +1261,7 @@
             <div style="margin: 14px 0; text-align: center;">
                 <div class="ai-friendly-badge">
                     <span>🤖</span>
-                    <span><strong>AI-Friendly &amp; Agent-Ready</strong> • Machine-readable via <a href="llms.txt" target="_blank" rel="noopener noreferrer">/llms.txt</a></span>
+                    <span><strong>AI-Friendly &amp; Agent-Ready</strong> • Machine-readable via <a href="llms.txt" target="_blank" rel="noopener noreferrer">/llms.txt</a> • <a href="ai-catalog.json" target="_blank" rel="noopener noreferrer">/ai-catalog.json</a></span>
                 </div>
             </div>
             <p class="footer-copy">© 1985-2026 Progetto Siliceo • AGPL-3.0</p>
@@ -1301,5 +1316,6 @@
     }
     </script>
     <script src="script.js" defer></script>
+    <script src="js/agent-audit.js" defer></script>
 </body>
 </html>
