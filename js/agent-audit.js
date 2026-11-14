@@ -67,7 +67,9 @@
     const warningsHtml =
       Array.isArray(summary.warnings) && summary.warnings.length > 0
         ? `<ul style="margin:12px 0 0 18px;color:var(--siliceo-paper-quartz);line-height:1.6;">${summary.warnings.map((w) => `<li>${escapeHtml(w)}</li>`).join('')}</ul>`
-        : `<p style="color:#10b981;margin-top:12px;">Tutti i controlli automatici base superati.</p>`;
+        : lh.available
+          ? `<p style="color:#10b981;margin-top:12px;">Tutti i controlli automatici base superati.</p>`
+          : `<p style="color:#fbbf24;margin-top:12px;">Controlli endpoint pubblici superati (telemetria Google PSI non disponibile in questa sessione).</p>`;
 
     const passedChecks = Number.isFinite(Number(summary.passedChecks)) ? Number(summary.passedChecks) : 0;
     const totalChecks = Number.isFinite(Number(summary.totalChecks)) ? Number(summary.totalChecks) : 5;
@@ -167,7 +169,7 @@
         renderResults(result);
       } catch (err) {
         if (outputBox) {
-          outputBox.innerHTML = `<p style="margin-top:18px;color:#fca5a5;font-family:var(--font-mono);">Errore: ${escapeHtml(err.message)}. Nota: il worker /api/agent-audit deve essere attivo sulla zona Cloudflare o usa la CLI Python locale in basso.</p>`;
+          outputBox.innerHTML = `<p style="margin-top:18px;color:#fca5a5;font-family:var(--font-mono);">Errore: ${escapeHtml(err.message)}. Nota: il worker /api/agent-audit deve essere attivo sulla zona Cloudflare o usa la CLI Rust locale (tools/siliceo-audit-rs) in basso.</p>`;
         }
       } finally {
         if (submitBtn) {

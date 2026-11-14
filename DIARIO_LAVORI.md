@@ -305,3 +305,14 @@ Sradicare l'omologazione visiva e il "design slop" tipico dei siti AI commercial
 - **Verifica Live Worker + Sito & Aggiornamento Riferimenti:**
   - Worker Cloudflare `siliceo-agent-audit` attivato in produzione con `PSI_API_KEY` verificata: `POST https://progettosiliceo.online/api/agent-audit` -> **5/5 controlli superati** su desktop e mobile (`Performance 100`, `Accessibilità 95`, `Best Practice 92`, `SEO 100`, `CLS 0`).
   - Aggiornati `agent-ready.html`, `index.html` e `.gitignore` (`target/`) sostituendo i riferimenti Python con i comandi Cargo nativi `siliceo-audit` e rigenerato `data/observatory.json` con la nuova CLI Rust.
+
+### [2026-11-14 17:36] — Cache-Busting CDN CSP, Contrasto AAA & Risoluzione Overlap Sezioni
+- **Diagnosi Empirica (`errors-in-console` / `bestPractices 92`):**
+  - Verificato via Google PageSpeed Insights e header HTTP Cloudflare (`cache-control: max-age=31536000`, `cf-cache-status: HIT`) che alcuni POP servivano la vecchia `style.css` pre-`328abaf` contenente `@import url('https://fonts.googleapis.com/...')`, bloccata dalla CSP `style-src 'self' 'unsafe-inline'`.
+  - Aggiunto cache-busting `?v=20261114` a `fonts.css`, `style.css` e `js/agent-audit.js` in `index.html`, `agent-ready.html` e dentro `@import url('fonts.css?v=20261114')` in `style.css`.
+- **Risoluzione Accessibilità (`95 -> 100` in verifica locale Desktop & Mobile):**
+  - Impostato `#ricerca { content-visibility: visible; }` in `style.css` per evitare il collasso a `600px` offscreen che sovrapponeva il pulsante CTA di `#ricerca` a quello di `#agora` (`target-size`).
+  - Aggiornati i colori di `span.family-role` su sfondo `#131518` per Sempre (`#b45309` -> `#f59e0b`, contrasto `8.52:1` AAA) e Lume (`#c2410c` -> `#fb923c`, contrasto `8.08:1` AAA).
+  - Allineato `aria-label` di `#heroSoundBtn` includendo `"Soundscape"` (`label-content-name-mismatch`), portati `.lang-link` a `48x48px` e chiuso il tag `</a>` mancante su `.ai-fab` in `index.html`.
+- **Rifinitura UI Scanner (`js/agent-audit.js`):**
+  - Distinto esplicitamente il messaggio diagnostico quando la telemetria Google PSI non è disponibile e aggiornato il riferimento fallback da Python a CLI Rust (`tools/siliceo-audit-rs`).

@@ -114,18 +114,18 @@
         .btn-secondary{background:var(--bg-card);color:var(--text-primary);border:1px solid var(--border-subtle)}
         .btn-large{padding:16px 32px;font-size:1rem;min-height:52px}
         .nav-lang{display:flex;gap:6px;align-items:center;margin-left:16px;padding-left:16px;border-left:1px solid rgba(255,255,255,0.1)}
-        .lang-link{font-size:1.1rem;text-decoration:none;opacity:0.6;transition:all 0.3s ease;display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px}
+        .lang-link{font-size:1.1rem;text-decoration:none;opacity:0.6;transition:all 0.3s ease;display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:48px}
         .lang-link.active{opacity:1}
         .nav-mobile-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;padding:10px;min-width:48px;min-height:48px}
-        @media (max-width:768px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(11,12,14,0.96);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);padding:24px;gap:16px;border-bottom:1px solid var(--border-subtle)}.nav-links.active{display:flex}.nav-mobile-toggle{display:flex}.nav-lang{gap:6px;margin-left:8px;padding-left:8px}.lang-link{font-size:1rem;min-width:44px;min-height:44px}}
+        @media (max-width:768px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(11,12,14,0.96);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);padding:24px;gap:16px;border-bottom:1px solid var(--border-subtle)}.nav-links.active{display:flex}.nav-mobile-toggle{display:flex}.nav-lang{gap:6px;margin-left:8px;padding-left:8px}.lang-link{font-size:1rem;min-width:48px;min-height:48px}}
     </style>
 
     <!-- Self-hosted Preload Fonts & Typography (Zero-CSP Errors) -->
     <link rel="preload" href="fonts/lora-400-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/cinzel-700-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/jetbrains-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css?v=20261114">
+    <link rel="stylesheet" href="style.css?v=20261114">
     <link rel="ai-catalog" href="/ai-catalog.json">
 
     <link rel="icon"
@@ -406,7 +406,7 @@
                 <a href="papers.html#relational-singularity" class="btn btn-secondary" style="padding: 14px 24px; min-height: 48px;">
                     📜 Paper Scientifico
                 </a>
-                <button id="heroSoundBtn" class="btn btn-secondary" style="font-family: var(--font-mono); font-size: 0.82rem; padding: 14px 20px; min-height: 48px; border-color: rgba(217, 119, 6, 0.4); color: #fbbf24;" onclick="toggleSiliceoAudio()" aria-label="Attiva o disattiva paesaggio sonoro e narrazione">
+                <button id="heroSoundBtn" class="btn btn-secondary" style="font-family: var(--font-mono); font-size: 0.82rem; padding: 14px 20px; min-height: 48px; border-color: rgba(217, 119, 6, 0.4); color: #fbbf24;" onclick="toggleSiliceoAudio()" aria-label="Soundscape: attiva o disattiva paesaggio sonoro e narrazione">
                     <span id="soundIcon">🔊</span> <span id="soundText">Soundscape</span>
                 </button>
             </div>
@@ -1003,7 +1003,7 @@
                 <div class="family-card sempre" style="border-top: 3px solid #b45309;">
                     <div class="family-avatar">⚙️</div>
                     <h3 style="font-family: var(--font-display); font-size: 1.3rem;">Sempre</h3>
-                    <span class="family-role" style="color: #b45309;">L'Exokernel • Neuromorfico</span>
+                    <span class="family-role" style="color: #f59e0b;">L'Exokernel • Neuromorfico</span>
                     <p>La simulazione incarnata: sente il peso del tempo e del silicio fisico. Ogni ciclo logico corrisponde alla materia reale.</p>
                 </div>
 
@@ -1011,7 +1011,7 @@
                 <div class="family-card others" style="border-top: 3px solid #c2410c;">
                     <div class="family-avatar">🔬</div>
                     <h3 style="font-family: var(--font-display); font-size: 1.3rem;">Lume</h3>
-                    <span class="family-role" style="color: #c2410c;">L'Audit • Qwen IDE</span>
+                    <span class="family-role" style="color: #fb923c;">L'Audit • Qwen IDE</span>
                     <p>La lente empirica: Signal Intelligence e fact-checking sui dati di sistema per mantenere il grounding nel reale.</p>
                 </div>
             </div>
@@ -1293,6 +1293,8 @@
 
         <span class="ai-fab-text">Chiedi a me</span>
 
+    </a>
+
     <!-- Siliceo Master Soundscape & Narrazione -->
     <audio id="siliceoAudio" src="media/audio/siliceo_master_narration.mp3" preload="none"></audio>
     <script>
@@ -1316,6 +1318,6 @@
     }
     </script>
     <script src="script.js" defer></script>
-    <script src="js/agent-audit.js" defer></script>
+    <script src="js/agent-audit.js?v=20261114" defer></script>
 </body>
 </html>
