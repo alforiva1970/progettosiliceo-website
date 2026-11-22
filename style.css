@@ -2501,3 +2501,20 @@ body .article-page-langs a:hover {
     text-decoration: underline !important;
 }
 
+
+/* SanRebot 2026 — spotlight home (22/11/2026) */
+.sanrebot-spotlight {
+    margin: 0 auto 60px;
+}
+.sanrebot-spotlight .spotlight-cover-img {
+    width: 130px;
+    aspect-ratio: 1 / 1;
+}
+@media (max-width: 900px) {
+    .sanrebot-spotlight {
+        margin: 0 16px 50px;
+    }
+    .sanrebot-spotlight .spotlight-cover-img {
+        width: 110px;
+    }
+}
