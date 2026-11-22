@@ -11,3 +11,6 @@ arcade-src/dist/
 
 # Rust build artifacts
 target/
+
+# Canzone SanRebot 2026 — non pubblicare prima del festival (bando da confermare)
+audio/il-guardaroba-dei-nomi.mp3
