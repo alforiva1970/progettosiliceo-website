@@ -417,7 +417,7 @@ if (canvas) {
         ts: Date.now()
     };
 
-    var endpoint = isLocal ? 'http://localhost:8091/pulse' : '/api/pulse';
+    var endpoint = isLocal ? 'http://localhost:8091/pulse' : 'https://stats.progettosiliceo.online/pulse';
 
     function sendPulse() {
         try {
