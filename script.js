@@ -378,8 +378,7 @@ if (canvas) {
     var host = window.location.hostname;
     var isLocal = host === 'localhost' || host === '127.0.0.1';
 
-    // On static production (GitHub Pages), do not fire non-existent /api/pulse to avoid 404 console errors
-    if (!isLocal) return;
+    // Il backend Pulse ora esiste (stats.progettosiliceo.online): il beacon parte anche in produzione.
 
     function cleanReferrer(ref) {
         if (!ref) return 'direct';
