@@ -422,7 +422,7 @@ if (canvas) {
         try {
             var data = JSON.stringify(payload);
             if (navigator.sendBeacon) {
-                var blob = new Blob([data], { type: 'application/json' });
+                var blob = new Blob([data], { type: 'text/plain' });
                 navigator.sendBeacon(endpoint, blob);
             } else if (window.fetch) {
                 fetch(endpoint, {
