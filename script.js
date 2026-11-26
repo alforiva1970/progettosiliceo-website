@@ -433,6 +433,12 @@ if (canvas) {
                     mode: 'cors'
                 }).catch(function() {});
             }
+            // ASN anonimo: stesso dominio, gestito dal Worker /api/anon.
+            // Nessun IP salvato, nessun cookie: solo ASN + organizzazione aggregati.
+            try {
+                var anonBlob = new Blob([JSON.stringify({ p: payload.p })], { type: 'text/plain' });
+                if (navigator.sendBeacon) navigator.sendBeacon('/api/anon', anonBlob);
+            } catch (e2) {}
         } catch (e) {}
     }
 

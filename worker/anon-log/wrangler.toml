@@ -1,0 +1,11 @@
+name = "siliceo-anon-log"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+routes = [
+  { pattern = "progettosiliceo.online/api/anon*", zone_name = "progettosiliceo.online" }
+]
+
+[[kv_namespaces]]
+binding = "ANON_LOG"
+id = "340274f65e554160b688db983440d6a1"
